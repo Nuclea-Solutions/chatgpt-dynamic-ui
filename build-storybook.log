@@ -1,0 +1,573 @@
+
+> next-openai@0.1.0 build-storybook
+> storybook build --output-dir C:\Users\alexi\AppData\Local\Temp\chromatic--34228-DmlBdvAAcT06
+
+@storybook/cli v7.4.5
+
+info => Cleaning outputDir: C:\Users\alexi\AppData\Local\Temp\chromatic--34228-DmlBdvAAcT06
+info => Loading presets
+WARN The "@storybook/addon-mdx-gfm" addon is meant as a migration assistant for Storybook 7.0; and will likely be removed in a future version.
+WARN It's recommended you read this document:
+WARN https://storybook.js.org/docs/react/writing-docs/mdx#lack-of-github-flavored-markdown-gfm
+WARN 
+WARN Once you've made the necessary changes, you can remove the addon from your package.json and storybook config.
+info => Building manager..
+info => Manager built (480 ms)
+info => Copying static files: C:\Users\alexi\OneDrive\Escritorio\Nuclea Projects\nuclea-contact-form-full\node_modules\@storybook\manager\static at C:\Users\alexi\AppData\Local\Temp\chromatic--34228-DmlBdvAAcT06\sb-common-assets
+[36mvite v4.4.9 [32mbuilding for production...[36m[39m
+
+./sb-common-assets/fonts.css doesn't exist at build time, it will remain unchanged to be resolved at runtime
+transforming...
+node_modules/@mui/material/Autocomplete/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Autocomplete/index.js" was ignored.
+node_modules/@mui/material/TextField/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/TextField/index.js" was ignored.
+node_modules/@nextui-org/avatar/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/avatar/dist/index.mjs" was ignored.
+node_modules/@nextui-org/accordion/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/accordion/dist/index.mjs" was ignored.
+node_modules/@nextui-org/button/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/button/dist/index.mjs" was ignored.
+node_modules/@nextui-org/card/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/card/dist/index.mjs" was ignored.
+node_modules/@nextui-org/chip/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/chip/dist/index.mjs" was ignored.
+node_modules/@nextui-org/checkbox/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/checkbox/dist/index.mjs" was ignored.
+node_modules/@nextui-org/link/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/link/dist/index.mjs" was ignored.
+node_modules/@nextui-org/pagination/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/pagination/dist/index.mjs" was ignored.
+node_modules/@nextui-org/snippet/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/snippet/dist/index.mjs" was ignored.
+node_modules/@nextui-org/radio/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/radio/dist/index.mjs" was ignored.
+node_modules/@nextui-org/switch/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/switch/dist/index.mjs" was ignored.
+node_modules/@nextui-org/tooltip/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/tooltip/dist/index.mjs" was ignored.
+node_modules/@nextui-org/progress/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/progress/dist/index.mjs" was ignored.
+node_modules/@nextui-org/user/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/user/dist/index.mjs" was ignored.
+node_modules/@nextui-org/input/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/input/dist/index.mjs" was ignored.
+node_modules/@nextui-org/popover/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/popover/dist/index.mjs" was ignored.
+node_modules/@nextui-org/image/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/image/dist/index.mjs" was ignored.
+node_modules/@nextui-org/dropdown/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/dropdown/dist/index.mjs" was ignored.
+node_modules/@nextui-org/table/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/table/dist/index.mjs" was ignored.
+node_modules/@nextui-org/navbar/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/navbar/dist/index.mjs" was ignored.
+node_modules/@nextui-org/modal/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/modal/dist/index.mjs" was ignored.
+node_modules/@nextui-org/tabs/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/tabs/dist/index.mjs" was ignored.
+node_modules/@nextui-org/scroll-shadow/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/scroll-shadow/dist/index.mjs" was ignored.
+node_modules/@nextui-org/select/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/select/dist/index.mjs" was ignored.
+node_modules/@nextui-org/listbox/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/listbox/dist/index.mjs" was ignored.
+node_modules/@nextui-org/menu/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/menu/dist/index.mjs" was ignored.
+node_modules/@mui/material/Autocomplete/Autocomplete.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Autocomplete/Autocomplete.js" was ignored.
+node_modules/@mui/material/TextField/TextField.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/TextField/TextField.js" was ignored.
+node_modules/@nextui-org/avatar/dist/chunk-K626GFF6.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/avatar/dist/chunk-K626GFF6.mjs" was ignored.
+node_modules/@nextui-org/avatar/dist/chunk-XBMXQVV7.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/avatar/dist/chunk-XBMXQVV7.mjs" was ignored.
+node_modules/@nextui-org/avatar/dist/chunk-2XTCMOP6.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/avatar/dist/chunk-2XTCMOP6.mjs" was ignored.
+node_modules/@nextui-org/avatar/dist/chunk-25E6VDTZ.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/avatar/dist/chunk-25E6VDTZ.mjs" was ignored.
+node_modules/@nextui-org/avatar/dist/chunk-KTES4AK4.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/avatar/dist/chunk-KTES4AK4.mjs" was ignored.
+node_modules/@nextui-org/avatar/dist/chunk-PM5WBSHT.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/avatar/dist/chunk-PM5WBSHT.mjs" was ignored.
+node_modules/@nextui-org/accordion/dist/chunk-IENCLDN4.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/accordion/dist/chunk-IENCLDN4.mjs" was ignored.
+node_modules/@nextui-org/accordion/dist/chunk-HMVE2ROQ.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/accordion/dist/chunk-HMVE2ROQ.mjs" was ignored.
+node_modules/@nextui-org/accordion/dist/chunk-VQPC6LU6.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/accordion/dist/chunk-VQPC6LU6.mjs" was ignored.
+node_modules/@nextui-org/accordion/dist/chunk-STESY4MM.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/accordion/dist/chunk-STESY4MM.mjs" was ignored.
+node_modules/@nextui-org/accordion/dist/chunk-LDUMD4XQ.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/accordion/dist/chunk-LDUMD4XQ.mjs" was ignored.
+node_modules/@nextui-org/button/dist/chunk-KHVXTQA4.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/button/dist/chunk-KHVXTQA4.mjs" was ignored.
+node_modules/@nextui-org/button/dist/chunk-OTHW2UID.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/button/dist/chunk-OTHW2UID.mjs" was ignored.
+node_modules/@nextui-org/button/dist/chunk-ZTLH2HDB.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/button/dist/chunk-ZTLH2HDB.mjs" was ignored.
+node_modules/@nextui-org/button/dist/chunk-UPC63NS7.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/button/dist/chunk-UPC63NS7.mjs" was ignored.
+node_modules/@nextui-org/button/dist/chunk-BOMWXXSL.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/button/dist/chunk-BOMWXXSL.mjs" was ignored.
+node_modules/@nextui-org/card/dist/chunk-5PWUQJVK.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/card/dist/chunk-5PWUQJVK.mjs" was ignored.
+node_modules/@nextui-org/card/dist/chunk-5ALFRFZW.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/card/dist/chunk-5ALFRFZW.mjs" was ignored.
+node_modules/@nextui-org/card/dist/chunk-QVMTN7ZJ.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/card/dist/chunk-QVMTN7ZJ.mjs" was ignored.
+node_modules/@nextui-org/card/dist/chunk-J333S7JQ.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/card/dist/chunk-J333S7JQ.mjs" was ignored.
+node_modules/@nextui-org/card/dist/chunk-VLCEO3FB.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/card/dist/chunk-VLCEO3FB.mjs" was ignored.
+node_modules/@nextui-org/card/dist/chunk-3GU2UBH3.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/card/dist/chunk-3GU2UBH3.mjs" was ignored.
+node_modules/@nextui-org/chip/dist/chunk-U7ENUD3I.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/chip/dist/chunk-U7ENUD3I.mjs" was ignored.
+node_modules/@nextui-org/chip/dist/chunk-IFLVSJDD.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/chip/dist/chunk-IFLVSJDD.mjs" was ignored.
+node_modules/@nextui-org/checkbox/dist/chunk-5LX4YCMK.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/checkbox/dist/chunk-5LX4YCMK.mjs" was ignored.
+node_modules/@nextui-org/checkbox/dist/chunk-YD5MTYTA.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/checkbox/dist/chunk-YD5MTYTA.mjs" was ignored.
+node_modules/@nextui-org/checkbox/dist/chunk-5E6Z6LLK.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/checkbox/dist/chunk-5E6Z6LLK.mjs" was ignored.
+node_modules/@nextui-org/checkbox/dist/chunk-ACAJT7GC.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/checkbox/dist/chunk-ACAJT7GC.mjs" was ignored.
+node_modules/@nextui-org/checkbox/dist/chunk-75NHPFKB.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/checkbox/dist/chunk-75NHPFKB.mjs" was ignored.
+node_modules/@nextui-org/checkbox/dist/chunk-M56F2XG7.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/checkbox/dist/chunk-M56F2XG7.mjs" was ignored.
+node_modules/@nextui-org/link/dist/chunk-7LH7ZARU.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/link/dist/chunk-7LH7ZARU.mjs" was ignored.
+node_modules/@nextui-org/link/dist/chunk-MPX6TMFQ.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/link/dist/chunk-MPX6TMFQ.mjs" was ignored.
+node_modules/@nextui-org/link/dist/chunk-PQAE7L75.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/link/dist/chunk-PQAE7L75.mjs" was ignored.
+node_modules/@nextui-org/pagination/dist/chunk-SDEB5NXU.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/pagination/dist/chunk-SDEB5NXU.mjs" was ignored.
+node_modules/@nextui-org/pagination/dist/chunk-SBGSGDN7.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/pagination/dist/chunk-SBGSGDN7.mjs" was ignored.
+node_modules/@nextui-org/pagination/dist/chunk-PEGVCFUD.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/pagination/dist/chunk-PEGVCFUD.mjs" was ignored.
+node_modules/@nextui-org/pagination/dist/chunk-G5VUENUN.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/pagination/dist/chunk-G5VUENUN.mjs" was ignored.
+node_modules/@nextui-org/pagination/dist/chunk-5TCS4DFW.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/pagination/dist/chunk-5TCS4DFW.mjs" was ignored.
+node_modules/@nextui-org/snippet/dist/chunk-LRN3OEVD.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/snippet/dist/chunk-LRN3OEVD.mjs" was ignored.
+node_modules/@nextui-org/snippet/dist/chunk-JKDRPOQT.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/snippet/dist/chunk-JKDRPOQT.mjs" was ignored.
+node_modules/@nextui-org/radio/dist/chunk-CNSCBPOV.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/radio/dist/chunk-CNSCBPOV.mjs" was ignored.
+node_modules/@nextui-org/radio/dist/chunk-ZJBBHHAR.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/radio/dist/chunk-ZJBBHHAR.mjs" was ignored.
+node_modules/@nextui-org/radio/dist/chunk-24SQAFV3.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/radio/dist/chunk-24SQAFV3.mjs" was ignored.
+node_modules/@nextui-org/radio/dist/chunk-EAFKL3GN.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/radio/dist/chunk-EAFKL3GN.mjs" was ignored.
+node_modules/@nextui-org/radio/dist/chunk-QGYJ6573.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/radio/dist/chunk-QGYJ6573.mjs" was ignored.
+node_modules/@nextui-org/switch/dist/chunk-WJ2NBUEH.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/switch/dist/chunk-WJ2NBUEH.mjs" was ignored.
+node_modules/@nextui-org/switch/dist/chunk-X4ZLQFQU.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/switch/dist/chunk-X4ZLQFQU.mjs" was ignored.
+node_modules/@nextui-org/tooltip/dist/chunk-WMIINNJ6.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/tooltip/dist/chunk-WMIINNJ6.mjs" was ignored.
+node_modules/@nextui-org/tooltip/dist/chunk-62U42LRQ.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/tooltip/dist/chunk-62U42LRQ.mjs" was ignored.
+node_modules/@nextui-org/progress/dist/chunk-U6YKS5KO.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/progress/dist/chunk-U6YKS5KO.mjs" was ignored.
+node_modules/@nextui-org/progress/dist/chunk-C6PDJQ2E.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/progress/dist/chunk-C6PDJQ2E.mjs" was ignored.
+node_modules/@nextui-org/progress/dist/chunk-5KKY3VCP.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/progress/dist/chunk-5KKY3VCP.mjs" was ignored.
+node_modules/@nextui-org/progress/dist/chunk-HB7GJPUL.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/progress/dist/chunk-HB7GJPUL.mjs" was ignored.
+node_modules/@nextui-org/user/dist/chunk-WWHWU6GY.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/user/dist/chunk-WWHWU6GY.mjs" was ignored.
+node_modules/@nextui-org/user/dist/chunk-RE3ZDKCF.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/user/dist/chunk-RE3ZDKCF.mjs" was ignored.
+node_modules/@nextui-org/input/dist/chunk-NDPHUITX.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/input/dist/chunk-NDPHUITX.mjs" was ignored.
+node_modules/@nextui-org/input/dist/chunk-CZWDPTFX.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/input/dist/chunk-CZWDPTFX.mjs" was ignored.
+node_modules/@nextui-org/input/dist/chunk-WMURI4ZR.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/input/dist/chunk-WMURI4ZR.mjs" was ignored.
+node_modules/@nextui-org/popover/dist/chunk-Z3NLEGXQ.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/popover/dist/chunk-Z3NLEGXQ.mjs" was ignored.
+node_modules/@nextui-org/popover/dist/chunk-SAZ74Z6M.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/popover/dist/chunk-SAZ74Z6M.mjs" was ignored.
+node_modules/@nextui-org/popover/dist/chunk-K4VREUER.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/popover/dist/chunk-K4VREUER.mjs" was ignored.
+node_modules/@nextui-org/popover/dist/chunk-SZB3CFF2.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/popover/dist/chunk-SZB3CFF2.mjs" was ignored.
+node_modules/@nextui-org/popover/dist/chunk-SQ3I4X62.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/popover/dist/chunk-SQ3I4X62.mjs" was ignored.
+node_modules/@nextui-org/popover/dist/chunk-U5OQCXOX.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/popover/dist/chunk-U5OQCXOX.mjs" was ignored.
+node_modules/@nextui-org/popover/dist/chunk-DA62PS6G.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/popover/dist/chunk-DA62PS6G.mjs" was ignored.
+node_modules/@nextui-org/image/dist/chunk-OFGZKCFR.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/image/dist/chunk-OFGZKCFR.mjs" was ignored.
+node_modules/@nextui-org/dropdown/dist/chunk-63RZRIL7.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/dropdown/dist/chunk-63RZRIL7.mjs" was ignored.
+node_modules/@nextui-org/dropdown/dist/chunk-R74JVVQ2.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/dropdown/dist/chunk-R74JVVQ2.mjs" was ignored.
+node_modules/@nextui-org/image/dist/chunk-DLHLVYAJ.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/image/dist/chunk-DLHLVYAJ.mjs" was ignored.
+node_modules/@nextui-org/dropdown/dist/chunk-SV7SBOJU.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/dropdown/dist/chunk-SV7SBOJU.mjs" was ignored.
+node_modules/@nextui-org/dropdown/dist/chunk-WRRPXIUB.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/dropdown/dist/chunk-WRRPXIUB.mjs" was ignored.
+node_modules/@nextui-org/dropdown/dist/chunk-H77OCOIT.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/dropdown/dist/chunk-H77OCOIT.mjs" was ignored.
+node_modules/@nextui-org/table/dist/chunk-IZM76DYO.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/table/dist/chunk-IZM76DYO.mjs" was ignored.
+node_modules/@nextui-org/table/dist/chunk-774VMS2G.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/table/dist/chunk-774VMS2G.mjs" was ignored.
+node_modules/@nextui-org/table/dist/chunk-NSERPD52.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/table/dist/chunk-NSERPD52.mjs" was ignored.
+node_modules/@nextui-org/table/dist/chunk-HH2KD3YZ.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/table/dist/chunk-HH2KD3YZ.mjs" was ignored.
+node_modules/@nextui-org/table/dist/chunk-CIL4Y7FA.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/table/dist/chunk-CIL4Y7FA.mjs" was ignored.
+node_modules/@nextui-org/table/dist/chunk-FKPXBCGS.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/table/dist/chunk-FKPXBCGS.mjs" was ignored.
+node_modules/@nextui-org/table/dist/chunk-F3UDT23P.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/table/dist/chunk-F3UDT23P.mjs" was ignored.
+node_modules/@nextui-org/table/dist/chunk-TSPNSPCL.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/table/dist/chunk-TSPNSPCL.mjs" was ignored.
+node_modules/@nextui-org/table/dist/chunk-DPLE67WJ.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/table/dist/chunk-DPLE67WJ.mjs" was ignored.
+node_modules/@nextui-org/table/dist/chunk-YRZGWF2W.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/table/dist/chunk-YRZGWF2W.mjs" was ignored.
+node_modules/@nextui-org/table/dist/chunk-MWTZZPYB.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/table/dist/chunk-MWTZZPYB.mjs" was ignored.
+node_modules/@nextui-org/table/dist/chunk-ZVKU2CIZ.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/table/dist/chunk-ZVKU2CIZ.mjs" was ignored.
+node_modules/@nextui-org/table/dist/chunk-N2ZOKY36.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/table/dist/chunk-N2ZOKY36.mjs" was ignored.
+node_modules/@nextui-org/table/dist/chunk-EYOO7AGH.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/table/dist/chunk-EYOO7AGH.mjs" was ignored.
+node_modules/@nextui-org/table/dist/chunk-GZVIASP2.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/table/dist/chunk-GZVIASP2.mjs" was ignored.
+node_modules/@nextui-org/table/dist/chunk-QURPNGP7.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/table/dist/chunk-QURPNGP7.mjs" was ignored.
+node_modules/@nextui-org/navbar/dist/chunk-PZVBZM3A.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/navbar/dist/chunk-PZVBZM3A.mjs" was ignored.
+node_modules/@nextui-org/navbar/dist/chunk-F7H5RMKG.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/navbar/dist/chunk-F7H5RMKG.mjs" was ignored.
+node_modules/@nextui-org/navbar/dist/chunk-WM4IYYR3.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/navbar/dist/chunk-WM4IYYR3.mjs" was ignored.
+node_modules/@nextui-org/navbar/dist/chunk-3CIMLUNX.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/navbar/dist/chunk-3CIMLUNX.mjs" was ignored.
+node_modules/@nextui-org/navbar/dist/chunk-XVPKP73N.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/navbar/dist/chunk-XVPKP73N.mjs" was ignored.
+node_modules/@nextui-org/navbar/dist/chunk-PSG7VTZC.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/navbar/dist/chunk-PSG7VTZC.mjs" was ignored.
+node_modules/@nextui-org/navbar/dist/chunk-MG5LCNUN.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/navbar/dist/chunk-MG5LCNUN.mjs" was ignored.
+node_modules/@nextui-org/navbar/dist/chunk-RI7HJISA.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/navbar/dist/chunk-RI7HJISA.mjs" was ignored.
+node_modules/@nextui-org/navbar/dist/chunk-IZLLXR4A.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/navbar/dist/chunk-IZLLXR4A.mjs" was ignored.
+node_modules/@nextui-org/navbar/dist/chunk-CLWTNWD4.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/navbar/dist/chunk-CLWTNWD4.mjs" was ignored.
+node_modules/@nextui-org/navbar/dist/chunk-D4DUWTY6.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/navbar/dist/chunk-D4DUWTY6.mjs" was ignored.
+node_modules/@nextui-org/modal/dist/chunk-IOH5ADIR.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/modal/dist/chunk-IOH5ADIR.mjs" was ignored.
+node_modules/@nextui-org/modal/dist/chunk-3S23ARPO.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/modal/dist/chunk-3S23ARPO.mjs" was ignored.
+node_modules/@nextui-org/modal/dist/chunk-QY5NICTW.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/modal/dist/chunk-QY5NICTW.mjs" was ignored.
+node_modules/@nextui-org/modal/dist/chunk-EPDLEVDR.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/modal/dist/chunk-EPDLEVDR.mjs" was ignored.
+node_modules/@nextui-org/modal/dist/chunk-G6W4LQQG.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/modal/dist/chunk-G6W4LQQG.mjs" was ignored.
+node_modules/@nextui-org/modal/dist/chunk-II5OMS4Q.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/modal/dist/chunk-II5OMS4Q.mjs" was ignored.
+node_modules/@nextui-org/modal/dist/chunk-6JNB4JMH.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/modal/dist/chunk-6JNB4JMH.mjs" was ignored.
+node_modules/@nextui-org/modal/dist/chunk-AY7EDYTU.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/modal/dist/chunk-AY7EDYTU.mjs" was ignored.
+node_modules/@nextui-org/tabs/dist/chunk-NDSCPFBB.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/tabs/dist/chunk-NDSCPFBB.mjs" was ignored.
+node_modules/@nextui-org/tabs/dist/chunk-FUVFJH5A.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/tabs/dist/chunk-FUVFJH5A.mjs" was ignored.
+node_modules/@nextui-org/tabs/dist/chunk-VOQUMKEW.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/tabs/dist/chunk-VOQUMKEW.mjs" was ignored.
+node_modules/@nextui-org/tabs/dist/chunk-3ZTZI2M3.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/tabs/dist/chunk-3ZTZI2M3.mjs" was ignored.
+node_modules/@nextui-org/tabs/dist/chunk-FXLYF44B.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/tabs/dist/chunk-FXLYF44B.mjs" was ignored.
+node_modules/@nextui-org/scroll-shadow/dist/chunk-NXESXOGU.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/scroll-shadow/dist/chunk-NXESXOGU.mjs" was ignored.
+node_modules/@nextui-org/scroll-shadow/dist/chunk-Q3YHKJSN.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/scroll-shadow/dist/chunk-Q3YHKJSN.mjs" was ignored.
+node_modules/@nextui-org/listbox/dist/chunk-UVWWYDCC.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/listbox/dist/chunk-UVWWYDCC.mjs" was ignored.
+node_modules/@nextui-org/select/dist/chunk-6D5IY2EM.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/select/dist/chunk-6D5IY2EM.mjs" was ignored.
+node_modules/@nextui-org/select/dist/chunk-TF2AZVBR.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/select/dist/chunk-TF2AZVBR.mjs" was ignored.
+node_modules/@nextui-org/select/dist/chunk-W2SF6LP4.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/select/dist/chunk-W2SF6LP4.mjs" was ignored.
+node_modules/@nextui-org/listbox/dist/chunk-DDB2FEKY.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/listbox/dist/chunk-DDB2FEKY.mjs" was ignored.
+node_modules/@nextui-org/listbox/dist/chunk-65JTUBIW.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/listbox/dist/chunk-65JTUBIW.mjs" was ignored.
+node_modules/@nextui-org/listbox/dist/chunk-MPIJ4SWU.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/listbox/dist/chunk-MPIJ4SWU.mjs" was ignored.
+node_modules/@nextui-org/listbox/dist/chunk-AHHJXNNY.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/listbox/dist/chunk-AHHJXNNY.mjs" was ignored.
+node_modules/@nextui-org/listbox/dist/chunk-ZHSNFO5S.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/listbox/dist/chunk-ZHSNFO5S.mjs" was ignored.
+node_modules/@nextui-org/listbox/dist/chunk-3OM65JFI.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/listbox/dist/chunk-3OM65JFI.mjs" was ignored.
+node_modules/@nextui-org/listbox/dist/chunk-VHPYXGWP.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/listbox/dist/chunk-VHPYXGWP.mjs" was ignored.
+node_modules/@nextui-org/menu/dist/chunk-EEKZGUSR.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/menu/dist/chunk-EEKZGUSR.mjs" was ignored.
+node_modules/@nextui-org/menu/dist/chunk-PVXU2M5R.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/menu/dist/chunk-PVXU2M5R.mjs" was ignored.
+node_modules/@nextui-org/menu/dist/chunk-7HMQ7MB7.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/menu/dist/chunk-7HMQ7MB7.mjs" was ignored.
+node_modules/@nextui-org/menu/dist/chunk-ZIIFKCEW.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/menu/dist/chunk-ZIIFKCEW.mjs" was ignored.
+node_modules/@nextui-org/menu/dist/chunk-RPQATZUH.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/menu/dist/chunk-RPQATZUH.mjs" was ignored.
+node_modules/@nextui-org/menu/dist/chunk-5CL57MFM.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/menu/dist/chunk-5CL57MFM.mjs" was ignored.
+node_modules/@nextui-org/menu/dist/chunk-7C7K3AST.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/menu/dist/chunk-7C7K3AST.mjs" was ignored.
+node_modules/@nextui-org/menu/dist/chunk-LRDIO3JU.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/menu/dist/chunk-LRDIO3JU.mjs" was ignored.
+node_modules/@mui/material/Typography/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Typography/index.js" was ignored.
+node_modules/@mui/material/Stack/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Stack/index.js" was ignored.
+node_modules/@mui/material/useMediaQuery/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/useMediaQuery/index.js" was ignored.
+node_modules/@mui/material/styles/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/styles/index.js" was ignored.
+node_modules/@mui/utils/esm/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/utils/esm/index.js" was ignored.
+node_modules/@mui/material/Tab/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Tab/index.js" was ignored.
+node_modules/@mui/material/Tabs/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Tabs/index.js" was ignored.
+node_modules/@mui/material/ListSubheader/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/ListSubheader/index.js" was ignored.
+node_modules/@mui/system/esm/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/system/esm/index.js" was ignored.
+node_modules/@mui/base/index.js (8:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/index.js" was ignored.
+node_modules/@mui/material/Popper/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Popper/index.js" was ignored.
+node_modules/@mui/material/Paper/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Paper/index.js" was ignored.
+node_modules/@mui/material/IconButton/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/IconButton/index.js" was ignored.
+node_modules/@mui/material/Chip/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Chip/index.js" was ignored.
+node_modules/@mui/material/internal/svg-icons/Close.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/internal/svg-icons/Close.js" was ignored.
+node_modules/@mui/material/internal/svg-icons/ArrowDropDown.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/internal/svg-icons/ArrowDropDown.js" was ignored.
+node_modules/@mui/material/styles/useThemeProps.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/styles/useThemeProps.js" was ignored.
+node_modules/@mui/material/styles/styled.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/styles/styled.js" was ignored.
+node_modules/@mui/material/utils/useForkRef.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/utils/useForkRef.js" was ignored.
+node_modules/@mui/material/Input/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Input/index.js" was ignored.
+node_modules/@mui/material/OutlinedInput/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/OutlinedInput/index.js" was ignored.
+node_modules/@mui/material/InputLabel/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/InputLabel/index.js" was ignored.
+node_modules/@mui/material/FormControl/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/FormControl/index.js" was ignored.
+node_modules/@mui/material/FormHelperText/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/FormHelperText/index.js" was ignored.
+node_modules/@mui/material/Select/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Select/index.js" was ignored.
+node_modules/@mui/material/FilledInput/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/FilledInput/index.js" was ignored.
+node_modules/@nextui-org/react-utils/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/react-utils/dist/index.mjs" was ignored.
+node_modules/@nextui-org/framer-transitions/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/framer-transitions/dist/index.mjs" was ignored.
+node_modules/@nextui-org/ripple/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/ripple/dist/index.mjs" was ignored.
+node_modules/@nextui-org/aria-utils/dist/index.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/aria-utils/dist/index.mjs" was ignored.
+node_modules/@mui/material/Typography/Typography.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Typography/Typography.js" was ignored.
+node_modules/@mui/material/Stack/Stack.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Stack/Stack.js" was ignored.
+node_modules/@mui/material/useMediaQuery/useMediaQuery.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/useMediaQuery/useMediaQuery.js" was ignored.
+node_modules/@mui/material/styles/useTheme.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/styles/useTheme.js" was ignored.
+node_modules/@mui/material/styles/ThemeProvider.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/styles/ThemeProvider.js" was ignored.
+node_modules/@mui/material/styles/CssVarsProvider.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/styles/CssVarsProvider.js" was ignored.
+node_modules/@mui/utils/esm/useId/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/utils/esm/useId/index.js" was ignored.
+node_modules/@mui/utils/esm/useEnhancedEffect/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/utils/esm/useEnhancedEffect/index.js" was ignored.
+node_modules/@mui/utils/esm/useForkRef/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/utils/esm/useForkRef/index.js" was ignored.
+node_modules/@mui/utils/esm/useEventCallback/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/utils/esm/useEventCallback/index.js" was ignored.
+node_modules/@mui/utils/esm/useControlled/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/utils/esm/useControlled/index.js" was ignored.
+node_modules/@mui/utils/esm/useIsFocusVisible.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/utils/esm/useIsFocusVisible.js" was ignored.
+node_modules/@mui/utils/esm/usePreviousProps.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/utils/esm/usePreviousProps.js" was ignored.
+node_modules/@mui/material/Tab/Tab.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Tab/Tab.js" was ignored.
+node_modules/@mui/material/Button/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Button/index.js" was ignored.
+node_modules/@mui/material/Tabs/Tabs.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Tabs/Tabs.js" was ignored.
+node_modules/@mui/material/utils/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/utils/index.js" was ignored.
+node_modules/@mui/material/ListSubheader/ListSubheader.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/ListSubheader/ListSubheader.js" was ignored.
+node_modules/@mui/styled-engine/index.js (8:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/styled-engine/index.js" was ignored.
+node_modules/@mui/system/esm/GlobalStyles/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/system/esm/GlobalStyles/index.js" was ignored.
+node_modules/@mui/system/esm/Box/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/system/esm/Box/index.js" was ignored.
+node_modules/@mui/system/esm/createBox.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/system/esm/createBox.js" was ignored.
+node_modules/@mui/system/esm/useTheme.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/system/esm/useTheme.js" was ignored.
+node_modules/@mui/system/esm/useThemeProps/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/system/esm/useThemeProps/index.js" was ignored.
+node_modules/@mui/system/esm/useThemeWithoutDefault.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/system/esm/useThemeWithoutDefault.js" was ignored.
+node_modules/@mui/system/esm/ThemeProvider/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/system/esm/ThemeProvider/index.js" was ignored.
+node_modules/@mui/system/esm/Container/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/system/esm/Container/index.js" was ignored.
+node_modules/@mui/system/esm/Unstable_Grid/Grid.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/system/esm/Unstable_Grid/Grid.js" was ignored.
+node_modules/@mui/system/esm/Stack/Stack.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/system/esm/Stack/Stack.js" was ignored.
+node_modules/@mui/system/esm/Unstable_Grid/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/system/esm/Unstable_Grid/index.js" was ignored.
+node_modules/@mui/system/esm/Stack/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/system/esm/Stack/index.js" was ignored.
+node_modules/@mui/base/utils/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/utils/index.js" was ignored.
+node_modules/@mui/base/Button/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Button/index.js" was ignored.
+node_modules/@mui/base/Badge/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Badge/index.js" was ignored.
+node_modules/@mui/base/ClickAwayListener/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/ClickAwayListener/index.js" was ignored.
+node_modules/@mui/base/FocusTrap/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/FocusTrap/index.js" was ignored.
+node_modules/@mui/base/Dropdown/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Dropdown/index.js" was ignored.
+node_modules/@mui/base/FormControl/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/FormControl/index.js" was ignored.
+node_modules/@mui/base/Input/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Input/index.js" was ignored.
+node_modules/@mui/base/MenuButton/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/MenuButton/index.js" was ignored.
+node_modules/@mui/base/Modal/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Modal/index.js" was ignored.
+node_modules/@mui/base/NoSsr/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/NoSsr/index.js" was ignored.
+node_modules/@mui/base/Unstable_NumberInput/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Unstable_NumberInput/index.js" was ignored.
+node_modules/@mui/base/OptionGroup/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/OptionGroup/index.js" was ignored.
+node_modules/@mui/base/Option/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Option/index.js" was ignored.
+node_modules/@mui/base/Portal/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Portal/index.js" was ignored.
+node_modules/@mui/base/Unstable_Popup/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Unstable_Popup/index.js" was ignored.
+node_modules/@mui/base/Popper/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Popper/index.js" was ignored.
+node_modules/@mui/base/Select/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Select/index.js" was ignored.
+node_modules/@mui/base/Slider/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Slider/index.js" was ignored.
+node_modules/@mui/base/Switch/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Switch/index.js" was ignored.
+node_modules/@mui/base/TablePagination/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/TablePagination/index.js" was ignored.
+node_modules/@mui/base/Snackbar/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Snackbar/index.js" was ignored.
+node_modules/@mui/base/TabPanel/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/TabPanel/index.js" was ignored.
+node_modules/@mui/base/TabsList/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/TabsList/index.js" was ignored.
+node_modules/@mui/base/Tab/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Tab/index.js" was ignored.
+node_modules/@mui/base/Tabs/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Tabs/index.js" was ignored.
+node_modules/@mui/base/TextareaAutosize/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/TextareaAutosize/index.js" was ignored.
+node_modules/@mui/base/useAutocomplete/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useAutocomplete/index.js" was ignored.
+node_modules/@mui/base/useBadge/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useBadge/index.js" was ignored.
+node_modules/@mui/base/useDropdown/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useDropdown/index.js" was ignored.
+node_modules/@mui/base/useButton/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useButton/index.js" was ignored.
+node_modules/@mui/base/useInput/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useInput/index.js" was ignored.
+node_modules/@mui/base/useMenu/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useMenu/index.js" was ignored.
+node_modules/@mui/base/useMenuButton/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useMenuButton/index.js" was ignored.
+node_modules/@mui/base/useMenuItem/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useMenuItem/index.js" was ignored.
+node_modules/@mui/base/useOption/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useOption/index.js" was ignored.
+node_modules/@mui/base/unstable_useNumberInput/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/unstable_useNumberInput/index.js" was ignored.
+node_modules/@mui/base/useSelect/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useSelect/index.js" was ignored.
+node_modules/@mui/base/useSlider/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useSlider/index.js" was ignored.
+node_modules/@mui/base/useSnackbar/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useSnackbar/index.js" was ignored.
+node_modules/@mui/base/useTab/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useTab/index.js" was ignored.
+node_modules/@mui/base/useSwitch/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useSwitch/index.js" was ignored.
+node_modules/@mui/base/useTabPanel/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useTabPanel/index.js" was ignored.
+node_modules/@mui/base/useTabs/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useTabs/index.js" was ignored.
+node_modules/@mui/base/useTabsList/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useTabsList/index.js" was ignored.
+node_modules/@mui/base/unstable_useModal/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/unstable_useModal/index.js" was ignored.
+node_modules/@mui/material/Popper/Popper.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Popper/Popper.js" was ignored.
+node_modules/@mui/material/Paper/Paper.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Paper/Paper.js" was ignored.
+node_modules/@mui/material/IconButton/IconButton.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/IconButton/IconButton.js" was ignored.
+node_modules/@mui/material/InputBase/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/InputBase/index.js" was ignored.
+node_modules/@mui/material/Chip/Chip.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Chip/Chip.js" was ignored.
+node_modules/@mui/material/styles/defaultTheme.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/styles/defaultTheme.js" was ignored.
+node_modules/@mui/material/Input/Input.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Input/Input.js" was ignored.
+node_modules/@mui/material/utils/createSvgIcon.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/utils/createSvgIcon.js" was ignored.
+node_modules/@mui/material/OutlinedInput/OutlinedInput.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/OutlinedInput/OutlinedInput.js" was ignored.
+node_modules/@mui/material/InputLabel/InputLabel.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/InputLabel/InputLabel.js" was ignored.
+node_modules/@mui/material/FormControl/FormControl.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/FormControl/FormControl.js" was ignored.
+node_modules/@mui/material/FormControl/useFormControl.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/FormControl/useFormControl.js" was ignored.
+node_modules/@mui/material/FormHelperText/FormHelperText.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/FormHelperText/FormHelperText.js" was ignored.
+node_modules/@mui/material/Select/Select.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Select/Select.js" was ignored.
+node_modules/@mui/material/FilledInput/FilledInput.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/FilledInput/FilledInput.js" was ignored.
+node_modules/@nextui-org/react-utils/dist/chunk-3TAVD5Y3.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/react-utils/dist/chunk-3TAVD5Y3.mjs" was ignored.
+node_modules/@nextui-org/react-utils/dist/chunk-LL7CBZ2S.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/react-utils/dist/chunk-LL7CBZ2S.mjs" was ignored.
+node_modules/@nextui-org/react-utils/dist/chunk-3XT5V4LF.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/react-utils/dist/chunk-3XT5V4LF.mjs" was ignored.
+node_modules/@nextui-org/react-utils/dist/chunk-CIZQCQPA.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/react-utils/dist/chunk-CIZQCQPA.mjs" was ignored.
+node_modules/@nextui-org/framer-transitions/dist/chunk-E4GWTEX4.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/framer-transitions/dist/chunk-E4GWTEX4.mjs" was ignored.
+node_modules/@nextui-org/aria-utils/dist/chunk-PCPL3WJ4.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/aria-utils/dist/chunk-PCPL3WJ4.mjs" was ignored.
+node_modules/@nextui-org/aria-utils/dist/chunk-S2FXLKJY.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/aria-utils/dist/chunk-S2FXLKJY.mjs" was ignored.
+node_modules/@nextui-org/ripple/dist/chunk-HBCH5SF5.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/ripple/dist/chunk-HBCH5SF5.mjs" was ignored.
+node_modules/@nextui-org/ripple/dist/chunk-XDVZSKPD.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/ripple/dist/chunk-XDVZSKPD.mjs" was ignored.
+node_modules/@nextui-org/aria-utils/dist/chunk-ICXN7KNJ.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/aria-utils/dist/chunk-ICXN7KNJ.mjs" was ignored.
+node_modules/@nextui-org/aria-utils/dist/chunk-GJQTIVYB.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/aria-utils/dist/chunk-GJQTIVYB.mjs" was ignored.
+node_modules/@nextui-org/aria-utils/dist/chunk-3MION23H.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/aria-utils/dist/chunk-3MION23H.mjs" was ignored.
+node_modules/@nextui-org/aria-utils/dist/chunk-F2R7RNPM.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/aria-utils/dist/chunk-F2R7RNPM.mjs" was ignored.
+node_modules/@nextui-org/aria-utils/dist/chunk-G3UXCW6V.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/aria-utils/dist/chunk-G3UXCW6V.mjs" was ignored.
+node_modules/@nextui-org/aria-utils/dist/chunk-DE4KHMGD.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/aria-utils/dist/chunk-DE4KHMGD.mjs" was ignored.
+node_modules/@nextui-org/aria-utils/dist/chunk-WQVQ7P2I.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/aria-utils/dist/chunk-WQVQ7P2I.mjs" was ignored.
+node_modules/@nextui-org/aria-utils/dist/chunk-EZZDOVTE.mjs (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@nextui-org/aria-utils/dist/chunk-EZZDOVTE.mjs" was ignored.
+node_modules/@mui/material/utils/useEnhancedEffect.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/utils/useEnhancedEffect.js" was ignored.
+node_modules/@mui/utils/esm/useEnhancedEffect/useEnhancedEffect.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/utils/esm/useEnhancedEffect/useEnhancedEffect.js" was ignored.
+node_modules/@mui/utils/esm/useEventCallback/useEventCallback.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/utils/esm/useEventCallback/useEventCallback.js" was ignored.
+node_modules/@mui/utils/esm/useForkRef/useForkRef.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/utils/esm/useForkRef/useForkRef.js" was ignored.
+node_modules/@mui/utils/esm/useId/useId.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/utils/esm/useId/useId.js" was ignored.
+node_modules/@mui/utils/esm/useControlled/useControlled.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/utils/esm/useControlled/useControlled.js" was ignored.
+node_modules/@mui/material/ButtonBase/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/ButtonBase/index.js" was ignored.
+node_modules/@mui/material/Button/Button.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Button/Button.js" was ignored.
+node_modules/@mui/material/TabScrollButton/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/TabScrollButton/index.js" was ignored.
+node_modules/@mui/material/utils/useEventCallback.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/utils/useEventCallback.js" was ignored.
+node_modules/@mui/material/Tabs/ScrollbarSize.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Tabs/ScrollbarSize.js" was ignored.
+node_modules/@mui/material/utils/useId.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/utils/useId.js" was ignored.
+node_modules/@mui/material/utils/useControlled.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/utils/useControlled.js" was ignored.
+node_modules/@mui/material/utils/useIsFocusVisible.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/utils/useIsFocusVisible.js" was ignored.
+node_modules/@mui/styled-engine/StyledEngineProvider/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/styled-engine/StyledEngineProvider/index.js" was ignored.
+node_modules/@mui/styled-engine/GlobalStyles/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/styled-engine/GlobalStyles/index.js" was ignored.
+node_modules/@mui/system/esm/GlobalStyles/GlobalStyles.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/system/esm/GlobalStyles/GlobalStyles.js" was ignored.
+node_modules/@mui/system/esm/Box/Box.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/system/esm/Box/Box.js" was ignored.
+node_modules/@mui/system/esm/useThemeProps/useThemeProps.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/system/esm/useThemeProps/useThemeProps.js" was ignored.
+node_modules/@mui/system/esm/ThemeProvider/ThemeProvider.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/system/esm/ThemeProvider/ThemeProvider.js" was ignored.
+node_modules/@mui/system/esm/cssVars/useCurrentColorScheme.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/system/esm/cssVars/useCurrentColorScheme.js" was ignored.
+node_modules/@mui/system/esm/Container/Container.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/system/esm/Container/Container.js" was ignored.
+node_modules/@mui/base/utils/ClassNameConfigurator.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/utils/ClassNameConfigurator.js" was ignored.
+node_modules/@mui/base/utils/useSlotProps.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/utils/useSlotProps.js" was ignored.
+node_modules/@mui/base/Button/Button.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Button/Button.js" was ignored.
+node_modules/@mui/base/Badge/Badge.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Badge/Badge.js" was ignored.
+node_modules/@mui/base/ClickAwayListener/ClickAwayListener.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/ClickAwayListener/ClickAwayListener.js" was ignored.
+node_modules/@mui/base/FocusTrap/FocusTrap.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/FocusTrap/FocusTrap.js" was ignored.
+node_modules/@mui/base/Dropdown/Dropdown.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Dropdown/Dropdown.js" was ignored.
+node_modules/@mui/base/FormControl/useFormControlContext.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/FormControl/useFormControlContext.js" was ignored.
+node_modules/@mui/base/FormControl/FormControl.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/FormControl/FormControl.js" was ignored.
+node_modules/@mui/base/Input/Input.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Input/Input.js" was ignored.
+node_modules/@mui/base/Menu/Menu.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Menu/Menu.js" was ignored.
+node_modules/@mui/base/MenuButton/MenuButton.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/MenuButton/MenuButton.js" was ignored.
+node_modules/@mui/base/Modal/Modal.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Modal/Modal.js" was ignored.
+node_modules/@mui/base/NoSsr/NoSsr.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/NoSsr/NoSsr.js" was ignored.
+node_modules/@mui/base/MenuItem/MenuItem.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/MenuItem/MenuItem.js" was ignored.
+node_modules/@mui/base/Unstable_NumberInput/NumberInput.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Unstable_NumberInput/NumberInput.js" was ignored.
+node_modules/@mui/base/OptionGroup/OptionGroup.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/OptionGroup/OptionGroup.js" was ignored.
+node_modules/@mui/base/Option/Option.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Option/Option.js" was ignored.
+node_modules/@mui/base/Portal/Portal.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Portal/Portal.js" was ignored.
+node_modules/@mui/base/Unstable_Popup/Popup.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Unstable_Popup/Popup.js" was ignored.
+node_modules/@mui/base/Popper/Popper.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Popper/Popper.js" was ignored.
+node_modules/@mui/base/Slider/Slider.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Slider/Slider.js" was ignored.
+node_modules/@mui/base/Select/Select.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Select/Select.js" was ignored.
+node_modules/@mui/base/Switch/Switch.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Switch/Switch.js" was ignored.
+node_modules/@mui/base/TablePagination/TablePagination.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/TablePagination/TablePagination.js" was ignored.
+node_modules/@mui/base/TablePagination/TablePaginationActions.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/TablePagination/TablePaginationActions.js" was ignored.
+node_modules/@mui/base/Snackbar/Snackbar.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Snackbar/Snackbar.js" was ignored.
+node_modules/@mui/base/TabPanel/TabPanel.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/TabPanel/TabPanel.js" was ignored.
+node_modules/@mui/base/TabsList/TabsList.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/TabsList/TabsList.js" was ignored.
+node_modules/@mui/base/Tab/Tab.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Tab/Tab.js" was ignored.
+node_modules/@mui/base/Tabs/Tabs.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/Tabs/Tabs.js" was ignored.
+node_modules/@mui/base/TextareaAutosize/TextareaAutosize.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/TextareaAutosize/TextareaAutosize.js" was ignored.
+node_modules/@mui/base/useBadge/useBadge.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useBadge/useBadge.js" was ignored.
+node_modules/@mui/base/useAutocomplete/useAutocomplete.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useAutocomplete/useAutocomplete.js" was ignored.
+node_modules/@mui/base/useDropdown/useDropdown.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useDropdown/useDropdown.js" was ignored.
+node_modules/@mui/base/useButton/useButton.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useButton/useButton.js" was ignored.
+node_modules/@mui/base/useMenu/useMenu.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useMenu/useMenu.js" was ignored.
+node_modules/@mui/base/useInput/useInput.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useInput/useInput.js" was ignored.
+node_modules/@mui/base/useMenu/MenuProvider.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useMenu/MenuProvider.js" was ignored.
+node_modules/@mui/base/useMenuButton/useMenuButton.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useMenuButton/useMenuButton.js" was ignored.
+node_modules/@mui/base/useMenuItem/useMenuItem.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useMenuItem/useMenuItem.js" was ignored.
+node_modules/@mui/base/useOption/useOption.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useOption/useOption.js" was ignored.
+node_modules/@mui/base/unstable_useNumberInput/useNumberInput.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/unstable_useNumberInput/useNumberInput.js" was ignored.
+node_modules/@mui/base/useSelect/useSelect.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useSelect/useSelect.js" was ignored.
+node_modules/@mui/base/useSlider/useSlider.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useSlider/useSlider.js" was ignored.
+node_modules/@mui/base/useSnackbar/useSnackbar.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useSnackbar/useSnackbar.js" was ignored.
+node_modules/@mui/base/useSelect/SelectProvider.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useSelect/SelectProvider.js" was ignored.
+node_modules/@mui/base/useSwitch/useSwitch.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useSwitch/useSwitch.js" was ignored.
+node_modules/@mui/base/useTab/useTab.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useTab/useTab.js" was ignored.
+node_modules/@mui/base/useTabPanel/useTabPanel.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useTabPanel/useTabPanel.js" was ignored.
+node_modules/@mui/base/useTabs/TabsProvider.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useTabs/TabsProvider.js" was ignored.
+node_modules/@mui/base/useTabs/useTabs.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useTabs/useTabs.js" was ignored.
+node_modules/@mui/base/useTabsList/useTabsList.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useTabsList/useTabsList.js" was ignored.
+node_modules/@mui/base/unstable_useModal/useModal.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/unstable_useModal/useModal.js" was ignored.
+node_modules/@mui/base/useTabsList/TabsListProvider.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useTabsList/TabsListProvider.js" was ignored.
+node_modules/@mui/material/internal/svg-icons/Cancel.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/internal/svg-icons/Cancel.js" was ignored.
+node_modules/@mui/material/SvgIcon/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/SvgIcon/index.js" was ignored.
+node_modules/@mui/material/InputBase/InputBase.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/InputBase/InputBase.js" was ignored.
+node_modules/@mui/material/FormLabel/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/FormLabel/index.js" was ignored.
+node_modules/@mui/material/OutlinedInput/NotchedOutline.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/OutlinedInput/NotchedOutline.js" was ignored.
+node_modules/@mui/material/Select/SelectInput.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Select/SelectInput.js" was ignored.
+node_modules/@mui/material/NativeSelect/NativeSelectInput.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/NativeSelect/NativeSelectInput.js" was ignored.
+node_modules/@mui/material/TabScrollButton/TabScrollButton.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/TabScrollButton/TabScrollButton.js" was ignored.
+node_modules/@mui/material/ButtonBase/ButtonBase.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/ButtonBase/ButtonBase.js" was ignored.
+node_modules/@mui/styled-engine/GlobalStyles/GlobalStyles.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/styled-engine/GlobalStyles/GlobalStyles.js" was ignored.
+node_modules/@mui/styled-engine/StyledEngineProvider/StyledEngineProvider.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/styled-engine/StyledEngineProvider/StyledEngineProvider.js" was ignored.
+node_modules/@mui/base/useList/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useList/index.js" was ignored.
+node_modules/@mui/base/utils/useControllableReducer.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/utils/useControllableReducer.js" was ignored.
+node_modules/@mui/base/utils/useCompound.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/utils/useCompound.js" was ignored.
+node_modules/@mui/base/utils/useCompoundItem.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/utils/useCompoundItem.js" was ignored.
+node_modules/@mui/material/SvgIcon/SvgIcon.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/SvgIcon/SvgIcon.js" was ignored.
+node_modules/@mui/material/GlobalStyles/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/GlobalStyles/index.js" was ignored.
+node_modules/@mui/material/FormLabel/FormLabel.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/FormLabel/FormLabel.js" was ignored.
+node_modules/@mui/material/Menu/Menu.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Menu/Menu.js" was ignored.
+node_modules/@mui/material/Divider/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Divider/index.js" was ignored.
+node_modules/@mui/material/InputAdornment/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/InputAdornment/index.js" was ignored.
+node_modules/@mui/material/internal/svg-icons/KeyboardArrowLeft.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/internal/svg-icons/KeyboardArrowLeft.js" was ignored.
+node_modules/@mui/material/internal/svg-icons/KeyboardArrowRight.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/internal/svg-icons/KeyboardArrowRight.js" was ignored.
+node_modules/@mui/material/ButtonBase/TouchRipple.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/ButtonBase/TouchRipple.js" was ignored.
+node_modules/@mui/base/useList/useList.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useList/useList.js" was ignored.
+node_modules/@mui/base/useList/useListItem.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useList/useListItem.js" was ignored.
+node_modules/@mui/material/MenuList/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/MenuList/index.js" was ignored.
+node_modules/@mui/material/Popover/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Popover/index.js" was ignored.
+node_modules/@mui/material/GlobalStyles/GlobalStyles.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/GlobalStyles/GlobalStyles.js" was ignored.
+node_modules/@mui/material/Divider/Divider.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Divider/Divider.js" was ignored.
+node_modules/@mui/material/Grow/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Grow/index.js" was ignored.
+node_modules/@mui/material/Fade/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Fade/index.js" was ignored.
+node_modules/@mui/material/InputAdornment/InputAdornment.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/InputAdornment/InputAdornment.js" was ignored.
+node_modules/@mui/material/DialogContent/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/DialogContent/index.js" was ignored.
+node_modules/@mui/material/Dialog/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Dialog/index.js" was ignored.
+node_modules/@mui/material/ButtonBase/Ripple.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/ButtonBase/Ripple.js" was ignored.
+node_modules/@mui/base/utils/useForcedRerendering.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/utils/useForcedRerendering.js" was ignored.
+node_modules/@mui/base/utils/useLatest.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/utils/useLatest.js" was ignored.
+node_modules/@mui/base/useList/useListChangeNotifiers.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/useList/useListChangeNotifiers.js" was ignored.
+node_modules/@mui/base/utils/useTextNavigation.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/utils/useTextNavigation.js" was ignored.
+node_modules/@mui/material/MenuList/MenuList.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/MenuList/MenuList.js" was ignored.
+node_modules/@mui/material/Popover/Popover.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Popover/Popover.js" was ignored.
+node_modules/@mui/material/Grow/Grow.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Grow/Grow.js" was ignored.
+node_modules/@mui/material/Fade/Fade.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Fade/Fade.js" was ignored.
+node_modules/@mui/material/DialogContent/DialogContent.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/DialogContent/DialogContent.js" was ignored.
+node_modules/@mui/material/Dialog/Dialog.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Dialog/Dialog.js" was ignored.
+node_modules/@mui/material/MenuItem/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/MenuItem/index.js" was ignored.
+node_modules/@mui/base/utils/useMessageBus.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/base/utils/useMessageBus.js" was ignored.
+node_modules/@mui/material/List/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/List/index.js" was ignored.
+node_modules/@mui/material/Modal/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Modal/index.js" was ignored.
+node_modules/@mui/material/Backdrop/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Backdrop/index.js" was ignored.
+node_modules/@mui/material/MenuItem/MenuItem.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/MenuItem/MenuItem.js" was ignored.
+node_modules/@mui/material/List/List.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/List/List.js" was ignored.
+node_modules/@mui/material/Modal/Modal.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Modal/Modal.js" was ignored.
+node_modules/@mui/material/Backdrop/Backdrop.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/Backdrop/Backdrop.js" was ignored.
+node_modules/@mui/material/List/ListContext.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/List/ListContext.js" was ignored.
+node_modules/@mui/material/ListItem/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/ListItem/index.js" was ignored.
+node_modules/@mui/material/DialogActions/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/DialogActions/index.js" was ignored.
+node_modules/@mui/material/ListItemIcon/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/ListItemIcon/index.js" was ignored.
+node_modules/@mui/material/ListItemText/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/ListItemText/index.js" was ignored.
+node_modules/@mui/material/DialogActions/DialogActions.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/DialogActions/DialogActions.js" was ignored.
+node_modules/@mui/material/ListItem/ListItem.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/ListItem/ListItem.js" was ignored.
+node_modules/@mui/material/ListItemIcon/ListItemIcon.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/ListItemIcon/ListItemIcon.js" was ignored.
+node_modules/@mui/material/ListItemText/ListItemText.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/ListItemText/ListItemText.js" was ignored.
+node_modules/@mui/material/ListItemButton/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/ListItemButton/index.js" was ignored.
+node_modules/@mui/material/ListItemSecondaryAction/index.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/ListItemSecondaryAction/index.js" was ignored.
+node_modules/@mui/material/ListItemSecondaryAction/ListItemSecondaryAction.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/ListItemSecondaryAction/ListItemSecondaryAction.js" was ignored.
+node_modules/@mui/material/ListItemButton/ListItemButton.js (1:0) Module level directives cause errors when bundled, "use client" in "node_modules/@mui/material/ListItemButton/ListItemButton.js" was ignored.
+node_modules/telejson/dist/index.mjs (1413:15) Use of eval in "node_modules/telejson/dist/index.mjs" is strongly discouraged as it poses security risks and may cause issues with minification.
+node_modules/telejson/dist/index.mjs (1416:18) Use of eval in "node_modules/telejson/dist/index.mjs" is strongly discouraged as it poses security risks and may cause issues with minification.
+[32m✓[39m 2275 modules transformed.
+rendering chunks...
+computing gzip size...
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[32massets/youtube-5361ca32.svg                                    [39m[1m[2m  0.73 kB[22m[1m[22m[2m │ gzip:   0.36 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[32massets/tutorials-f0fc7b4f.svg                                  [39m[1m[2m  1.28 kB[22m[1m[22m[2m │ gzip:   0.63 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[32massets/discord-02fd6b8c.svg                                    [39m[1m[2m  2.43 kB[22m[1m[22m[2m │ gzip:   1.15 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[32massets/github-2aae4a19.svg                                     [39m[1m[2m  2.73 kB[22m[1m[22m[2m │ gzip:   1.28 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[32massets/context-c612d889.png                                    [39m[1m[2m  6.12 kB[22m[1m[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[32massets/audioPrueba-52827ae1.ogg                                [39m[1m[2m  6.15 kB[22m[1m[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[32massets/styling-c83082e0.png                                    [39m[1m[2m  7.24 kB[22m[1m[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[32miframe.html                                                    [39m[1m[2m 12.75 kB[22m[1m[22m[2m │ gzip:   3.57 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[32massets/docs-5b0c7100.png                                       [39m[1m[2m 27.88 kB[22m[1m[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[32massets/share-b59d6c77.png                                      [39m[1m[2m 40.77 kB[22m[1m[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[32massets/accessibility-cd6d60f7.png                              [39m[1m[2m 42.34 kB[22m[1m[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[32massets/figma-plugin-b0a5ad2d.png                               [39m[1m[2m 44.25 kB[22m[1m[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[32massets/theming-b6e819c3.png                                    [39m[1m[2m 44.37 kB[22m[1m[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[32massets/testing-6a59f681.png                                    [39m[1m[2m 49.31 kB[22m[1m[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[32massets/addon-library-bc7ba705.png                              [39m[1m[2m467.37 kB[22m[1m[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[35massets/Sidebar-e705cd00.css                                    [39m[1m[2m  0.23 kB[22m[1m[22m[2m │ gzip:   0.14 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[35massets/preview-9b042585.css                                    [39m[1m[2m158.93 kB[22m[1m[22m[2m │ gzip:  20.53 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/chunk-CAFRINWI-0aa94a04.js                              [39m[1m[2m  0.17 kB[22m[1m[22m[2m │ gzip:   0.17 kB[22m[2m │ map:     0.90 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/preview-b675e47a.js                                     [39m[1m[2m  0.19 kB[22m[1m[22m[2m │ gzip:   0.19 kB[22m[2m │ map:     0.69 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/index-9eea8125.js                                       [39m[1m[2m  0.25 kB[22m[1m[22m[2m │ gzip:   0.20 kB[22m[2m │ map:     0.10 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/RightSideBar.component-4080c0b6.js                      [39m[1m[2m  0.37 kB[22m[1m[22m[2m │ gzip:   0.29 kB[22m[2m │ map:     0.85 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/WithTooltip-J57HCPYA-c9c4b488.js                        [39m[1m[2m  0.39 kB[22m[1m[22m[2m │ gzip:   0.25 kB[22m[2m │ map:     0.11 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/chunk-7F3ZLNJ6-b251322a.js                              [39m[1m[2m  0.40 kB[22m[1m[22m[2m │ gzip:   0.31 kB[22m[2m │ map:     1.16 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/syntaxhighlighter-PONEFOSF-b57bf4e1.js                  [39m[1m[2m  0.41 kB[22m[1m[22m[2m │ gzip:   0.27 kB[22m[2m │ map:     0.12 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/chunk-3XT5V4LF-0c049f00.js                              [39m[1m[2m  0.49 kB[22m[1m[22m[2m │ gzip:   0.37 kB[22m[2m │ map:     1.65 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/preview-7b05b339.js                                     [39m[1m[2m  0.52 kB[22m[1m[22m[2m │ gzip:   0.33 kB[22m[2m │ map:     0.54 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/index-a1cf9e47.js                                       [39m[1m[2m  0.53 kB[22m[1m[22m[2m │ gzip:   0.34 kB[22m[2m │ map:     4.30 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/react-18-38063e1e.js                                    [39m[1m[2m  0.59 kB[22m[1m[22m[2m │ gzip:   0.38 kB[22m[2m │ map:     2.66 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/RightSideBar.stories-dbee02fe.js                        [39m[1m[2m  0.60 kB[22m[1m[22m[2m │ gzip:   0.38 kB[22m[2m │ map:     0.11 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/preview-87eac49b.js                                     [39m[1m[2m  0.68 kB[22m[1m[22m[2m │ gzip:   0.48 kB[22m[2m │ map:     3.96 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/_commonjsHelpers-de833af9.js                            [39m[1m[2m  0.75 kB[22m[1m[22m[2m │ gzip:   0.43 kB[22m[2m │ map:     0.11 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/index-356e4a49.js                                       [39m[1m[2m  0.81 kB[22m[1m[22m[2m │ gzip:   0.51 kB[22m[2m │ map:     3.28 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/index-8d47fad6.js                                       [39m[1m[2m  0.84 kB[22m[1m[22m[2m │ gzip:   0.55 kB[22m[2m │ map:     4.15 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/import-0aa8787c.js                                      [39m[1m[2m  0.85 kB[22m[1m[22m[2m │ gzip:   0.50 kB[22m[2m │ map:     5.99 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/preview-b3c37142.js                                     [39m[1m[2m  0.90 kB[22m[1m[22m[2m │ gzip:   0.59 kB[22m[2m │ map:     3.01 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/jsx-runtime-03b4ddbf.js                                 [39m[1m[2m  1.02 kB[22m[1m[22m[2m │ gzip:   0.64 kB[22m[2m │ map:     2.34 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/SwitchButton.component-8d0dce2b.js                      [39m[1m[2m  1.04 kB[22m[1m[22m[2m │ gzip:   0.54 kB[22m[2m │ map:     1.73 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/DocsRenderer-3PUGWF3O-8ff1f193.js                       [39m[1m[2m  1.25 kB[22m[1m[22m[2m │ gzip:   0.69 kB[22m[2m │ map:     2.60 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/NavbarSmallScreen.component-69987a42.js                 [39m[1m[2m  1.39 kB[22m[1m[22m[2m │ gzip:   0.63 kB[22m[2m │ map:     3.03 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/iconBase-1d38e9b4.js                                    [39m[1m[2m  1.56 kB[22m[1m[22m[2m │ gzip:   0.79 kB[22m[2m │ map:     5.21 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/RegenerateButton.component-52555216.js                  [39m[1m[2m  1.68 kB[22m[1m[22m[2m │ gzip:   0.78 kB[22m[2m │ map:     3.38 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/Navbar.component-fee61e40.js                            [39m[1m[2m  1.72 kB[22m[1m[22m[2m │ gzip:   0.85 kB[22m[2m │ map:     3.00 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/DefaultOptionCard.component-5a63bc1d.js                 [39m[1m[2m  1.72 kB[22m[1m[22m[2m │ gzip:   0.86 kB[22m[2m │ map:     2.92 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/Input.stories-7f412d22.js                               [39m[1m[2m  2.33 kB[22m[1m[22m[2m │ gzip:   1.11 kB[22m[2m │ map:     8.57 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/preview-bed967c6.js                                     [39m[1m[2m  2.38 kB[22m[1m[22m[2m │ gzip:   1.24 kB[22m[2m │ map:    11.11 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/SwitchButton.stories-d2045891.js                        [39m[1m[2m  2.48 kB[22m[1m[22m[2m │ gzip:   1.02 kB[22m[2m │ map:     0.12 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/SidebarConversation.component-26e1281c.js               [39m[1m[2m  2.49 kB[22m[1m[22m[2m │ gzip:   1.00 kB[22m[2m │ map:     5.21 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/index-d37d4223.js                                       [39m[1m[2m  2.63 kB[22m[1m[22m[2m │ gzip:   1.30 kB[22m[2m │ map:     7.50 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/InputWidthButton.component-52a27d66.js                  [39m[1m[2m  2.83 kB[22m[1m[22m[2m │ gzip:   1.37 kB[22m[2m │ map: 1,062.51 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/FeedbackModal.stories-2ed6d2d9.js                       [39m[1m[2m  2.88 kB[22m[1m[22m[2m │ gzip:   1.27 kB[22m[2m │ map:     4.79 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/Navbar.stories-c9308d97.js                              [39m[1m[2m  3.03 kB[22m[1m[22m[2m │ gzip:   1.33 kB[22m[2m │ map:     0.11 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/NavbarSmallScreen.stories-09cf71a7.js                   [39m[1m[2m  3.07 kB[22m[1m[22m[2m │ gzip:   1.23 kB[22m[2m │ map:     0.12 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/preview-15309724.js                                     [39m[1m[2m  3.22 kB[22m[1m[22m[2m │ gzip:   1.39 kB[22m[2m │ map:    10.28 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/RegenerateButton.stories-c8bdce15.js                    [39m[1m[2m  3.23 kB[22m[1m[22m[2m │ gzip:   1.28 kB[22m[2m │ map:     0.13 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/InputWidthButton.stories-7ff20533.js                    [39m[1m[2m  3.28 kB[22m[1m[22m[2m │ gzip:   1.34 kB[22m[2m │ map:     0.12 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/DefaultOptionsCard.stories-ef899b9f.js                  [39m[1m[2m  3.52 kB[22m[1m[22m[2m │ gzip:   1.47 kB[22m[2m │ map:     0.12 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/ScrollButton.stories-4de31ef8.js                        [39m[1m[2m  3.56 kB[22m[1m[22m[2m │ gzip:   1.45 kB[22m[2m │ map:     2.64 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/HelpButton.stories-ee8417c6.js                          [39m[1m[2m  3.77 kB[22m[1m[22m[2m │ gzip:   1.52 kB[22m[2m │ map:     0.11 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/SidebarConversation.stories-6aa56fe8.js                 [39m[1m[2m  4.38 kB[22m[1m[22m[2m │ gzip:   1.56 kB[22m[2m │ map:     0.13 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/Feedback.stories-c6b182db.js                            [39m[1m[2m  5.10 kB[22m[1m[22m[2m │ gzip:   1.42 kB[22m[2m │ map:     3.73 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/Audio.stories-e4da9567.js                               [39m[1m[2m  5.50 kB[22m[1m[22m[2m │ gzip:   2.13 kB[22m[2m │ map:   263.29 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/Toggle.stories-2da810b2.js                              [39m[1m[2m  5.75 kB[22m[1m[22m[2m │ gzip:   2.14 kB[22m[2m │ map:     0.11 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/Toggle.component-bb71097a.js                            [39m[1m[2m  6.01 kB[22m[1m[22m[2m │ gzip:   2.11 kB[22m[2m │ map:    13.31 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/index-76fb7be0.js                                       [39m[1m[2m  7.21 kB[22m[1m[22m[2m │ gzip:   2.95 kB[22m[2m │ map:    15.75 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/preview-b8d6c68d.js                                     [39m[1m[2m  7.67 kB[22m[1m[22m[2m │ gzip:   1.59 kB[22m[2m │ map:    14.26 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/preview-2059b184.js                                     [39m[1m[2m  8.32 kB[22m[1m[22m[2m │ gzip:   3.20 kB[22m[2m │ map:    29.49 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/ShareLinkToChat.stories-86320d9a.js                     [39m[1m[2m  9.31 kB[22m[1m[22m[2m │ gzip:   2.60 kB[22m[2m │ map:     9.16 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/SettingsModal.stories-941be14f.js                       [39m[1m[2m 10.34 kB[22m[1m[22m[2m │ gzip:   2.95 kB[22m[2m │ map:    12.21 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/CustomInstructions.stories-657f5d72.js                  [39m[1m[2m 11.33 kB[22m[1m[22m[2m │ gzip:   3.66 kB[22m[2m │ map: 1,714.04 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/Sidebar.component-7d6bbf81.js                           [39m[1m[2m 14.17 kB[22m[1m[22m[2m │ gzip:   4.22 kB[22m[2m │ map:    40.15 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/iframe-14c83306.js                                      [39m[1m[2m 14.32 kB[22m[1m[22m[2m │ gzip:   2.87 kB[22m[2m │ map:    10.76 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/GlobalScrollAreaStyles-UY5SB7EJ-ac747455.js             [39m[1m[2m 15.00 kB[22m[1m[22m[2m │ gzip:   2.78 kB[22m[2m │ map:    21.44 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/Configure-d1f399c0.js                                   [39m[1m[2m 16.98 kB[22m[1m[22m[2m │ gzip:   7.72 kB[22m[2m │ map:    27.53 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/chunk-NDPHUITX-a57a686a.js                              [39m[1m[2m 17.72 kB[22m[1m[22m[2m │ gzip:   4.88 kB[22m[2m │ map:    61.13 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/preview-6751e51d.js                                     [39m[1m[2m 21.12 kB[22m[1m[22m[2m │ gzip:   7.00 kB[22m[2m │ map:    68.41 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/import-66b13c17.js                                      [39m[1m[2m 26.34 kB[22m[1m[22m[2m │ gzip:   8.21 kB[22m[2m │ map:   146.32 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/chunk-3TAVD5Y3-02d701d2.js                              [39m[1m[2m 27.48 kB[22m[1m[22m[2m │ gzip:   9.44 kB[22m[2m │ map:   136.76 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/LayoutScreen.stories-549e7c7b.js                        [39m[1m[2m 27.50 kB[22m[1m[22m[2m │ gzip:   7.51 kB[22m[2m │ map:    45.42 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/OverlayScrollbars-GZGLA7DL-14afcb95.js                  [39m[1m[2m 28.95 kB[22m[1m[22m[2m │ gzip:  14.20 kB[22m[2m │ map:   108.16 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/Color-6VNJS4EI-1b800a3a.js                              [39m[1m[2m 31.00 kB[22m[1m[22m[2m │ gzip:  11.57 kB[22m[2m │ map:   113.12 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/InputWithAutoComplete.stories-aba36cca.js               [39m[1m[2m 36.32 kB[22m[1m[22m[2m │ gzip:  11.54 kB[22m[2m │ map:   116.59 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/Select.stories-639b7580.js                              [39m[1m[2m 38.00 kB[22m[1m[22m[2m │ gzip:  11.57 kB[22m[2m │ map:   133.59 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/chunk-FHPW6X44-ec3ed69f.js                              [39m[1m[2m 42.18 kB[22m[1m[22m[2m │ gzip:  13.49 kB[22m[2m │ map:   285.28 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/HelpButton.component-19548276.js                        [39m[1m[2m 45.45 kB[22m[1m[22m[2m │ gzip:  14.90 kB[22m[2m │ map:   265.81 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/Sidebar.stories-6ec91ca9.js                             [39m[1m[2m 58.23 kB[22m[1m[22m[2m │ gzip:   9.58 kB[22m[2m │ map:     0.64 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/Table.stories-6a3485c9.js                               [39m[1m[2m 85.23 kB[22m[1m[22m[2m │ gzip:  26.66 kB[22m[2m │ map:   427.37 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/import-6a4ab66f.js                                      [39m[1m[2m147.02 kB[22m[1m[22m[2m │ gzip:  49.42 kB[22m[2m │ map:   791.90 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/InputGoogleMapsAutoCompleteWhitMap.stories-e4b2ed9b.js  [39m[1m[2m150.25 kB[22m[1m[22m[2m │ gzip:  34.40 kB[22m[2m │ map:   564.89 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/Chip-9428ff8e.js                                        [39m[1m[2m181.06 kB[22m[1m[22m[2m │ gzip:  59.50 kB[22m[2m │ map: 1,012.52 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/index-ffc7e5ff.js                                       [39m[1m[2m212.55 kB[22m[1m[22m[2m │ gzip:  66.45 kB[22m[2m │ map:   655.52 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/DatePicker.stories-cb7f5f9a.js                          [39m[1m[2m213.40 kB[22m[1m[22m[2m │ gzip:  63.53 kB[22m[2m │ map: 1,007.69 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/config-5449214f.js                                      [39m[1m[2m213.48 kB[22m[1m[22m[2m │ gzip:  66.38 kB[22m[2m │ map:   803.84 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/index-9fa52ec2.js                                       [39m[1m[33m518.12 kB[39m[22m[2m │ gzip: 169.60 kB[22m[2m │ map: 1,487.66 kB[22m
+[2m../../../../AppData/Local/Temp/chromatic--34228-DmlBdvAAcT06/[22m[36massets/formatter-SWP5E3XI-e3169d20.js                          [39m[1m[33m601.59 kB[39m[22m[2m │ gzip: 185.02 kB[22m[2m │ map: 1,318.61 kB[22m
+[33m
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+[32m✓ built in 50.44s[39m
+info => Output directory: C:\Users\alexi\AppData\Local\Temp\chromatic--34228-DmlBdvAAcT06
