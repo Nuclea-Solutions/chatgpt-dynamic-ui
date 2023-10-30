@@ -1,0 +1,13 @@
+#content_sidebar::-webkit-scrollbar {
+	background: none;
+	width: 10px;
+}
+#content_sidebar::-webkit-scrollbar-thumb {
+	background: #ccc;
+	border-radius: 5px;
+	visibility: hidden;
+}
+
+#content_sidebar:hover::-webkit-scrollbar-thumb {
+	visibility: visible;
+}

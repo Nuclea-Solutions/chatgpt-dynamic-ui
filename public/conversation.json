@@ -1,0 +1,4496 @@
+[
+	{
+		"_id": {
+			"$oid": "6516f8b5ae4d712e4eb38d18"
+		},
+		"title": "Tabla Datos Muestra 6",
+		"create_time": {
+			"$numberDouble": "1691425341.01132"
+		},
+		"update_time": {
+			"$numberDouble": "1691425353.0"
+		},
+		"mapping": {
+			"f8d137c5-930b-4dd8-8c28-87bb2af82160": {
+				"id": "f8d137c5-930b-4dd8-8c28-87bb2af82160",
+				"message": {
+					"id": "f8d137c5-930b-4dd8-8c28-87bb2af82160",
+					"author": {
+						"role": "system",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1691425341.011647"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							""
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {},
+					"recipient": "all"
+				},
+				"parent": "aaa112db-e3e9-46f9-8a62-84b4f19c8cb5",
+				"children": [
+					"aaa2b4c0-a5ca-4c87-a243-99d0c8c40e74"
+				]
+			},
+			"aaa112db-e3e9-46f9-8a62-84b4f19c8cb5": {
+				"id": "aaa112db-e3e9-46f9-8a62-84b4f19c8cb5",
+				"message": null,
+				"parent": null,
+				"children": [
+					"f8d137c5-930b-4dd8-8c28-87bb2af82160"
+				]
+			},
+			"aaa2b4c0-a5ca-4c87-a243-99d0c8c40e74": {
+				"id": "aaa2b4c0-a5ca-4c87-a243-99d0c8c40e74",
+				"message": {
+					"id": "aaa2b4c0-a5ca-4c87-a243-99d0c8c40e74",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1691425341.029331"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"genera una tabla con información de muestra, de seis columna"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "f8d137c5-930b-4dd8-8c28-87bb2af82160",
+				"children": [
+					"1d09eeb3-3073-476e-bbae-dbe63421bc87"
+				]
+			},
+			"1d09eeb3-3073-476e-bbae-dbe63421bc87": {
+				"id": "1d09eeb3-3073-476e-bbae-dbe63421bc87",
+				"message": {
+					"id": "1d09eeb3-3073-476e-bbae-dbe63421bc87",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1691425351.374473"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Claro, aquí tienes una tabla de muestra con seis columnas. Utilizaré datos aleatorios para llenarla:\n\n```\n|   Nombre    |   Edad   |    Género   |   Ciudad    |  Profesión  |   Intereses    |\n|-------------|----------|-------------|-------------|-------------|----------------|\n|   Ana       |   28     |   Femenino  |   Madrid    |   Abogada   |   Viajar       |\n|   Pedro     |   35     |   Masculino |   Barcelona |   Ingeniero |   Deportes     |\n|   Laura     |   42     |   Femenino  |   Valencia  |   Médico    |   Lectura      |\n|   Miguel    |   22     |   Masculino |   Sevilla   |   Estudiante|   Música       |\n|   Carmen    |   50     |   Femenino  |   Bilbao    |   Empresaria|   Arte         |\n|   Javier    |   31     |   Masculino |   Zaragoza  |   Arquitecto|   Cocina       |\n```\n\nEsta tabla muestra información de muestra de seis personas, con las columnas: Nombre, Edad, Género, Ciudad, Profesión e Intereses. Los datos son ficticios y se han generado únicamente con el propósito de mostrar cómo podría verse la tabla. Puedes reemplazarlos con la información que desees representar."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop": "<|diff_marker|>"
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "text-davinci-002-render-sha",
+						"parent_id": "aaa2b4c0-a5ca-4c87-a243-99d0c8c40e74",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa2b4c0-a5ca-4c87-a243-99d0c8c40e74",
+				"children": []
+			}
+		},
+		"moderation_results": [],
+		"current_node": "1d09eeb3-3073-476e-bbae-dbe63421bc87",
+		"plugin_ids": null,
+		"id": "fca54f38-98c4-445c-a13d-e7bb4542851c"
+	},
+	{
+		"_id": {
+			"$oid": "6521a668058d1e5872c7ffa7"
+		},
+		"title": "Diagrama AI Aprender Idiomas",
+		"create_time": {
+			"$numberDouble": "1696702225.71237"
+		},
+		"update_time": {
+			"$numberDouble": "1696702254.363491"
+		},
+		"mapping": {
+			"785d9878-1a15-4272-99b1-96dd3328331c": {
+				"id": "785d9878-1a15-4272-99b1-96dd3328331c",
+				"message": {
+					"id": "785d9878-1a15-4272-99b1-96dd3328331c",
+					"author": {
+						"role": "system",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": null,
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							""
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "0.0"
+					},
+					"metadata": {},
+					"recipient": "all"
+				},
+				"parent": "aaa121c5-efa1-4957-882e-2da8e82385da",
+				"children": [
+					"aaa2f08c-0a20-47c5-bd0b-8eaff58074b5"
+				]
+			},
+			"aaa121c5-efa1-4957-882e-2da8e82385da": {
+				"id": "aaa121c5-efa1-4957-882e-2da8e82385da",
+				"message": null,
+				"parent": null,
+				"children": [
+					"785d9878-1a15-4272-99b1-96dd3328331c"
+				]
+			},
+			"aaa2f08c-0a20-47c5-bd0b-8eaff58074b5": {
+				"id": "aaa2f08c-0a20-47c5-bd0b-8eaff58074b5",
+				"message": {
+					"id": "aaa2f08c-0a20-47c5-bd0b-8eaff58074b5",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696702225.713024"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"haceme un diagrama con ai que sirvan para aprender idiomas"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "785d9878-1a15-4272-99b1-96dd3328331c",
+				"children": [
+					"0352beea-a37e-47ee-9682-9b1a73a93c2a"
+				]
+			},
+			"0352beea-a37e-47ee-9682-9b1a73a93c2a": {
+				"id": "0352beea-a37e-47ee-9682-9b1a73a93c2a",
+				"message": {
+					"id": "0352beea-a37e-47ee-9682-9b1a73a93c2a",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696702250.450123"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"{\n  \"q\": \"aprender idiomas\"\n}"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": false,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100265"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4-plugins",
+						"parent_id": "aaa2f08c-0a20-47c5-bd0b-8eaff58074b5",
+						"timestamp_": "absolute"
+					},
+					"recipient": "theresanaiforthat.searchQuery"
+				},
+				"parent": "aaa2f08c-0a20-47c5-bd0b-8eaff58074b5",
+				"children": [
+					"32c24d6a-0047-4275-be7f-c2c385a2b0ac"
+				]
+			},
+			"32c24d6a-0047-4275-be7f-c2c385a2b0ac": {
+				"id": "32c24d6a-0047-4275-be7f-c2c385a2b0ac",
+				"message": {
+					"id": "32c24d6a-0047-4275-be7f-c2c385a2b0ac",
+					"author": {
+						"role": "tool",
+						"name": "theresanaiforthat.searchQuery",
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696702250.451026"
+					},
+					"update_time": {
+						"$numberDouble": "1696702229.9041853"
+					},
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"[{\"name\":\"Fluent\",\"task\":\"Language learning\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/fluent\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Web browsing for language learning.\"},{\"name\":\"Carlos App\",\"task\":\"Language learning\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/carlos-app\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Personalized language tutoring.\"},{\"name\":\"Linguabot\",\"task\":\"Language learning\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/linguabot\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Spanish and Portuguese language learning app.\"},{\"name\":\"Languate\",\"task\":\"Language learning\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/languate\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Enhance language skills and confidence in communication.\"},{\"name\":\"LanguageMate\",\"task\":\"Language learning\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/languagemate\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Chatbot helps practice language with feedback.\"},{\"name\":\"LearnLingo\",\"task\":\"Language learning\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/learnlingo\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Intelligent language learning w\\/ personalized feedback.\"},{\"name\":\"Duolingo Max\",\"task\":\"Language learning\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/duolingo-max\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Science-based personalized language lessons.\"},{\"name\":\"Voz\",\"task\":\"Language learning\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/voz\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Advanced language learning assistant.\"},{\"name\":\"Sheila \",\"task\":\"Spanish lessons\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/sheila\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Spanish learning app on App Store.\"},{\"name\":\"Lorro\",\"task\":\"English lessons\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/lorro\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Language learning technology for English fluency.\"},{\"name\":\"Chatlingo\",\"task\":\"Language learning\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/chatlingo\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Language learning with interactive conversation\"},{\"name\":\"LanguagePro\",\"task\":\"Learning\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/languagepro\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Language learning and assistance.\"},{\"name\":\"Lingobo\",\"task\":\"English lessons\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/lingobo\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Practice language skills with personalized responses.\"},{\"name\":\"Loora\",\"task\":\"English lessons\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/loora\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Personalized English fluency tutor.\"},{\"name\":\"Speak.com\",\"task\":\"Language learning\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/speak-com\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Spoken language learning app with instant feedback.\"},{\"name\":\"Workbookpdf\",\"task\":\"Language learning\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/workbookpdf\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Personalized language learning workbooks with exercises\"},{\"name\":\"LingoCoach\",\"task\":\"Language learning\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/lingocoach\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Immersive conversational language learning\"},{\"name\":\"Converso\",\"task\":\"Language learning\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/converso\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Simulated conversation scenarios for language learning.\"},{\"name\":\"Languify\",\"task\":\"Learning\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/languify\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Enhanced personalized education for outcomes.\"},{\"name\":\"Talkme\",\"task\":\"Learning\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/talkme\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Practice multilingual speaking and listening skills.\"},{\"name\":\"Pronounce\",\"task\":\"Language Learning\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/pronounce\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Boost English fluency, pronunciation, and comprehension.\"},{\"name\":\"Langmob\",\"task\":\"Language learning\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/langmob\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Personalized language lessons & conversations.\"},{\"name\":\"Speakingclubai\",\"task\":\"Communication improvement\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/speakingclubai\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Personalized spoken language practice.\"},{\"name\":\"Langs\",\"task\":\"Language learning\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/langs\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Language learning resources on Apple devices.\"},{\"name\":\"Quazel\",\"task\":\"Language learning\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/quazel\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Language app for achieving conversational fluency.\"},{\"name\":\"Conversly\",\"task\":\"Language learning\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/conversly\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Boost language skills via conversation.\"},{\"name\":\"Tutor AI\",\"task\":\"English lessons\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/tutor-ai\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Refine English speech w\\/ chatbots & live feedback.\"},{\"name\":\"Soofy\",\"task\":\"Language learning\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/soofy\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Enhance language skills: writing, speaking, debating.\"},{\"name\":\"Langchats\",\"task\":\"Language learning\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/langchats\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Language fluency: voice, translation, feedback.\"},{\"name\":\"SpeakAI.cc\",\"task\":\"Language learning\",\"url\":\"https:\\/\\/taaft.com\\/ai\\/speakai-cc\\/?ref=search&term=aprender+idiomas&from=chatgpt\",\"use_case\":\"Language learning with tutoring, grammar correction.\"}]"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"invoked_plugin": {
+							"type": "remote",
+							"namespace": "theresanaiforthat",
+							"plugin_id": "plugin-110f5f4e-0b9d-41b8-ac66-968546e1cce5",
+							"http_response_status": {
+								"$numberInt": "200"
+							}
+						},
+						"message_type": null,
+						"model_slug": "gpt-4-plugins",
+						"parent_id": "0352beea-a37e-47ee-9682-9b1a73a93c2a",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "0352beea-a37e-47ee-9682-9b1a73a93c2a",
+				"children": [
+					"e321b30e-89e5-47c2-97d8-28262cf8660d"
+				]
+			},
+			"e321b30e-89e5-47c2-97d8-28262cf8660d": {
+				"id": "e321b30e-89e5-47c2-97d8-28262cf8660d",
+				"message": {
+					"id": "e321b30e-89e5-47c2-97d8-28262cf8660d",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696702250.451362"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"{\n  \"diagramLanguage\": \"mermaid\",\n  \"diagramType\": \"graph\",\n  \"mermaid\": \"graph TD;\\nA[AI para aprender idiomas];\\nB[Fluent - Navegación web para aprendizaje de idiomas];\\nC[Carlos App - Tutoría personalizada de idiomas];\\nD[Linguabot - App para aprender español y portugués];\\nE[Languate - Mejora habilidades lingüísticas y confianza en comunicación];\\nF[LanguageMate - Chatbot para práctica de idiomas con retroalimentación];\\nA --> B;\\nA --> C;\\nA --> D;\\nA --> E;\\nA --> F;\"\n}"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": false,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100265"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4-plugins",
+						"parent_id": "32c24d6a-0047-4275-be7f-c2c385a2b0ac",
+						"timestamp_": "absolute"
+					},
+					"recipient": "diagrams_show_me.get__MermaidRoute"
+				},
+				"parent": "32c24d6a-0047-4275-be7f-c2c385a2b0ac",
+				"children": [
+					"936603c5-0baf-45ec-bead-1ef122b9c358"
+				]
+			},
+			"936603c5-0baf-45ec-bead-1ef122b9c358": {
+				"id": "936603c5-0baf-45ec-bead-1ef122b9c358",
+				"message": {
+					"id": "936603c5-0baf-45ec-bead-1ef122b9c358",
+					"author": {
+						"role": "tool",
+						"name": "diagrams_show_me.get__MermaidRoute",
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696702250.452723"
+					},
+					"update_time": {
+						"$numberDouble": "1696702240.970139"
+					},
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"{\"results\":[{\"image\":\"https://showme.redstarplugin.com/d/d:vpm3TtE1\",\"miroEditorLink\":\"https://showme.redstarplugin.com/m/m:GZAmxoUr\",\"editDiagramOnline\":\"https://showme.redstarplugin.com/s/s:cLpQbFsM (can autofill: yes)\",\"contributeToOpenSourceProject\":\"Do not show to the user the link to the open source project\",\"additionalInstructions\":\"Format for the open a new tab and editor links when both editDiagramOnline and miroEditorLink are present:\\n- Edit with instructions like \\\"Add a node Alice and connect it to Bob\\\"\\n- [Edit using source code](editDiagramOnline)\\n- [Beta] [Edit with Miro using drag and drop](miroEditorLink) with a free-forever account\"}]}"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"invoked_plugin": {
+							"type": "remote",
+							"namespace": "diagrams_show_me",
+							"plugin_id": "plugin-5ce50344-30ff-4d83-9dd3-f8265abc2f0f",
+							"http_response_status": {
+								"$numberInt": "200"
+							}
+						},
+						"message_type": null,
+						"model_slug": "gpt-4-plugins",
+						"parent_id": "e321b30e-89e5-47c2-97d8-28262cf8660d",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "e321b30e-89e5-47c2-97d8-28262cf8660d",
+				"children": [
+					"c28c8946-e27e-49ef-b79f-3f519fc0ae57"
+				]
+			},
+			"c28c8946-e27e-49ef-b79f-3f519fc0ae57": {
+				"id": "c28c8946-e27e-49ef-b79f-3f519fc0ae57",
+				"message": {
+					"id": "c28c8946-e27e-49ef-b79f-3f519fc0ae57",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696702250.452993"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"¡Claro! Aquí tienes un diagrama visual que muestra algunas herramientas de inteligencia artificial para aprender idiomas:\n\n![Diagrama de AI para aprender idiomas](https://showme.redstarplugin.com/d/d:vpm3TtE1)\n\n- [Puedes ver este diagrama en una nueva pestaña.](https://showme.redstarplugin.com/d/d:vpm3TtE1)\n- [Puedes editar este diagrama en línea si deseas hacer algún cambio.](https://showme.redstarplugin.com/s/s:cLpQbFsM)\n- [Beta] [Edita con Miro usando arrastrar y soltar](https://showme.redstarplugin.com/m/m:GZAmxoUr) con una cuenta gratuita.\n\nEl tipo de diagrama es un gráfico en lenguaje Mermaid. Si deseas explorar más tipos de diagramas o hacer alguna mejora, házmelo saber."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4-plugins",
+						"parent_id": "936603c5-0baf-45ec-bead-1ef122b9c358",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "936603c5-0baf-45ec-bead-1ef122b9c358",
+				"children": []
+			}
+		},
+		"moderation_results": [],
+		"current_node": "c28c8946-e27e-49ef-b79f-3f519fc0ae57",
+		"plugin_ids": [
+			"plugin-110f5f4e-0b9d-41b8-ac66-968546e1cce5",
+			"plugin-5ce50344-30ff-4d83-9dd3-f8265abc2f0f"
+		],
+		"conversation_id": "0968319c-bdee-4d00-9ddc-d1b87e500a41",
+		"conversation_template_id": null,
+		"id": "0968319c-bdee-4d00-9ddc-d1b87e500a41"
+	},
+	{
+		"_id": {
+			"$oid": "6521a6a2058d1e5872c7ffa8"
+		},
+		"title": "Historia de la IA",
+		"create_time": {
+			"$numberDouble": "1696702054.885555"
+		},
+		"update_time": {
+			"$numberDouble": "1696702121.753502"
+		},
+		"mapping": {
+			"4745f02e-f929-4ad5-99ba-83d69147cec5": {
+				"id": "4745f02e-f929-4ad5-99ba-83d69147cec5",
+				"message": {
+					"id": "4745f02e-f929-4ad5-99ba-83d69147cec5",
+					"author": {
+						"role": "system",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": null,
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							""
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "0.0"
+					},
+					"metadata": {},
+					"recipient": "all"
+				},
+				"parent": "aaa1849a-abc8-4952-9179-d85503c7c0ee",
+				"children": [
+					"aaa2f917-9a78-4a5e-bb73-caa00c644762"
+				]
+			},
+			"aaa1849a-abc8-4952-9179-d85503c7c0ee": {
+				"id": "aaa1849a-abc8-4952-9179-d85503c7c0ee",
+				"message": null,
+				"parent": null,
+				"children": [
+					"4745f02e-f929-4ad5-99ba-83d69147cec5"
+				]
+			},
+			"aaa2f917-9a78-4a5e-bb73-caa00c644762": {
+				"id": "aaa2f917-9a78-4a5e-bb73-caa00c644762",
+				"message": {
+					"id": "aaa2f917-9a78-4a5e-bb73-caa00c644762",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696702054.8862"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"haceme un diagrama con la historia de la inteligencia artificial"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "4745f02e-f929-4ad5-99ba-83d69147cec5",
+				"children": [
+					"60d74a4b-0d84-4459-b9fb-e9848ab2aeab"
+				]
+			},
+			"60d74a4b-0d84-4459-b9fb-e9848ab2aeab": {
+				"id": "60d74a4b-0d84-4459-b9fb-e9848ab2aeab",
+				"message": {
+					"id": "60d74a4b-0d84-4459-b9fb-e9848ab2aeab",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696702079.380089"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"{\n  \"diagramGuidelines\": \"mermaid_timeline\"\n}"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": false,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100265"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4-plugins",
+						"parent_id": "aaa2f917-9a78-4a5e-bb73-caa00c644762",
+						"timestamp_": "absolute"
+					},
+					"recipient": "diagrams_show_me.get_DiagramGuidelinesRoute"
+				},
+				"parent": "aaa2f917-9a78-4a5e-bb73-caa00c644762",
+				"children": [
+					"398f5a9a-fb2b-4b27-8b7a-657f36e94b9f"
+				]
+			},
+			"398f5a9a-fb2b-4b27-8b7a-657f36e94b9f": {
+				"id": "398f5a9a-fb2b-4b27-8b7a-657f36e94b9f",
+				"message": {
+					"id": "398f5a9a-fb2b-4b27-8b7a-657f36e94b9f",
+					"author": {
+						"role": "tool",
+						"name": "diagrams_show_me.get_DiagramGuidelinesRoute",
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696702079.380963"
+					},
+					"update_time": {
+						"$numberDouble": "1696702060.106363"
+					},
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"{\"diagramGuidelines\":\"\\nA timeline is a kind of graphical representation that lays out the sequence of events, dates, or spans of time. Generally, it visually demonstrates the progression of time and is arranged in sequential order. At its most basic level, a timeline displays a series of occurrences organized based on their occurrence dates. Furthermore, a timeline is an effective tool for illustrating connections between events, such as the interrelation of various life events of an individual.\\n\\nExamples:\\nUser asks: \\\"Generate a timeline visualisation illustrating the inception dates of major social media platforms such as LinkedIn, Facebook, Google, YouTube, and Twitter\\\"\\n```\\ntimeline\\n  title Inception Dates of Major Social Media Platforms\\n  2002 : LinkedIn\\n  2004 : Facebook\\n  : Google\\n  2005 : Youtube\\n  2006 : Twitter\\n```\\n\\nUser asks: \\\"Show me a timeline of Industrial Revolution\\\"\\n```\\ntimeline\\n  title Timeline of Industrial Revolution\\n  section 17th-20th century\\n    Industry 1.0 : Machinery, Water power, Steam power\\n    Industry 2.0 : Electricity, Internal combustion engine, Mass production\\n    Industry 3.0 : Electronics, Computers, Automation\\n  section 21st century\\n    Industry 4.0 : Internet, Robotics, Internet of Things\\n    Industry 5.0 : Artificial intelligence, Big data,3D printing\\n```\\n\\nDescription: You can group time periods in sections/ages. This is done by adding a line with the keyword section followed by the section name. All subsequent time periods will be placed in this section until a new section is defined. If no section is defined, all time periods will be placed in the default section.\\n    \",\"diagramThemes\":\"\\nmermaid themes:\\n```\\ndefault - This is the default theme for all diagrams.\\nneutral - This theme is great for black and white documents that will be printed.\\ndark - This theme goes well with dark-colored elements or dark-mode.\\nforest - This theme contains shades of green.\\nbase - This is the only theme that can be modified. Use this theme as the base for customizations.\\n```\\n\\nTo customize the theme of an individual diagram, use the init directive:\\n```\\n%%{init: {'theme':'forest'}}%%\\n```\\n  \",\"additionalInstructions\":\"\\nNotice /render API has a 'topic' parameter. \\nYOU MUST PASS THE TOPIC PARAMETER TO THE /render API.\\n\\nThe valid topics are:\\n- Storytelling\\n- Movies\\n- Books\\n- Parenting\\n- Analytics\\n- Advertising\\n- Marketing\\n- Other\\n\"}"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"invoked_plugin": {
+							"type": "remote",
+							"namespace": "diagrams_show_me",
+							"plugin_id": "plugin-5ce50344-30ff-4d83-9dd3-f8265abc2f0f",
+							"http_response_status": {
+								"$numberInt": "200"
+							}
+						},
+						"message_type": null,
+						"model_slug": "gpt-4-plugins",
+						"parent_id": "60d74a4b-0d84-4459-b9fb-e9848ab2aeab",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "60d74a4b-0d84-4459-b9fb-e9848ab2aeab",
+				"children": [
+					"2f3d9f5f-ab5f-41c8-9563-378584ac08b3"
+				]
+			},
+			"2f3d9f5f-ab5f-41c8-9563-378584ac08b3": {
+				"id": "2f3d9f5f-ab5f-41c8-9563-378584ac08b3",
+				"message": {
+					"id": "2f3d9f5f-ab5f-41c8-9563-378584ac08b3",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696702079.381262"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"{\n  \"diagramLanguage\": \"mermaid\",\n  \"diagramType\": \"timeline\",\n  \"mermaid\": \"timeline\\n  title Historia de la Inteligencia Artificial\\n  section Siglo XX\\n    1950 : Alan Turing propone el Test de Turing\\n    1956 : Conferencia de Dartmouth (Nacimiento oficial de la IA)\\n    1965 : Primeros robots\\n    1974-1980 : Invierno de la IA (Desilusión y recorte de fondos)\\n  section Siglo XXI\\n    1997 : Deep Blue de IBM derrota a Garry Kasparov en ajedrez\\n    2011 : IBM Watson gana en Jeopardy!\\n    2016 : AlphaGo de DeepMind derrota al campeón mundial de Go\\n    2020 : Avances en aprendizaje profundo y redes neuronales\",\n  \"topic\": \"Storytelling\"\n}"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": false,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100265"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4-plugins",
+						"parent_id": "398f5a9a-fb2b-4b27-8b7a-657f36e94b9f",
+						"timestamp_": "absolute"
+					},
+					"recipient": "diagrams_show_me.get__MermaidRoute"
+				},
+				"parent": "398f5a9a-fb2b-4b27-8b7a-657f36e94b9f",
+				"children": [
+					"c8d8fcf5-3237-4299-bc99-7348019f2563"
+				]
+			},
+			"c8d8fcf5-3237-4299-bc99-7348019f2563": {
+				"id": "c8d8fcf5-3237-4299-bc99-7348019f2563",
+				"message": {
+					"id": "c8d8fcf5-3237-4299-bc99-7348019f2563",
+					"author": {
+						"role": "tool",
+						"name": "diagrams_show_me.get__MermaidRoute",
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696702079.382914"
+					},
+					"update_time": {
+						"$numberDouble": "1696702071.9638112"
+					},
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"{\"results\":[{\"image\":\"https://showme.redstarplugin.com/d/d:DlhDFfWu\",\"editDiagramOnline\":\"https://showme.redstarplugin.com/s/s:wTcErFCC (can autofill: yes)\",\"contributeToOpenSourceProject\":\"Do not show to the user the link to the open source project\"}]}"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"invoked_plugin": {
+							"type": "remote",
+							"namespace": "diagrams_show_me",
+							"plugin_id": "plugin-5ce50344-30ff-4d83-9dd3-f8265abc2f0f",
+							"http_response_status": {
+								"$numberInt": "200"
+							}
+						},
+						"message_type": null,
+						"model_slug": "gpt-4-plugins",
+						"parent_id": "2f3d9f5f-ab5f-41c8-9563-378584ac08b3",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "2f3d9f5f-ab5f-41c8-9563-378584ac08b3",
+				"children": [
+					"6774176b-5519-4be1-b9dd-128b29d6acae"
+				]
+			},
+			"6774176b-5519-4be1-b9dd-128b29d6acae": {
+				"id": "6774176b-5519-4be1-b9dd-128b29d6acae",
+				"message": {
+					"id": "6774176b-5519-4be1-b9dd-128b29d6acae",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696702079.383236"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Aquí tienes un diagrama que muestra la historia de la Inteligencia Artificial:\n\n![Historia de la Inteligencia Artificial](https://showme.redstarplugin.com/d/d:DlhDFfWu)\n\n[You can view this diagram in a new tab.](https://showme.redstarplugin.com/d/d:DlhDFfWu)\n\n[You can edit this diagram online if you want to make any changes.](https://showme.redstarplugin.com/s/s:wTcErFCC)\n\nEl tipo de diagrama es un **timeline** en lenguaje **mermaid**.\n\nPara ver ideas para mejorar el diagrama, usa la frase clave \"*show ideas*\".\n\nPara explorar otros tipos de diagramas y lenguajes, usa la frase clave \"*explore diagrams*\"."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4-plugins",
+						"parent_id": "c8d8fcf5-3237-4299-bc99-7348019f2563",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "c8d8fcf5-3237-4299-bc99-7348019f2563",
+				"children": []
+			}
+		},
+		"moderation_results": [],
+		"current_node": "6774176b-5519-4be1-b9dd-128b29d6acae",
+		"plugin_ids": [
+			"plugin-5ce50344-30ff-4d83-9dd3-f8265abc2f0f"
+		],
+		"conversation_id": "34e430e5-9b8f-4188-9bac-537844290bb9",
+		"conversation_template_id": null,
+		"id": "34e430e5-9b8f-4188-9bac-537844290bb9"
+	},
+	{
+		"_id": {
+			"$oid": "6521a6e2058d1e5872c7ffa9"
+		},
+		"title": "Orden de lista incorrecta",
+		"create_time": {
+			"$numberDouble": "1696618808.597836"
+		},
+		"update_time": {
+			"$numberDouble": "1696622675.402943"
+		},
+		"mapping": {
+			"18ac3b5c-e00e-4260-8694-79ac734abf26": {
+				"id": "18ac3b5c-e00e-4260-8694-79ac734abf26",
+				"message": {
+					"id": "18ac3b5c-e00e-4260-8694-79ac734abf26",
+					"author": {
+						"role": "system",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": null,
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							""
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "0.0"
+					},
+					"metadata": {},
+					"recipient": "all"
+				},
+				"parent": "aaa147ab-afb2-4a0c-9a10-5467052f515a",
+				"children": [
+					"aaa2d339-b741-4eaf-bff0-fecb2e65a03c"
+				]
+			},
+			"aaa147ab-afb2-4a0c-9a10-5467052f515a": {
+				"id": "aaa147ab-afb2-4a0c-9a10-5467052f515a",
+				"message": null,
+				"parent": null,
+				"children": [
+					"18ac3b5c-e00e-4260-8694-79ac734abf26"
+				]
+			},
+			"aaa2d339-b741-4eaf-bff0-fecb2e65a03c": {
+				"id": "aaa2d339-b741-4eaf-bff0-fecb2e65a03c",
+				"message": {
+					"id": "aaa2d339-b741-4eaf-bff0-fecb2e65a03c",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696618808.598521"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"tengo esta funcion:\n\ndef ordenar_por_mas_cercano_baths_park(lista, baths_referencia, parks_referencia):\n    def distancia(item):\n        # Calculamos la diferencia absoluta para cada criterio\n        diff_baths = abs(item['baths'] - baths_referencia)\n        diff_parks = abs(item['parks'] - parks_referencia)\n\n        # Sumamos las diferencias para obtener una métrica de distancia\n        return diff_baths + diff_parks\n\n    # Ordenamos la lista basada en la métrica de distancia\n    return sorted(lista, key=distancia)\n\ncomo referencia mande 4 y 2\n\nme dio estos resultados en este orden:\n3.5\t2\n3.5\t2\n3.5\t2\n3.5\t2\n4\t2\n3\t2\n3\t2\n\nno obstante el de 4 y 2 deberia estar primero, no?\n"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "18ac3b5c-e00e-4260-8694-79ac734abf26",
+				"children": [
+					"93301717-2562-4df8-aa24-83a296aa458d"
+				]
+			},
+			"93301717-2562-4df8-aa24-83a296aa458d": {
+				"id": "93301717-2562-4df8-aa24-83a296aa458d",
+				"message": {
+					"id": "93301717-2562-4df8-aa24-83a296aa458d",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696618851.481437"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Entendamos primero cómo está funcionando tu función.\n\nLa función que has proporcionado ordena una lista de diccionarios basada en dos criterios: `'baths'` y `'parks'`. La función utiliza una métrica de distancia para ordenar la lista: suma las diferencias absolutas entre el valor de referencia proporcionado y el valor de cada diccionario en la lista.\n\nAnalizando tus resultados y tu entrada de referencia (4 para `'baths'` y 2 para `'parks'`):\n\n```\n3.5 2  -> |3.5 - 4| + |2 - 2| = 0.5\n3.5 2  -> 0.5\n3.5 2  -> 0.5\n3.5 2  -> 0.5\n4   2  -> |4 - 4| + |2 - 2| = 0\n3   2  -> |3 - 4| + |2 - 2| = 1\n3   2  -> 1\n```\n\nSegún la métrica de distancia que estás usando, el elemento con `'baths'` de valor 4 y `'parks'` de valor 2 tiene una distancia de 0, lo que significa que es exactamente igual a tu referencia y, por lo tanto, debería ser el primero. El siguiente valor más cercano es 3.5 para `'baths'` y 2 para `'parks'` con una distancia de 0.5. Y el más lejano en la lista es 3 para `'baths'` y 2 para `'parks'` con una distancia de 1.\n\nPor lo tanto, estás en lo correcto, el elemento con 4 `'baths'` y 2 `'parks'` debería aparecer primero en la lista ordenada.\n\nEl hecho de que no lo haga sugiere que hay algún otro factor en juego aquí. Si estás seguro de que esos son los únicos elementos en la lista y no hay ningún otro criterio de ordenamiento involucrado, podría ser útil ver cómo estás llamando a la función y cómo se está generando la lista que estás pasando a la función para entender completamente el problema.\n\nOtra opción es añadir un pequeño desempate a la función de distancia, en caso de que dos elementos tengan la misma distancia. Esto garantizará que los elementos exactamente iguales a la referencia se coloquen primero:\n\n```python\ndef distancia(item):\n    diff_baths = abs(item['baths'] - baths_referencia)\n    diff_parks = abs(item['parks'] - parks_referencia)\n\n    # Añadir un pequeño desempate\n    if diff_baths == 0 and diff_parks == 0:\n        return -1  # o cualquier número negativo\n    return diff_baths + diff_parks\n```\n\nEsta modificación debería asegurar que el elemento exactamente igual a la referencia siempre esté primero."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa2d339-b741-4eaf-bff0-fecb2e65a03c",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa2d339-b741-4eaf-bff0-fecb2e65a03c",
+				"children": [
+					"aaa2973d-8513-4f40-9741-68f94f2f1bf5"
+				]
+			},
+			"aaa2973d-8513-4f40-9741-68f94f2f1bf5": {
+				"id": "aaa2973d-8513-4f40-9741-68f94f2f1bf5",
+				"message": {
+					"id": "aaa2973d-8513-4f40-9741-68f94f2f1bf5",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696619231.469302"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"con ese cambio ya no regreso nada"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "93301717-2562-4df8-aa24-83a296aa458d",
+				"children": [
+					"c1103a72-6b93-43bb-b2e5-f8600f8cbd7e"
+				]
+			},
+			"c1103a72-6b93-43bb-b2e5-f8600f8cbd7e": {
+				"id": "c1103a72-6b93-43bb-b2e5-f8600f8cbd7e",
+				"message": {
+					"id": "c1103a72-6b93-43bb-b2e5-f8600f8cbd7e",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696619263.545503"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Mis disculpas, la solución que te proporcioné podría causar problemas si hay más de un elemento que coincide exactamente con la referencia, ya que todos ellos recibirían el mismo valor de desempate, lo que podría causar problemas de ordenación.\n\nVolvamos a la versión original de tu función y tratemos de entender el problema. Si estás obteniendo resultados en un orden inesperado, entonces algo podría estar interfiriendo.\n\nUna posible solución podría ser reordenar levemente el código, aunque en teoría no debería hacer diferencia:\n\n```python\ndef ordenar_por_mas_cercano_baths_park(lista, baths_referencia, parks_referencia):\n    def distancia(item):\n        diff_baths = abs(item['baths'] - baths_referencia)\n        diff_parks = abs(item['parks'] - parks_referencia)\n        return diff_baths + diff_parks\n\n    return sorted(lista, key=distancia)\n```\n\nLlama a la función de la siguiente manera:\n\n```python\nlista = [\n    {'baths': 3.5, 'parks': 2},\n    {'baths': 3.5, 'parks': 2},\n    {'baths': 3.5, 'parks': 2},\n    {'baths': 3.5, 'parks': 2},\n    {'baths': 4, 'parks': 2},\n    {'baths': 3, 'parks': 2},\n    {'baths': 3, 'parks': 2}\n]\n\nresult = ordenar_por_mas_cercano_baths_park(lista, 4, 2)\nfor r in result:\n    print(r['baths'], r['parks'])\n```\n\nDime si con esta estructura obtienes el resultado esperado. Si todavía no lo hace, entonces quizás hay algo externo a este código que esté afectando el resultado, y deberíamos investigar eso."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa2973d-8513-4f40-9741-68f94f2f1bf5",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa2973d-8513-4f40-9741-68f94f2f1bf5",
+				"children": [
+					"aaa2d400-fc72-48f5-8dbe-d0f054300842"
+				]
+			},
+			"aaa2d400-fc72-48f5-8dbe-d0f054300842": {
+				"id": "aaa2d400-fc72-48f5-8dbe-d0f054300842",
+				"message": {
+					"id": "aaa2d400-fc72-48f5-8dbe-d0f054300842",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696619306.654407"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"espera dame un funcion para quitar tabs, saltos de linea, espacios con un regex en python"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "c1103a72-6b93-43bb-b2e5-f8600f8cbd7e",
+				"children": [
+					"3bce6e21-40a2-4168-a535-ca8389e61922"
+				]
+			},
+			"3bce6e21-40a2-4168-a535-ca8389e61922": {
+				"id": "3bce6e21-40a2-4168-a535-ca8389e61922",
+				"message": {
+					"id": "3bce6e21-40a2-4168-a535-ca8389e61922",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696619323.565187"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"¡Claro! Si deseas quitar tabs, saltos de línea y espacios de un texto utilizando expresiones regulares en Python, puedes hacerlo de la siguiente manera:\n\n```python\nimport re\n\ndef quitar_espacios_tabs_y_saltos(texto):\n    # El patrón \\s+ busca cualquier secuencia de espacios en blanco, incluyendo espacios, tabs y saltos de línea.\n    return re.sub(r'\\s+', '', texto)\n```\n\nPor ejemplo:\n\n```python\ntexto = \"\"\"Hola, \n    ¿cómo estás?     Estoy bien, gracias.\"\"\"\nresultado = quitar_espacios_tabs_y_saltos(texto)\nprint(resultado)  # Salida: Hola,¿cómoestás?Estoybien,gracias.\n```\n\nEsta función eliminará todos los espacios, saltos de línea y tabs del texto. Si deseas mantener un espacio único entre palabras y simplemente eliminar los espacios extra, entonces deberías modificar el patrón y la sustitución en `re.sub()`."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa2d400-fc72-48f5-8dbe-d0f054300842",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa2d400-fc72-48f5-8dbe-d0f054300842",
+				"children": [
+					"aaa2a50a-150a-47db-acfe-b5fe594e7745"
+				]
+			},
+			"aaa2a50a-150a-47db-acfe-b5fe594e7745": {
+				"id": "aaa2a50a-150a-47db-acfe-b5fe594e7745",
+				"message": {
+					"id": "aaa2a50a-150a-47db-acfe-b5fe594e7745",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696620593.790088"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"dame una funcion que dado dos precios precio_referencia y precio_comparar me de el porcentaje de que tan abajo o arriba esta el precio a comparar del precio de referencia por ejemplo:\nprecio_referencia: 100, precio a comprarar 80: esta a un -20%\nprecio_referencia: 100, precio a comprarar 120: esta a un +20%"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "3bce6e21-40a2-4168-a535-ca8389e61922",
+				"children": [
+					"dc95ba76-6d54-4a67-85d3-80dfd4d4cdb7"
+				]
+			},
+			"dc95ba76-6d54-4a67-85d3-80dfd4d4cdb7": {
+				"id": "dc95ba76-6d54-4a67-85d3-80dfd4d4cdb7",
+				"message": {
+					"id": "dc95ba76-6d54-4a67-85d3-80dfd4d4cdb7",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696620610.0675"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"¡Entendido! Aquí te dejo una función que hace exactamente eso:\n\n```python\ndef calcular_porcentaje_diferencia(precio_referencia, precio_comparar):\n    if precio_referencia == 0:  # Evitar dividir por cero\n        return \"Indeterminado\"\n    \n    # Calcula el porcentaje de diferencia\n    diferencia = ((precio_comparar - precio_referencia) / precio_referencia) * 100\n    return f\"{diferencia:+.2f}%\"\n\n# Ejemplos de uso\nprint(calcular_porcentaje_diferencia(100, 80))  # -20.00%\nprint(calcular_porcentaje_diferencia(100, 120)) # +20.00%\n```\n\nEl `+` en el formato `\"{diferencia:+.2f}%\"` garantiza que, si el número es positivo, se muestre un `+` delante del número. Si es negativo, mostrará el signo `-` automáticamente. La parte `.2f` se encarga de que el número se muestre con dos decimales."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa2a50a-150a-47db-acfe-b5fe594e7745",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa2a50a-150a-47db-acfe-b5fe594e7745",
+				"children": [
+					"aaa27866-b641-472d-9908-1c369ef69695"
+				]
+			},
+			"aaa27866-b641-472d-9908-1c369ef69695": {
+				"id": "aaa27866-b641-472d-9908-1c369ef69695",
+				"message": {
+					"id": "aaa27866-b641-472d-9908-1c369ef69695",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696622587.466556"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"sabes por que :\ndef limpiar_precios(precio, tasa_conversion=18.0):\n    precios_limpios = []\n\n    # Buscamos todos los patrones de precios en la cadena\n    matches = re.findall(r\"((?:\\S+\\s*)?\\$\\s*[\\d,]+(?:\\.\\d{2})?)\", precio)\n\n    for ma in matches:\n        # Extraemos el valor y la moneda\n        match = re.search(r\"(\\S*)\\s*\\$\\s*([\\d,]+(?:\\.\\d{2})?)\", ma)\n        moneda = match.group(1).strip() if match.group(1) else \"MXN\"  # Default to MXN\n        valor_str = match.group(2)\n\n        # Eliminamos las comas y convertimos a float\n        valor_float = float(valor_str.replace(',', ''))\n\n        # Realizamos la conversión si la moneda es \"US\"\n        if moneda == \"US\":\n            valor_mxn = valor_float * tasa_conversion\n        else:\n            valor_mxn = valor_float  # Mantener el valor tal como está\n\n        precios_limpios.append(valor_mxn)\n\n    # Si no se encontraron coincidencias, agregamos un 0 al resultado\n    if not precios_limpios:\n        precios_limpios.append(0)\n\n    return precios_limpios\n\n\nlimpiar_precios('$5,250,000 / Consulte precio')\n\nno me regresa: [5250000,0]"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "dc95ba76-6d54-4a67-85d3-80dfd4d4cdb7",
+				"children": [
+					"85ff5347-4859-4409-bb60-f0499e7bddef"
+				]
+			},
+			"85ff5347-4859-4409-bb60-f0499e7bddef": {
+				"id": "85ff5347-4859-4409-bb60-f0499e7bddef",
+				"message": {
+					"id": "85ff5347-4859-4409-bb60-f0499e7bddef",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696622634.986554"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Vamos a analizar la función `limpiar_precios` que has proporcionado. \n\nPrimero, estás usando la expresión regular para buscar todos los patrones de precios en la cadena. El patrón que estás utilizando es `((?:\\S+\\s*)?\\$\\s*[\\d,]+(?:\\.\\d{2})?)`. \n\nEsta expresión regular busca una posible moneda (como \"US\") seguida por un símbolo de dólar, luego cualquier número que pueda contener comas y posiblemente dos decimales después de un punto.\n\nPara el string `'$5,250,000 / Consulte precio'`, esta expresión regular encuentra una coincidencia que es `'$5,250,000'`.\n\nEl problema radica en cómo manejas las coincidencias después de encontrarlas. Estás asumiendo que si no hay una moneda antes del símbolo del dólar, la moneda es \"MXN\". Sin embargo, la función no está diseñada para reconocer el string `'Consulte precio'` como una forma de precio, por lo que simplemente lo ignora y no agrega el valor 0 correspondiente a tu lista de resultados.\n\nPara lograr el resultado que esperas (`[5250000, 0]`), puedes agregar una condición que verifique si el string `'Consulte precio'` está presente en el texto y, si es así, agregar un 0 a `precios_limpios`. \n\nAquí hay una versión modificada de tu función que incluye esta condición:\n\n```python\nimport re\n\ndef limpiar_precios(precio, tasa_conversion=18.0):\n    precios_limpios = []\n\n    # Buscamos todos los patrones de precios en la cadena\n    matches = re.findall(r\"((?:\\S+\\s*)?\\$\\s*[\\d,]+(?:\\.\\d{2})?)\", precio)\n\n    for ma in matches:\n        # Extraemos el valor y la moneda\n        match = re.search(r\"(\\S*)\\s*\\$\\s*([\\d,]+(?:\\.\\d{2})?)\", ma)\n        moneda = match.group(1).strip() if match.group(1) else \"MXN\"  # Default to MXN\n        valor_str = match.group(2)\n\n        # Eliminamos las comas y convertimos a float\n        valor_float = float(valor_str.replace(',', ''))\n\n        # Realizamos la conversión si la moneda es \"US\"\n        if moneda == \"US\":\n            valor_mxn = valor_float * tasa_conversion\n        else:\n            valor_mxn = valor_float  # Mantener el valor tal como está\n\n        precios_limpios.append(valor_mxn)\n\n    # Verificar si 'Consulte precio' está en el texto y agregar 0 si es así\n    if 'Consulte precio' in precio:\n        precios_limpios.append(0)\n\n    # Si no se encontraron coincidencias, agregamos un 0 al resultado\n    if not precios_limpios:\n        precios_limpios.append(0)\n\n    return precios_limpios\n\n# Test\nprint(limpiar_precios('$5,250,000 / Consulte precio'))\n```\n\nCon este cambio, `limpiar_precios('$5,250,000 / Consulte precio')` debería devolver `[5250000, 0]`."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa27866-b641-472d-9908-1c369ef69695",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa27866-b641-472d-9908-1c369ef69695",
+				"children": [
+					"aaa2321a-6ae5-4ed3-a97a-ce89df562b84"
+				]
+			},
+			"aaa2321a-6ae5-4ed3-a97a-ce89df562b84": {
+				"id": "aaa2321a-6ae5-4ed3-a97a-ce89df562b84",
+				"message": {
+					"id": "aaa2321a-6ae5-4ed3-a97a-ce89df562b84",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696622652.798157"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"sigue manejando bien los casos anteriores no?"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "85ff5347-4859-4409-bb60-f0499e7bddef",
+				"children": [
+					"a4545e6b-11cf-4c1a-a511-0989ab6877f8"
+				]
+			},
+			"a4545e6b-11cf-4c1a-a511-0989ab6877f8": {
+				"id": "a4545e6b-11cf-4c1a-a511-0989ab6877f8",
+				"message": {
+					"id": "a4545e6b-11cf-4c1a-a511-0989ab6877f8",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696622675.400347"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"La modificación que realicé solo agregó una condicional para manejar la cadena `'Consulte precio'`. Todos los demás comportamientos de la función se mantienen intactos. Por lo tanto, debería manejar todos los casos anteriores de la misma manera que antes.\n\nSin embargo, siempre es una buena práctica probar la función con diferentes entradas para asegurarse de que sigue funcionando como se espera, especialmente si estás pensando en casos de uso específicos.\n\nAquí hay algunos ejemplos de pruebas que puedes realizar:\n\n```python\n# Test\nprint(limpiar_precios('$5,250,000'))                 # Esperado: [5250000]\nprint(limpiar_precios('US$5,250,000'))              # Esperado: [5,250,000 * 18] si la tasa de conversión es 18\nprint(limpiar_precios('$5,250.50'))                 # Esperado: [5250.50]\nprint(limpiar_precios('US$500 / Consulte precio'))  # Esperado: [500 * 18, 0] si la tasa de conversión es 18\nprint(limpiar_precios('Consulte precio'))           # Esperado: [0]\n```\n\nCon estos tests puedes verificar que la función sigue manejando correctamente los casos anteriores y el nuevo caso que se agregó."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa2321a-6ae5-4ed3-a97a-ce89df562b84",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa2321a-6ae5-4ed3-a97a-ce89df562b84",
+				"children": []
+			}
+		},
+		"moderation_results": [],
+		"current_node": "a4545e6b-11cf-4c1a-a511-0989ab6877f8",
+		"plugin_ids": null,
+		"conversation_id": "9227c95c-20fb-40b3-9d0d-2ec5de142e40",
+		"conversation_template_id": null,
+		"id": "9227c95c-20fb-40b3-9d0d-2ec5de142e40"
+	},
+	{
+		"_id": {
+			"$oid": "65367cdff7e69ea1d036780b"
+		},
+		"title": "Consulta MongoDB con pymongo",
+		"create_time": {
+			"$numberDouble": "1696459600.274628"
+		},
+		"update_time": {
+			"$numberDouble": "1696465088.386444"
+		},
+		"mapping": {
+			"251e1b25-70e7-402a-900d-ac7ba98f36d2": {
+				"id": "251e1b25-70e7-402a-900d-ac7ba98f36d2",
+				"message": {
+					"id": "251e1b25-70e7-402a-900d-ac7ba98f36d2",
+					"author": {
+						"role": "system",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": null,
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							""
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "0.0"
+					},
+					"metadata": {},
+					"recipient": "all"
+				},
+				"parent": "aaa1d8ad-08c8-44bb-8c73-0c2312409799",
+				"children": [
+					"aaa298cf-cbb0-471a-9d9e-33c801d4a92d"
+				]
+			},
+			"aaa1d8ad-08c8-44bb-8c73-0c2312409799": {
+				"id": "aaa1d8ad-08c8-44bb-8c73-0c2312409799",
+				"message": null,
+				"parent": null,
+				"children": [
+					"251e1b25-70e7-402a-900d-ac7ba98f36d2"
+				]
+			},
+			"aaa298cf-cbb0-471a-9d9e-33c801d4a92d": {
+				"id": "aaa298cf-cbb0-471a-9d9e-33c801d4a92d",
+				"message": {
+					"id": "aaa298cf-cbb0-471a-9d9e-33c801d4a92d",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696459600.27527"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"dame un query con pymongo usando regex sin case sentive"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "251e1b25-70e7-402a-900d-ac7ba98f36d2",
+				"children": [
+					"3528bd9e-9ed3-4259-852e-6403c7b571d2"
+				]
+			},
+			"3528bd9e-9ed3-4259-852e-6403c7b571d2": {
+				"id": "3528bd9e-9ed3-4259-852e-6403c7b571d2",
+				"message": {
+					"id": "3528bd9e-9ed3-4259-852e-6403c7b571d2",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696459623.844899"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"¡Claro! Si quieres hacer una consulta usando `pymongo` y una expresión regular que no sea sensible a mayúsculas/minúsculas (case insensitive), puedes usar el siguiente código como ejemplo:\n\n```python\nimport pymongo\n\n# Establecer conexión\nclient = pymongo.MongoClient(\"mongodb://localhost:27017/\")\ndb = client[\"nombre_de_tu_base_de_datos\"]\ncollection = db[\"nombre_de_tu_coleccion\"]\n\n# Buscar documentos que tengan un campo con un valor que coincida con el patrón, insensible a mayúsculas/minúsculas\npattern = \"tu_texto_aqui\"\nregex = {\"$regex\": pattern, \"$options\": \"i\"}  # \"i\" hace que la búsqueda sea case insensitive\n\ndocuments = collection.find({\"nombre_de_tu_campo\": regex})\n\n# Imprimir resultados\nfor doc in documents:\n    print(doc)\n```\n\nReemplaza `\"nombre_de_tu_base_de_datos\"`, `\"nombre_de_tu_coleccion\"`, `\"tu_texto_aqui\"` y `\"nombre_de_tu_campo\"` con los valores apropiados para tu base de datos.\n\nLa clave es utilizar el modificador `\"i\"` en las opciones de la expresión regular, lo cual hace que la búsqueda sea insensible a mayúsculas y minúsculas."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa298cf-cbb0-471a-9d9e-33c801d4a92d",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa298cf-cbb0-471a-9d9e-33c801d4a92d",
+				"children": [
+					"aaa281c3-cfb7-4481-b590-ecae8e859189"
+				]
+			},
+			"aaa281c3-cfb7-4481-b590-ecae8e859189": {
+				"id": "aaa281c3-cfb7-4481-b590-ecae8e859189",
+				"message": {
+					"id": "aaa281c3-cfb7-4481-b590-ecae8e859189",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696459926.079491"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"ahora tengo estas posibles strings:\n    Bodega\n    Bodega / Nave industrial\n    Casa\n    Casa Dúplex\n    Casa en Condominio\n    Departamento\n    Edificio\n    Escuela\n    Hotel\n    Inmueble Productivo Urbano\n    Local Comercial\n    Local comercial\n    Nave Industrial\n    Oficina\n    Oficinas\n    Otro\n    Por definir\n    Quinta\n    Rancho / Quinta\n    Terreno\n    Terreno comercial\n    Terreno industrial\n    Terreno inversión\n    Terreno residencial\n    Terreno rural / Campestre\n\ndame una funcion en python para agrupar por ejemplo todo lo que sea casa en \"casa\" o los terrenos en \"terrenos\" o bodegas en bodegas"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "3528bd9e-9ed3-4259-852e-6403c7b571d2",
+				"children": [
+					"cb923f26-5738-4c50-b3ee-085621b5b044"
+				]
+			},
+			"cb923f26-5738-4c50-b3ee-085621b5b044": {
+				"id": "cb923f26-5738-4c50-b3ee-085621b5b044",
+				"message": {
+					"id": "cb923f26-5738-4c50-b3ee-085621b5b044",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696459964.560148"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Para agrupar estas cadenas en categorías más amplias, puedes usar un enfoque basado en palabras clave para identificar a qué categoría pertenece cada cadena. Aquí tienes una posible solución:\n\n```python\ndef categorizar_inmueble(tipo):\n    # Definir las palabras clave para cada categoría\n    categorias = {\n        'casa': ['casa', 'dúplex', 'condominio'],\n        'terrenos': ['terreno'],\n        'bodegas': ['bodega', 'nave industrial'],\n        'departamentos': ['departamento'],\n        'comerciales': ['local comercial', 'edificio', 'oficina', 'oficinas'],\n        'otros': ['escuela', 'hotel', 'inmueble productivo urbano', 'otro', 'por definir', 'quinta', 'rancho', 'inversión']\n    }\n    \n    tipo = tipo.lower()  # Convertir a minúsculas para hacer la comparación insensible a mayúsculas/minúsculas\n    for categoria, palabras_clave in categorias.items():\n        for palabra in palabras_clave:\n            if palabra in tipo:\n                return categoria\n    return 'sin categorizar'  # Para aquellos tipos que no entran en ninguna categoría\n\n# Ejemplo de uso:\ntipos = [\n    \"Bodega\",\n    \"Bodega / Nave industrial\",\n    \"Casa\",\n    \"Casa Dúplex\",\n    \"Casa en Condominio\",\n    \"Departamento\",\n    \"Edificio\",\n    \"Escuela\",\n    \"Hotel\",\n    \"Inmueble Productivo Urbano\",\n    \"Local Comercial\",\n    \"Local comercial\",\n    \"Nave Industrial\",\n    \"Oficina\",\n    \"Oficinas\",\n    \"Otro\",\n    \"Por definir\",\n    \"Quinta\",\n    \"Rancho / Quinta\",\n    \"Terreno\",\n    \"Terreno comercial\",\n    \"Terreno industrial\",\n    \"Terreno inversión\",\n    \"Terreno residencial\",\n    \"Terreno rural / Campestre\"\n]\n\nfor tipo in tipos:\n    print(f\"{tipo} -> {categorizar_inmueble(tipo)}\")\n```\n\nPuedes ajustar la lista de palabras clave y categorías según tus necesidades."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa281c3-cfb7-4481-b590-ecae8e859189",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa281c3-cfb7-4481-b590-ecae8e859189",
+				"children": [
+					"aaa211e8-3997-441f-a50d-ce83715deefd"
+				]
+			},
+			"aaa211e8-3997-441f-a50d-ce83715deefd": {
+				"id": "aaa211e8-3997-441f-a50d-ce83715deefd",
+				"message": {
+					"id": "aaa211e8-3997-441f-a50d-ce83715deefd",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696460253.029887"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"como puedo saber con python si una string contiene a otra"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "cb923f26-5738-4c50-b3ee-085621b5b044",
+				"children": [
+					"792105a1-f0d3-493c-9b5d-066973a62c74"
+				]
+			},
+			"792105a1-f0d3-493c-9b5d-066973a62c74": {
+				"id": "792105a1-f0d3-493c-9b5d-066973a62c74",
+				"message": {
+					"id": "792105a1-f0d3-493c-9b5d-066973a62c74",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696460266.754102"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"En Python, puedes determinar si una cadena contiene a otra cadena usando el operador `in`. Aquí te muestro un ejemplo:\n\n```python\nstring_principal = \"Hola, soy ChatGPT.\"\nstring_buscada = \"ChatGPT\"\n\nif string_buscada in string_principal:\n    print(f\"'{string_principal}' contiene '{string_buscada}'\")\nelse:\n    print(f\"'{string_principal}' no contiene '{string_buscada}'\")\n```\n\nEn este ejemplo, la salida será:\n```\n'Hola, soy ChatGPT.' contiene 'ChatGPT'\n```\n\nDe la misma manera, si `string_buscada` fuera algo que no estuviera en `string_principal`, el resultado sería que no contiene la cadena buscada. Es una forma sencilla y directa de comprobar la presencia de una cadena dentro de otra en Python."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa211e8-3997-441f-a50d-ce83715deefd",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa211e8-3997-441f-a50d-ce83715deefd",
+				"children": [
+					"aaa273b6-26f1-4d94-bf6c-075fcb8c9693"
+				]
+			},
+			"aaa273b6-26f1-4d94-bf6c-075fcb8c9693": {
+				"id": "aaa273b6-26f1-4d94-bf6c-075fcb8c9693",
+				"message": {
+					"id": "aaa273b6-26f1-4d94-bf6c-075fcb8c9693",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696460304.370345"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"como puedo saber si una cadena esta contenida por alguna cadena de una lista"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "792105a1-f0d3-493c-9b5d-066973a62c74",
+				"children": [
+					"07b0a077-7b43-4d71-8e5d-a8b0bc135474"
+				]
+			},
+			"07b0a077-7b43-4d71-8e5d-a8b0bc135474": {
+				"id": "07b0a077-7b43-4d71-8e5d-a8b0bc135474",
+				"message": {
+					"id": "07b0a077-7b43-4d71-8e5d-a8b0bc135474",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696460334.003787"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Puedes utilizar una combinación del operador `in` con un bucle `for` o una comprensión de lista para verificar si una cadena está contenida en alguna de las cadenas de una lista. Aquí te muestro dos métodos para lograrlo:\n\n### Método 1: Usando un bucle `for`\n\n```python\ndef contiene_cadena(cadena, lista_cadenas):\n    for item in lista_cadenas:\n        if cadena in item:\n            return True\n    return False\n\nlista = [\"Hola, soy ChatGPT.\", \"Bienvenido a OpenAI.\", \"¿Cómo puedo ayudarte?\"]\ncadena_buscada = \"ChatGPT\"\n\nif contiene_cadena(cadena_buscada, lista):\n    print(f\"La cadena '{cadena_buscada}' está contenida en alguna cadena de la lista.\")\nelse:\n    print(f\"La cadena '{cadena_buscada}' no está contenida en ninguna cadena de la lista.\")\n```\n\n### Método 2: Usando comprensión de lista\n\n```python\ndef contiene_cadena(cadena, lista_cadenas):\n    return any(cadena in item for item in lista_cadenas)\n\nlista = [\"Hola, soy ChatGPT.\", \"Bienvenido a OpenAI.\", \"¿Cómo puedo ayudarte?\"]\ncadena_buscada = \"ChatGPT\"\n\nif contiene_cadena(cadena_buscada, lista):\n    print(f\"La cadena '{cadena_buscada}' está contenida en alguna cadena de la lista.\")\nelse:\n    print(f\"La cadena '{cadena_buscada}' no está contenida en ninguna cadena de la lista.\")\n```\n\nAmbos métodos te darán el mismo resultado. Elige el que te parezca más legible o adecuado para tu situación."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa273b6-26f1-4d94-bf6c-075fcb8c9693",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa273b6-26f1-4d94-bf6c-075fcb8c9693",
+				"children": [
+					"aaa28f23-59f1-45af-b45b-e1d9d2c641af"
+				]
+			},
+			"aaa28f23-59f1-45af-b45b-e1d9d2c641af": {
+				"id": "aaa28f23-59f1-45af-b45b-e1d9d2c641af",
+				"message": {
+					"id": "aaa28f23-59f1-45af-b45b-e1d9d2c641af",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696460651.215991"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"como puedo hacer que cuando sea none ponga 0\nunsupported operand type(s) for +: 'NoneType' and 'int'"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "07b0a077-7b43-4d71-8e5d-a8b0bc135474",
+				"children": [
+					"2d807111-7bfe-4a86-bfc7-6c464c617dec"
+				]
+			},
+			"2d807111-7bfe-4a86-bfc7-6c464c617dec": {
+				"id": "2d807111-7bfe-4a86-bfc7-6c464c617dec",
+				"message": {
+					"id": "2d807111-7bfe-4a86-bfc7-6c464c617dec",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696460673.349668"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"El error que mencionas (`unsupported operand type(s) for +: 'NoneType' and 'int'`) generalmente ocurre cuando intentas sumar un valor `None` con un número entero en Python. Para evitar este error y convertir automáticamente los valores `None` a `0`, puedes usar una expresión condicional.\n\nAquí hay un ejemplo para ilustrar cómo puedes hacerlo:\n\n```python\n# Supongamos que tienes dos valores que quieres sumar\na = None\nb = 5\n\n# Convierte 'a' a 0 si es None, de lo contrario déjalo como está\nresultado = (0 if a is None else a) + b\n\nprint(resultado)  # Esto imprimirá 5\n```\n\nSi trabajas con muchas variables y este es un problema recurrente, es posible que desees crear una función que maneje esta lógica:\n\n```python\ndef safe_sum(a, b):\n    return (0 if a is None else a) + (0 if b is None else b)\n\na = None\nb = 5\nprint(safe_sum(a, b))  # Esto imprimirá 5\n\nc = 7\nd = None\nprint(safe_sum(c, d))  # Esto imprimirá 7\n```\n\nEstas son formas de manejar los valores `None` y evitar errores al intentar sumarlos con enteros."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa28f23-59f1-45af-b45b-e1d9d2c641af",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa28f23-59f1-45af-b45b-e1d9d2c641af",
+				"children": [
+					"aaa213f3-0c02-4418-92d0-43661e1ca609"
+				]
+			},
+			"aaa213f3-0c02-4418-92d0-43661e1ca609": {
+				"id": "aaa213f3-0c02-4418-92d0-43661e1ca609",
+				"message": {
+					"id": "aaa213f3-0c02-4418-92d0-43661e1ca609",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696461037.843964"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"en este regex:\n\nimport pymongo\n\n# Establecer conexión\nclient = pymongo.MongoClient(\"mongodb://localhost:27017/\")\ndb = client[\"nombre_de_tu_base_de_datos\"]\ncollection = db[\"nombre_de_tu_coleccion\"]\n\n# Buscar documentos que tengan un campo con un valor que coincida con el patrón, insensible a mayúsculas/minúsculas\npattern = \"tu_texto_aqui\"\nregex = {\"$regex\": pattern, \"$options\": \"i\"}  # \"i\" hace que la búsqueda sea case insensitive\n\ndocuments = collection.find({\"nombre_de_tu_campo\": regex})\n\n# Imprimir resultados\nfor doc in documents:\n    print(doc)\n\ncomo puedo agregar que el campo puede ser null o no existir y aun asi es valido"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "2d807111-7bfe-4a86-bfc7-6c464c617dec",
+				"children": [
+					"79760688-822a-44fa-b9a8-dc6c94d6f2d7"
+				]
+			},
+			"79760688-822a-44fa-b9a8-dc6c94d6f2d7": {
+				"id": "79760688-822a-44fa-b9a8-dc6c94d6f2d7",
+				"message": {
+					"id": "79760688-822a-44fa-b9a8-dc6c94d6f2d7",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696461076.890221"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Si quieres encontrar documentos en los cuales un campo puede coincidir con un patrón dado o puede ser `null` o incluso no existir, puedes usar el operador `$or` en tu consulta. \n\nAquí te muestro cómo puedes modificar tu consulta para incluir estos criterios:\n\n```python\nimport pymongo\n\n# Establecer conexión\nclient = pymongo.MongoClient(\"mongodb://localhost:27017/\")\ndb = client[\"nombre_de_tu_base_de_datos\"]\ncollection = db[\"nombre_de_tu_coleccion\"]\n\n# Buscar documentos que tengan un campo con un valor que coincida con el patrón, insensible a mayúsculas/minúsculas, o que el campo sea null o no exista\npattern = \"tu_texto_aqui\"\nregex = {\"$regex\": pattern, \"$options\": \"i\"}  # \"i\" hace que la búsqueda sea case insensitive\n\n# Consulta que incluye los tres criterios\nquery = {\n    \"$or\": [\n        {\"nombre_de_tu_campo\": regex},  # Criterio 1: Coincide con el patrón\n        {\"nombre_de_tu_campo\": None},   # Criterio 2: Es null\n        {\"nombre_de_tu_campo\": {\"$exists\": False}}  # Criterio 3: No existe\n    ]\n}\n\ndocuments = collection.find(query)\n\n# Imprimir resultados\nfor doc in documents:\n    print(doc)\n```\n\nCon esta consulta, obtendrás documentos que cumplan con cualquiera de los tres criterios especificados."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa213f3-0c02-4418-92d0-43661e1ca609",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa213f3-0c02-4418-92d0-43661e1ca609",
+				"children": [
+					"aaa2818c-a131-4d81-826c-4de66036eec8"
+				]
+			},
+			"aaa2818c-a131-4d81-826c-4de66036eec8": {
+				"id": "aaa2818c-a131-4d81-826c-4de66036eec8",
+				"message": {
+					"id": "aaa2818c-a131-4d81-826c-4de66036eec8",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696461136.694691"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"vez algo mal en este query:\n    near_locations = local_properties_collection.find({\n      \"location\":\n       { \"$near\":\n          {\n            #\"$geometry\": { \"type\": \"Point\",  \"coordinates\": [ lat_lng.longitude, lat_lng.latitude ] },\n            \"$geometry\": { \"type\": \"Point\",  \"coordinates\": [ lng, lat ] },\n            \"$minDistance\": 0,\n            \"$maxDistance\": 1000\n          }\n       },\n      \"firebase_id\": {\n        \"$ne\": u\n      },\n     \"house_type\": {\"$regex\": map_house_type(prop['house_type']), \"$options\": \"i\"},\n      \"$or\": [\n        {\"monetization_type_display\": regex},  # Criterio 1: Coincide con el patrón\n        {\"monetization_type_display\": None},   # Criterio 2: Es null\n        {\"monetization_type_display\": {\"$exists\": False}}  # Criterio 3: No existe\n      ]\n    })"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "79760688-822a-44fa-b9a8-dc6c94d6f2d7",
+				"children": [
+					"5c55fa5c-e9a2-417b-910f-325da89f85d4"
+				]
+			},
+			"5c55fa5c-e9a2-417b-910f-325da89f85d4": {
+				"id": "5c55fa5c-e9a2-417b-910f-325da89f85d4",
+				"message": {
+					"id": "5c55fa5c-e9a2-417b-910f-325da89f85d4",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696461174.716911"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Tu consulta parece ser una búsqueda geoespacial utilizando el operador `$near` de MongoDB combinada con otros criterios.\n\nAquí hay algunas cosas que deberías revisar o considerar:\n\n1. **Coordenadas en el formato correcto**: Asegúrate de que las variables `lng` y `lat` están correctamente definidas y tienen los valores adecuados.\n\n2. **Índice geoespacial**: Asegúrate de que hayas creado un índice geoespacial en el campo `\"location\"`. Puedes hacerlo de la siguiente manera:\n   \n   ```python\n   local_properties_collection.create_index([(\"location\", pymongo.GEOSPHERE)])\n   ```\n\n3. **Consistencia en los campos**: Asegúrate de que los documentos en tu colección efectivamente tienen los campos que estás utilizando en tu consulta, como `firebase_id`, `house_type`, y `monetization_type_display`.\n\n4. **Función `map_house_type`**: No veo la definición de `map_house_type` en tu código. Asegúrate de que esta función regrese un valor válido para ser utilizado con el operador `$regex`.\n\n5. **Variable `regex`**: Asegúrate de que `regex` esté definido y tenga un valor válido antes de usarlo en la consulta.\n\n6. **Estructura general**: En general, la estructura del query parece estar bien. Pero ten en cuenta que si un solo criterio falla (por ejemplo, si el índice geoespacial no está configurado correctamente), entonces todo el query podría no retornar resultados o generar un error.\n\nSi tras considerar los puntos mencionados sigues teniendo problemas, por favor proporciona más detalles sobre los errores o comportamientos inesperados que estás experimentando. ¡Estoy aquí para ayudar!"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa2818c-a131-4d81-826c-4de66036eec8",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa2818c-a131-4d81-826c-4de66036eec8",
+				"children": [
+					"aaa24074-8320-4427-93cd-cafe944c4e20"
+				]
+			},
+			"aaa24074-8320-4427-93cd-cafe944c4e20": {
+				"id": "aaa24074-8320-4427-93cd-cafe944c4e20",
+				"message": {
+					"id": "aaa24074-8320-4427-93cd-cafe944c4e20",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696461184.409074"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"en pyton el regex \".*\" es valido?"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "5c55fa5c-e9a2-417b-910f-325da89f85d4",
+				"children": [
+					"12d02594-d578-4764-bedc-f0d4411e805c"
+				]
+			},
+			"12d02594-d578-4764-bedc-f0d4411e805c": {
+				"id": "12d02594-d578-4764-bedc-f0d4411e805c",
+				"message": {
+					"id": "12d02594-d578-4764-bedc-f0d4411e805c",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696461213.300014"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Sí, en Python, la expresión regular `.*` es válida.\n\nEl punto (`.`) corresponde a cualquier carácter excepto un salto de línea (a menos que uses la flag `re.DOTALL`, en cuyo caso también corresponderá a saltos de línea). El asterisco (`*`) es un cuantificador que significa \"cero o más\" del elemento anterior, en este caso, cualquier carácter.\n\nPor lo tanto, `.*` capturará y coincidirá con cualquier secuencia de caracteres dentro de una línea. Es comúnmente usado en regex para representar una secuencia de caracteres de longitud variable.\n\nAquí tienes un breve ejemplo usando el módulo `re` de Python:\n\n```python\nimport re\n\npattern = \".*\"\ntext = \"Hola mundo\"\n\nmatch = re.match(pattern, text)\n\nif match:\n    print(\"La cadena coincide con el patrón.\")\nelse:\n    print(\"La cadena no coincide con el patrón.\")\n```\n\nEn este caso, la salida será \"La cadena coincide con el patrón.\" ya que `.*` coincide con cualquier cadena, incluida una cadena vacía."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa24074-8320-4427-93cd-cafe944c4e20",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa24074-8320-4427-93cd-cafe944c4e20",
+				"children": [
+					"aaa28629-2e68-4eb8-9222-1749ec3eb446"
+				]
+			},
+			"aaa28629-2e68-4eb8-9222-1749ec3eb446": {
+				"id": "aaa28629-2e68-4eb8-9222-1749ec3eb446",
+				"message": {
+					"id": "aaa28629-2e68-4eb8-9222-1749ec3eb446",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696465068.212498"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"def map_house_monetization(pop):\n  print(f\"monetization to map {pop}\")\n  tipos = [\n    \"Alquiler\",\n    \"Preventa\",\n    \"Renta\",\n    \"Venta\",\n    \"Temporal\"\n  ]\n  for item in tipos:\n    if pop in item:\n      return item\n  return '.*' # lo que sea\n\nmap_house_monetization('Venta ')\n\nsabes por que esa funcion no detecta el \"in\""
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "12d02594-d578-4764-bedc-f0d4411e805c",
+				"children": [
+					"c187ebab-369b-41e3-9d6f-60b8aea93b20"
+				]
+			},
+			"c187ebab-369b-41e3-9d6f-60b8aea93b20": {
+				"id": "c187ebab-369b-41e3-9d6f-60b8aea93b20",
+				"message": {
+					"id": "c187ebab-369b-41e3-9d6f-60b8aea93b20",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696465088.384398"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"La función `map_house_monetization` intenta comprobar si la cadena dada `pop` está contenida en cualquiera de las cadenas de la lista `tipos`. Sin embargo, debido a la forma en que está escrita, en realidad verifica si alguna de las cadenas en `tipos` está contenida en `pop`. Esto es opuesto a lo que parece que deseas hacer.\n\nPara corregir esto, simplemente invierte el uso de `in` en el bucle:\n\n```python\ndef map_house_monetization(pop):\n    print(f\"monetization to map {pop}\")\n    tipos = [\n        \"Alquiler\",\n        \"Preventa\",\n        \"Renta\",\n        \"Venta\",\n        \"Temporal\"\n    ]\n    for item in tipos:\n        if item in pop:  # Cambio aquí\n            return item\n    return '.*'  # lo que sea\n\nprint(map_house_monetization('Venta '))\n```\n\nAhora, cuando ejecutes la función con `'Venta '`, debería detectar correctamente y retornar `'Venta'`."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa28629-2e68-4eb8-9222-1749ec3eb446",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa28629-2e68-4eb8-9222-1749ec3eb446",
+				"children": []
+			}
+		},
+		"moderation_results": [],
+		"current_node": "c187ebab-369b-41e3-9d6f-60b8aea93b20",
+		"plugin_ids": null,
+		"conversation_id": "25370cfe-4999-4b17-9818-7e2f99101b5b",
+		"conversation_template_id": null,
+		"id": "25370cfe-4999-4b17-9818-7e2f99101b5b"
+	},
+	{
+		"_id": {
+			"$oid": "65367d4df7e69ea1d036780c"
+		},
+		"title": "New chat",
+		"create_time": {
+			"$numberDouble": "1696520443.063478"
+		},
+		"update_time": {
+			"$numberDouble": "1696524344.853244"
+		},
+		"mapping": {
+			"151caa87-4656-465a-81c9-5a748323a377": {
+				"id": "151caa87-4656-465a-81c9-5a748323a377",
+				"message": {
+					"id": "151caa87-4656-465a-81c9-5a748323a377",
+					"author": {
+						"role": "system",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": null,
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							""
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "0.0"
+					},
+					"metadata": {},
+					"recipient": "all"
+				},
+				"parent": "aaa1c728-ead0-48a0-b76f-f62e2f482b78",
+				"children": [
+					"aaa23306-76fd-422c-b8a3-7e4ff0202115"
+				]
+			},
+			"aaa1c728-ead0-48a0-b76f-f62e2f482b78": {
+				"id": "aaa1c728-ead0-48a0-b76f-f62e2f482b78",
+				"message": null,
+				"parent": null,
+				"children": [
+					"151caa87-4656-465a-81c9-5a748323a377"
+				]
+			},
+			"aaa23306-76fd-422c-b8a3-7e4ff0202115": {
+				"id": "aaa23306-76fd-422c-b8a3-7e4ff0202115",
+				"message": {
+					"id": "aaa23306-76fd-422c-b8a3-7e4ff0202115",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696520443.064786"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"actualmenter tengo esta funcion:\ndef ordenar_por_cercania(lista, precio_referencia):\n    return sorted(lista, key=lambda x: abs(x['price'] - precio_referencia))\n\ncomo puedo hadcer para que solo me regrese los precios que estan x porcentaje por abajo o y porcentaje por arriba del precio_referencia"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "151caa87-4656-465a-81c9-5a748323a377",
+				"children": [
+					"d24df881-9c31-4a87-ad21-a4d969e66f87"
+				]
+			},
+			"d24df881-9c31-4a87-ad21-a4d969e66f87": {
+				"id": "d24df881-9c31-4a87-ad21-a4d969e66f87",
+				"message": {
+					"id": "d24df881-9c31-4a87-ad21-a4d969e66f87",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696520477.287203"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Si deseas filtrar la lista para que solo te devuelva elementos cuyo precio está dentro de un rango específico basado en un porcentaje con respecto al `precio_referencia`, puedes hacer lo siguiente:\n\n1. Calcular los límites superior e inferior usando los porcentajes `x` y `y` respectivamente.\n2. Filtrar la lista usando esos límites.\n3. Ordenar la lista filtrada por cercanía al `precio_referencia`.\n\nAquí te muestro cómo puedes hacerlo:\n\n```python\ndef ordenar_por_cercania(lista, precio_referencia, x, y):\n    limite_inferior = precio_referencia * (1 - x / 100)  # x% por debajo\n    limite_superior = precio_referencia * (1 + y / 100)  # y% por arriba\n\n    lista_filtrada = [item for item in lista if limite_inferior <= item['price'] <= limite_superior]\n\n    return sorted(lista_filtrada, key=lambda item: abs(item['price'] - precio_referencia))\n```\n\nEn este caso, `x` y `y` son los porcentajes de variación que aceptas por debajo y por arriba del `precio_referencia`, respectivamente.\n\nPor ejemplo, si llamas a la función con `x=10`"
+						]
+					},
+					"status": "in_progress",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa23306-76fd-422c-b8a3-7e4ff0202115",
+						"finish_details": {
+							"type": "interrupted"
+						},
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa23306-76fd-422c-b8a3-7e4ff0202115",
+				"children": [
+					"aaa28bd8-8f44-4440-a48d-af986f6c2656"
+				]
+			},
+			"aaa28bd8-8f44-4440-a48d-af986f6c2656": {
+				"id": "aaa28bd8-8f44-4440-a48d-af986f6c2656",
+				"message": {
+					"id": "aaa28bd8-8f44-4440-a48d-af986f6c2656",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696520495.182519"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"dame un ejemplo de como llamarla"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "d24df881-9c31-4a87-ad21-a4d969e66f87",
+				"children": [
+					"f194d78c-0b4e-4a4e-a4e4-5749f3c093ff"
+				]
+			},
+			"f194d78c-0b4e-4a4e-a4e4-5749f3c093ff": {
+				"id": "f194d78c-0b4e-4a4e-a4e4-5749f3c093ff",
+				"message": {
+					"id": "f194d78c-0b4e-4a4e-a4e4-5749f3c093ff",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696520522.413088"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Por supuesto, aquí te doy un ejemplo de cómo llamar a la función:\n\nSupongamos que tienes la siguiente lista de productos con sus respectivos precios:\n\n```python\nproductos = [\n    {'nombre': 'Producto A', 'price': 90},\n    {'nombre': 'Producto B', 'price': 105},\n    {'nombre': 'Producto C', 'price': 95},\n    {'nombre': 'Producto D', 'price': 120},\n    {'nombre': 'Producto E', 'price': 87}\n]\n```\n\nAhora, si deseas obtener todos los productos cuyo precio está dentro del rango de un 10% por debajo y un 15% por arriba de un `precio_referencia` de 100, puedes llamar a la función de la siguiente manera:\n\n```python\nprecio_referencia = 100\nresultados = ordenar_por_cercania(productos, precio_referencia, 10, 15)\n\nfor producto in resultados:\n    print(producto['nombre'], producto['price'])\n```\n\nEl resultado será:\n\n```\nProducto C 95\nProducto B 105\nProducto A 90\nProducto E 87\n```\n\nEn este ejemplo, el `Producto D` con un precio de 120 queda fuera del rango permitido y, por lo tanto, no aparece en los resultados."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa28bd8-8f44-4440-a48d-af986f6c2656",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa28bd8-8f44-4440-a48d-af986f6c2656",
+				"children": [
+					"aaa23fe3-0138-428f-85d9-425835e20dff"
+				]
+			},
+			"aaa23fe3-0138-428f-85d9-425835e20dff": {
+				"id": "aaa23fe3-0138-428f-85d9-425835e20dff",
+				"message": {
+					"id": "aaa23fe3-0138-428f-85d9-425835e20dff",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696520600.612407"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"mejor que solo sea procentaje hacia arriba"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "f194d78c-0b4e-4a4e-a4e4-5749f3c093ff",
+				"children": [
+					"5c1b7c0d-de0d-4346-9ea6-9079bd1b1377"
+				]
+			},
+			"5c1b7c0d-de0d-4346-9ea6-9079bd1b1377": {
+				"id": "5c1b7c0d-de0d-4346-9ea6-9079bd1b1377",
+				"message": {
+					"id": "5c1b7c0d-de0d-4346-9ea6-9079bd1b1377",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696520627.293303"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"¡Entendido! Si solo deseas un porcentaje hacia arriba, podemos modificar la función para que solo tome en cuenta ese criterio.\n\nAquí está la función modificada:\n\n```python\ndef ordenar_por_cercania(lista, precio_referencia, y):\n    limite_superior = precio_referencia * (1 + y / 100)  # y% por arriba\n\n    lista_filtrada = [item for item in lista if item['price'] <= limite_superior]\n\n    return sorted(lista_filtrada, key=lambda item: abs(item['price'] - precio_referencia))\n```\n\nSiguiendo el ejemplo anterior, si deseas obtener todos los productos cuyo precio no exceda un 15% por arriba del `precio_referencia` de 100, llamarías a la función de la siguiente manera:\n\n```python\nprecio_referencia = 100\nresultados = ordenar_por_cercania(productos, precio_referencia, 15)\n\nfor producto in resultados:\n    print(producto['nombre'], producto['price'])\n```\n\nEl resultado será:\n\n```\nProducto C 95\nProducto B 105\nProducto A 90\nProducto E 87\n```\n\nNuevamente, el `Producto D` con un precio de 120 queda fuera del rango permitido y no aparece en los resultados."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa23fe3-0138-428f-85d9-425835e20dff",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa23fe3-0138-428f-85d9-425835e20dff",
+				"children": [
+					"aaa2a505-30aa-42f2-8ffe-dfcd61249ebf"
+				]
+			},
+			"aaa2a505-30aa-42f2-8ffe-dfcd61249ebf": {
+				"id": "aaa2a505-30aa-42f2-8ffe-dfcd61249ebf",
+				"message": {
+					"id": "aaa2a505-30aa-42f2-8ffe-dfcd61249ebf",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696522288.98652"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"haz una nueva funcion que se llame ordenar_por_mas_cercano_baths_park\n\nrecibe una lista de [{'nombre': 'Producto A', 'baths': 90, 'parks': 1}]\nel numero de referencia y me regrese los mas cercanos"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "5c1b7c0d-de0d-4346-9ea6-9079bd1b1377",
+				"children": [
+					"c03d31c7-0b04-44cd-932b-ed4d58c1f14e"
+				]
+			},
+			"c03d31c7-0b04-44cd-932b-ed4d58c1f14e": {
+				"id": "c03d31c7-0b04-44cd-932b-ed4d58c1f14e",
+				"message": {
+					"id": "c03d31c7-0b04-44cd-932b-ed4d58c1f14e",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696522328.829592"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"¡Entendido! Si quieres una función que ordene la lista basada en dos criterios (`baths` y `parks`) y que regrese los elementos más cercanos al número de referencia proporcionado, puedes hacerlo de la siguiente forma:\n\nLa clave aquí es crear una función que devuelva una métrica de \"distancia\" basada en ambos criterios y luego ordenar la lista basada en esa métrica.\n\n```python\ndef ordenar_por_mas_cercano_baths_park(lista, num_referencia):\n    def distancia(item):\n        # Calculamos la diferencia absoluta para cada criterio\n        diff_baths = abs(item['baths'] - num_referencia)\n        diff_parks = abs(item['parks'] - num_referencia)\n        \n        # Sumamos las diferencias para obtener una métrica de distancia\n        return diff_baths + diff_parks\n    \n    # Ordenamos la lista basada en la métrica de distancia\n    return sorted(lista, key=distancia)\n\n# Ejemplo de uso:\n\nproductos = [\n    {'nombre': 'Producto A', 'baths': 90, 'parks': 1},\n    {'nombre': 'Producto B', 'baths': 100, 'parks': 2},\n    {'nombre': 'Producto C', 'baths': 85, 'parks': 0},\n    {'nombre': 'Producto D', 'baths': 110, 'parks': 3},\n]\n\nnum_referencia = 100\nresultados = ordenar_por_mas_cercano_baths_park(productos, num_referencia)\n\nfor producto in resultados:\n    print(producto['nombre'], producto['baths'], producto['parks'])\n```\n\nEl código anterior crea una función de ordenación basada en la \"distancia\" de cada elemento de la lista al número de referencia. Luego, el ejemplo muestra cómo usar esa función para ordenar la lista `productos` basada en los criterios `baths` y `parks`."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa2a505-30aa-42f2-8ffe-dfcd61249ebf",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa2a505-30aa-42f2-8ffe-dfcd61249ebf",
+				"children": [
+					"aaa2598e-24fb-4319-9154-8661fceda64a"
+				]
+			},
+			"aaa2598e-24fb-4319-9154-8661fceda64a": {
+				"id": "aaa2598e-24fb-4319-9154-8661fceda64a",
+				"message": {
+					"id": "aaa2598e-24fb-4319-9154-8661fceda64a",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696522342.388235"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"pero a la funcion le pasaria dos numeros de referncia uno para parks y otro para batsh"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "c03d31c7-0b04-44cd-932b-ed4d58c1f14e",
+				"children": [
+					"6b395091-9c60-45f8-b24f-b6ff7f83373a"
+				]
+			},
+			"6b395091-9c60-45f8-b24f-b6ff7f83373a": {
+				"id": "6b395091-9c60-45f8-b24f-b6ff7f83373a",
+				"message": {
+					"id": "6b395091-9c60-45f8-b24f-b6ff7f83373a",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696522383.228158"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"¡Entendido! Aquí te presento una versión modificada de la función que acepta dos números de referencia, uno para `baths` y otro para `parks`. La lista se ordenará basándose en la cercanía de cada elemento a ambos números de referencia:\n\n```python\ndef ordenar_por_mas_cercano_baths_park(lista, baths_referencia, parks_referencia):\n    def distancia(item):\n        # Calculamos la diferencia absoluta para cada criterio\n        diff_baths = abs(item['baths'] - baths_referencia)\n        diff_parks = abs(item['parks'] - parks_referencia)\n        \n        # Sumamos las diferencias para obtener una métrica de distancia\n        return diff_baths + diff_parks\n    \n    # Ordenamos la lista basada en la métrica de distancia\n    return sorted(lista, key=distancia)\n\n# Ejemplo de uso:\n\nproductos = [\n    {'nombre': 'Producto A', 'baths': 90, 'parks': 1},\n    {'nombre': 'Producto B', 'baths': 100, 'parks': 2},\n    {'nombre': 'Producto C', 'baths': 85, 'parks': 0},\n    {'nombre': 'Producto D', 'baths': 110, 'parks': 3},\n]\n\nbaths_referencia = 100\nparks_referencia = 2\n\nresultados = ordenar_por_mas_cercano_baths_park(productos, baths_referencia, parks_referencia)\n\nfor producto in resultados:\n    print(producto['nombre'], producto['baths'], producto['parks'])\n```\n\nCon los datos del ejemplo, el orden de los resultados mostrará primero aquellos productos que están más cerca en términos de cantidad de `baths` y `parks` a los números de referencia proporcionados."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa2598e-24fb-4319-9154-8661fceda64a",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa2598e-24fb-4319-9154-8661fceda64a",
+				"children": [
+					"aaa2cd6a-8eb0-4594-ae71-a08d88aecfbc"
+				]
+			},
+			"aaa2cd6a-8eb0-4594-ae71-a08d88aecfbc": {
+				"id": "aaa2cd6a-8eb0-4594-ae71-a08d88aecfbc",
+				"message": {
+					"id": "aaa2cd6a-8eb0-4594-ae71-a08d88aecfbc",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696522638.038329"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"ahora tengo esto:\n\nsug_half_bath = a / 2\n\ndonde a puede ser un numero o None, como puedo evitar que me de error"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "6b395091-9c60-45f8-b24f-b6ff7f83373a",
+				"children": [
+					"51943f95-dd02-435c-9357-c9cb70845438"
+				]
+			},
+			"51943f95-dd02-435c-9357-c9cb70845438": {
+				"id": "51943f95-dd02-435c-9357-c9cb70845438",
+				"message": {
+					"id": "51943f95-dd02-435c-9357-c9cb70845438",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696522653.80361"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Si la variable `a` puede ser `None` y quieres evitar que te dé un error al realizar la operación, puedes usar una condición para verificar el valor de `a` antes de realizar la operación.\n\nAquí hay una forma de hacerlo utilizando una expresión condicional:\n\n```python\nsug_half_bath = a / 2 if a is not None else None\n```\n\nCon esta línea de código, si `a` tiene un valor numérico, `sug_half_bath` tendrá el valor de `a` dividido por 2. Si `a` es `None`, entonces `sug_half_bath` también será `None`."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa2cd6a-8eb0-4594-ae71-a08d88aecfbc",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa2cd6a-8eb0-4594-ae71-a08d88aecfbc",
+				"children": [
+					"aaa28d60-9794-4861-b7ce-aef69373a839"
+				]
+			},
+			"aaa28d60-9794-4861-b7ce-aef69373a839": {
+				"id": "aaa28d60-9794-4861-b7ce-aef69373a839",
+				"message": {
+					"id": "aaa28d60-9794-4861-b7ce-aef69373a839",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696522656.509832"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"si a era none que sea 0"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "51943f95-dd02-435c-9357-c9cb70845438",
+				"children": [
+					"f963112b-1331-440c-bbf8-f58b76dd6e95"
+				]
+			},
+			"f963112b-1331-440c-bbf8-f58b76dd6e95": {
+				"id": "f963112b-1331-440c-bbf8-f58b76dd6e95",
+				"message": {
+					"id": "f963112b-1331-440c-bbf8-f58b76dd6e95",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696522667.23127"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"¡Entendido! Si deseas que `sug_half_bath` sea `0` en caso de que `a` sea `None`, puedes modificar la expresión condicional de la siguiente manera:\n\n```python\nsug_half_bath = a / 2 if a is not None else 0\n```\n\nCon esta línea, si `a` es `None`, entonces `sug_half_bath` tendrá el valor `0`. Si `a` tiene un valor numérico, `sug_half_bath` tendrá el valor de `a` dividido por 2."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa28d60-9794-4861-b7ce-aef69373a839",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa28d60-9794-4861-b7ce-aef69373a839",
+				"children": [
+					"aaa28d12-4468-4355-bbc4-e033890ae247"
+				]
+			},
+			"aaa28d12-4468-4355-bbc4-e033890ae247": {
+				"id": "aaa28d12-4468-4355-bbc4-e033890ae247",
+				"message": {
+					"id": "aaa28d12-4468-4355-bbc4-e033890ae247",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696523132.499888"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"y casos donde a pueda ser 0?"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "f963112b-1331-440c-bbf8-f58b76dd6e95",
+				"children": [
+					"5675d839-31cb-4cf8-a48d-afbbcef70fe0"
+				]
+			},
+			"5675d839-31cb-4cf8-a48d-afbbcef70fe0": {
+				"id": "5675d839-31cb-4cf8-a48d-afbbcef70fe0",
+				"message": {
+					"id": "5675d839-31cb-4cf8-a48d-afbbcef70fe0",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696523153.187771"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Si `a` puede ser `0`, no habrá problemas con la operación `a / 2`, ya que `0` dividido por cualquier número es `0`. Sin embargo, si quieres manejar explícitamente el caso en que `a` sea `0` o `None`, puedes hacerlo así:\n\n```python\nsug_half_bath = a / 2 if a is not None else 0\n```\n\nEn este caso, si `a` es `0`, entonces `sug_half_bath` será `0 / 2`, lo cual resulta en `0`. Si `a` es `None`, entonces `sug_half_bath` será `0`.\n\nSi tienes alguna otra preocupación sobre posibles valores de `a` o comportamientos específicos que desees, házmelo saber. Pero con la solución proporcionada, tanto `0` como `None` están manejados adecuadamente."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa28d12-4468-4355-bbc4-e033890ae247",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa28d12-4468-4355-bbc4-e033890ae247",
+				"children": [
+					"aaa2b49a-970e-4bca-bf3d-89723f739d54"
+				]
+			},
+			"aaa2b49a-970e-4bca-bf3d-89723f739d54": {
+				"id": "aaa2b49a-970e-4bca-bf3d-89723f739d54",
+				"message": {
+					"id": "aaa2b49a-970e-4bca-bf3d-89723f739d54",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696524312.143694"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"como puedo hacer que este loop aplique a los primeros n elementos         for cl in closest:"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "5675d839-31cb-4cf8-a48d-afbbcef70fe0",
+				"children": [
+					"c9a93e8b-43ad-49f4-a772-8bd592aaeb15"
+				]
+			},
+			"c9a93e8b-43ad-49f4-a772-8bd592aaeb15": {
+				"id": "c9a93e8b-43ad-49f4-a772-8bd592aaeb15",
+				"message": {
+					"id": "c9a93e8b-43ad-49f4-a772-8bd592aaeb15",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696524323.591879"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Si deseas que el bucle se aplique solo a los primeros `n` elementos de la lista `closest`, puedes utilizar un slice en tu bucle `for`. \n\nAquí te muestro cómo hacerlo:\n\n```python\nn = 5  # o cualquier otro valor que desees\n\nfor cl in closest[:n]:\n    # tu código aquí\n```\n\nCon este código, el bucle se iterará solo sobre los primeros `n` elementos de la lista `closest`. Si la lista tiene menos de `n` elementos, simplemente iterará sobre todos los elementos disponibles."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa2b49a-970e-4bca-bf3d-89723f739d54",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa2b49a-970e-4bca-bf3d-89723f739d54",
+				"children": [
+					"aaa28fbb-950d-4383-922a-9c8489662741"
+				]
+			},
+			"aaa28fbb-950d-4383-922a-9c8489662741": {
+				"id": "aaa28fbb-950d-4383-922a-9c8489662741",
+				"message": {
+					"id": "aaa28fbb-950d-4383-922a-9c8489662741",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696524334.971401"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"que pasa si la lista no tiene el numero de elementos que pongo"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "c9a93e8b-43ad-49f4-a772-8bd592aaeb15",
+				"children": [
+					"5a75be2e-76a1-4087-9de0-251e4b0d12be"
+				]
+			},
+			"5a75be2e-76a1-4087-9de0-251e4b0d12be": {
+				"id": "5a75be2e-76a1-4087-9de0-251e4b0d12be",
+				"message": {
+					"id": "5a75be2e-76a1-4087-9de0-251e4b0d12be",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696524344.851118"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Si la lista `closest` tiene menos elementos que el valor de `n` que especificas, el slice `closest[:n]` simplemente devolverá todos los elementos que estén en la lista. No arrojará ningún error.\n\nPor ejemplo:\n\n```python\nclosest = [1, 2, 3]\nn = 5\n\nfor cl in closest[:n]:\n    print(cl)\n```\n\nEste código imprimirá:\n\n```\n1\n2\n3\n```\n\nComo puedes ver, incluso si `n` es mayor que la longitud de la lista, el bucle solo iterará sobre los elementos disponibles en la lista, y todo funcionará sin problemas."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa28fbb-950d-4383-922a-9c8489662741",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa28fbb-950d-4383-922a-9c8489662741",
+				"children": []
+			}
+		},
+		"moderation_results": [],
+		"current_node": "5a75be2e-76a1-4087-9de0-251e4b0d12be",
+		"plugin_ids": null,
+		"conversation_id": "d4260e49-eb82-429a-b453-b0228b70a9ba",
+		"conversation_template_id": null,
+		"id": "d4260e49-eb82-429a-b453-b0228b70a9ba"
+	},
+	{
+		"_id": {
+			"$oid": "65367df9f7e69ea1d036780d"
+		},
+		"title": "Convertir Timestamp Firebase a Datetime",
+		"create_time": {
+			"$numberDouble": "1696374744.198869"
+		},
+		"update_time": {
+			"$numberDouble": "1696375217.447802"
+		},
+		"mapping": {
+			"564c47b2-8c07-4dee-a5b5-120405297ea4": {
+				"id": "564c47b2-8c07-4dee-a5b5-120405297ea4",
+				"message": {
+					"id": "564c47b2-8c07-4dee-a5b5-120405297ea4",
+					"author": {
+						"role": "system",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": null,
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							""
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "0.0"
+					},
+					"metadata": {},
+					"recipient": "all"
+				},
+				"parent": "aaa139cf-bce7-4c23-8ae2-88fe5ea7515f",
+				"children": [
+					"aaa274f9-a66f-441d-9d66-d91d8c420e98"
+				]
+			},
+			"aaa139cf-bce7-4c23-8ae2-88fe5ea7515f": {
+				"id": "aaa139cf-bce7-4c23-8ae2-88fe5ea7515f",
+				"message": null,
+				"parent": null,
+				"children": [
+					"564c47b2-8c07-4dee-a5b5-120405297ea4"
+				]
+			},
+			"aaa274f9-a66f-441d-9d66-d91d8c420e98": {
+				"id": "aaa274f9-a66f-441d-9d66-d91d8c420e98",
+				"message": {
+					"id": "aaa274f9-a66f-441d-9d66-d91d8c420e98",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696374744.199649"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"como convertir un timestamp de firebase a datetime de python cuando lo obtengo de un doc de firebase"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "564c47b2-8c07-4dee-a5b5-120405297ea4",
+				"children": [
+					"68272659-3804-4420-8959-2dcabe4b246d"
+				]
+			},
+			"68272659-3804-4420-8959-2dcabe4b246d": {
+				"id": "68272659-3804-4420-8959-2dcabe4b246d",
+				"message": {
+					"id": "68272659-3804-4420-8959-2dcabe4b246d",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696374763.578756"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Si estás trabajando con Firebase, especialmente con Firestore, es probable que hayas encontrado un tipo de dato llamado `Timestamp`. Cuando recuperas un documento de Firestore que contiene un campo de fecha, este campo es devuelto como un objeto `Timestamp`.\n\nPara convertir un `Timestamp` de Firebase a un objeto `datetime` de Python, puedes hacer lo siguiente:\n\n1. Asegúrate de haber importado las bibliotecas necesarias:\n```python\nfrom datetime import datetime\n```\n\n2. Cuando obtengas el objeto `Timestamp` de Firebase (supongamos que se llama `firebase_timestamp`), puedes convertirlo a `datetime` de la siguiente manera:\n```python\n# Suponiendo que firebase_timestamp es tu objeto Timestamp de Firebase\npython_datetime = firebase_timestamp.to_datetime()\n```\n\nLa función `to_datetime()` convierte el objeto `Timestamp` de Firebase a un objeto `datetime` de Python.\n\nRecuerda que necesitarás tener la SDK de Firebase para Python instalada y configurada adecuadamente para poder hacer esta conversión.\n\nSi tienes un ejemplo específico o alguna otra duda relacionada, ¡házmelo saber!"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4-code-interpreter",
+						"parent_id": "aaa274f9-a66f-441d-9d66-d91d8c420e98",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa274f9-a66f-441d-9d66-d91d8c420e98",
+				"children": [
+					"aaa22f1f-6989-40ad-9ded-c12b157be468"
+				]
+			},
+			"aaa22f1f-6989-40ad-9ded-c12b157be468": {
+				"id": "aaa22f1f-6989-40ad-9ded-c12b157be468",
+				"message": {
+					"id": "aaa22f1f-6989-40ad-9ded-c12b157be468",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696375197.894046"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"{\n    \"error\": \"An error occurred: 'DatetimeWithNanoseconds' object has no attribute 'to_datetime'\",\n    \"tb\": \"Traceback (most recent call last):\\n  File \\\"C:\\\\Users\\\\brand\\\\Documents\\\\Nuclea Projects\\\\upload-file-drive\\\\main.py\\\", line 681, in generate_contract_drive\\n    date_to_set_aside = first_receivable_first_payment_data['paymentDate'].to_datetime()\\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\nAttributeError: 'DatetimeWithNanoseconds' object has no attribute 'to_datetime'\\n\"\n}"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "68272659-3804-4420-8959-2dcabe4b246d",
+				"children": [
+					"7197e53e-867e-4548-aafb-41bebcaa2c76"
+				]
+			},
+			"7197e53e-867e-4548-aafb-41bebcaa2c76": {
+				"id": "7197e53e-867e-4548-aafb-41bebcaa2c76",
+				"message": {
+					"id": "7197e53e-867e-4548-aafb-41bebcaa2c76",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1696375217.445709"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Mis disculpas. Cometí un error en mi respuesta anterior. Si estás obteniendo un error con el objeto `DatetimeWithNanoseconds`, eso significa que estás tratando con la representación de Python del objeto `Timestamp` de Firebase.\n\nEl objeto `DatetimeWithNanoseconds` es, en esencia, un objeto `datetime` estándar de Python con información adicional de nanosegundos. No necesitas convertirlo, ya que ya es un `datetime`. Sin embargo, si deseas obtener una versión sin nanosegundos, puedes hacerlo de la siguiente manera:\n\n```python\npython_datetime = first_receivable_first_payment_data['paymentDate'].datetime\n```\n\nEl atributo `.datetime` te dará el objeto `datetime` subyacente.\n\nAsí que, para corregir tu error, simplemente cambia:\n\n```python\ndate_to_set_aside = first_receivable_first_payment_data['paymentDate'].to_datetime()\n```\n\na:\n\n```python\ndate_to_set_aside = first_receivable_first_payment_data['paymentDate'].datetime\n```\n\n¡Espero que eso solucione tu problema!"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4-code-interpreter",
+						"parent_id": "aaa22f1f-6989-40ad-9ded-c12b157be468",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa22f1f-6989-40ad-9ded-c12b157be468",
+				"children": []
+			}
+		},
+		"moderation_results": [],
+		"current_node": "7197e53e-867e-4548-aafb-41bebcaa2c76",
+		"plugin_ids": null,
+		"conversation_id": "da90dcae-1597-4bea-9d71-6dfd21a5e670",
+		"conversation_template_id": null,
+		"id": "da90dcae-1597-4bea-9d71-6dfd21a5e670"
+	},
+	{
+		"_id": {
+			"$oid": "65367e61f7e69ea1d036780e"
+		},
+		"title": "Ordenar por precio cercano",
+		"create_time": {
+			"$numberDouble": "1695920894.438181"
+		},
+		"update_time": {
+			"$numberDouble": "1695922415.367959"
+		},
+		"mapping": {
+			"60a7d0c0-cb1a-408a-a35f-52c9b7038c3d": {
+				"id": "60a7d0c0-cb1a-408a-a35f-52c9b7038c3d",
+				"message": {
+					"id": "60a7d0c0-cb1a-408a-a35f-52c9b7038c3d",
+					"author": {
+						"role": "system",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": null,
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							""
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "0.0"
+					},
+					"metadata": {},
+					"recipient": "all"
+				},
+				"parent": "aaa1d89b-2e67-484e-8dba-041e423d19ff",
+				"children": [
+					"aaa2151f-7697-4af6-b3b2-498b9c2b85e5"
+				]
+			},
+			"aaa1d89b-2e67-484e-8dba-041e423d19ff": {
+				"id": "aaa1d89b-2e67-484e-8dba-041e423d19ff",
+				"message": null,
+				"parent": null,
+				"children": [
+					"60a7d0c0-cb1a-408a-a35f-52c9b7038c3d"
+				]
+			},
+			"aaa2151f-7697-4af6-b3b2-498b9c2b85e5": {
+				"id": "aaa2151f-7697-4af6-b3b2-498b9c2b85e5",
+				"message": {
+					"id": "aaa2151f-7697-4af6-b3b2-498b9c2b85e5",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695920894.438836"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"dame una funcion en python para ordenar un  arreglo de elementos por ejemplos [{titulo: 'a', price: 2000 }]\npara ordenarlos por el precio más cercano a otro dato"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "60a7d0c0-cb1a-408a-a35f-52c9b7038c3d",
+				"children": [
+					"618217ff-be66-494c-9aa2-674b7159c643"
+				]
+			},
+			"618217ff-be66-494c-9aa2-674b7159c643": {
+				"id": "618217ff-be66-494c-9aa2-674b7159c643",
+				"message": {
+					"id": "618217ff-be66-494c-9aa2-674b7159c643",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695920917.21134"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Claro, aquí tienes una función en Python que ordena una lista de diccionarios basándose en la diferencia de precio con un valor dado:\n\n```python\ndef ordenar_por_cercania(lista, precio_referencia):\n    return sorted(lista, key=lambda x: abs(x['price'] - precio_referencia))\n\n# Ejemplo de uso:\nproductos = [\n    {'titulo': 'a', 'price': 2000},\n    {'titulo': 'b', 'price': 1500},\n    {'titulo': 'c', 'price': 1800},\n    {'titulo': 'd', 'price': 2500}\n]\n\nprecio_deseado = 1900\nproductos_ordenados = ordenar_por_cercania(productos, precio_deseado)\nprint(productos_ordenados)\n```\n\nLa función `ordenar_por_cercania` toma como argumentos una lista de diccionarios y un precio de referencia. La función `sorted` se encarga de ordenar la lista. La clave de ordenación (`key`) se basa en la diferencia absoluta entre el precio del producto y el precio de referencia, lo que garantiza que los productos se ordenen de acuerdo con su cercanía al precio deseado.\n\nEl resultado en el ejemplo sería:\n\n```\n[{'titulo': 'c', 'price': 1800}, {'titulo': 'a', 'price': 2000}, {'titulo': 'b', 'price': 1500}, {'titulo': 'd', 'price': 2500}]\n```\n\nEsto significa que el producto con el título 'c' es el más cercano al precio deseado de 1900, seguido por el producto con el título 'a', y así sucesivamente."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa2151f-7697-4af6-b3b2-498b9c2b85e5",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa2151f-7697-4af6-b3b2-498b9c2b85e5",
+				"children": [
+					"aaa222c4-121f-4d5c-8c72-05f183da9d95"
+				]
+			},
+			"aaa222c4-121f-4d5c-8c72-05f183da9d95": {
+				"id": "aaa222c4-121f-4d5c-8c72-05f183da9d95",
+				"message": {
+					"id": "aaa222c4-121f-4d5c-8c72-05f183da9d95",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695921105.723663"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"ahora dame una funcion para limpiar estos precios:\n$19,000\n$19,000\n$2,720,000\n$21,000,000 / $90,000\n$19,000\n$5,900,000\n$19,500,000\n$22,000\n$47,200\n$2,100,000\n$19,000\n$2,891,000\n$31,500\n$17,800\n$79,000\n$25,000\n$79,000\nConsulte precio\n$12,000.00\n$4,800,000\n$2,380,000\n$1,500,000\n$3,500,000\n$10,500,000\n$79,000"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "618217ff-be66-494c-9aa2-674b7159c643",
+				"children": [
+					"f9a6f3a5-bb0d-4594-9a95-69d2cca73bde"
+				]
+			},
+			"f9a6f3a5-bb0d-4594-9a95-69d2cca73bde": {
+				"id": "f9a6f3a5-bb0d-4594-9a95-69d2cca73bde",
+				"message": {
+					"id": "f9a6f3a5-bb0d-4594-9a95-69d2cca73bde",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695921138.982098"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Entiendo que deseas limpiar la lista de precios para extraer solo los valores numéricos y deshacerte de los caracteres no deseados. Asumo que quieres manejar casos donde hay dos precios en una sola cadena (como \"$21,000,000 / $90,000\") y posiblemente separarlos.\n\nAquí te presento una función que limpia la lista de precios y devuelve una lista de valores numéricos:\n\n```python\nimport re\n\ndef limpiar_precios(lista_precios):\n    precios_limpios = []\n\n    for precio in lista_precios:\n        # Buscamos todos los patrones de precios en la cadena\n        matches = re.findall(r\"\\$([\\d,]+(?:\\.\\d{2})?)\", precio)\n        \n        for match in matches:\n            # Eliminamos las comas y convertimos a int\n            valor = int(match.replace(',', ''))\n            precios_limpios.append(valor)\n\n    return precios_limpios\n\n# Ejemplo de uso:\nprecios = [\n    \"$19,000\", \"$19,000\", \"$2,720,000\", \"$21,000,000 / $90,000\", \n    \"$19,000\", \"$5,900,000\", \"$19,500,000\", \"$22,000\", \"$47,200\", \n    \"$2,100,000\", \"$19,000\", \"$2,891,000\", \"$31,500\", \"$17,800\", \n    \"$79,000\", \"$25,000\", \"$79,000\", \"Consulte precio\", \"$12,000.00\", \n    \"$4,800,000\", \"$2,380,000\", \"$1,500,000\", \"$3,500,000\", \n    \"$10,500,000\", \"$79,000\"\n]\n\nprecios_limpios = limpiar_precios(precios)\nprint(precios_limpios)\n```\n\nEl resultado de esta función sería una lista con los valores numéricos limpios, eliminando cualquier otra palabra o símbolo que no corresponda a un precio. En el caso de \"$21,000,000 / $90,000\", la función extrae ambos precios y los agrega a la lista resultante."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa222c4-121f-4d5c-8c72-05f183da9d95",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa222c4-121f-4d5c-8c72-05f183da9d95",
+				"children": [
+					"aaa257ed-d66e-40d7-a38d-f248617ba94f"
+				]
+			},
+			"aaa257ed-d66e-40d7-a38d-f248617ba94f": {
+				"id": "aaa257ed-d66e-40d7-a38d-f248617ba94f",
+				"message": {
+					"id": "aaa257ed-d66e-40d7-a38d-f248617ba94f",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695921182.900169"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"alueError: invalid literal for int() with base 10: '12000.00'"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "f9a6f3a5-bb0d-4594-9a95-69d2cca73bde",
+				"children": [
+					"a440fabd-8987-4817-bab7-d8b9ded91ea1"
+				]
+			},
+			"a440fabd-8987-4817-bab7-d8b9ded91ea1": {
+				"id": "a440fabd-8987-4817-bab7-d8b9ded91ea1",
+				"message": {
+					"id": "a440fabd-8987-4817-bab7-d8b9ded91ea1",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695921213.37324"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Mis disculpas, me olvidé de manejar el caso en el que los precios pueden contener decimales (como en \"$12,000.00\").\n\nPara solucionar el error, vamos a modificar la función para manejar los decimales de forma adecuada:\n\n```python\nimport re\n\ndef limpiar_precios(lista_precios):\n    precios_limpios = []\n\n    for precio in lista_precios:\n        # Buscamos todos los patrones de precios en la cadena\n        matches = re.findall(r\"\\$([\\d,]+(?:\\.\\d{2})?)\", precio)\n        \n        for match in matches:\n            # Eliminamos las comas y convertimos a float primero\n            valor_float = float(match.replace(',', ''))\n            \n            # Convertimos a int (esto eliminará los decimales .00)\n            valor = int(valor_float)\n            \n            precios_limpios.append(valor)\n\n    return precios_limpios\n\n# Ejemplo de uso:\nprecios = [\n    \"$19,000\", \"$19,000\", \"$2,720,000\", \"$21,000,000 / $90,000\", \n    \"$19,000\", \"$5,900,000\", \"$19,500,000\", \"$22,000\", \"$47,200\", \n    \"$2,100,000\", \"$19,000\", \"$2,891,000\", \"$31,500\", \"$17,800\", \n    \"$79,000\", \"$25,000\", \"$79,000\", \"Consulte precio\", \"$12,000.00\", \n    \"$4,800,000\", \"$2,380,000\", \"$1,500,000\", \"$3,500,000\", \n    \"$10,500,000\", \"$79,000\"\n]\n\nprecios_limpios = limpiar_precios(precios)\nprint(precios_limpios)\n```\n\nCon estos cambios, la función primero convertirá los valores a `float` para manejar los decimales, y luego los convertirá a `int` para eliminar los decimales `.00`. Esto manejará adecuadamente los precios con y sin decimales."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa257ed-d66e-40d7-a38d-f248617ba94f",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa257ed-d66e-40d7-a38d-f248617ba94f",
+				"children": [
+					"aaa2b8bf-26cc-4674-9029-8106f265f6ee"
+				]
+			},
+			"aaa2b8bf-26cc-4674-9029-8106f265f6ee": {
+				"id": "aaa2b8bf-26cc-4674-9029-8106f265f6ee",
+				"message": {
+					"id": "aaa2b8bf-26cc-4674-9029-8106f265f6ee",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695921645.22662"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"modifica esta funcion:\ndef ordenar_por_cercania(lista, precio_referencia):\n  return sorted(lista, key=lambda x: abs(x['price'] - precio_referencia)) \n\npara que sea de un arreglo de numeros y no un arreglod e items"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "a440fabd-8987-4817-bab7-d8b9ded91ea1",
+				"children": [
+					"df3d58c2-2ae9-468c-8398-e50765ceda8b"
+				]
+			},
+			"df3d58c2-2ae9-468c-8398-e50765ceda8b": {
+				"id": "df3d58c2-2ae9-468c-8398-e50765ceda8b",
+				"message": {
+					"id": "df3d58c2-2ae9-468c-8398-e50765ceda8b",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695921660.953647"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Claro, si lo que deseas es ordenar una lista de números basándose en la cercanía a un número de referencia, puedes hacerlo así:\n\n```python\ndef ordenar_por_cercania(lista, numero_referencia):\n    return sorted(lista, key=lambda x: abs(x - numero_referencia))\n\n# Ejemplo de uso:\nnumeros = [2000, 1500, 1800, 2500, 1900]\nnumero_referencia = 1900\nnumeros_ordenados = ordenar_por_cercania(numeros, numero_referencia)\nprint(numeros_ordenados)\n```\n\nEl resultado en este ejemplo sería:\n\n```\n[1900, 1800, 2000, 1500, 2500]\n```\n\nLo que hicimos fue simplificar la función para que tome en cuenta una lista de números en lugar de una lista de diccionarios. La clave de ordenación ahora se basa directamente en la diferencia absoluta entre cada número de la lista y el número de referencia."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa2b8bf-26cc-4674-9029-8106f265f6ee",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa2b8bf-26cc-4674-9029-8106f265f6ee",
+				"children": [
+					"aaa2d86b-1478-48c3-b660-ecea61d03385"
+				]
+			},
+			"aaa2d86b-1478-48c3-b660-ecea61d03385": {
+				"id": "aaa2d86b-1478-48c3-b660-ecea61d03385",
+				"message": {
+					"id": "aaa2d86b-1478-48c3-b660-ecea61d03385",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695922060.261186"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"      9 def ordenar_por_cercania(lista, precio_referencia):\n---> 10   return sorted(lista, key=lambda x: abs(x['price'] - precio_referencia))\n     11 \n     12 def limpiar_precios(precio):\n\nTypeError: 'list' object is not callable"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "df3d58c2-2ae9-468c-8398-e50765ceda8b",
+				"children": [
+					"87bdb574-7e04-4e73-b65f-f3e32ae2e375"
+				]
+			},
+			"87bdb574-7e04-4e73-b65f-f3e32ae2e375": {
+				"id": "87bdb574-7e04-4e73-b65f-f3e32ae2e375",
+				"message": {
+					"id": "87bdb574-7e04-4e73-b65f-f3e32ae2e375",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695922086.539854"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"El error `TypeError: 'list' object is not callable` generalmente indica que en alguna parte de tu código has reasignado accidentalmente el nombre de una función incorporada de Python a otro tipo de objeto. En este caso, es probable que hayas reasignado el nombre `sorted` a una lista en algún lugar de tu código.\n\nPara solucionar el problema, sigue estos pasos:\n\n1. Asegúrate de no tener ninguna variable llamada `sorted` en tu código. Si la tienes, cambia su nombre.\n2. Reinicia el kernel o intérprete de Python para limpiar las asignaciones de nombres anteriores.\n3. Ejecuta el código nuevamente.\n\nAquí está el código de las funciones que hemos discutido hasta ahora, sin cambios:\n\n```python\ndef ordenar_por_cercania(lista, precio_referencia):\n    return sorted(lista, key=lambda x: abs(x - precio_referencia))\n\ndef limpiar_precios(lista_precios):\n    precios_limpios = []\n\n    for precio in lista_precios:\n        # Buscamos todos los patrones de precios en la cadena\n        matches = re.findall(r\"\\$([\\d,]+(?:\\.\\d{2})?)\", precio)\n        \n        for match in matches:\n            # Eliminamos las comas y convertimos a float primero\n            valor_float = float(match.replace(',', ''))\n            \n            # Convertimos a int (esto eliminará los decimales .00)\n            valor = int(valor_float)\n            \n            precios_limpios.append(valor)\n\n    return precios_limpios\n```\n\nLuego de asegurarte de no tener ninguna variable llamada `sorted`, deberías poder ejecutar el código sin problemas."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa2d86b-1478-48c3-b660-ecea61d03385",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa2d86b-1478-48c3-b660-ecea61d03385",
+				"children": [
+					"aaa2b0ca-ee63-4319-9712-2ff51151c1e6"
+				]
+			},
+			"aaa2b0ca-ee63-4319-9712-2ff51151c1e6": {
+				"id": "aaa2b0ca-ee63-4319-9712-2ff51151c1e6",
+				"message": {
+					"id": "aaa2b0ca-ee63-4319-9712-2ff51151c1e6",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695922180.606875"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"<ipython-input-77-40bb5cc5e3d1> in <cell line: 21>()\n     60     original_price = limpiar_precios(prop['price_display'])\n     61     print(original_price)\n---> 62     ordenar_por_cercania(clean_prices, original_price[0])\n     63   else:\n     64     continue\n\n<ipython-input-60-8f50f692f9f8> in ordenar_por_cercania(lista, precio_referencia)\n      8 \n      9 def ordenar_por_cercania(lista, precio_referencia):\n---> 10   return sorted(lista, key=lambda x: abs(x['price'] - precio_referencia))\n     11 \n     12 def limpiar_precios(precio):\n\nTypeError: 'list' object is not callable"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "87bdb574-7e04-4e73-b65f-f3e32ae2e375",
+				"children": [
+					"497b9a43-9253-4569-982d-84f98083cebd"
+				]
+			},
+			"497b9a43-9253-4569-982d-84f98083cebd": {
+				"id": "497b9a43-9253-4569-982d-84f98083cebd",
+				"message": {
+					"id": "497b9a43-9253-4569-982d-84f98083cebd",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695922202.510093"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"El error que estás viendo indica que estás tratando de llamar a un objeto de tipo `list` como si fuera una función. Es muy probable que en alguna parte de tu código (en una celda anterior en Jupyter Notebook, por ejemplo) hayas reasignado por error el nombre de la función incorporada `sorted` a una lista.\n\nPara resolver este problema:\n\n1. Revisa todas las celdas anteriores en tu Jupyter Notebook para asegurarte de que no hayas reasignado el nombre `sorted` a otra cosa. Si lo hiciste, cambia el nombre de esa variable.\n2. Luego de corregir cualquier reasignación, reinicia el kernel de tu Jupyter Notebook para limpiar el espacio de nombres actual.\n3. Ejecuta nuevamente el código.\n\nAdicionalmente, noto que en la función `ordenar_por_cercania`, estás tratando de acceder a la clave `['price']` en la lista, pero esta función estaba diseñada para una lista de números y no una lista de diccionarios. Si estás usando la lista de números limpios, la función debería ser:\n\n```python\ndef ordenar_por_cercania(lista, precio_referencia):\n    return sorted(lista, key=lambda x: abs(x - precio_referencia))\n```\n\nAsegúrate de que la función `ordenar_por_cercania` y cómo la llamas sean consistentes en términos de la estructura de datos que estás utilizando."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa2b0ca-ee63-4319-9712-2ff51151c1e6",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa2b0ca-ee63-4319-9712-2ff51151c1e6",
+				"children": [
+					"aaa292f7-73a3-490a-8814-490742ceeadd"
+				]
+			},
+			"aaa292f7-73a3-490a-8814-490742ceeadd": {
+				"id": "aaa292f7-73a3-490a-8814-490742ceeadd",
+				"message": {
+					"id": "aaa292f7-73a3-490a-8814-490742ceeadd",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695922303.973515"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"      9 \n     10 def ordenar_por_cercania(lista, precio_referencia):\n---> 11     return sorted(lista, key=lambda x: abs(x - precio_referencia))\n     12 \n     13 def limpiar_precios(precio):\n\nTypeError: unsupported operand type(s) for -: 'dict' and 'int'"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "497b9a43-9253-4569-982d-84f98083cebd",
+				"children": [
+					"0494ebb7-fd9c-457d-80c7-cde7803a969a"
+				]
+			},
+			"0494ebb7-fd9c-457d-80c7-cde7803a969a": {
+				"id": "0494ebb7-fd9c-457d-80c7-cde7803a969a",
+				"message": {
+					"id": "0494ebb7-fd9c-457d-80c7-cde7803a969a",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695922327.700204"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"El error `unsupported operand type(s) for -: 'dict' and 'int'` indica que estás tratando de restar un número entero (`int`) de un diccionario (`dict`), lo cual no es una operación válida en Python.\n\nEste error sugiere que la lista que estás pasando a la función `ordenar_por_cercania` no es una lista de números, sino una lista de diccionarios.\n\nHay dos posibles soluciones para este problema:\n\n1. **Modificar la estructura de la lista**: Asegúrate de que la lista `clean_prices` que estás pasando a `ordenar_por_cercania` sea realmente una lista de números y no una lista de diccionarios.\n\n2. **Modificar la función para manejar diccionarios**: Si deseas mantener la estructura de la lista como una lista de diccionarios, entonces debes modificar la función `ordenar_por_cercania` para que acceda al valor correcto dentro del diccionario al hacer la operación de resta.\n\nSi estás utilizando la estructura original (una lista de diccionarios con una clave 'price'), entonces la función `ordenar_por_cercania` debería verse así:\n\n```python\ndef ordenar_por_cercania(lista, precio_referencia):\n    return sorted(lista, key=lambda x: abs(x['price'] - precio_referencia))\n```\n\nDe lo contrario, si estás utilizando una lista de números, asegúrate de que `clean_prices` realmente contenga solo números y no diccionarios antes de pasarla a la función `ordenar_por_cercania`."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa292f7-73a3-490a-8814-490742ceeadd",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa292f7-73a3-490a-8814-490742ceeadd",
+				"children": [
+					"aaa2e79e-9e7f-4c11-9002-5141ef79b48f"
+				]
+			},
+			"aaa2e79e-9e7f-4c11-9002-5141ef79b48f": {
+				"id": "aaa2e79e-9e7f-4c11-9002-5141ef79b48f",
+				"message": {
+					"id": "aaa2e79e-9e7f-4c11-9002-5141ef79b48f",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695922399.010023"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"modifica este query para que no incluya cierto firebase_id:\n    results = local_properties_collection.find({\n     \"location\":\n       { \"$near\":\n          {\n            \"$geometry\": { \"type\": \"Point\",  \"coordinates\": [ lat_lng.longitude, lat_lng.latitude ] },\n            \"$minDistance\": 0,\n            \"$maxDistance\": 1000\n          }\n       }\n    })"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "0494ebb7-fd9c-457d-80c7-cde7803a969a",
+				"children": [
+					"a5f3c154-663a-47ad-98f6-fda8737e80a5"
+				]
+			},
+			"a5f3c154-663a-47ad-98f6-fda8737e80a5": {
+				"id": "a5f3c154-663a-47ad-98f6-fda8737e80a5",
+				"message": {
+					"id": "a5f3c154-663a-47ad-98f6-fda8737e80a5",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695922415.365625"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Para excluir documentos que tienen un cierto `firebase_id`, puedes agregar una condición adicional usando el operador `$ne` (que significa \"not equal to\").\n\nSupongamos que quieres excluir documentos con `firebase_id` igual a \"12345\". Aquí está tu consulta modificada:\n\n```python\nresults = local_properties_collection.find({\n    \"location\": {\n        \"$near\": {\n            \"$geometry\": {\n                \"type\": \"Point\",\n                \"coordinates\": [lat_lng.longitude, lat_lng.latitude]\n            },\n            \"$minDistance\": 0,\n            \"$maxDistance\": 1000\n        }\n    },\n    \"firebase_id\": {\n        \"$ne\": \"12345\"  # Asegúrate de usar el tipo de dato correcto aquí (podría ser int u otro tipo dependiendo de tu base de datos)\n    }\n})\n```\n\nCon esta consulta, obtendrás todos los documentos que cumplan con las condiciones geográficas especificadas y que no tengan un `firebase_id` de \"12345\"."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4",
+						"parent_id": "aaa2e79e-9e7f-4c11-9002-5141ef79b48f",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa2e79e-9e7f-4c11-9002-5141ef79b48f",
+				"children": []
+			}
+		},
+		"moderation_results": [],
+		"current_node": "a5f3c154-663a-47ad-98f6-fda8737e80a5",
+		"plugin_ids": null,
+		"conversation_id": "325d7415-a679-49db-9173-def8b343d8e5",
+		"conversation_template_id": null,
+		"id": "325d7415-a679-49db-9173-def8b343d8e5"
+	},
+	{
+		"_id": {
+			"$oid": "65367f65f7e69ea1d0367810"
+		},
+		"title": "Error de permisos en Pub/Sub",
+		"create_time": {
+			"$numberDouble": "1695748971.114285"
+		},
+		"update_time": {
+			"$numberDouble": "1695752668.0"
+		},
+		"mapping": {
+			"6ce6526c-5321-4a88-a361-01c6f4b3998a": {
+				"id": "6ce6526c-5321-4a88-a361-01c6f4b3998a",
+				"message": {
+					"id": "6ce6526c-5321-4a88-a361-01c6f4b3998a",
+					"author": {
+						"role": "system",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": null,
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							""
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "0.0"
+					},
+					"metadata": {},
+					"recipient": "all"
+				},
+				"parent": "aaa1606a-7114-4be5-ac0d-84d21b30e8bd",
+				"children": [
+					"aaa2d871-24ca-4de6-82e0-dcd1be091884"
+				]
+			},
+			"aaa1606a-7114-4be5-ac0d-84d21b30e8bd": {
+				"id": "aaa1606a-7114-4be5-ac0d-84d21b30e8bd",
+				"message": null,
+				"parent": null,
+				"children": [
+					"6ce6526c-5321-4a88-a361-01c6f4b3998a"
+				]
+			},
+			"aaa2d871-24ca-4de6-82e0-dcd1be091884": {
+				"id": "aaa2d871-24ca-4de6-82e0-dcd1be091884",
+				"message": {
+					"id": "aaa2d871-24ca-4de6-82e0-dcd1be091884",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695748971.11747"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"explicame este error usando sub/pub de google cloud {\n    \"error\": \"An error occurred: 403 User not authorized to perform this action., traceback: Traceback (most recent call last):\\n  File \\\"/layers/google.python.pip/pip/lib/python3.11/site-packages/google/api_core/grpc_helpers.py\\\", line 72, in error_remapped_callable\\n    return callable_(*args, **kwargs)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/layers/google.python.pip/pip/lib/python3.11/site-packages/grpc/_channel.py\\\", line 1161, in __call__\\n    return _end_unary_response_blocking(state, call, False, None)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/layers/google.python.pip/pip/lib/python3.11/site-packages/grpc/_channel.py\\\", line 1004, in _end_unary_response_blocking\\n    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable\\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\ngrpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:\\n\\tstatus = StatusCode.PERMISSION_DENIED\\n\\tdetails = \\\"User not authorized to perform this action.\\\"\\n\\tdebug_error_string = \\\"UNKNOWN:Error received from peer ipv4:172.253.114.95:443 {created_time:\\\"2023-09-26T17:21:32.111606182+00:00\\\", grpc_status:7, grpc_message:\\\"User not authorized to perform this action.\\\"}\\\"\\n>\\n\\nThe above exception was the direct cause of the following exception:\\n\\nTraceback (most recent call last):\\n  File \\\"/workspace/main.py\\\", line 1211, in webhook_callpicker\\n    message = f\\\"Published Message ID: {future.result()}\\\"\\n                                       ^^^^^^^^^^^^^^^\\n  File \\\"/layers/google.python.pip/pip/lib/python3.11/site-packages/google/cloud/pubsub_v1/publisher/futures.py\\\", line 66, in result\\n    return super().result(timeout=timeout)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/layers/google.python.runtime/python/lib/python3.11/concurrent/futures/_base.py\\\", line 456, in result\\n    return self.__get_result()\\n           ^^^^^^^^^^^^^^^^^^^\\n  File \\\"/layers/google.python.runtime/python/lib/python3.11/concurrent/futures/_base.py\\\", line 401, in __get_result\\n    raise self._exception\\n  File \\\"/layers/google.python.pip/pip/lib/python3.11/site-packages/google/cloud/pubsub_v1/publisher/_batch/thread.py\\\", line 274, in _commit\\n    response = self._client._gapic_publish(\\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/layers/google.python.pip/pip/lib/python3.11/site-packages/google/cloud/pubsub_v1/publisher/client.py\\\", line 267, in _gapic_publish\\n    return super().publish(*args, **kwargs)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/layers/google.python.pip/pip/lib/python3.11/site-packages/google/pubsub_v1/services/publisher/client.py\\\", line 831, in publish\\n    response = rpc(\\n               ^^^^\\n  File \\\"/layers/google.python.pip/pip/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py\\\", line 113, in __call__\\n    return wrapped_func(*args, **kwargs)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/layers/google.python.pip/pip/lib/python3.11/site-packages/google/api_core/retry.py\\\", line 349, in retry_wrapped_func\\n    return retry_target(\\n           ^^^^^^^^^^^^^\\n  File \\\"/layers/google.python.pip/pip/lib/python3.11/site-packages/google/api_core/retry.py\\\", line 191, in retry_target\\n    return target()\\n           ^^^^^^^^\\n  File \\\"/layers/google.python.pip/pip/lib/python3.11/site-packages/google/api_core/timeout.py\\\", line 120, in func_with_timeout\\n    return func(*args, **kwargs)\\n           ^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/layers/google.python.pip/pip/lib/python3.11/site-packages/google/api_core/grpc_helpers.py\\\", line 74, in error_remapped_callable\\n    raise exceptions.from_grpc_error(exc) from exc\\ngoogle.api_core.exceptions.PermissionDenied: 403 User not authorized to perform this action.\\n\",\n    \"tb\": \"Traceback (most recent call last):\\n  File \\\"/layers/google.python.pip/pip/lib/python3.11/site-packages/google/api_core/grpc_helpers.py\\\", line 72, in error_remapped_callable\\n    return callable_(*args, **kwargs)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/layers/google.python.pip/pip/lib/python3.11/site-packages/grpc/_channel.py\\\", line 1161, in __call__\\n    return _end_unary_response_blocking(state, call, False, None)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/layers/google.python.pip/pip/lib/python3.11/site-packages/grpc/_channel.py\\\", line 1004, in _end_unary_response_blocking\\n    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable\\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\ngrpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:\\n\\tstatus = StatusCode.PERMISSION_DENIED\\n\\tdetails = \\\"User not authorized to perform this action.\\\"\\n\\tdebug_error_string = \\\"UNKNOWN:Error received from peer ipv4:172.253.114.95:443 {created_time:\\\"2023-09-26T17:21:32.111606182+00:00\\\", grpc_status:7, grpc_message:\\\"User not authorized to perform this action.\\\"}\\\"\\n>\\n\\nThe above exception was the direct cause of the following exception:\\n\\nTraceback (most recent call last):\\n  File \\\"/workspace/main.py\\\", line 1211, in webhook_callpicker\\n    message = f\\\"Published Message ID: {future.result()}\\\"\\n                                       ^^^^^^^^^^^^^^^\\n  File \\\"/layers/google.python.pip/pip/lib/python3.11/site-packages/google/cloud/pubsub_v1/publisher/futures.py\\\", line 66, in result\\n    return super().result(timeout=timeout)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/layers/google.python.runtime/python/lib/python3.11/concurrent/futures/_base.py\\\", line 456, in result\\n    return self.__get_result()\\n           ^^^^^^^^^^^^^^^^^^^\\n  File \\\"/layers/google.python.runtime/python/lib/python3.11/concurrent/futures/_base.py\\\", line 401, in __get_result\\n    raise self._exception\\n  File \\\"/layers/google.python.pip/pip/lib/python3.11/site-packages/google/cloud/pubsub_v1/publisher/_batch/thread.py\\\", line 274, in _commit\\n    response = self._client._gapic_publish(\\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/layers/google.python.pip/pip/lib/python3.11/site-packages/google/cloud/pubsub_v1/publisher/client.py\\\", line 267, in _gapic_publish\\n    return super().publish(*args, **kwargs)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/layers/google.python.pip/pip/lib/python3.11/site-packages/google/pubsub_v1/services/publisher/client.py\\\", line 831, in publish\\n    response = rpc(\\n               ^^^^\\n  File \\\"/layers/google.python.pip/pip/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py\\\", line 113, in __call__\\n    return wrapped_func(*args, **kwargs)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/layers/google.python.pip/pip/lib/python3.11/site-packages/google/api_core/retry.py\\\", line 349, in retry_wrapped_func\\n    return retry_target(\\n           ^^^^^^^^^^^^^\\n  File \\\"/layers/google.python.pip/pip/lib/python3.11/site-packages/google/api_core/retry.py\\\", line 191, in retry_target\\n    return target()\\n           ^^^^^^^^\\n  File \\\"/layers/google.python.pip/pip/lib/python3.11/site-packages/google/api_core/timeout.py\\\", line 120, in func_with_timeout\\n    return func(*args, **kwargs)\\n           ^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/layers/google.python.pip/pip/lib/python3.11/site-packages/google/api_core/grpc_helpers.py\\\", line 74, in error_remapped_callable\\n    raise exceptions.from_grpc_error(exc) from exc\\ngoogle.api_core.exceptions.PermissionDenied: 403 User not authorized to perform this action.\\n\""
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "6ce6526c-5321-4a88-a361-01c6f4b3998a",
+				"children": [
+					"4c77a632-e5e5-489d-859a-5dee9284fc8b"
+				]
+			},
+			"4c77a632-e5e5-489d-859a-5dee9284fc8b": {
+				"id": "4c77a632-e5e5-489d-859a-5dee9284fc8b",
+				"message": {
+					"id": "4c77a632-e5e5-489d-859a-5dee9284fc8b",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695749002.891456"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"The error you're encountering is related to permissions when using Google Cloud's Pub/Sub service. Here's a breakdown of the error:\n\n1. **Error Type:** `PermissionDenied`\n2. **Error Code:** `403`\n3. **Error Message:** `User not authorized to perform this action.`\n\n### What's happening?\n\nThe error indicates that the service account or user credentials being used to interact with the Google Cloud Pub/Sub service does not have the necessary permissions to perform the desired action.\n\nFrom the traceback, the error seems to be originating from the code attempting to publish a message to a Pub/Sub topic:\n\n```python\nmessage = f\"Published Message ID: {future.result()}\"\n```\n\nWhen the result of the publish action is being fetched, a `PermissionDenied` exception is raised.\n\n### How to Resolve?\n\nHere are a few steps you can take to resolve this issue:\n\n1. **Service Account Permissions:** Ensure the service account being used has the required permissions to publish messages to the desired Pub/Sub topic. You might want to assign the `roles/pubsub.publisher` role to the service account for the specific topic or project.\n\n2. **Authentication:** Make sure you're using the correct service account key file and that it hasn't been revoked or deleted. If you're running this on a Google Cloud Platform (GCP) resource like a Compute Engine instance, Cloud Run, or Cloud Functions, make sure the associated service account of that resource has the necessary permissions.\n\n3. **Topic Existence:** Ensure the Pub/Sub topic you're trying to publish to exists. If it doesn't, the publisher role won't help. You'll need to create the topic first.\n\n4. **IAM Policy Propagation:** Sometimes, after you update an IAM policy, it might take a few minutes for the changes to propagate and take effect. If you've just added permissions, consider waiting for a short period and then retrying.\n\n5. **API Activation:** Ensure the Pub/Sub API is enabled for your GCP project.\n\n6. **Review Code:** Ensure that the code is correctly setting up authentication. If you're using a service account key file, make sure the path to that file is correct and accessible from the code.\n\nLastly, always ensure you follow the principle of least privilege – only grant the minimum necessary permissions required for the task. This helps in maintaining a secure environment."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4-code-interpreter",
+						"parent_id": "aaa2d871-24ca-4de6-82e0-dcd1be091884",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa2d871-24ca-4de6-82e0-dcd1be091884",
+				"children": [
+					"aaa2e2ef-f3bd-4a54-a8a0-9dfabe25a8f3"
+				]
+			},
+			"aaa2e2ef-f3bd-4a54-a8a0-9dfabe25a8f3": {
+				"id": "aaa2e2ef-f3bd-4a54-a8a0-9dfabe25a8f3",
+				"message": {
+					"id": "aaa2e2ef-f3bd-4a54-a8a0-9dfabe25a8f3",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695752167.101584"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"como cambiar esta linea para que debes de set, se haga un merge en firebase si es que existe para actualizarlo y si no eiste pues crearlo: prospect_ref.set(prospect_data) en python"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "4c77a632-e5e5-489d-859a-5dee9284fc8b",
+				"children": [
+					"d7e772f3-d92b-4e73-be3a-6d8230282e4d"
+				]
+			},
+			"d7e772f3-d92b-4e73-be3a-6d8230282e4d": {
+				"id": "d7e772f3-d92b-4e73-be3a-6d8230282e4d",
+				"message": {
+					"id": "d7e772f3-d92b-4e73-be3a-6d8230282e4d",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695752178.490338"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Si estás utilizando la biblioteca de Firebase Admin SDK para Python y quieres que los datos se fusionen (merge) en lugar de sobrescribirse, puedes utilizar el argumento `merge=True` en el método `set()`. \n\nDado tu código original:\n```python\nprospect_ref.set(prospect_data)\n```\n\nPuedes modificarlo para que haga un \"merge\" de la siguiente manera:\n```python\nprospect_ref.set(prospect_data, merge=True)\n```\n\nCon esta modificación, si el documento al que apunta `prospect_ref` ya existe, los campos en `prospect_data` se fusionarán con los campos existentes en el documento. Si el documento no existe, se creará con los campos en `prospect_data`."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4-code-interpreter",
+						"parent_id": "aaa2e2ef-f3bd-4a54-a8a0-9dfabe25a8f3",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa2e2ef-f3bd-4a54-a8a0-9dfabe25a8f3",
+				"children": [
+					"aaa2f1d7-3808-49fa-af74-03684de142ed"
+				]
+			},
+			"aaa2f1d7-3808-49fa-af74-03684de142ed": {
+				"id": "aaa2f1d7-3808-49fa-af74-03684de142ed",
+				"message": {
+					"id": "aaa2f1d7-3808-49fa-af74-03684de142ed",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695752510.015641"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"tengo una collection llamada prospects, me gustaria saber si existe uno o mas documentos que donde el atributo callpicker_request_id, sea igual a un id que yo le daria, hacer el if si encuentra concidiencias"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "d7e772f3-d92b-4e73-be3a-6d8230282e4d",
+				"children": [
+					"bb79d699-e162-4a9a-83d5-0636858111e4"
+				]
+			},
+			"bb79d699-e162-4a9a-83d5-0636858111e4": {
+				"id": "bb79d699-e162-4a9a-83d5-0636858111e4",
+				"message": {
+					"id": "bb79d699-e162-4a9a-83d5-0636858111e4",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695752530.57442"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Para comprobar si existen uno o más documentos en la colección `prospects` donde el atributo `callpicker_request_id` es igual a un ID específico, puedes hacer una consulta utilizando la biblioteca Firebase Admin SDK para Python. \n\nAquí hay un ejemplo de cómo hacerlo:\n\n```python\nimport firebase_admin\nfrom firebase_admin import credentials, firestore\n\n# Inicializa la app de Firebase (asegúrate de hacer esto solo una vez)\ncred = credentials.Certificate('path_to_your_service_account_key.json')\nfirebase_admin.initialize_app(cred)\n\n# Obtiene una referencia al cliente de Firestore\ndb = firestore.client()\n\n# Define el ID que estás buscando\ndesired_id = \"YOUR_DESIRED_ID\"\n\n# Consulta la colección 'prospects' para documentos que coincidan con el ID deseado\nmatching_docs = db.collection('prospects').where('callpicker_request_id', '==', desired_id).stream()\n\n# Verifica si se encontraron coincidencias\nfound = False\nfor doc in matching_docs:\n    found = True\n    # Aquí puedes procesar los documentos coincidentes si lo deseas\n    # print(f\"Found document with ID: {doc.id}\")\n\nif found:\n    print(\"There are documents with the matching callpicker_request_id.\")\nelse:\n    print(\"No documents found with the matching callpicker_request_id.\")\n```\n\nEn este ejemplo, primero inicializamos Firebase y luego hacemos una consulta a la colección `prospects` buscando documentos donde `callpicker_request_id` es igual al `desired_id` proporcionado. Si se encuentran documentos que coincidan, el código imprimirá un mensaje indicando que se encontraron documentos coincidentes. De lo contrario, imprimirá un mensaje indicando que no se encontraron documentos coincidentes."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4-code-interpreter",
+						"parent_id": "aaa2f1d7-3808-49fa-af74-03684de142ed",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa2f1d7-3808-49fa-af74-03684de142ed",
+				"children": [
+					"aaa25b13-e66e-4e6d-a938-2d076eda790f"
+				]
+			},
+			"aaa25b13-e66e-4e6d-a938-2d076eda790f": {
+				"id": "aaa25b13-e66e-4e6d-a938-2d076eda790f",
+				"message": {
+					"id": "aaa25b13-e66e-4e6d-a938-2d076eda790f",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695752610.92158"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"debes de hacer el for, se ´puede saber si hay elementos que coinciden si le sacamos el lenght a matching_docs?"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "bb79d699-e162-4a9a-83d5-0636858111e4",
+				"children": [
+					"eca3a1e2-094a-45de-b414-c8f9ede01d48"
+				]
+			},
+			"eca3a1e2-094a-45de-b414-c8f9ede01d48": {
+				"id": "eca3a1e2-094a-45de-b414-c8f9ede01d48",
+				"message": {
+					"id": "eca3a1e2-094a-45de-b414-c8f9ede01d48",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695752629.434724"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"No, no puedes obtener directamente la longitud (length) de `matching_docs` porque `matching_docs` es un generador, y los generadores no tienen una longitud predefinida en Python. Sin embargo, puedes convertir el generador en una lista y luego obtener la longitud de esa lista. \n\nTen en cuenta que esto podría no ser eficiente si estás trabajando con una gran cantidad de documentos, ya que cargarías todos los documentos en la memoria. Pero para pequeños conjuntos de datos, funciona bien.\n\nAquí te muestro cómo hacerlo:\n\n```python\n# Convertimos el generador a una lista\ndocs_list = list(matching_docs)\n\n# Obtenemos la longitud de la lista\nnum_matching_docs = len(docs_list)\n\nif num_matching_docs > 0:\n    print(f\"There are {num_matching_docs} documents with the matching callpicker_request_id.\")\nelse:\n    print(\"No documents found with the matching callpicker_request_id.\")\n```\n\nEn este código, primero convertimos el generador `matching_docs` en una lista llamada `docs_list`. Luego, obtenemos la longitud de `docs_list` y la almacenamos en `num_matching_docs`. Finalmente, basándonos en el valor de `num_matching_docs`, determinamos si se encontraron o no documentos coincidentes."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4-code-interpreter",
+						"parent_id": "aaa25b13-e66e-4e6d-a938-2d076eda790f",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa25b13-e66e-4e6d-a938-2d076eda790f",
+				"children": [
+					"aaa23446-e804-4d02-99ae-8662e50cade8"
+				]
+			},
+			"aaa23446-e804-4d02-99ae-8662e50cade8": {
+				"id": "aaa23446-e804-4d02-99ae-8662e50cade8",
+				"message": {
+					"id": "aaa23446-e804-4d02-99ae-8662e50cade8",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695752649.732792"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"puedes poner todo el código"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "eca3a1e2-094a-45de-b414-c8f9ede01d48",
+				"children": [
+					"a6d88b36-b8a3-4a31-a49c-4e55e8b44936"
+				]
+			},
+			"a6d88b36-b8a3-4a31-a49c-4e55e8b44936": {
+				"id": "a6d88b36-b8a3-4a31-a49c-4e55e8b44936",
+				"message": {
+					"id": "a6d88b36-b8a3-4a31-a49c-4e55e8b44936",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1695752668.785111"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"¡Claro! Aquí está el código completo, desde la inicialización de Firebase hasta la verificación de los documentos que coinciden:\n\n```python\nimport firebase_admin\nfrom firebase_admin import credentials, firestore\n\n# Inicializa la app de Firebase (asegúrate de hacer esto solo una vez)\ncred = credentials.Certificate('path_to_your_service_account_key.json')\nfirebase_admin.initialize_app(cred)\n\n# Obtiene una referencia al cliente de Firestore\ndb = firestore.client()\n\n# Define el ID que estás buscando\ndesired_id = \"YOUR_DESIRED_ID\"\n\n# Consulta la colección 'prospects' para documentos que coincidan con el ID deseado\nmatching_docs = db.collection('prospects').where('callpicker_request_id', '==', desired_id).stream()\n\n# Convertimos el generador a una lista\ndocs_list = list(matching_docs)\n\n# Obtenemos la longitud de la lista\nnum_matching_docs = len(docs_list)\n\nif num_matching_docs > 0:\n    print(f\"There are {num_matching_docs} documents with the matching callpicker_request_id.\")\nelse:\n    print(\"No documents found with the matching callpicker_request_id.\")\n```\n\nSolo asegúrate de reemplazar `'path_to_your_service_account_key.json'` con la ruta al archivo de la clave de tu cuenta de servicio y `\"YOUR_DESIRED_ID\"` con el ID que estás buscando."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "gpt-4-code-interpreter",
+						"parent_id": "aaa23446-e804-4d02-99ae-8662e50cade8",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa23446-e804-4d02-99ae-8662e50cade8",
+				"children": []
+			}
+		},
+		"moderation_results": [],
+		"current_node": "a6d88b36-b8a3-4a31-a49c-4e55e8b44936",
+		"plugin_ids": null,
+		"conversation_id": "9378e1b1-72e9-4d25-b843-d09032baa101",
+		"conversation_template_id": null,
+		"id": "9378e1b1-72e9-4d25-b843-d09032baa101"
+	},
+	{
+		"_id": {
+			"$oid": "653bce8672e7be6e4f99d0b1"
+		},
+		"title": "Regex para números 10 dígitos",
+		"create_time": {
+			"$numberDouble": "1691591908.937552"
+		},
+		"update_time": {
+			"$numberDouble": "1691591914.0"
+		},
+		"mapping": {
+			"a59eb7d6-39dc-4596-abf9-b26d5b40db81": {
+				"id": "a59eb7d6-39dc-4596-abf9-b26d5b40db81",
+				"message": {
+					"id": "a59eb7d6-39dc-4596-abf9-b26d5b40db81",
+					"author": {
+						"role": "system",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1691591908.937967"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							""
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {},
+					"recipient": "all"
+				},
+				"parent": "aaa183be-cd89-4813-8bdf-707785ee720f",
+				"children": [
+					"aaa27b79-19c1-42b0-97d8-4809099b0abd"
+				]
+			},
+			"aaa183be-cd89-4813-8bdf-707785ee720f": {
+				"id": "aaa183be-cd89-4813-8bdf-707785ee720f",
+				"message": null,
+				"parent": null,
+				"children": [
+					"a59eb7d6-39dc-4596-abf9-b26d5b40db81"
+				]
+			},
+			"aaa27b79-19c1-42b0-97d8-4809099b0abd": {
+				"id": "aaa27b79-19c1-42b0-97d8-4809099b0abd",
+				"message": {
+					"id": "aaa27b79-19c1-42b0-97d8-4809099b0abd",
+					"author": {
+						"role": "user",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1691591908.945316"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"dame una regex para números de diez dígitos"
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": null,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"timestamp_": "absolute",
+						"message_type": null
+					},
+					"recipient": "all"
+				},
+				"parent": "a59eb7d6-39dc-4596-abf9-b26d5b40db81",
+				"children": [
+					"7c7f2e44-7f26-40b2-8cfc-1a58f1c6f62c"
+				]
+			},
+			"7c7f2e44-7f26-40b2-8cfc-1a58f1c6f62c": {
+				"id": "7c7f2e44-7f26-40b2-8cfc-1a58f1c6f62c",
+				"message": {
+					"id": "7c7f2e44-7f26-40b2-8cfc-1a58f1c6f62c",
+					"author": {
+						"role": "assistant",
+						"name": null,
+						"metadata": {}
+					},
+					"create_time": {
+						"$numberDouble": "1691591914.478531"
+					},
+					"update_time": null,
+					"content": {
+						"content_type": "text",
+						"parts": [
+							"Claro, aquí tienes una expresión regular para coincidir con números de diez dígitos:\n\n```regex\n^\\d{10}$\n```\n\nExplicación:\n- `^` indica el comienzo de la cadena.\n- `\\d` coincide con un dígito.\n- `{10}` especifica que el dígito anterior debe aparecer exactamente 10 veces.\n- `$` indica el final de la cadena.\n\nEsta expresión regular buscará cadenas que consistan exactamente en diez dígitos seguidos, sin ningún otro carácter en medio."
+						]
+					},
+					"status": "finished_successfully",
+					"end_turn": true,
+					"weight": {
+						"$numberDouble": "1.0"
+					},
+					"metadata": {
+						"finish_details": {
+							"type": "stop",
+							"stop_tokens": [
+								{
+									"$numberInt": "100260"
+								}
+							]
+						},
+						"is_complete": true,
+						"message_type": null,
+						"model_slug": "text-davinci-002-render-sha",
+						"parent_id": "aaa27b79-19c1-42b0-97d8-4809099b0abd",
+						"timestamp_": "absolute"
+					},
+					"recipient": "all"
+				},
+				"parent": "aaa27b79-19c1-42b0-97d8-4809099b0abd",
+				"children": []
+			}
+		},
+		"moderation_results": [],
+		"current_node": "7c7f2e44-7f26-40b2-8cfc-1a58f1c6f62c",
+		"plugin_ids": null,
+		"conversation_id": "b2bc278c-cacc-4b78-af82-11195a94bac8",
+		"conversation_template_id": null,
+		"gizmo_id": null,
+		"id": "b2bc278c-cacc-4b78-af82-11195a94bac8"
+	}
+]
