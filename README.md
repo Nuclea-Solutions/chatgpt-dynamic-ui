@@ -18,15 +18,21 @@ s
 
 1. Clone this repository.
    ```bash
-      https://github.com/Nuclea-Solutions/nuclea-contact-form-full.git
+   git clone https://github.com/Nuclea-Solutions/nuclea-contact-form-full.git
    ```
-2. In the root directory, run the following command:
+2. Open proyect
+
+   ```bash
+   code .
+   ```
+
+3. In the root directory, run the following command:
 
    ```bash
    npm install
    ```
 
-3. Run project
+4. Run project
    ```bash
    npm run dev
    ```
@@ -47,7 +53,7 @@ s
 
 #### Project's Storybook link 🔗
 
-https://64d0fe6c6d2314c32ab59491-almzswaxww.chromatic.com/
+https://64d0fe6c6d2314c32ab59491-zeicjrcspl.chromatic.com/
 
 ## Technologies Used 💼
 
