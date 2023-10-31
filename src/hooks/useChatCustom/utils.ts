@@ -1,7 +1,6 @@
 'use client';
 import DatePicker from '@/stories/date_picker/DatePicker';
 import SelectComponent from '@/stories/select/Select';
-import CalendarLink from '@/components/CalendarLink';
 import InputWidthButtonComponent from '@/stories/input_with_button/InputWidthButton.component';
 
 /*
@@ -33,11 +32,5 @@ export const COMPONENTS_REF: {
 		type: 'input_component',
 		component: InputWidthButtonComponent,
 		description: 'To input text. Usefull when the user has to enter text.'
-	},
-	calendar_button: {
-		name: 'calendar_button',
-		type: 'component',
-		component: CalendarLink,
-		description: 'To display in your message the link to schedule an appointment in the calendar.'
 	}
 };

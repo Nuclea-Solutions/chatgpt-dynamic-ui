@@ -48,6 +48,24 @@ export async function POST(req: Request) {
 						functions
 					});
 				}
+				if (name === 'form_data') {
+					// @ts-ignore
+					const newMessage = createFunctionCallMessages({
+						content: 'null',
+						role: 'assistant',
+						function_call: {
+							name,
+							arguments: args
+						}
+					});
+
+					return await openai.createChatCompletion({
+						messages: [...messages, ...newMessage],
+						stream: true,
+						model: 'gpt-4',
+						functions
+					});
+				}
 			}
 		});
 

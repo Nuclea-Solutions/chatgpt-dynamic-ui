@@ -2,7 +2,6 @@
 // libraries
 import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material';
 // components
-import CalendarLink from '@/components/CalendarLink';
 import ComponentMessage from '@/components/ComponentMessage';
 import Avatar from '@/components/Avatar';
 import AssistantMessage from '@/components/AssistantMessage';
@@ -78,34 +77,21 @@ const MessagesList = ({ messages }: { messages: Message[] }) => {
 									</div>
 								)}
 							</div>
-							{item.role === 'assistant' ? (
-								parseItemOutput?.message?.component &&
-								parseItemOutput?.message?.component?.includes('calendar') ? (
-									<div className='py-4 px-10'>
-										<CalendarLink />
-									</div>
-								) : parseItemMessage && parseItemMessage?.component ? (
-									parseItemMessage?.component?.includes('calendar') ? (
-										<div className='py-4 px-10'>
-											<CalendarLink />
+							{item.role === 'assistant'
+								? parseItemOutput?.message?.component && (
+										<div className='m-[24px]'>
+											<ComponentMessage
+												key={`${item.id}-${Date.now()}`}
+												component={
+													typeof parseItemOutput.message?.component === 'string'
+														? parseItemOutput.message?.component
+														: parseItemOutput.message?.component?.name ?? ''
+												}
+												componentProps={parseItemOutput.message?.component?.props ?? []}
+											/>
 										</div>
-									) : (
-										parseItemOutput?.message?.component && (
-											<div className='m-[24px]'>
-												<ComponentMessage
-													key={`${item.id}-${Date.now()}`}
-													component={
-														typeof parseItemOutput.message?.component === 'string'
-															? parseItemOutput.message?.component
-															: parseItemOutput.message?.component?.name ?? ''
-													}
-													componentProps={parseItemOutput.message?.component?.props ?? []}
-												/>
-											</div>
-										)
-									)
-								) : null
-							) : null}
+								  )
+								: null}
 						</div>
 					</div>
 				</div>
