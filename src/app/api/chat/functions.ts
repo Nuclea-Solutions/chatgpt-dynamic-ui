@@ -42,7 +42,7 @@ export const functions: ChatCompletionFunctions[] = [
 	{
 		name: 'form_data',
 		description:
-			'To fill the form information about the user, step by step: name, origin country, date of birth and email. When you finish, show the user the information that he/she provided in a table',
+			'To fill the form information about the user, step by step: name; if he/she works in any area of software development, and if so, which one; origin country; date of birth and email. When you finish, show the user the information that he/she provided in a table',
 		parameters: {
 			type: 'object',
 			properties: {
@@ -58,7 +58,17 @@ export const functions: ChatCompletionFunctions[] = [
 						description: 'User date of birth',
 						input_component: 'date_picker'
 					},
-					email: { type: 'text', description: 'User email address', input_component: 'text_input' }
+					email: { type: 'text', description: 'User email address', input_component: 'text_input' },
+					is_developer: {
+						type: 'text',
+						description: 'If the user works in any area of software development',
+						input_component: 'select_input'
+					},
+					development_area: {
+						type: 'text',
+						description: 'Software development area in which the user works.',
+						input_component: 'select_input'
+					}
 				}
 			}
 		}

@@ -6,7 +6,6 @@ import useChatCustom from '@/hooks/useChatCustom/useChatCustom';
 import useMessagesStore from '@/store/useMessagesStore';
 // utils
 import { COMPONENTS_REF } from '@/hooks/useChatCustom/utils';
-import DatePickerCustom from '@/stories/date_picker/DatePicker';
 
 const InputContainer = () => {
 	const { input, handleInputChange, handleSubmit, inputType } = useChatCustom();
@@ -17,9 +16,8 @@ const InputContainer = () => {
 
 	const Component = !!messagesComponents.length
 		? messagesComponents?.at(-1)?.output
-			? messagesComponents?.at(-1)?.output?.input_component === 'calendar_button'
-				? COMPONENTS_REF['text_input'].component
-				: COMPONENTS_REF[messagesComponents?.at(-1)?.output?.input_component ?? 'text_input']
+			? COMPONENTS_REF[messagesComponents?.at(-1)?.output?.input_component ?? 'text_input']
+					.component
 			: !messagesComponents?.at(-1)?.output &&
 			  messagesComponents?.at(-1)?.content?.output?.input_component
 			? COMPONENTS_REF[messagesComponents?.at(-1)?.content?.output?.input_component ?? 'text_input']

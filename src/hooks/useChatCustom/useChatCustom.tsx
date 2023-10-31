@@ -59,8 +59,10 @@ const useChatCustom = () => {
 	// Current chat input component name
 	const inputType = useMemo(
 		() =>
-			messagesComponents.length && messagesComponents?.at(-1)?.output
+			messagesComponents?.length && messagesComponents?.at(-1)?.output
 				? messagesComponents?.at(-1)?.output.input_component ?? 'text_input'
+				: messagesComponents?.at(-1)?.content?.output
+				? messagesComponents?.at(-1)?.content?.output?.input_component ?? 'text_input'
 				: 'text_input',
 		[messagesComponents]
 	);
