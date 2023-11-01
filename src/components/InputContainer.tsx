@@ -7,6 +7,7 @@ import useMessagesStore from '@/store/useMessagesStore';
 // utils
 import { COMPONENTS_REF } from '@/hooks/useChatCustom/utils';
 
+//holis
 const InputContainer = () => {
 	const { input, handleInputChange, handleSubmit, inputType } = useChatCustom();
 	const [messages, messagesComponents] = useMessagesStore((state) => [
