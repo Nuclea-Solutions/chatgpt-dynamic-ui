@@ -4,7 +4,6 @@
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/cdnjs/cdnjs.svg?style=flat)]()
 
 Welcome to the ChatGPT Dynamic UI project. It could be described as a ChatGPT clone. This project seeks community collaboration, and we extend an invitation for you to join and participate with your valuable contributions. Likewise, we are exploring ways to improve and optimize the project, **following the ChatGPT scheme**. Your contributions and ideas are of great importance as we work together on this innovative project.
-s
 
 ## Objective 🎯
 

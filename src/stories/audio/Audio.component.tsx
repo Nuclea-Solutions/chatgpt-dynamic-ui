@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import audiol from '../assets/audioPrueba.ogg'; // this audio need to come from the parameters
+
 import { CiPlay1, CiPause1 } from 'react-icons/ci';
 interface AudioPlayerProps {
 	audioSrc: string;
@@ -52,7 +52,7 @@ const AudioComponent: React.FC<AudioPlayerProps> = ({ audioSrc, color }) => {
 				color ? `bg-[${color}]` : 'bg-white'
 			} dark:bg-gray-800 dark:border-white`}
 		>
-			<audio ref={audioRef} src={audiol} />
+			<audio ref={audioRef} src={audioSrc} />
 			<div className='flex items-center justify-between'>
 				<button onClick={togglePlay}>
 					{isPlaying ? (
