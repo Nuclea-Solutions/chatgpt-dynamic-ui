@@ -36,11 +36,7 @@ export default {
 						link contiene la documentacion oficial para la correcta utilizacion del componente:
 						https://mui.com/x/react-date-pickers/date-picker/
 					</Description>
-					<Canvas>
-						<div className='flex gap-2 '>
-							<DatePicker disable={false} readOnly={false} />
-						</div>
-					</Canvas>
+					<Canvas />
 
 					<Subtitle>
 						Componente de solo lectura <hr className='my-4' />
@@ -53,7 +49,7 @@ export default {
 					</Description>
 
 					<Canvas>
-						<DatePicker readOnly={true} disable={false} />
+						<DatePicker onChange={() => {}} value={new Date()} readOnly={true} disable={false} />
 					</Canvas>
 
 					<Subtitle>
@@ -67,7 +63,7 @@ export default {
 					</Description>
 
 					<Canvas>
-						<DatePicker readOnly={false} disable={true} />
+						<DatePicker onChange={() => {}} value={new Date()} readOnly={false} disable={true} />
 					</Canvas>
 
 					<Subtitle>
