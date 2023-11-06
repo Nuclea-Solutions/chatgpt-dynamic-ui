@@ -11,7 +11,7 @@ const ComponentMessage = ({
 }) => {
 	const Component = COMPONENTS_REF[component] && COMPONENTS_REF[component].component;
 
-	if (!Component) return <div className='italic'>no reacheble text</div>;
+	if (!Component) return <div className='italic'></div>;
 	if (component === 'table_view') {
 		return (
 			<Component

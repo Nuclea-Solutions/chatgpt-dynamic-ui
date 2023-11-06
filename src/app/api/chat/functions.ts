@@ -7,9 +7,9 @@ export const functions: ChatCompletionFunctions[] = [
 		description: `
 		Following the list of available components that I am going to give you, you must choose the component that you need for the user to enter information. You will choose from the options and return the name of the component chosen for the input_component property.
 		You can also choose a component to display data with the message. This is optional.
-		In both cases, you have to choose from the list of components based on the description and type of each element, and you will have to return the exact name. 
-		The name of the component you return has to be the same as the name it has in the list. If the component is not on the list is because you don't need it. If you need to display lists, bolder text, a table, or code, just return text using markdown. If no special component is needed for the user input, you should choose the text_input.
+		In both cases, you have to choose from the list of components based on the description and type of each element, and you will have to return the exact name.The name of the component you return has to be the same as the name it has in the list. If the component is not on the list is because you don't need it. If no special component is needed for the user input, you should choose the text_input.
 		This is the list of available components: ${JSON.stringify(COMPONENTS_REF)}.
+		If you need to display lists, bolder text, a table, or code, just return text using markdown. 
 		Do not use any other format than the one indicated.`,
 		parameters: {
 			type: 'object',
@@ -42,7 +42,7 @@ export const functions: ChatCompletionFunctions[] = [
 	{
 		name: 'form_data',
 		description:
-			'To fill the form information about the user, step by step: name; if he/she works in any area of software development, and if so, which one; origin country; date of birth and email. When you finish, show the user the information that he/she provided in a table',
+			'To fill the form information about the user, step by step: name; if he/she works in any area of software development, and if so, which one; origin country; date of birth and email. When you finish, show the user the information that he/she provided in a table using markdown.',
 		parameters: {
 			type: 'object',
 			properties: {
