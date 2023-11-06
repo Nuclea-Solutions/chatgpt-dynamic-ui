@@ -15,7 +15,7 @@ const NavbarComponent = ({ isNewChat, hide }: { isNewChat: Boolean; hide?: boole
 			</div>
 			<div className='flex flex-shrink flex-row'>
 				<span>
-					<span className='' data-state='closed'>
+					<span>
 						<button
 							aria-label='Share chat'
 							className='flex p-3 items-center gap-3 transition-colors duration-200 text-gray-600 dark:text-white cursor-pointer text-sm rounded-md bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 h-11'

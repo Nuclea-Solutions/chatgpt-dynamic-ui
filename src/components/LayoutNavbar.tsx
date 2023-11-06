@@ -5,13 +5,13 @@ import NavbarComponent from '@/stories/navbar/Navbar.component';
 import { useParams } from 'next/navigation';
 import useMessagesStore from '@/store/useMessagesStore';
 
-const LayoutNavbar = () => {
+const LayoutNavbar = ({ handleOpenSidebar }: { handleOpenSidebar: () => void }) => {
 	const params: { id?: string } = useParams();
 	const messages = useMessagesStore((state) => state.messages);
 
 	return (
 		<>
-			<NavbarSmallScreenComponent />
+			<NavbarSmallScreenComponent handleOpenSidebar={handleOpenSidebar} />
 			<NavbarComponent
 				isNewChat={!params.id}
 				hide={messages.every((item) => item.role === 'system')}

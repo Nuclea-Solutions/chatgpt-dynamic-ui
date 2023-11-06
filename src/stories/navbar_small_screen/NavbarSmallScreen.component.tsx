@@ -1,11 +1,12 @@
 import React from 'react';
 
-const NavbarSmallScreenComponent = () => {
+const NavbarSmallScreenComponent = ({ handleOpenSidebar }: { handleOpenSidebar: () => void }) => {
 	return (
 		<div className='sticky top-0 z-20 flex items-center border-b border-white/20 pl-1 pt-1 text-gray-600 sm:pl-3 md:hidden bg-white dark:bg-gray-700 dark:text-white'>
 			<button
 				type='button'
 				className='-ml-0.5 -mt-0.5 inline-flex h-10 w-10 items-center justify-center rounded-md hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white dark:hover:text-white'
+				onClick={handleOpenSidebar}
 			>
 				<svg
 					stroke='currentColor'

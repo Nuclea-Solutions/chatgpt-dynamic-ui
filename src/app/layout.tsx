@@ -1,3 +1,4 @@
+'use client';
 import './globals.css';
 import { Inter } from 'next/font/google';
 import { cn } from '../utils/utils';
@@ -15,6 +16,11 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	const [openSidebar, setOPenSidebar] = useState(true);
+
+	const handleOpenSidebar = () => {
+		setOPenSidebar((prev) => !prev);
+	};
+
 	return (
 		<html lang='en'>
 			<body
@@ -23,9 +29,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					'bg-white dark:bg-gray-700 min-h-screen flex text-[#374151] w-full font-sans text-base'
 				)}
 			>
-				<LayoutSidebar setOpenSidebar={setOPenSidebar} />
+				<LayoutSidebar openSidebar={openSidebar} handleOpenSidebar={handleOpenSidebar} />
 				<div className='w-full max-h-[100vh] overflow-scroll'>
-					<LayoutNavbar />
+					<LayoutNavbar handleOpenSidebar={handleOpenSidebar} />
 					{children}
 				</div>
 				<RightSideBarComponent />

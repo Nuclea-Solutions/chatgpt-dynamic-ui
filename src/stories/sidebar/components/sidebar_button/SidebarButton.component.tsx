@@ -1,10 +1,10 @@
 import React from 'react';
 
 const SidebarButtonComponent = ({
-	setOpenSidebar,
+	handleOpenSidebar,
 	openSidebar
 }: {
-	setOpenSidebar: React.Dispatch<React.SetStateAction<boolean>>;
+	handleOpenSidebar: () => void;
 	openSidebar: Boolean;
 }) => {
 	return (
@@ -12,7 +12,7 @@ const SidebarButtonComponent = ({
 			className={`hidden md:flex px-3 min-h-[44px] py-1 transition-colors duration-200 cursor-pointer text-sm rounded border border-white/20 hover:bg-gray-500/10 h-11 w-11 flex-shrink-0 items-center justify-center dark:bg-transparent ${
 				openSidebar ? '' : 'absolute visible z-50 border-none text-gray-500'
 			}`}
-			onClick={() => setOpenSidebar(!openSidebar)}
+			onClick={handleOpenSidebar}
 		>
 			<svg
 				stroke='currentColor'
