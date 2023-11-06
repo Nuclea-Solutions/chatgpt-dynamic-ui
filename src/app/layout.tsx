@@ -4,6 +4,7 @@ import { cn } from '../utils/utils';
 import LayoutSidebar from '../components/LayoutSidebar';
 import RightSideBarComponent from '@/stories/right_sidebar/RightSideBar.component';
 import LayoutNavbar from '@/components/LayoutNavbar';
+import { useState } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -13,6 +14,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+	const [openSidebar, setOPenSidebar] = useState(true);
 	return (
 		<html lang='en'>
 			<body
@@ -21,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					'bg-white dark:bg-gray-700 min-h-screen flex text-[#374151] w-full font-sans text-base'
 				)}
 			>
-				<LayoutSidebar />
+				<LayoutSidebar setOpenSidebar={setOPenSidebar} />
 				<div className='w-full max-h-[100vh] overflow-scroll'>
 					<LayoutNavbar />
 					{children}
