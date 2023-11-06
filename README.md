@@ -28,12 +28,24 @@ Welcome to the ChatGPT Dynamic UI project. This project seeks community collabor
 3. In the root directory, run the following command:
 
    ```bash
-   npm install
+      # using npm
+      npm install
+      # using pnpm
+      pnpm install
+      # using bun
+      bun install
    ```
 
 4. Run project
+
    ```bash
-   npm run dev
+      # using npm
+      npm run dev
+      # using pnpm
+      pnpm run dev
+      # using bun
+      bun run dev
+
    ```
 
 ## Run Storybook 🚀
@@ -41,13 +53,24 @@ Welcome to the ChatGPT Dynamic UI project. This project seeks community collabor
 - Running Storybook in this project runs the following command.
 
 ```bash
+   # using npm
    npm run storybook
+   # using pnpm
+   pnpm run storybook
+   # using bun
+   bun run storybook
 ```
 
 - Building Storybook runs the following command.
 
 ```bash
+   # using npm
    npm run build-storybook
+   # using pnpm
+   pnpm run build-storybook
+   # using bun
+   bun run build-storybook
+
 ```
 
 #### Project's Storybook link 🔗
