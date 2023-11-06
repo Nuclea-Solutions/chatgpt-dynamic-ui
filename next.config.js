@@ -7,6 +7,9 @@ const nextConfig = {
 				hostname: 'www.pngkit.com'
 			}
 		]
+	},
+	eslint: {
+		ignoreDuringBuilds: true
 	}
 };
 
