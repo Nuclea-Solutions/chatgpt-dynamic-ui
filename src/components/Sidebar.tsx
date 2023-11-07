@@ -9,13 +9,17 @@ import useMessagesStore from '@/store/useMessagesStore';
 const SidebarComponent = ({
 	conversations,
 	userName,
-	photoUrl
+	photoUrl,
+	openSidebar,
+	handleOpenSidebar
 }: {
 	conversations: Array<Conversation> | [];
 	userName: String;
 	photoUrl?: string;
+	openSidebar: boolean;
+	handleOpenSidebar: () => void;
 }) => {
-	const [openSidebar, setOPenSidebar] = useState(true);
+	// const [openSidebar, setOPenSidebar] = useState(true);
 
 	const [daysPassed, setDaysPassed] = useState({
 		today: false,
@@ -123,7 +127,7 @@ const SidebarComponent = ({
 						New Chat
 					</button>
 				</div>
-				<SidebarButtonComponent setOpenSidebar={setOPenSidebar} openSidebar={openSidebar} />
+				<SidebarButtonComponent handleOpenSidebar={handleOpenSidebar} openSidebar={openSidebar} />
 			</div>
 
 			<div
@@ -386,7 +390,7 @@ const SidebarComponent = ({
 			</div>
 
 			<div
-				onClick={() => setOPenSidebar((prev) => !prev)}
+				onClick={handleOpenSidebar}
 				className={`w-6 h-6 flex justify-center items-center absolute top-0 right-0 -mr-12 cursor-pointer md:hidden`}
 			>
 				<svg
