@@ -10,14 +10,14 @@ const SidebarComponent = ({
 	conversations,
 	userName,
 	photoUrl,
-	setOpenSidebar,
-	openSidebar
+	openSidebar,
+	handleOpenSidebar
 }: {
 	conversations: Array<Conversation> | [];
 	userName: String;
 	photoUrl?: string;
-	setOpenSidebar: React.Dispatch<React.SetStateAction<boolean>>;
 	openSidebar: boolean;
+	handleOpenSidebar: () => void;
 }) => {
 	// const [openSidebar, setOPenSidebar] = useState(true);
 
@@ -127,7 +127,7 @@ const SidebarComponent = ({
 						New Chat
 					</button>
 				</div>
-				<SidebarButtonComponent setOpenSidebar={setOpenSidebar} openSidebar={openSidebar} />
+				<SidebarButtonComponent handleOpenSidebar={handleOpenSidebar} openSidebar={openSidebar} />
 			</div>
 
 			<div
@@ -390,7 +390,7 @@ const SidebarComponent = ({
 			</div>
 
 			<div
-				onClick={() => setOpenSidebar((prev) => !prev)}
+				onClick={handleOpenSidebar}
 				className={`w-6 h-6 flex justify-center items-center absolute top-0 right-0 -mr-12 cursor-pointer md:hidden`}
 			>
 				<svg
