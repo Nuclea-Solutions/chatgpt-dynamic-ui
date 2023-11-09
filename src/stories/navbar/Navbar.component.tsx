@@ -10,7 +10,7 @@ const NavbarComponent = ({ isNewChat, hide }: { isNewChat: Boolean; hide?: boole
 			<div className='hidden flex-shrink flex-row sm:flex'>
 				<div className='h-11 w-11'></div>
 			</div>
-			<div className='flex flex-1 flex-grow items-center gap-1 p-1 text-gray-600 dark:text-white sm:justify-center sm:p-0'>
+			<div className='flex flex-1 flex-grow items-center gap-1 text-lg p-1 text-gray-600 dark:text-white sm:justify-center sm:p-0'>
 				<span>{isNewChat ? 'New Chat' : 'Default (GTP-3.5)'}</span>
 			</div>
 			<div className='flex flex-shrink flex-row'>
@@ -28,8 +28,8 @@ const NavbarComponent = ({ isNewChat, hide }: { isNewChat: Boolean; hide?: boole
 								strokeLinecap='round'
 								strokeLinejoin='round'
 								className='icon-sm'
-								height='1em'
-								width='1em'
+								height='1.3rem'
+								width='1.3rem'
 								xmlns='http://www.w3.org/2000/svg'
 							>
 								<path d='M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8'></path>
