@@ -1,18 +1,27 @@
 'use client';
 import './globals.css';
-import { Inter } from 'next/font/google';
+import { Inter, Roboto } from 'next/font/google';
 import { cn } from '../utils/utils';
 import LayoutSidebar from '../components/LayoutSidebar';
 import RightSideBarComponent from '@/stories/right_sidebar/RightSideBar.component';
 import LayoutNavbar from '@/components/LayoutNavbar';
 import { useState } from 'react';
+import localFont from 'next/font/local';
 
 const inter = Inter({ subsets: ['latin'] });
+
+const roboto = Roboto({
+	weight: '400',
+	subsets: ['latin'],
+	display: 'swap'
+});
 
 export const metadata = {
 	title: 'ChatGPT Dynamic UI',
 	description: ''
 };
+
+const sohne = localFont({ src: '../../fonts/Test Söhne/TestSöhne-Buch.otf' });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	const [openSidebar, setOPenSidebar] = useState(true);
@@ -25,8 +34,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		<html lang='en'>
 			<body
 				className={cn(
-					inter.className,
-					'bg-white dark:bg-gray-700 min-h-screen flex text-[#374151] w-full font-sans text-base'
+					sohne.className,
+					'bg-white dark:bg-gray-700 min-h-screen flex text-[#374151] w-full text-base'
 				)}
 			>
 				<LayoutSidebar openSidebar={openSidebar} handleOpenSidebar={handleOpenSidebar} />

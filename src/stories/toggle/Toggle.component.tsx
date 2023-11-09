@@ -65,18 +65,18 @@ const ToggleComponent = ({ isNewChat = true }: { isNewChat: Boolean }) => {
 				!isNewChat && 'hidden'
 			}`}
 		>
-			<div className='flex gap-1 p-1 border rounded-xl sm:w-[308px] h-16 relative bg-white text-gray-600 dark:bg-gray-800 dark:text-white'>
+			<div className='flex gap-1 p-1 rounded-xl sm:w-[308px] h-[50px] relative bg-gray-200 text-gray-600 dark:bg-gray-800 dark:text-white'>
 				<button
 					name='button1'
 					onClick={toggle}
 					className={`${
-						isActive === 'button1' ? 'border bg-gray-100/50 dark:bg-gray-700/50' : ''
-					} p-3 rounded-xl w-full outline-none`}
+						isActive === 'button1' ? 'border bg-white dark:bg-gray-700/50' : 'text-gray-400/90'
+					}  rounded-xl w-full outline-none px-6`}
 					onMouseEnter={handleMouseEnterOptionOne}
 					onMouseLeave={handleMouseLeaveOptionOne}
 				>
-					<div className='flex justify-center gap-2'>
-						<span className='relative'>
+					<div className='flex justify-center gap-2 '>
+						<span className='relative flex items-center'>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								viewBox='0 0 16 16'
@@ -91,9 +91,9 @@ const ToggleComponent = ({ isNewChat = true }: { isNewChat: Boolean }) => {
 								></path>
 							</svg>
 						</span>
-						<span className='truncate font-sm font-medium pr-1.5'>GPT-3.5</span>
+						<span className='truncate text-sm font-medium pr-1.5'>GPT-3.5</span>
 
-						<div onClick={() => setClickedOption((prev) => !prev)}>
+						<div className='flex items-center' onClick={() => setClickedOption((prev) => !prev)}>
 							<svg
 								stroke='currentColor'
 								fill='currentColor'
@@ -114,8 +114,8 @@ const ToggleComponent = ({ isNewChat = true }: { isNewChat: Boolean }) => {
 					name='button2'
 					onClick={toggle}
 					className={`${
-						isActive == 'button2' ? 'border bg-gray-100/50 dark:bg-gray-700/50' : ''
-					} p-3 rounded-xl w-full outline-none`}
+						isActive == 'button2' ? 'border bg-white dark:bg-gray-700/50' : 'text-gray-400/90'
+					} px-6 rounded-xl w-full outline-none`}
 					onMouseEnter={handleMouseEnterOptionTwo}
 					onMouseLeave={handleMouseLeaveOptionTwo}
 				>
@@ -141,7 +141,7 @@ const ToggleComponent = ({ isNewChat = true }: { isNewChat: Boolean }) => {
 							viewBox='0 0 24 24'
 							fill='currentColor'
 							aria-hidden='true'
-							className='icon-sm transition-colors sm:ml-0 group-hover/options:text-gray-500 !text-gray-500 -ml-2 group-hover/button:text-brand-purple w-5'
+							className='icon-sm transition-colors sm:ml-0 -ml-2 group-hover/button:text-brand-purple w-5'
 						>
 							<path
 								fillRule='evenodd'
@@ -155,7 +155,7 @@ const ToggleComponent = ({ isNewChat = true }: { isNewChat: Boolean }) => {
 				<div
 					className={`${
 						hoveredOptionOne || hoveredOptionOneTooltip
-							? 'flex flex-col gap-3 p-4 max-w-xs absolute -bottom-[138px] border rounded-xl bg-white dark:bg-gray-800'
+							? 'flex flex-col gap-3 p-4 max-w-xs absolute -bottom-[138px] border text-left rounded-xl bg-white dark:bg-gray-800'
 							: 'hidden'
 					}
 					${windowWidth && windowWidth < 640 && 'hidden'}
@@ -163,25 +163,27 @@ const ToggleComponent = ({ isNewChat = true }: { isNewChat: Boolean }) => {
 					onMouseEnter={handleMouseEnterOptionOneTooltip}
 					onMouseLeave={handleLeaveOptionOneTooltip}
 				>
-					<h3 className='text-xl font-semibold'>Our fastest model, great for most everday tasks</h3>
-					<p className='text-normal '>Avalible to Free and Plus users</p>
+					<h3 className='text-lg font-semibold'>
+						Our fastest model, great for most everday tasks.
+					</h3>
+					<p className='text-sm font-medium text-gray-400'>Avalible to Free and Plus users</p>
 				</div>
 
 				<div
 					className={`${
 						clickedOption
-							? 'flex flex-col gap-3 p-4 max-w-xs absolute -bottom-[138px] border rounded-xl bg-white dark:bg-gray-800'
+							? 'flex flex-col gap-3 p-4 max-w-xs absolute -bottom-[138px] border text-left rounded-xl bg-white dark:bg-gray-800'
 							: 'hidden'
 					}`}
 				>
-					<h3 className='text-xl font-semibold'>Our fastest model, great for most everday tasks</h3>
-					<p className='text-normal '>Avalible to Free and Plus users</p>
+					<h3 className='text-lg font-semibold'>Our fastest model, great for most everday tasks</h3>
+					<p className='text-sm font-medium text-gray-400'>Avalible to Free and Plus users</p>
 				</div>
 
 				<div
 					className={`${
 						hoveredOptionTwo || hoveredOptionTwoTooltip
-							? 'flex flex-col gap-3 p-4 max-w-xs absolute -bottom-[314px] rounded-xl border bg-white dark:bg-gray-800'
+							? 'flex flex-col gap-3 p-4 max-w-xs absolute -bottom-[283px] rounded-xl border text-left bg-white dark:bg-gray-800'
 							: 'hidden'
 					}
 					${windowWidth && windowWidth < 640 && 'hidden'}
@@ -189,12 +191,14 @@ const ToggleComponent = ({ isNewChat = true }: { isNewChat: Boolean }) => {
 					onMouseEnter={handleMouseEnterOptionTwoTooltip}
 					onMouseLeave={handleLeaveOptionTwoTooltip}
 				>
-					<h3 className='text-xl font-semibold'>
-						Our most capable model, great for tasks that require creatibity and advanced reasoning
+					<h3 className='text-lg font-semibold'>
+						Our most capable model, great for tasks that require creatibity and advanced reasoning.
 					</h3>
-					<p className='text-normal '>Avalible to Free and Plus users</p>
-					<p className='text-normal '>GPT-4 currently has a cap of 25 messages every 3 hours.</p>
-					<button className=' w-full py-3 font-semibold bg-[#AB68FF] rounded text-white tracking-wide outline-none'>
+					<p className='text-sm font-medium text-gray-400 '>Avalible to Free and Plus users</p>
+					<p className='text-sm font-medium text-gray-400 '>
+						GPT-4 currently has a cap of 25 messages every 3 hours.
+					</p>
+					<button className=' w-full text-sm py-4 font-semibold bg-[#AB68FF] rounded-[6px] text-white tracking-wide outline-none'>
 						{' '}
 						Upgrade to ChatGPT Plus
 					</button>
