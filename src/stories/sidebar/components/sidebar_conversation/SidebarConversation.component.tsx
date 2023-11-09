@@ -20,8 +20,8 @@ const SidebarConversationComponent = ({
 
 	return (
 		<div
-			className={`flex items-center gap-3 p-3 rounded-xl cursor-pointer mr-2 bg-[#202123] hover:bg-gray-700 text-white break-all relative ${
-				isSelected == itemId ? 'bg-gray-700 mr-2 pr-14' : ''
+			className={`flex items-center gap-3 p-3 rounded-xl cursor-pointer mr-2 bg-[#202123] hover:bg-[#2A2B32] text-white break-all relative ${
+				isSelected == itemId ? 'bg-[#2A2B32] mr-2 pr-14' : ''
 			}`}
 			key={itemId}
 			onMouseEnter={handleConversationMouseEnter}
@@ -42,13 +42,13 @@ const SidebarConversationComponent = ({
 				<path d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'></path>
 			</svg>
 
-			<div className='flex-1 text-ellipsis max-h-5 overflow-hidden relative'>
+			<div className='flex-1 text-ellipsis max-h-5 overflow-hidden relative text-sm'>
 				{title}
 				<div
 					className={`absolute inset-y-0 right-0 w-8 z-10 bg-gradient-to-l  ${
 						isSelected !== itemId && conversationHovered === false
 							? 'from-[#202123]'
-							: 'from-gray-700'
+							: 'from-[#2A2B32]'
 					}
 					`}
 				></div>

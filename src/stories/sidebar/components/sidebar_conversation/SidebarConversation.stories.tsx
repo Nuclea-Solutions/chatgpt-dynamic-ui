@@ -81,8 +81,8 @@ export default {
 						<ColorItem title='Background ' subtitle='bg-[#202123]' colors={{ black: '#202123' }} />
 						<ColorItem
 							title='Backgorund hover'
-							subtitle='hover:bg-gray-700'
-							colors={{ gray: '#374151' }}
+							subtitle='hover:bg-[#2A2B32]'
+							colors={{ gray: '#2A2B32' }}
 						/>
 						<ColorItem title='Text' subtitle='text-white' colors={{ White: '#fff' }} />
 					</ColorPalette>
