@@ -1,20 +1,11 @@
 'use client';
 import './globals.css';
-import { Inter, Roboto } from 'next/font/google';
 import { cn } from '../utils/utils';
 import LayoutSidebar from '../components/LayoutSidebar';
 import RightSideBarComponent from '@/stories/right_sidebar/RightSideBar.component';
 import LayoutNavbar from '@/components/LayoutNavbar';
 import { useState } from 'react';
 import localFont from 'next/font/local';
-
-const inter = Inter({ subsets: ['latin'] });
-
-const roboto = Roboto({
-	weight: '400',
-	subsets: ['latin'],
-	display: 'swap'
-});
 
 export const metadata = {
 	title: 'ChatGPT Dynamic UI',
