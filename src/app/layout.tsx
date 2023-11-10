@@ -14,9 +14,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html lang='en'>
 			<body
+				style={{ background: 'blue' }}
 				className={cn(
 					sohne.className,
-					'bg-white dark:bg-gray-700 min-h-screen flex text-[#374151] w-full text-base'
+					'bg-blue dark:bg-gray-700 min-h-screen flex text-[#374151] w-full text-base'
 				)}
 			>
 				<LayoutSecondary>{children}</LayoutSecondary>
