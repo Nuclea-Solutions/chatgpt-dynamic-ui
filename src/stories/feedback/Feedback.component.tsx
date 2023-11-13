@@ -3,7 +3,7 @@ import React from 'react';
 const FeedbackComponent = () => {
 	return (
 		<div className='text-gray-400 flex mt-2 visible lg:gap-1 lg:mt-0 lg:pl-2 gap-2 md:gap-3'>
-			<button className='flex gap-2 items-center rounded-[8px] p-1 dark:hover:bg-gray-700 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400 hover:bg-gray-100 hover:text-gray-700'>
+			<button className='flex gap-2 items-center rounded-[8px] dark:hover:bg-gray-700 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400 hover:bg-gray-100 hover:text-gray-700'>
 				<svg
 					stroke='currentColor'
 					fill='none'

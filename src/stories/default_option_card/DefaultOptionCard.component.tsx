@@ -21,7 +21,7 @@ const DefaultOptionCardComponent = ({
 		<button
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
-			className='w-full py-2 px-3 whitespace-nowrap border rounded-xl text-left bg-white hover:bg-gray-100/50 text-gray-700 shadow-[0px_1px_6px_0px_rgba(0,0,0,0.02)] dark:text-gray-300 dark:bg-slate-700 dark:hover:bg-slate-700/50  md:whitespace-normal'
+			className='w-full py-2 px-3 whitespace-nowrap border rounded-xl text-left bg-white hover:bg-gray-100/50 text-gray-700 shadow-[0px_1px_6px_0px_rgba(0,0,0,0.02)] dark:text-gray-300 dark:bg-slate-700 dark:hover:bg-slate-700/50  md:whitespace-normal text-sm'
 		>
 			<div className='flex w-full gap-2 items-center justify-center'>
 				<div className='flex w-full items-center justify-between'>
