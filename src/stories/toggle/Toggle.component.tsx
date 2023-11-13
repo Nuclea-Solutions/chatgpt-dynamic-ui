@@ -61,7 +61,7 @@ const ToggleComponent = ({ isNewChat = true }: { isNewChat: Boolean }) => {
 
 	return (
 		<div
-			className={`flex flex-col justify-center w-full mt-6 sm:items-center md:p-0 md:mt-6  ${
+			className={`flex flex-col justify-center w-full mt-6 sm:items-center md:p-0 md:mt-6 overflow-hidden ${
 				!isNewChat && 'hidden'
 			}`}
 		>
