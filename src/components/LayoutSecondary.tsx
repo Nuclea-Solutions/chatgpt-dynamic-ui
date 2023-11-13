@@ -13,7 +13,7 @@ const LayoutSecondary = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<>
 			<LayoutSidebar openSidebar={openSidebar} handleOpenSidebar={handleOpenSidebar} />
-			<div className='w-full max-h-[100vh] overflow-scroll'>
+			<div className='w-full max-h-[100vh] overflow-scroll overflow-x-hidden'>
 				<LayoutNavbar handleOpenSidebar={handleOpenSidebar} />
 				{children}
 			</div>

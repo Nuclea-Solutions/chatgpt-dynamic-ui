@@ -16,7 +16,7 @@ const InputWidthButtonComponent = ({
 
 	return (
 		<div
-			className={`flex justify-between items-end w-full text-base rounded-large bg-white px-2 border shadow-[0_0_15px_rgba(0,0,0,.1)] dark:bg-[#40424f] dark:text-white`}
+			className={`flex justify-between items-end w-full text-base rounded-large px-2 border shadow-[0_0_15px_rgba(0,0,0,.1)] bg-white dark:bg-[#40424f] dark:text-white`}
 		>
 			<button
 				className='w-[40px] h-[40px]  p-0 my-2 flex items-center justify-center text-[#ccc] relative group'
@@ -36,7 +36,7 @@ const InputWidthButtonComponent = ({
 					onChange(e);
 					handleChangeValue(e);
 				}}
-				placeholder='Envia un mensaje'
+				placeholder='Send a message'
 			/>
 
 			<button

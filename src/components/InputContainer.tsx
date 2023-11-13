@@ -6,6 +6,7 @@ import useChatCustom from '@/hooks/useChatCustom/useChatCustom';
 import useMessagesStore from '@/store/useMessagesStore';
 // utils
 import { COMPONENTS_REF } from '@/hooks/useChatCustom/utils';
+import HelpButtonComponent from '@/stories/help_button/HelpButton.component';
 
 const InputContainer = () => {
 	const { input, handleInputChange, handleSubmit, inputType } = useChatCustom();
@@ -26,14 +27,16 @@ const InputContainer = () => {
 		: COMPONENTS_REF['text_input'].component;
 
 	return (
-		<form onSubmit={handleSubmit} className='mt-8 px-10 w-full'>
+		<form
+			onSubmit={handleSubmit}
+			className='w-full lg:mx-auto lg:max-w-2xl xl:max-w-3xl bg-gray-50 rounded-large ring ring-gray-50 ring-opacity-90 relative'
+		>
 			{!!messagesComponents?.length && Component && (
 				<Component onChange={handleInputChange} value={input} />
 			)}
 			{messages?.every((item) => item.role === 'system') && inputType === 'text_input' && (
 				<InputWidthButtonComponent value={input} onChange={handleInputChange} />
 			)}
-
 			{/* Footer */}
 			<div className='mt-2'>
 				<span>
@@ -41,6 +44,9 @@ const InputContainer = () => {
 					facts.
 					<span className='underline'>ChatGPT September 25 Version</span>
 				</span>
+			</div>
+			<div className='absolute bottom-2 -right-14 xl:-right-28 z-10'>
+				<HelpButtonComponent />
 			</div>
 		</form>
 	);

@@ -5,7 +5,7 @@ const AssistantMessage = ({ content, contentId }: { content: string; contentId: 
 	return (
 		<div className='flex-1 flex flex-col item-start justify-between md:flex-row md:max-w-[80%]'>
 			<MarkdownMessage id={contentId} content={content} />
-			<div className='pl-1'>
+			<div className='lg:pl-1'>
 				<FeedbackComponent />
 			</div>
 		</div>
