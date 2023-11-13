@@ -8,7 +8,7 @@ interface Props {
 
 const EmptyCardsContainerComponent = ({ isNewChat }: Props) => {
 	return (
-		<div className='h-full w-full flex flex-col gap-3 lg:mx-auto lg:max-w-2xl xl:max-w-3xl'>
+		<div className='h-full w-full flex flex-col gap-3 lg:mx-auto lg:max-w-2xl xl:max-w-3xl px-2'>
 			<ToggleComponent isNewChat={isNewChat} />
 			<div className={`flex h-full w-full flex-col px-2 pb-2`}>
 				<h1 className='text-4xl font-semibold text-center text-gray-200 dark:text-gray-600 ml-auto mr-auto mb-10 sm:mb-16 flex gap-2 items-center justify-center flex-grow'>
@@ -16,7 +16,7 @@ const EmptyCardsContainerComponent = ({ isNewChat }: Props) => {
 				</h1>
 			</div>
 
-			<div className='w-full flex justify-center px-2'>
+			<div className='w-full flex justify-center'>
 				<div
 					className={`grid grid-flow-row grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-3 px-4  w-full absolute  bottom-0 mx-2 md:mx-4 lg:mx-auto lg:max-w-2xl xl:max-w-3xl ${
 						!isNewChat && 'hidden'
