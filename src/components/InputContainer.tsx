@@ -45,7 +45,7 @@ const InputContainer = () => {
 					<span className='underline'>ChatGPT September 25 Version</span>
 				</span>
 			</div>
-			<div className='absolute bottom-2 -right-14 xl:-right-28 z-10'>
+			<div className='absolute bottom-2 -right-10 xl:-right-20 z-10'>
 				<HelpButtonComponent />
 			</div>
 		</form>

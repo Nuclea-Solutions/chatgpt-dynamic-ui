@@ -18,7 +18,7 @@ const EmptyCardsContainerComponent = ({ isNewChat }: Props) => {
 
 			<div className='w-full flex justify-center'>
 				<div
-					className={`grid grid-flow-row grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-3 px-4  w-full absolute  bottom-0 mx-2 md:mx-4 lg:mx-auto lg:max-w-2xl xl:max-w-3xl ${
+					className={`grid grid-flow-row grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-3 px-4  w-full max-w-2xl xl:max-w-3xl absolute  bottom-0 mx-2 md:mx-4 lg:mx-auto ${
 						!isNewChat && 'hidden'
 					}`}
 				>
