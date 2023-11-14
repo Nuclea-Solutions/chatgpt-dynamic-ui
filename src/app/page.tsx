@@ -26,17 +26,20 @@ export default function Chat() {
 				<MessagesList messages={messages} />
 				{isLoading && <p className='px-10'>cargando...</p>}
 
-				<div className='h-full py-2 text-center text-xs text-gray-600 dark:text-gray-300 md:px-[60px] flex flex-col justify-end'>
+				<div className='h-full pt-2 text-center text-xs text-gray-600 dark:text-gray-300 md:px-[60px] flex flex-col justify-end'>
 					{/* Empty chat cards */}
 					{messages?.every((item) => item.role === 'system') && (
-						<div className='h-full w-full relative mb-4'>
+						<div className='h-full w-full relative'>
 							<EmptyCardsContainerComponent isNewChat />
 						</div>
 					)}
 					{/* Input component */}
 
-					<div className='lg:w-full px-2'>
-						<InputContainer />
+					<div className='w-full py-2 text-center text-xs text-gray-600 dark:text-gray-300 flex justify-center sticky bottom-0'>
+						{/* Input component */}
+						<div className=' lg:w-full px-2 flex items-center flex-row-reverse md:block'>
+							<InputContainer />
+						</div>
 					</div>
 				</div>
 			</div>
