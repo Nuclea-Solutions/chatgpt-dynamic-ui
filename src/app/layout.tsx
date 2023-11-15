@@ -2,7 +2,6 @@ import './globals.css';
 import { cn } from '../utils/utils';
 import localFont from 'next/font/local';
 import LayoutSecondary from '@/components/LayoutSecondary';
-
 export const metadata = {
 	title: 'ChatGPT Dynamic UI',
 	description: ''

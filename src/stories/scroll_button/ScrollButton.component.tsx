@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
 
-const ScrollButtonComponent = () => {
-	const [isVisible, setIsVisible] = useState(false);
+const ScrollButtonComponent = ({ parentScrollY }: { parentScrollY: number }) => {
+	// const [isVisible, setIsVisible] = useState(false);
 
-	useEffect(() => {
-		const handleScroll = () => {
-			if (window.scrollY > 100) {
-				setIsVisible(true);
-			} else {
-				setIsVisible(false);
-			}
-		};
+	// useEffect(() => {
+	// 	const handleScroll = () => {
+	// 		if (window.scrollY > 100) {
+	// 			setIsVisible(true);
+	// 		} else {
+	// 			setIsVisible(false);
+	// 		}
+	// 	};
 
-		window.addEventListener('scroll', handleScroll);
+	// 	window.addEventListener('scroll', handleScroll);
 
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	}, []);
+	// 	return () => {
+	// 		window.removeEventListener('scroll', handleScroll);
+	// 	};
+	// }, []);
 
 	const scrollToBottom = () => {
 		window.scrollTo({
@@ -29,7 +29,9 @@ const ScrollButtonComponent = () => {
 	return (
 		<button
 			onClick={scrollToBottom}
-			className='flex items-center justify-center w-7 h-7 cursor-pointer  z-10 rounded-full border border-gray-200 bg-white text-gray-600 dark:border-white/10 dark:bg-[#444654]  dark:text-white'
+			className={`flex items-center justify-center w-7 h-7 cursor-pointer  z-10 rounded-full border border-gray-200 bg-white text-gray-600 dark:border-white/10 dark:bg-[#444654]  dark:text-white ${
+				parentScrollY <= 100 && 'hidden'
+			}`}
 		>
 			<svg
 				stroke='currentColor'

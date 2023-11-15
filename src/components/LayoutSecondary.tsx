@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import LayoutSidebar from './LayoutSidebar';
 import LayoutNavbar from './LayoutNavbar';
 import RightSideBarComponent from '@/stories/right_sidebar/RightSideBar.component';
+import FeedbackModalComponent from '@/stories/feedback_modal/FeedbackModal.component';
+import { useFeedbackModal } from '../store/useFeedbackModal';
 
 const LayoutSecondary = ({ children }: { children: React.ReactNode }) => {
 	const [openSidebar, setOPenSidebar] = useState<boolean>(true);
@@ -10,6 +12,10 @@ const LayoutSecondary = ({ children }: { children: React.ReactNode }) => {
 	const handleOpenSidebar = () => {
 		setOPenSidebar((prev) => !prev);
 	};
+
+	const openModal = useFeedbackModal((state) => state.openModal);
+	const like = useFeedbackModal((state) => state.like);
+
 	return (
 		<>
 			<LayoutSidebar openSidebar={openSidebar} handleOpenSidebar={handleOpenSidebar} />
@@ -17,7 +23,15 @@ const LayoutSecondary = ({ children }: { children: React.ReactNode }) => {
 				<LayoutNavbar handleOpenSidebar={handleOpenSidebar} />
 				{children}
 			</div>
+
 			<RightSideBarComponent />
+			<div
+				className={`fixed w-screen h-screen top-0 left-0 flex justify-center items-center z-40 bg-gray-700 bg-opacity-50 ${
+					!openModal && 'hidden'
+				} `}
+			>
+				<FeedbackModalComponent like={like} />
+			</div>
 		</>
 	);
 };
