@@ -39,11 +39,7 @@ const InputContainer = () => {
 			)}
 			{/* Footer */}
 			<div className='mt-2'>
-				<span>
-					Free Research Preview. ChatGPT may produce inaccurate information about people, places, or
-					facts.
-					<span className='underline'>ChatGPT September 25 Version</span>
-				</span>
+				<span>ChatGPT can make mistakes. Consider checking important information.</span>
 			</div>
 			<div className='absolute bottom-2 -right-10 xl:-right-20 z-10'>
 				<HelpButtonComponent />

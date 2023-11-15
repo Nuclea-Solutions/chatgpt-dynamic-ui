@@ -40,20 +40,27 @@ const MessagesList = ({ messages }: { messages: Message[] }) => {
 					>
 						<div className='w-full md:w-[820px] md:max-w-[94%]'>
 							<div className='flex py-6'>
-								<Avatar author={item.role} />
+								<div>
+									<Avatar author={item.role} />
+								</div>
+
 								{/* ASSISTANT MESSAGE */}
 								{item.role === 'assistant' ? (
 									/* ASSISTANT MESSAGE */
-									<AssistantMessage
-										contentId={item.id}
-										content={
-											parseItem && Object.keys(parseItem)?.includes('output')
-												? parseItemOutput?.message?.content ?? ''
-												: parseItemMessage
-												? parseItemMessage?.content
-												: 'no readable message'
-										}
-									/>
+
+									<div className='flex flex-col w-full md:w-[820px] md:max-w-[91%]'>
+										<p className='font-semibold text-sm mb-1'>ChatGPT</p>
+										<AssistantMessage
+											contentId={item.id}
+											content={
+												parseItem && Object.keys(parseItem)?.includes('output')
+													? parseItemOutput?.message?.content ?? ''
+													: parseItemMessage
+													? parseItemMessage?.content
+													: 'no readable message'
+											}
+										/>
+									</div>
 								) : /* TOOL/FUNCTION MESSAGE */
 								item.role === 'function' ? (
 									<Accordion className='max-w-[500px] bg-[#ececf1]'>
@@ -73,6 +80,7 @@ const MessagesList = ({ messages }: { messages: Message[] }) => {
 								) : (
 									/* USER MESSAGE */
 									<div className='flex-1 md:max-w-[80%]'>
+										<p className='font-semibold text-sm mb-1'>You</p>
 										<p className='m-0'>{item.content}</p>
 									</div>
 								)}
