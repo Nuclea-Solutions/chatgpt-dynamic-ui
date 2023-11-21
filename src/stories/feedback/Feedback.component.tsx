@@ -76,7 +76,11 @@ const FeedbackComponent = ({
 						</svg>
 					</button>
 				</div>
-				<button className={`${!isLastMessage && 'hidden'}`}>
+				<button
+					className={`${
+						!isLastMessage && 'hidden'
+					} flex gap-2 items-center rounded-[8px] dark:hover:bg-gray-700 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400 hover:bg-gray-100 hover:text-gray-700`}
+				>
 					<svg
 						stroke='currentColor'
 						fill='none'
