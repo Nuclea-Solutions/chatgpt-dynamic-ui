@@ -1,5 +1,6 @@
 'use client';
 // libraries
+import { useState } from 'react';
 import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material';
 // components
 import ComponentMessage from '@/components/ComponentMessage';
@@ -10,8 +11,12 @@ import { CodeBlock } from './CodeBlock';
 import { cn } from '@/utils/utils';
 import { Message } from 'ai';
 import { nanoid } from 'nanoid';
+import { TbPencil } from 'react-icons/tb';
 
 const MessagesList = ({ messages }: { messages: Message[] }) => {
+	const [showIconInUserMessage, setShowIconInUserMessage] = useState(false);
+	const [showFeedbackMessage, setShowFeedbackMessage] = useState(false);
+
 	return messages?.map((item) => {
 		let parseItem: any = {
 			output: { message: { content: item.content } }
@@ -32,13 +37,8 @@ const MessagesList = ({ messages }: { messages: Message[] }) => {
 		return (
 			item.role !== 'system' && (
 				<div className='w-full justify-center' key={`${item.id}-${nanoid()}`}>
-					<div
-						className={cn([
-							'whitespace-pre-wrap flex justify-center',
-							item.role === 'assistant' ? 'bg-[#f7f7f8] border-1' : 'inherit'
-						])}
-					>
-						<div className='w-full md:w-[820px] md:max-w-[94%]'>
+					<div className={cn(['whitespace-pre-wrap flex justify-center'])}>
+						<div className='w-full md:w-[820px] md:max-w-[94%] bg-inherit'>
 							<div className='flex py-6'>
 								<div>
 									<Avatar author={item.role} />
@@ -48,7 +48,11 @@ const MessagesList = ({ messages }: { messages: Message[] }) => {
 								{item.role === 'assistant' ? (
 									/* ASSISTANT MESSAGE */
 
-									<div className='flex flex-col w-full md:w-[820px] md:max-w-[91%]'>
+									<div
+										className='flex flex-col w-full md:w-[820px] md:max-w-[91%]'
+										onMouseEnter={() => setShowFeedbackMessage(true)}
+										onMouseLeave={() => setShowFeedbackMessage(false)}
+									>
 										<p className='font-semibold text-sm mb-1'>ChatGPT</p>
 										<AssistantMessage
 											contentId={item.id}
@@ -59,6 +63,7 @@ const MessagesList = ({ messages }: { messages: Message[] }) => {
 													? parseItemMessage?.content
 													: 'no readable message'
 											}
+											showFeedbackMessage={showFeedbackMessage}
 										/>
 									</div>
 								) : /* TOOL/FUNCTION MESSAGE */
@@ -79,9 +84,20 @@ const MessagesList = ({ messages }: { messages: Message[] }) => {
 									</Accordion>
 								) : (
 									/* USER MESSAGE */
-									<div className='flex-1 md:max-w-[80%]'>
+									<div
+										className='flex-1 md:max-w-[80%]'
+										onMouseEnter={() => setShowIconInUserMessage(true)}
+										onMouseLeave={() => setShowIconInUserMessage(false)}
+									>
 										<p className='font-semibold text-sm mb-1'>You</p>
 										<p className='m-0'>{item.content}</p>
+										<div
+											className={`mt-2 text-gray-400 hover:text-black hover:cursor-pointer w-0 ${
+												!showIconInUserMessage && 'opacity-0'
+											}`}
+										>
+											<TbPencil size={16} />
+										</div>
 									</div>
 								)}
 							</div>
