@@ -6,10 +6,12 @@ import axios from 'axios';
 
 export default function LayoutSidebar({
 	openSidebar,
-	handleOpenSidebar
+	handleOpenSidebar,
+	handleToggleSidebar
 }: {
 	openSidebar: boolean;
 	handleOpenSidebar: () => void;
+	handleToggleSidebar: () => void;
 }) {
 	const [list, setList] = useState<Conversation[] | []>([]);
 	const setConversationList = useConversationsStore((state) => state.setConversationList);
@@ -35,6 +37,7 @@ export default function LayoutSidebar({
 			photoUrl='https://www.pngkit.com/png/full/281-2812821_user-account-management-logo-user-icon-png.png'
 			openSidebar={openSidebar}
 			handleOpenSidebar={handleOpenSidebar}
+			handleToggleSidebar={handleToggleSidebar}
 		></SidebarComponent>
 	);
 }

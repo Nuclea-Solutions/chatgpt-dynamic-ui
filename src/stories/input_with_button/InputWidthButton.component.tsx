@@ -1,5 +1,4 @@
 import React, { ChangeEvent } from 'react';
-import { IoSend } from 'react-icons/io5';
 import { GoImage } from 'react-icons/go';
 const InputWidthButtonComponent = ({
 	onChange,
@@ -16,7 +15,7 @@ const InputWidthButtonComponent = ({
 
 	return (
 		<div
-			className={`flex justify-between items-end w-full text-base rounded-large px-2 border shadow-[0_0_15px_rgba(0,0,0,.1)] bg-white dark:bg-[#40424f] dark:text-white`}
+			className={`flex justify-between items-end w-full text-base rounded-large px-2 border border-black/20 dark:border-gray-900/50 dark:bg-[#444654] dark:text-white`}
 		>
 			<button
 				className='w-[40px] h-[40px]  p-0 my-2 flex items-center justify-center text-[#ccc] relative group'
@@ -29,24 +28,38 @@ const InputWidthButtonComponent = ({
 				<GoImage size={20} />
 			</button>
 			<textarea
-				className='px-2 resize-none max-h-200 overflow-y-hidden outline-none py-5 w-full'
+				className='px-2 resize-none max-h-200 overflow-y-hidden outline-none py-4 w-full'
 				value={value}
 				style={{ height: '56px' }}
 				onChange={(e) => {
 					onChange(e);
 					handleChangeValue(e);
 				}}
-				placeholder='Send a message'
+				placeholder='Message ChatGPT...'
 			/>
 
 			<button
 				type='submit'
-				className={`w-[38px] h-[38px]  p-0 my-2 flex items-center justify-center text-[#ccc] rounded-[8px] ${
-					value ? 'bg-[#19c37d]' : 'bg-none'
+				className={`w-[38px] h-[34px]  p-0 mb-[10px] flex items-center justify-center rounded-[8px] ${
+					value ? 'bg-black' : 'bg-black opacity-10 dark:bg-white'
 				}`}
 				disabled={!value}
 			>
-				<IoSend color={value ? 'white' : '#ccc'} size={20} />
+				<svg
+					width='24'
+					height='24'
+					viewBox='0 0 24 24'
+					fill='none'
+					className='text-white dark:text-black'
+				>
+					<path
+						d='M7 11L12 6L17 11M12 18V7'
+						stroke='currentColor'
+						strokeWidth='2'
+						strokeLinecap='round'
+						strokeLinejoin='round'
+					></path>
+				</svg>
 			</button>
 		</div>
 	);
