@@ -1,5 +1,7 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import '@/stories/sidebar/Sidebar.styles.css';
 import SidebarConversationComponent from '@/stories/sidebar/components/sidebar_conversation/SidebarConversation.component';
 import { Image } from '@nextui-org/react';
@@ -160,11 +162,12 @@ const SidebarComponent = ({
 					<h3 className=' text-xs font-medium text-gray-500'>Today</h3>
 				</div>
 				{conversations?.map((conversation) => (
-					<div
-						onClick={() => {
-							router.push(`/conversation/${conversation.id}`);
-							setIsSelected(conversation.id);
-						}}
+					<Link
+						href={`/conversation/${conversation.id}`}
+						// onClick={() => {
+						// 	setIsSelected(conversation.id);
+						// }}
+						shallow={true}
 						key={conversation.id}
 					>
 						{calculatedDays(conversation.create_time) === 1 && (
@@ -174,7 +177,7 @@ const SidebarComponent = ({
 								isSelected={isSelected}
 							/>
 						)}
-					</div>
+					</Link>
 				))}
 
 				<div
@@ -185,12 +188,13 @@ const SidebarComponent = ({
 					<h3 className='text-xs font-medium text-gray-500'>Yesterday</h3>
 				</div>
 				{conversations?.map((conversation) => (
-					<div
-						onClick={() => {
-							router.push(`/conversation/${conversation.id}`);
-							setIsSelected(conversation.id);
-						}}
+					<Link
+						href={`/conversation/${conversation.id}`}
+						// onClick={() => {
+						// 	setIsSelected(conversation.id);
+						// }}
 						key={conversation.id}
+						shallow={true}
 					>
 						{calculatedDays(conversation.create_time) === 2 && (
 							<SidebarConversationComponent
@@ -199,7 +203,7 @@ const SidebarComponent = ({
 								isSelected={isSelected}
 							/>
 						)}
-					</div>
+					</Link>
 				))}
 
 				<div
@@ -210,11 +214,11 @@ const SidebarComponent = ({
 					<h3 className='text-xs font-medium text-gray-500'>Less than seven days</h3>
 				</div>
 				{conversations?.map((conversation) => (
-					<div
-						onClick={() => {
-							router.push(`/conversation/${conversation.id}`);
-							setIsSelected(conversation.id);
-						}}
+					<Link
+						href={`/conversation/${conversation.id}`}
+						// onClick={() => {
+						// 	setIsSelected(conversation.id);
+						// }}
 						key={conversation.id}
 					>
 						{calculatedDays(conversation.create_time) === 3 && (
@@ -224,7 +228,7 @@ const SidebarComponent = ({
 								isSelected={isSelected}
 							/>
 						)}
-					</div>
+					</Link>
 				))}
 
 				<div
@@ -235,11 +239,11 @@ const SidebarComponent = ({
 					<h3 className='text-xs font-medium text-gray-500'>Less than thirty days</h3>
 				</div>
 				{conversations?.map((conversation) => (
-					<div
-						onClick={() => {
-							router.push(`/conversation/${conversation.id}`);
-							setIsSelected(conversation.id);
-						}}
+					<Link
+						href={`/conversation/${conversation.id}`}
+						// onClick={() => {
+						// 	setIsSelected(conversation.id);
+						// }}
 						key={conversation.id}
 					>
 						{calculatedDays(conversation.create_time) === 4 && (
@@ -249,7 +253,7 @@ const SidebarComponent = ({
 								isSelected={isSelected}
 							/>
 						)}
-					</div>
+					</Link>
 				))}
 
 				<div
@@ -260,11 +264,12 @@ const SidebarComponent = ({
 					<h3 className='text-xs font-medium text-gray-500'>More than thirty days</h3>
 				</div>
 				{conversations?.map((conversation) => (
-					<div
-						onClick={() => {
-							router.push(`/conversation/${conversation.id}`);
-							setIsSelected(conversation.id);
-						}}
+					<Link
+						href={`/conversation/${conversation.id}`}
+						// onClick={() => {
+						// 	setIsSelected(conversation.id);
+						// }}
+						shallow={true}
 						key={conversation.id}
 					>
 						{calculatedDays(conversation.create_time) === 0 && (
@@ -274,7 +279,7 @@ const SidebarComponent = ({
 								isSelected={isSelected}
 							/>
 						)}
-					</div>
+					</Link>
 				))}
 			</div>
 			<div
