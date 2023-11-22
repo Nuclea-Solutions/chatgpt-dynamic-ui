@@ -8,6 +8,7 @@ const InputWidthButtonComponent = ({
 	onChange: (newValue: any) => void;
 	value: any;
 }) => {
+	// const [inputHeight, setInputHeight] = useState(0);
 	const handleChangeValue = (e: ChangeEvent<HTMLTextAreaElement>) => {
 		e.target.style.height = '56px';
 		e.target.style.height = `${Math.min(e.target.scrollHeight, 200)}px`;
@@ -17,7 +18,7 @@ const InputWidthButtonComponent = ({
 		<div
 			className={`flex justify-between items-end w-full text-base rounded-large px-2 border border-black/20 dark:border-gray-900/50 dark:bg-[#444654] dark:text-white`}
 		>
-			<button
+			{/* <button
 				className='w-[40px] h-[40px]  p-0 my-2 flex items-center justify-center text-[#ccc] relative group'
 				disabled
 			>
@@ -26,16 +27,17 @@ const InputWidthButtonComponent = ({
 					<div className='-z-10 w-[10px] h-[10px] bg-black transform rotate-45 absolute -bottom-1 left-1/2 -translate-x-1/2'></div>
 				</span>
 				<GoImage size={20} />
-			</button>
+			</button> */}
 			<textarea
-				className='px-2 resize-none max-h-200 overflow-y-hidden outline-none py-4 w-full'
+				className='px-2 resize-none max-h-200  outline-none py-4 w-full'
 				value={value}
 				style={{ height: '56px' }}
 				onChange={(e) => {
 					onChange(e);
 					handleChangeValue(e);
 				}}
-				placeholder='Message ChatGPT...'
+				// placeholder='Message ChatGPT...'
+				placeholder='Envía un mensaje a Gú'
 			/>
 
 			<button
