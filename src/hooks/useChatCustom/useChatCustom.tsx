@@ -55,8 +55,6 @@ const useChatCustom = () => {
 			});
 		} catch (error) {
 			console.error(error);
-		} finally {
-			setIsLoading(false);
 		}
 	}, []);
 
@@ -80,7 +78,6 @@ const useChatCustom = () => {
 	const handleSubmitCustom = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		if (!e) return;
-		setIsLoading(true);
 		setNewMessage({
 			content: inputMessage,
 			id: nanoid(),
