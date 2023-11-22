@@ -39,11 +39,12 @@ const InputContainer = () => {
 			)}
 			{/* Footer */}
 			<div className='mt-2 text-center text-sm'>
-				<span>ChatGPT can make mistakes. Consider checking important information.</span>
+				{/* <span>ChatGPT can make mistakes. Consider checking important information.</span> */}
+				<span>Gú puede cometer errores. Considera checar la información.</span>
 			</div>
-			<div className='absolute bottom-2 -right-10 xl:-right-20 z-10'>
+			{/* <div className='absolute bottom-2 -right-10 xl:-right-20 z-10'>
 				<HelpButtonComponent />
-			</div>
+			</div> */}
 		</form>
 	);
 };
