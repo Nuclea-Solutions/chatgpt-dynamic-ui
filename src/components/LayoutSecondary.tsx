@@ -22,17 +22,16 @@ const LayoutSecondary = ({ children }: { children: React.ReactNode }) => {
 
 	return (
 		<>
-			<LayoutSidebar
+			{/* <LayoutSidebar
 				openSidebar={openSidebar}
 				handleOpenSidebar={handleOpenSidebar}
 				handleToggleSidebar={handleToggleSidebar}
-			/>
+			/> */}
 			<div className='w-full max-h-[100vh] overflow-scroll overflow-x-hidden'>
-				<LayoutNavbar handleToggleSidebar={handleToggleSidebar} />
+				{/* <LayoutNavbar handleToggleSidebar={handleToggleSidebar} /> */}
 				{children}
 			</div>
 
-			<RightSideBarComponent />
 			<div
 				className={`fixed w-screen h-screen top-0 left-0 flex justify-center items-center z-40 bg-gray-700 bg-opacity-50 ${
 					!openModal && 'hidden'
