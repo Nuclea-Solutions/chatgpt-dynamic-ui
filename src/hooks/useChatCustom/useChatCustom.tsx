@@ -1,5 +1,5 @@
 // libraries
-import { useState, useMemo, useEffect, useCallback } from 'react';
+import { useState, useMemo, useEffect, useCallback, useRef } from 'react';
 import { useChat } from 'ai/react';
 import { useParams } from 'next/navigation';
 import axios from 'axios';
@@ -14,6 +14,7 @@ import { Message } from 'ai';
 const useChatCustom = () => {
 	const params = useParams();
 	const [dateInput, setDateInput] = useState<Date | undefined>();
+	const userId = useRef(nanoid());
 	const [listOfComponents, setListOfComponents] = useState<any[]>([]);
 	const [
 		setNewMessage,
@@ -31,31 +32,31 @@ const useChatCustom = () => {
 		state.setMessagesComponents
 	]);
 	const conversationList = useConversationsStore((state) => state.conversationList);
+	const [inputMessage, setInputMessage] = useState('');
+	const [isLoading, setIsLoading] = useState(false);
 
-	const { input, handleInputChange, handleSubmit, isLoading } = useChat({
-		api: '/api/chat',
-		initialMessages: [
-			{
-				content: PROMPTS.initial,
-				id: 'initial',
-				role: 'system'
-			}
-		],
-		onFinish(message) {
-			let messageContent = JSON.parse(message.content);
-			setNewMessage(message);
+	const handleChangeMessage = (e: any) => {
+		setInputMessage(e.target.value);
+	};
 
-			const messageParse =
-				messageContent && messageContent['output']
-					? { ...message, content: messageContent }
-					: { ...message, content: { output: messageContent } };
+	const sendMessage = useCallback(async (newMessage: string) => {
+		setInputMessage('');
 
-			// @ts-ignore
-			setListOfComponents((prev) => prev.concat(messageParse));
-			setNewMessageComponent(messageParse);
+		try {
+			const response = await axios.post('/api/chat', {
+				message: newMessage,
+				userId: userId.current
+			});
+
+			setNewMessage({
+				content: response.data,
+				id: nanoid(),
+				role: 'assistant'
+			});
+		} catch (error) {
+			console.error(error);
 		}
-		// onResponse or onError: To throw alerts
-	});
+	}, []);
 
 	// Current chat input component name
 	const inputType = useMemo(
@@ -74,15 +75,15 @@ const useChatCustom = () => {
 	};
 
 	// Submit user message
-	const handleSubmitCustom = (data: React.FormEvent<HTMLFormElement>) => {
-		if (!data) return;
-		handleSubmit(data);
+	const handleSubmitCustom = (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		if (!e) return;
 		setNewMessage({
-			//@ts-ignore
-			content: inputType !== 'date_picker' ? input : dateInput,
+			content: inputMessage,
 			id: nanoid(),
 			role: 'user'
 		});
+		sendMessage(inputMessage);
 	};
 
 	// Get one conversation
@@ -169,20 +170,20 @@ const useChatCustom = () => {
 	}, []);
 
 	// Save initial message
-	useEffect(() => {
-		if (messages.length === 0) {
-			setNewMessage({
-				content: PROMPTS.initial,
-				id: 'initial',
-				role: 'system'
-			});
-		}
-	}, []);
+	// useEffect(() => {
+	// 	if (messages.length === 0) {
+	// 		setNewMessage({
+	// 			content: PROMPTS.initial,
+	// 			id: 'initial',
+	// 			role: 'system'
+	// 		});
+	// 	}
+	// }, []);
 
 	return {
-		handleInputChange: inputType !== 'date_picker' ? handleInputChange : handleDateInputChange,
+		handleInputChange: handleChangeMessage,
 		handleSubmit: handleSubmitCustom,
-		input: inputType !== 'date_picker' ? input : dateInput,
+		input: inputMessage,
 		listOfComponents,
 		dateInput,
 		handleDateInputChange,
