@@ -90,7 +90,7 @@ const MessagesList = ({ messages }: { messages: Message[] }) => {
 										onMouseLeave={() => setShowIconInUserMessage(false)}
 									>
 										<p className='font-semibold text-sm mb-1'>You</p>
-										<p className='m-0'>{item.content}</p>
+										<p className='m-0 break-words'>{item.content}</p>
 										<div
 											className={`mt-2 text-gray-400 hover:text-black hover:cursor-pointer w-0 ${
 												!showIconInUserMessage && 'opacity-0'
