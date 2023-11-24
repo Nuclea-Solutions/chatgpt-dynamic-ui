@@ -7,36 +7,29 @@ import useMessagesStore from '@/store/useMessagesStore';
 // utils
 import { COMPONENTS_REF } from '@/hooks/useChatCustom/utils';
 import HelpButtonComponent from '@/stories/help_button/HelpButton.component';
+import { MessageRole } from '@/types/message';
 
 const InputContainer = () => {
 	const { input, handleInputChange, handleSubmit, inputType } = useChatCustom();
-	const [messages, messagesComponents] = useMessagesStore((state) => [
-		state.messages,
-		state.messagesComponents
-	]);
+	const messages = useMessagesStore((state) => state.messages);
 
-	const Component = !!messagesComponents.length
-		? messagesComponents?.at(-1)?.output
-			? COMPONENTS_REF[messagesComponents?.at(-1)?.output?.input_component ?? 'text_input']
-					.component
-			: !messagesComponents?.at(-1)?.output &&
-			  messagesComponents?.at(-1)?.content?.output?.input_component
-			? COMPONENTS_REF[messagesComponents?.at(-1)?.content?.output?.input_component ?? 'text_input']
-					.component
-			: COMPONENTS_REF['text_input'].component
-		: COMPONENTS_REF['text_input'].component;
+	const Component =
+		!!messages?.length && messages?.at(-1)?.content?.output?.input_component
+			? COMPONENTS_REF[messages?.at(-1)?.content.output.input_component].component
+			: COMPONENTS_REF['text_input'].component;
 
 	return (
 		<form
 			onSubmit={handleSubmit}
 			className='w-full lg:mx-auto lg:max-w-2xl xl:max-w-3xl bg-gray-50 rounded-large ring ring-gray-50 ring-opacity-90 relative'
 		>
-			{!!messagesComponents?.length && Component && (
+			{!messages?.every((item) => item.role === 'system') && Component && (
 				<Component onChange={handleInputChange} value={input} />
 			)}
-			{messages?.every((item) => item.role === 'system') && inputType === 'text_input' && (
-				<InputWidthButtonComponent value={input} onChange={handleInputChange} />
-			)}
+			{messages?.every((item) => item.role === MessageRole.SYSTEM) &&
+				inputType === 'text_input' && (
+					<InputWidthButtonComponent value={input} onChange={handleInputChange} />
+				)}
 			{/* Footer */}
 			<div className='mt-2'>
 				<span>ChatGPT can make mistakes. Consider checking important information.</span>

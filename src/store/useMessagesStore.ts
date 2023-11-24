@@ -1,6 +1,6 @@
 import { create } from 'zustand';
-import { Message } from 'ai';
 import { produce } from 'immer';
+import { Message } from '@/types/message';
 
 interface MessagesStore {
 	messages: Message[];

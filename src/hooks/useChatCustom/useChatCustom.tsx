@@ -8,12 +8,15 @@ import useConversationsStore from '@/store/useConversationsStore';
 // utils
 import { PROMPTS } from '../../utils/propts';
 import { nanoid } from 'nanoid';
-import { Message } from 'ai';
+import axios from 'axios';
+import { Message, MessageRole } from '@/types/message';
 
 const useChatCustom = () => {
 	const params = useParams();
 	const [dateInput, setDateInput] = useState<Date | undefined>();
+	const [textInput, setTextInput] = useState<string | undefined>('');
 	const [listOfComponents, setListOfComponents] = useState<any[]>([]);
+	const [isLoading, setIsLoading] = useState(false);
 	const [
 		setNewMessage,
 		setNewMessageComponent,
@@ -31,31 +34,6 @@ const useChatCustom = () => {
 	]);
 	const conversationList = useConversationsStore((state) => state.conversationList);
 
-	const { input, handleInputChange, handleSubmit, isLoading } = useChat({
-		api: '/api/chat',
-		initialMessages: [
-			{
-				content: PROMPTS.initial,
-				id: 'initial',
-				role: 'system'
-			}
-		],
-		onFinish(message) {
-			let messageContent = JSON.parse(message.content);
-			setNewMessage(message);
-
-			const messageParse =
-				messageContent && messageContent['output']
-					? { ...message, content: messageContent }
-					: { ...message, content: { output: messageContent } };
-
-			// @ts-ignore
-			setListOfComponents((prev) => prev.concat(messageParse));
-			setNewMessageComponent(messageParse);
-		}
-		// onResponse or onError: To throw alerts
-	});
-
 	// Current chat input component name
 	const inputType = useMemo(
 		() =>
@@ -67,22 +45,48 @@ const useChatCustom = () => {
 		[messagesComponents]
 	);
 
+	// Handle string input
+	const handleTextInputChange = (e: any) => {
+		setTextInput(e.target.value);
+	};
+
 	// Handle date input
 	const handleDateInputChange = (newValue: Date) => {
 		setDateInput(newValue);
 	};
 
 	// Submit user message
-	const handleSubmitCustom = (data: React.FormEvent<HTMLFormElement>) => {
-		if (!data) return;
-		handleSubmit(data);
-		setNewMessage({
-			//@ts-ignore
-			content: inputType !== 'date_picker' ? input : dateInput,
-			id: nanoid(),
-			role: 'user'
-		});
-	};
+	const handleSubmit = useCallback(
+		(e: React.FormEvent<HTMLFormElement>) => {
+			e.preventDefault();
+			if (!e) return;
+
+			const message = {
+				content: inputType !== 'date_picker' ? textInput : dateInput,
+				id: nanoid(),
+				role: MessageRole.USER
+			};
+			setNewMessage(message);
+			sendMessage(message);
+		},
+		[textInput]
+	);
+
+	// Post message
+	const sendMessage = useCallback(
+		async (message: Message) => {
+			setTextInput('');
+			try {
+				const response = await axios.post('/api/chat', {
+					data: { messages: [...messages, message] }
+				});
+				setNewMessage(response.data);
+			} catch (error) {
+				console.log({ error });
+			}
+		},
+		[messages]
+	);
 
 	// Get one conversation
 	const getConversation = useCallback(async () => {
@@ -113,8 +117,10 @@ const useChatCustom = () => {
 						createdAt: item.message.create_time ?? new Date(),
 						content: partTool,
 						role: 'function',
-						name: nextItem.message?.author.name,
-						function_call: part
+						tool_calls: {
+							name: nextItem.message?.author.name,
+							arguments: part
+						}
 						// string | ChatCompletionMessage.FunctionCall	undefined;
 					};
 					resultMessages.push(payload as Message);
@@ -165,16 +171,16 @@ const useChatCustom = () => {
 		if (messages.length === 0) {
 			setNewMessage({
 				content: PROMPTS.initial,
-				id: 'initial',
+				// id: 'initial',
 				role: 'system'
 			});
 		}
 	}, []);
 
 	return {
-		handleInputChange: inputType !== 'date_picker' ? handleInputChange : handleDateInputChange,
-		handleSubmit: handleSubmitCustom,
-		input: inputType !== 'date_picker' ? input : dateInput,
+		handleInputChange: inputType !== 'date_picker' ? handleTextInputChange : handleDateInputChange,
+		handleSubmit,
+		input: inputType !== 'date_picker' ? textInput : dateInput,
 		listOfComponents,
 		dateInput,
 		handleDateInputChange,
