@@ -1,4 +1,4 @@
-const { MongoClient, ServerApiVersion } = require('mongodb');
+import { MongoClient, ServerApiVersion } from 'mongodb';
 
 const URI = `${process.env.MONGODB_URI}/?retryWrites=true&w=majority`;
 
