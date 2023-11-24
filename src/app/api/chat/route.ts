@@ -52,7 +52,6 @@ export async function POST(req: Request) {
 			// Regular message
 		} else if (response.choices[0]?.message.content) {
 			const messageContent = JSON.parse(response.choices[0]?.message.content);
-			console.log('Regular message', { messageContent });
 
 			const message = {
 				role: response.choices[0]?.message.role,

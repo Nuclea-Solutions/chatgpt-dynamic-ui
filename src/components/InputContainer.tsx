@@ -21,7 +21,7 @@ const InputContainer = () => {
 	return (
 		<form
 			onSubmit={handleSubmit}
-			className='w-full lg:mx-auto lg:max-w-2xl xl:max-w-3xl bg-gray-50 rounded-large ring ring-gray-50 ring-opacity-90 relative'
+			className='w-full lg:mx-auto lg:max-w-2xl xl:max-w-3xl bg-white dark:bg-[#444654] rounded-large relative'
 		>
 			{!messages?.every((item) => item.role === 'system') && Component && (
 				<Component onChange={handleInputChange} value={input} />
@@ -31,7 +31,7 @@ const InputContainer = () => {
 					<InputWidthButtonComponent value={input} onChange={handleInputChange} />
 				)}
 			{/* Footer */}
-			<div className='mt-2'>
+			<div className='mt-2 text-center text-sm'>
 				<span>ChatGPT can make mistakes. Consider checking important information.</span>
 			</div>
 			<div className='absolute bottom-2 -right-10 xl:-right-20 z-10'>

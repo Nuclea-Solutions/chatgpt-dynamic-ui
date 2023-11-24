@@ -10,6 +10,10 @@ const LayoutSecondary = ({ children }: { children: React.ReactNode }) => {
 	const [openSidebar, setOPenSidebar] = useState<boolean>(true);
 
 	const handleOpenSidebar = () => {
+		setOPenSidebar(true);
+	};
+
+	const handleToggleSidebar = () => {
 		setOPenSidebar((prev) => !prev);
 	};
 
@@ -18,9 +22,13 @@ const LayoutSecondary = ({ children }: { children: React.ReactNode }) => {
 
 	return (
 		<>
-			<LayoutSidebar openSidebar={openSidebar} handleOpenSidebar={handleOpenSidebar} />
+			<LayoutSidebar
+				openSidebar={openSidebar}
+				handleOpenSidebar={handleOpenSidebar}
+				handleToggleSidebar={handleToggleSidebar}
+			/>
 			<div className='w-full max-h-[100vh] overflow-scroll overflow-x-hidden'>
-				<LayoutNavbar handleOpenSidebar={handleOpenSidebar} />
+				<LayoutNavbar handleToggleSidebar={handleToggleSidebar} />
 				{children}
 			</div>
 

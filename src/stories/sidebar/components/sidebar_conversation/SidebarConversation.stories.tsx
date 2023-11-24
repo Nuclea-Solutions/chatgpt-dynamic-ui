@@ -78,11 +78,11 @@ export default {
 						<hr className='my-4' />
 					</Subtitle>
 					<ColorPalette>
-						<ColorItem title='Background ' subtitle='bg-[#202123]' colors={{ black: '#202123' }} />
+						<ColorItem title='Background ' subtitle='bg-black' colors={{ black: '#000' }} />
 						<ColorItem
 							title='Backgorund hover'
-							subtitle='hover:bg-[#2A2B32]'
-							colors={{ gray: '#2A2B32' }}
+							subtitle='hover:bg-[#202123]'
+							colors={{ gray: '#202123' }}
 						/>
 						<ColorItem title='Text' subtitle='text-white' colors={{ White: '#fff' }} />
 					</ColorPalette>
@@ -92,56 +92,21 @@ export default {
 						<hr className='my-4' />
 					</Subtitle>
 					<IconGallery>
-						<IconItem name='icono de mensaje'>
+						<IconItem name='icono de elipsis'>
 							<svg
-								stroke='currentColor'
-								fill='none'
-								strokeWidth='2'
+								width='24'
+								height='24'
 								viewBox='0 0 24 24'
-								strokeLinecap='round'
-								strokeLinejoin='round'
-								className='icon-sm'
-								height='1em'
-								width='1em'
-								xmlns='http://www.w3.org/2000/svg'
-							>
-								<path d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'></path>
-							</svg>
-						</IconItem>
-						<IconItem name='icono de editar'>
-							<svg
-								stroke='currentColor'
 								fill='none'
-								strokeWidth='2'
-								viewBox='0 0 24 24'
-								strokeLinecap='round'
-								strokeLinejoin='round'
-								className='icon-sm'
-								height='1em'
-								width='1em'
 								xmlns='http://www.w3.org/2000/svg'
+								className='icon-md relative'
 							>
-								<path d='M12 20h9'></path>
-								<path d='M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z'></path>
-							</svg>
-						</IconItem>
-						<IconItem name='icono de eliminar'>
-							<svg
-								stroke='currentColor'
-								fill='none'
-								strokeWidth='2'
-								viewBox='0 0 24 24'
-								strokeLinecap='round'
-								strokeLinejoin='round'
-								className='icon-sm'
-								height='1em'
-								width='1em'
-								xmlns='http://www.w3.org/2000/svg'
-							>
-								<polyline points='3 6 5 6 21 6'></polyline>
-								<path d='M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2'></path>
-								<line x1='10' y1='11' x2='10' y2='17'></line>
-								<line x1='14' y1='11' x2='14' y2='17'></line>
+								<path
+									fillRule='evenodd'
+									clipRule='evenodd'
+									d='M3 12C3 10.8954 3.89543 10 5 10C6.10457 10 7 10.8954 7 12C7 13.1046 6.10457 14 5 14C3.89543 14 3 13.1046 3 12ZM10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12ZM17 12C17 10.8954 17.8954 10 19 10C20.1046 10 21 10.8954 21 12C21 13.1046 20.1046 14 19 14C17.8954 14 17 13.1046 17 12Z'
+									fill='currentColor'
+								></path>
 							</svg>
 						</IconItem>
 					</IconGallery>

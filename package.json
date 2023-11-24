@@ -26,6 +26,7 @@
 		"dayjs": "^1.11.9",
 		"framer-motion": "^10.16.4",
 		"immer": "^10.0.3",
+		"mongodb": "^6.3.0",
 		"nanoid": "^4.0.2",
 		"next": "13.4.4-canary.11",
 		"openai": "^4.19.0",

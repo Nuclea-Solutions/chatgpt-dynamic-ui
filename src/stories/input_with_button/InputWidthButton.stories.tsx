@@ -12,7 +12,6 @@ import {
 	Subtitle,
 	Title
 } from '@storybook/blocks';
-import { IoSend } from 'react-icons/io5';
 import { GoImage } from 'react-icons/go';
 export default {
 	title: 'Main/InputWidthButton',
@@ -80,13 +79,24 @@ export default {
 						<ColorItem title='Background white' subtitle='bg-white' colors={{ white: '#fff' }} />
 						<ColorItem
 							title='Background dark'
-							subtitle='bg-[#40424f]'
-							colors={{ gray: '#40424f' }}
+							subtitle='bg-[#444654]'
+							colors={{ gray: '#444654' }}
 						/>
 						<ColorItem title='Text dark' subtitle='text-white' colors={{ White: '#fff' }} />
-						<ColorItem title='Button' subtitle='' colors={{ green: '#18c964' }} />
-						<ColorItem title='Icon inactive' subtitle='' colors={{ gray: '#ccc' }} />
-						<ColorItem title='Icon active' subtitle='' colors={{ white: '#fff' }} />
+						<ColorItem title='Button' subtitle='bg-black' colors={{ black: '#000' }} />
+						<ColorItem
+							title='Button inactive'
+							subtitle='bg-black opacity-10'
+							colors={{ black: '#00000010' }}
+						/>
+						<ColorItem title='Button dark' subtitle='bg-white' colors={{ white: '#fff' }} />
+						<ColorItem
+							title='Button inactive dark'
+							subtitle='bg-white opacity-10'
+							colors={{ white: '#ffffff10' }}
+						/>
+						<ColorItem title='Icon' subtitle='text-black' colors={{ black: '#000' }} />
+						<ColorItem title='Icon dark' subtitle='text-white' colors={{ white: '#fff' }} />
 					</ColorPalette>
 
 					<Subtitle>
@@ -98,7 +108,15 @@ export default {
 							<GoImage />
 						</IconItem>
 						<IconItem name='icono de enviar'>
-							<IoSend />
+							<svg width='24' height='24' viewBox='0 0 24 24' fill='none'>
+								<path
+									d='M7 11L12 6L17 11M12 18V7'
+									stroke='currentColor'
+									strokeWidth='2'
+									strokeLinecap='round'
+									strokeLinejoin='round'
+								></path>
+							</svg>
 						</IconItem>
 					</IconGallery>
 				</>

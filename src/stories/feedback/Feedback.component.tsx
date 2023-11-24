@@ -1,13 +1,24 @@
-import { useFeedbackModal } from '@/store/useFeedbackModal';
+import { useFeedbackModal } from '../../store/useFeedbackModal';
 import React from 'react';
 
-const FeedbackComponent = () => {
+const FeedbackComponent = ({
+	isLastMessage,
+	showFeedbackMessage
+}: {
+	isLastMessage: boolean;
+	showFeedbackMessage: boolean;
+}) => {
 	const setOpenModalLike = useFeedbackModal((state) => state.setOpenModalLike);
 	const setOpenModalDislike = useFeedbackModal((state) => state.setOpenModalDislike);
 
 	return (
-		<div className='flex justify-start md:flex-col gap-3'>
-			<div className='text-gray-400 flex order-2 md:order-1 mt-2 visible lg:gap-1 lg:mt-0 lg:pl-2 gap-2 md:gap-3'>
+		<div
+			className={`flex justify-start gap-3 opacity-0 ${
+				isLastMessage || showFeedbackMessage ? 'opacity-100' : ''
+			}`}
+		>
+			<div className=' justify-end text-sm items-center hidden'>&lt; 1 / 1 &gt;</div>
+			<div className='text-gray-400 flex visible lg:gap-1 lg:mt-0 gap-2 md:gap-3'>
 				<button className='flex gap-2 items-center rounded-[8px] dark:hover:bg-gray-700 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400 hover:bg-gray-100 hover:text-gray-700'>
 					<svg
 						stroke='currentColor'
@@ -65,7 +76,11 @@ const FeedbackComponent = () => {
 						</svg>
 					</button>
 				</div>
-				<button>
+				<button
+					className={`${
+						!isLastMessage && 'hidden'
+					} flex gap-2 items-center rounded-[8px] dark:hover:bg-gray-700 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400 hover:bg-gray-100 hover:text-gray-700`}
+				>
 					<svg
 						stroke='currentColor'
 						fill='none'
@@ -83,9 +98,6 @@ const FeedbackComponent = () => {
 						<path d='M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15'></path>
 					</svg>
 				</button>
-			</div>
-			<div className='flex justify-end text-sm items-center order-1 md:order-2'>
-				&lt; 1 / 1 &gt;
 			</div>
 		</div>
 	);
