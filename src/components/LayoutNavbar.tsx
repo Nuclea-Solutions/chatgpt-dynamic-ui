@@ -14,7 +14,7 @@ const LayoutNavbar = ({ handleToggleSidebar }: { handleToggleSidebar: () => void
 			<NavbarSmallScreenComponent handleToggleSidebar={handleToggleSidebar} />
 			<NavbarComponent
 				isNewChat={!params.id}
-				hide={messages.every((item) => item.role === 'system')}
+				hide={messages?.every((item) => item.role === 'system')}
 			/>
 		</div>
 	);

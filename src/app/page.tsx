@@ -21,7 +21,7 @@ export default function Chat() {
 		<HomeLayout>
 			<div className='flex flex-col h-full justify-between w-full'>
 				{/* MESSAGES */}
-				<MessagesList messages={messages.filter((item) => item.role !== 'system')} />
+				<MessagesList messages={messages?.filter((item) => item.role !== 'system') ?? []} />
 				{isLoading && <p className='px-10'>cargando...</p>}
 
 				<div className='h-full pt-2 text-center text-xs text-gray-600 dark:text-gray-300 md:px-[60px] flex flex-col justify-end relative'>

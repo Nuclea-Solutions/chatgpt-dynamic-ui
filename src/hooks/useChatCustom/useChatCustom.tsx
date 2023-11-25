@@ -62,9 +62,10 @@ const useChatCustom = () => {
 	const sendMessage = useCallback(
 		async (message: Message) => {
 			setTextInput('');
+			const list = !!messages?.length ? [...messages, message] : [message];
 			try {
 				const response = await axios.post('/api/chat', {
-					data: { messages: [...messages, message] }
+					data: { messages: list }
 				});
 				setNewMessage(response.data);
 			} catch (error) {
@@ -148,7 +149,7 @@ const useChatCustom = () => {
 
 	// Save initial message
 	useEffect(() => {
-		if (messages.length === 0 && !params.id) {
+		if (messages?.length === 0 && !params.id) {
 			setNewMessage({
 				content: PROMPTS.initial,
 				// id: 'initial',
