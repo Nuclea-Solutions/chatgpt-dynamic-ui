@@ -14,6 +14,13 @@ const InputWidthButtonComponent = ({
 		e.target.style.height = `${Math.min(e.target.scrollHeight, 200)}px`;
 	};
 
+	const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+		if (e.key === 'Enter' && !e.shiftKey && value.trim() !== '') {
+			e.preventDefault();
+			document.getElementById('submitButton')?.click();
+		}
+	};
+
 	return (
 		<div
 			className={`flex justify-between items-end w-full text-base rounded-large pl-2 border overflow-hidden border-black/20 dark:border-gray-900/50 dark:bg-[#444654] dark:text-white`}
@@ -36,11 +43,13 @@ const InputWidthButtonComponent = ({
 					onChange(e);
 					handleChangeValue(e);
 				}}
+				onKeyDown={handleKeyDown}
 				// placeholder='Message ChatGPT...'
 				placeholder='Envía un mensaje a Gú'
 			/>
 
 			<button
+				id='submitButton'
 				type='submit'
 				className={`w-[38px] h-[34px]  p-0 mb-[10px] flex items-center justify-center rounded-[8px] absolute right-4 ${
 					value ? 'bg-black' : 'bg-black opacity-10 dark:bg-white'
