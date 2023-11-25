@@ -1,6 +1,4 @@
 'use client';
-// libraries
-import { useParams } from 'next/navigation';
 // components
 import HomeLayout from '@/components/HomeLayout';
 import EmptyCardsContainerComponent from '@/stories/empty_cards_container/EmptyCardsContainer.component';
@@ -10,12 +8,12 @@ import useChatCustom from '@/hooks/useChatCustom/useChatCustom';
 import MessagesList from '@/components/MessagesList';
 import InputContainer from '@/components/InputContainer';
 import useMessagesStore from '@/store/useMessagesStore';
+import { useEffect } from 'react';
 
 /*
 Page with chat using the message and the input component that it's return from response
 */
 export default function Chat() {
-	const params = useParams();
 	const { isLoading } = useChatCustom();
 	const messages = useMessagesStore((state) => state.messages);
 
@@ -23,7 +21,7 @@ export default function Chat() {
 		<HomeLayout>
 			<div className='flex flex-col h-full justify-between w-full'>
 				{/* MESSAGES */}
-				<MessagesList messages={messages} />
+				<MessagesList messages={messages.filter((item) => item.role !== 'system')} />
 				{isLoading && <p className='px-10'>cargando...</p>}
 
 				<div className='h-full pt-2 text-center text-xs text-gray-600 dark:text-gray-300 md:px-[60px] flex flex-col justify-end relative'>

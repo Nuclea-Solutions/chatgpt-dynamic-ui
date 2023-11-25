@@ -33,10 +33,7 @@ const SidebarComponent = ({
 	const currentDate = new Date();
 	const router = useRouter();
 
-	const [setMessages, setMessagesComponents] = useMessagesStore((state) => [
-		state.setMessages,
-		state.setMessagesComponents
-	]);
+	const setMessages = useMessagesStore((state) => state.setMessages);
 
 	//This function checks the creation date of each conversation
 	const calculatedDays = (date: number) => {
@@ -125,7 +122,6 @@ const SidebarComponent = ({
 						<button
 							onClick={() => {
 								setMessages([]);
-								setMessagesComponents([]);
 								router.push('/');
 							}}
 							className='truncate text-sm'

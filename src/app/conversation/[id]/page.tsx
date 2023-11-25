@@ -26,7 +26,7 @@ export default function Conversation() {
 		<div className='min-h-screen flex flex-col pt-2'>
 			<div className='w-full max-w-[100vw]'>
 				<div className='flex flex-col h-full justify-between '>
-					<MessagesList messages={messages} />
+					<MessagesList messages={messages.filter((item) => item.role !== 'system')} />
 
 					{/* <div className='w-full h-36 py-2 text-center text-xs text-gray-600 dark:text-gray-300 flex justify-center'> */}
 					{/* Input component */}
