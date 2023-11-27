@@ -55,6 +55,11 @@ const useChatCustom = () => {
 			});
 		} catch (error) {
 			console.error(error);
+			setNewMessage({
+				content: 'An error ocurred. Try again later',
+				id: `error-${nanoid()}`,
+				role: 'assistant'
+			});
 		}
 	}, []);
 
