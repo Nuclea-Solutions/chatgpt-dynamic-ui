@@ -121,7 +121,7 @@ const SidebarComponent = ({
 						</div>
 						<button
 							onClick={() => {
-								setMessages([]);
+								setMessages(null);
 								router.push('/');
 							}}
 							className='truncate text-sm'

@@ -12,9 +12,9 @@ export async function GET(req: Request) {
 			return NextResponse.json(conversation);
 		}
 		const client = await runMongo();
-		const db = await client.db('conversations');
-		const collection = await db.collection('conversations');
-		const conversation = await collection.findOne({ id });
+		const db = client?.db('conversations');
+		const collection = db?.collection('conversations');
+		const conversation = await collection?.findOne({ id });
 
 		return NextResponse.json(conversation);
 	} catch (error) {
