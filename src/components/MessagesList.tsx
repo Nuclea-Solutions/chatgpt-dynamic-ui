@@ -7,6 +7,7 @@ import ComponentMessage from '@/components/ComponentMessage';
 import Avatar from '@/components/Avatar';
 import AssistantMessage from '@/components/AssistantMessage';
 import { CodeBlock } from './CodeBlock';
+import ErrorMessage from './ErrorMessage';
 // utils
 import { cn } from '@/utils/utils';
 import { Message } from 'ai';
@@ -45,7 +46,9 @@ const MessagesList = ({ messages }: { messages: Message[] }) => {
 								</div>
 
 								{/* ASSISTANT MESSAGE */}
-								{item.role === 'assistant' ? (
+								{item.id?.includes('error') ? (
+									<ErrorMessage content={parseItemOutput?.message?.content ?? ''} />
+								) : item.role === 'assistant' ? (
 									/* ASSISTANT MESSAGE */
 
 									<div
