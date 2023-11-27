@@ -15,17 +15,28 @@ Welcome to the ChatGPT Dynamic UI project. This project seeks community collabor
 
 ## Getting started 🧑🏻‍💻
 
-1. Clone this repository.
+1. Clone this repository:
+
    ```bash
    git clone https://github.com/Nuclea-Solutions/chatgpt-dynamic-ui.git
    ```
+
 2. Open proyect
 
    ```bash
+   cd chatgpt-dynamic-ui
    code .
    ```
 
-3. In the root directory, run the following command:
+3. Set-up OpenAi API
+
+   Create a `.env.local` file and configure your environment. To create and copy your API key, visit [API Keys section in OpenAI web portal](https://platform.openai.com/account/api-keys).
+
+   ```bash
+    echo "OPENAI_API_KEY=enter-your-apikey" > .env.local
+   ```
+
+4. In the root directory, run the following command:
 
    ```bash
       # using npm
@@ -36,7 +47,7 @@ Welcome to the ChatGPT Dynamic UI project. This project seeks community collabor
       bun install
    ```
 
-4. Run project
+5. Run project
 
    ```bash
       # using npm
