@@ -1,9 +1,9 @@
 import { create } from 'zustand';
-import { Message } from 'ai';
 import { produce } from 'immer';
+import { Message } from '@/types/message';
 
 interface MessagesStore {
-	messages: Message[];
+	messages: Message[] | [];
 	setNewMessage: (message: Message) => void;
 	setMessages: (messages: Message[]) => void;
 	messagesComponents: any[];
@@ -19,12 +19,13 @@ const useMessagesStore = create<MessagesStore>((set) => ({
 				draft.messages.push(message);
 			})
 		),
-	setMessages: (messages: Message[]) =>
+	setMessages: (messages: Message[] | []) => {
 		set((state) =>
 			produce(state, (draft) => {
 				draft.messages = messages;
 			})
-		),
+		);
+	},
 	messagesComponents: [],
 	setNewMessageComponent: (message: Message) =>
 		set((state) =>

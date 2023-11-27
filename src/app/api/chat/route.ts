@@ -1,77 +1,66 @@
-import { Configuration, OpenAIApi } from 'openai-edge';
-import { OpenAIStream, StreamingTextResponse } from 'ai';
 import { functions } from './functions';
+import OpenAI from 'openai';
+import { nanoid } from 'nanoid';
+import { NextResponse } from 'next/server';
+import { Message } from '@/types/message';
 
-const config = new Configuration({
-	apiKey: process.env.OPENAI_API_KEY
+const openai = new OpenAI({
+	apiKey: process.env.OPENAI_API_KEY,
+	baseURL: 'https://oai.hconeai.com/v1',
+	defaultHeaders: {
+		'Helicone-Auth': `Bearer ${process.env.HELICONE_API_KEY}`
+	}
 });
-const openai = new OpenAIApi(config);
 
-// IMPORTANT!
+// // IMPORTANT!
 export const runtime = 'edge';
 
 export async function POST(req: Request) {
 	try {
 		const json = await req.json();
+		const { data } = json;
 
-		const { messages } = json;
-		const response = await openai.createChatCompletion({
+		const messagesToSend = data.messages?.map((item: Message) => ({
+			role: item.role,
+			content: typeof item.content === 'string' ? item.content : JSON.stringify(item.content)
+		}));
+		const response = await openai.chat.completions.create({
+			// model: 'gpt-4-1106-preview',
 			model: 'gpt-4',
-			stream: true,
+			// stream: true,
 			temperature: 0.1,
-			messages,
-			functions,
-			function_call: { name: 'pick_a_component' }
+			messages: messagesToSend,
+			tools: functions,
+			tool_choice: { type: 'function', function: { name: 'pick_a_component' } },
+			max_tokens: 500
+			// response_format: { type: 'json_object' }
 		});
 
-		// Convert the response into a friendly text-stream
-		const stream = OpenAIStream(response, {
-			// onStart: async () => {
-			// 	// save user message to db
-			// },
-			// onCompletion: async (completion: any) => {
-			// 	// save assistant response to db (exclude responses from function calls)
-			// 	// const jsonCompletion = JSON.parse(completion);
-			// },
-			experimental_onFunctionCall: async (
-				{ name, arguments: args },
-				createFunctionCallMessages
-			) => {
-				if (name === 'pick_a_component') {
-					// @ts-ignore
-					const newMessage = createFunctionCallMessages(args);
+		// Tool message
+		if (!!response.choices[0]?.message?.tool_calls?.length) {
+			const messageContent = JSON.parse(
+				response.choices[0]?.message.tool_calls[0].function.arguments
+			);
 
-					return await openai.createChatCompletion({
-						messages: [...messages, ...newMessage],
-						stream: true,
-						model: 'gpt-4',
-						functions
-					});
-				}
-				if (name === 'form_data') {
-					// @ts-ignore
-					const newMessage = createFunctionCallMessages({
-						content: 'null',
-						role: 'assistant',
-						function_call: {
-							name,
-							arguments: args
-						}
-					});
+			const message = {
+				role: response.choices[0]?.message.role,
+				id: response.choices[0]?.message.tool_calls[0].id,
+				content: messageContent
+			};
+			return NextResponse.json(message);
 
-					return await openai.createChatCompletion({
-						messages: [...messages, ...newMessage],
-						stream: true,
-						model: 'gpt-4',
-						functions
-					});
-				}
-			}
-		});
+			// Regular message
+		} else if (response.choices[0]?.message.content) {
+			const messageContent = JSON.parse(response.choices[0]?.message.content);
 
-		// Respond with the stream
-		return new StreamingTextResponse(stream);
+			const message = {
+				role: response.choices[0]?.message.role,
+				id: nanoid(),
+				content: messageContent
+			};
+			return NextResponse.json(message);
+		}
 	} catch (error) {
-		return new Error('error');
+		console.error(error);
 	}
 }
