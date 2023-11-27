@@ -9,6 +9,7 @@ import UserMessage from './UserMessage';
 import { cn } from '@/utils/utils';
 import { nanoid } from 'nanoid';
 import { Message, MessageRole } from '@/types/message';
+import ErrorMessage from './ErrorMessage';
 
 const MessagesList = ({ messages }: { messages: Message[] }) => {
 	return messages?.map((item) => {
@@ -28,7 +29,9 @@ const MessagesList = ({ messages }: { messages: Message[] }) => {
 							</div>
 
 							{/* ASSISTANT MESSAGE */}
-							{item.role === MessageRole.ASSISTANT ? (
+							{item.id?.includes('error') ? (
+								<ErrorMessage content={parseItemContent} />
+							) : item.role === MessageRole.ASSISTANT ? (
 								/* ASSISTANT MESSAGE */
 								<AssistantMessage contentId={item.id ?? nanoid()} content={parseItemContent} />
 							) : /* TOOL/FUNCTION MESSAGE */
