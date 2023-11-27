@@ -1,4 +1,4 @@
-import { useFeedbackModal } from '@/store/useFeedbackModal';
+import { useFeedbackModal } from '../../store/useFeedbackModal';
 import React from 'react';
 
 const FeedbackModalComponent = ({ like }: { like: boolean }) => {
