@@ -11,9 +11,10 @@ const AssistantMessage = ({ content, contentId }: { content: string; contentId: 
 	const [showFeedbackMessage, setShowFeedbackMessage] = useState(false);
 
 	const isLastMessage = useMemo(() => {
-		const assistanConversations = conversationsStorage.filter(
+		const assistanConversations = conversationsStorage?.filter(
 			(assistanConversation) => assistanConversation.role === 'assistant'
 		);
+		if (!assistanConversations?.length) return false;
 		const lastMessageId = assistanConversations[assistanConversations.length - 1].id;
 		return lastMessageId === contentId;
 	}, []);

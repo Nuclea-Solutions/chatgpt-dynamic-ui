@@ -11,9 +11,9 @@ export async function GET(req: Request) {
 		}
 
 		const client = await runMongo();
-		const db = await client.db('conversations');
-		const collection = await db.collection('conversations');
-		const conversations = await collection.find({}).toArray();
+		const db = await client?.db('conversations');
+		const collection = db?.collection('conversations');
+		const conversations = collection?.find({}).toArray();
 
 		return NextResponse.json({ conversations });
 	} catch (error) {
