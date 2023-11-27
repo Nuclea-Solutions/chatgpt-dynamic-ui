@@ -36,7 +36,7 @@ const InputWidthButtonComponent = ({
 				<GoImage size={20} />
 			</button> */}
 			<textarea
-				className='pr-14 resize-none max-h-200  outline-none py-4 w-full pl-2'
+				className='pr-16 resize-none max-h-200  outline-none py-4 w-full pl-2'
 				value={value}
 				style={{ height: '56px' }}
 				onChange={(e) => {
