@@ -56,7 +56,7 @@ const MessagesList = ({ messages }: { messages: Message[] }) => {
 										onMouseEnter={() => setShowFeedbackMessage(true)}
 										onMouseLeave={() => setShowFeedbackMessage(false)}
 									>
-										<p className='font-semibold text-sm mb-1'>ChatGPT</p>
+										<p className='font-semibold text-sm mb-1'>Gú</p>
 										<AssistantMessage
 											contentId={item.id}
 											content={
