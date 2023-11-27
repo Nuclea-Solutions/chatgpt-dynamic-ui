@@ -20,12 +20,12 @@ export default function Chat() {
 
 	return (
 		<HomeLayout>
-			<div className='flex flex-col h-full justify-between w-full'>
+			<div className='flex flex-col h-full justify-between w-full '>
 				{/* MESSAGES */}
 				<MessagesList messages={messages} />
 				{isLoading && <p className='px-10'>cargando...</p>}
 
-				<div className='h-full pt-2 text-center text-xs text-gray-600 dark:text-gray-300 md:px-[60px] flex flex-col justify-end relative'>
+				<div className='h-full pt-2 text-center text-xs text-gray-600 dark:text-gray-300 md:px-[60px] flex flex-col justify-end sticky z-20 bottom-0'>
 					{/* Empty chat cards */}
 					{messages?.every((item) => item.role === 'system') && (
 						<div className='h-full w-full relative'>
@@ -33,7 +33,7 @@ export default function Chat() {
 						</div>
 					)}
 
-					<div className='w-full py-2 text-center text-xs text-gray-600 dark:text-gray-300 flex justify-center sticky bottom-0'>
+					<div className='w-full pt-2 text-center text-xs text-gray-600 dark:text-gray-300 flex justify-center'>
 						<div className=' w-full px-2 flex items-center flex-row-reverse md:block'>
 							<form
 								onSubmit={handleSubmit}

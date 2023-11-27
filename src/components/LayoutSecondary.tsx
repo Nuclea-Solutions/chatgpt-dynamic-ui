@@ -22,11 +22,11 @@ const LayoutSecondary = ({ children }: { children: React.ReactNode }) => {
 
 	return (
 		<>
-			{/* <LayoutSidebar
+			<LayoutSidebar
 				openSidebar={openSidebar}
 				handleOpenSidebar={handleOpenSidebar}
 				handleToggleSidebar={handleToggleSidebar}
-			/> */}
+			/>
 			<div className='w-full max-h-[100vh] overflow-scroll overflow-x-hidden'>
 				{/* <LayoutNavbar handleToggleSidebar={handleToggleSidebar} /> */}
 				{children}
