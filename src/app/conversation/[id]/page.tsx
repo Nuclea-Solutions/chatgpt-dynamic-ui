@@ -1,6 +1,7 @@
 'use client';
 // libraries
 import { useEffect } from 'react';
+import { usePathname, useSearchParams } from 'next/navigation';
 // components
 import MessagesList from '@/components/MessagesList';
 import InputContainer from '@/components/InputContainer';
@@ -18,7 +19,18 @@ export default function Conversation() {
 
 	const { getConversation } = useChatCustom();
 
+	const pathname = usePathname();
+	const searchParams = useSearchParams();
+
 	useEffect(() => {
+		const url = `${pathname}?${searchParams}`;
+		console.log(url);
+		// You can now use the current URL
+		// ...
+	}, [pathname, searchParams]);
+
+	useEffect(() => {
+		console.log('get conversation');
 		getConversation();
 	}, []);
 

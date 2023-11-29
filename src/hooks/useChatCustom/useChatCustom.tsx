@@ -93,11 +93,12 @@ const useChatCustom = () => {
 
 	// Get one conversation
 	const getConversation = useCallback(async () => {
+		console.log({ params });
 		if (!params.id) return;
 
 		try {
 			const { data } = await axios.get(`/api/conversation/${params.id}`);
-
+			console.log({ data });
 			let resultMessages: Message[] = [];
 			Object.values((data as Conversation).mapping).forEach(
 				(item: MessageModule, index: number, array: MessageModule[]) => {
