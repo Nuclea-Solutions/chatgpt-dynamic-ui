@@ -29,7 +29,7 @@
 		"mongodb": "^6.3.0",
 		"nanoid": "^4.0.2",
 		"next": "13.4.4-canary.11",
-		"openai-edge": "^1.1.0",
+		"openai": "^4.20.1",
 		"prop-types": "^15.8.1",
 		"rc-table": "^7.32.1",
 		"react": "^18.2.0",
