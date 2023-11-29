@@ -158,7 +158,7 @@ const SidebarComponent = ({
 				{conversations?.map((conversation) => (
 					<div
 						onClick={() => {
-							router.push(`/conversation/${conversation.id}`);
+							router.push(`/conversation/${conversation._id}`);
 							setIsSelected(conversation.id);
 						}}
 						key={conversation.id}
@@ -183,7 +183,7 @@ const SidebarComponent = ({
 				{conversations?.map((conversation) => (
 					<div
 						onClick={() => {
-							router.push(`/conversation/${conversation.id}`);
+							router.push(`/conversation/${conversation._id}`);
 							setIsSelected(conversation.id);
 						}}
 						key={conversation.id}
@@ -208,7 +208,7 @@ const SidebarComponent = ({
 				{conversations?.map((conversation) => (
 					<div
 						onClick={() => {
-							router.push(`/conversation/${conversation.id}`);
+							router.push(`/conversation/${conversation._id}`);
 							setIsSelected(conversation.id);
 						}}
 						key={conversation.id}
@@ -233,7 +233,7 @@ const SidebarComponent = ({
 				{conversations?.map((conversation) => (
 					<div
 						onClick={() => {
-							router.push(`/conversation/${conversation.id}`);
+							router.push(`/conversation/${conversation._id}`);
 							setIsSelected(conversation.id);
 						}}
 						key={conversation.id}
@@ -258,7 +258,7 @@ const SidebarComponent = ({
 				{conversations?.map((conversation) => (
 					<div
 						onClick={() => {
-							router.push(`/conversation/${conversation.id}`);
+							router.push(`/conversation/${conversation._id}`);
 							setIsSelected(conversation.id);
 						}}
 						key={conversation.id}

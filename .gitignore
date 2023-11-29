@@ -36,3 +36,6 @@ next-env.d.ts
 
 # storybook
 storybook-static
+
+# mongo local db
+/mongodata

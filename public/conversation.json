@@ -1,8 +1,5 @@
 [
 	{
-		"_id": {
-			"$oid": "6516f8b5ae4d712e4eb38d18"
-		},
 		"title": "Tabla Datos Muestra 6",
 		"create_time": {
 			"$numberDouble": "1691425341.01132"
@@ -133,9 +130,6 @@
 		"id": "fca54f38-98c4-445c-a13d-e7bb4542851c"
 	},
 	{
-		"_id": {
-			"$oid": "6521a668058d1e5872c7ffa7"
-		},
 		"title": "Diagrama AI Aprender Idiomas",
 		"create_time": {
 			"$numberDouble": "1696702225.71237"
@@ -459,9 +453,6 @@
 		"id": "0968319c-bdee-4d00-9ddc-d1b87e500a41"
 	},
 	{
-		"_id": {
-			"$oid": "6521a6a2058d1e5872c7ffa8"
-		},
 		"title": "Historia de la IA",
 		"create_time": {
 			"$numberDouble": "1696702054.885555"
@@ -784,9 +775,6 @@
 		"id": "34e430e5-9b8f-4188-9bac-537844290bb9"
 	},
 	{
-		"_id": {
-			"$oid": "6521a6e2058d1e5872c7ffa9"
-		},
 		"title": "Orden de lista incorrecta",
 		"create_time": {
 			"$numberDouble": "1696618808.597836"
@@ -1326,9 +1314,7 @@
 		"id": "9227c95c-20fb-40b3-9d0d-2ec5de142e40"
 	},
 	{
-		"_id": {
-			"$oid": "65367cdff7e69ea1d036780b"
-		},
+		
 		"title": "Consulta MongoDB con pymongo",
 		"create_time": {
 			"$numberDouble": "1696459600.274628"
@@ -2111,9 +2097,6 @@
 		"id": "25370cfe-4999-4b17-9818-7e2f99101b5b"
 	},
 	{
-		"_id": {
-			"$oid": "65367d4df7e69ea1d036780c"
-		},
 		"title": "New chat",
 		"create_time": {
 			"$numberDouble": "1696520443.063478"
@@ -2971,9 +2954,6 @@
 		"id": "d4260e49-eb82-429a-b453-b0228b70a9ba"
 	},
 	{
-		"_id": {
-			"$oid": "65367df9f7e69ea1d036780d"
-		},
 		"title": "Convertir Timestamp Firebase a Datetime",
 		"create_time": {
 			"$numberDouble": "1696374744.198869"
@@ -3189,9 +3169,6 @@
 		"id": "da90dcae-1597-4bea-9d71-6dfd21a5e670"
 	},
 	{
-		"_id": {
-			"$oid": "65367e61f7e69ea1d036780e"
-		},
 		"title": "Ordenar por precio cercano",
 		"create_time": {
 			"$numberDouble": "1695920894.438181"
@@ -3893,9 +3870,6 @@
 		"id": "325d7415-a679-49db-9173-def8b343d8e5"
 	},
 	{
-		"_id": {
-			"$oid": "65367f65f7e69ea1d0367810"
-		},
 		"title": "Error de permisos en Pub/Sub",
 		"create_time": {
 			"$numberDouble": "1695748971.114285"
@@ -4354,9 +4328,6 @@
 		"id": "9378e1b1-72e9-4d25-b843-d09032baa101"
 	},
 	{
-		"_id": {
-			"$oid": "653bce8672e7be6e4f99d0b1"
-		},
 		"title": "Regex para números 10 dígitos",
 		"create_time": {
 			"$numberDouble": "1691591908.937552"

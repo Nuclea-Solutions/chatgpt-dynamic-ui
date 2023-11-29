@@ -21,7 +21,6 @@ const useChatCustom = () => {
 		state.setMessages
 	]);
 	const conversationList = useConversationsStore((state) => state.conversationList);
-	const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
 	// Current chat input component name
 	const inputType = useMemo(
@@ -70,8 +69,6 @@ const useChatCustom = () => {
 				});
 				setNewMessage(response.data);
 			} catch (error) {
-				console.log({ error });
-				setErrorMsg('An error ocurred. Try again later');
 				setNewMessage({
 					content: { output: { message: { content: 'An error ocurred. Try again later' } } },
 					id: `error-${nanoid()}`,
@@ -173,8 +170,7 @@ const useChatCustom = () => {
 		handleDateInputChange,
 		inputType,
 		isLoading,
-		getConversation,
-		errorMsg
+		getConversation
 	};
 };
 

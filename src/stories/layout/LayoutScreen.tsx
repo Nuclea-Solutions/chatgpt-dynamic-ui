@@ -11,6 +11,7 @@ import DefaultOptionCardComponent from '../default_option_card/DefaultOptionCard
 
 const conversations: Conversation[] = [
 	{
+		_id: '',
 		title: 'Diagrama AI Aprender Idiomas',
 		create_time: 1696702225.71237,
 		update_time: 1696702254.363491,
@@ -258,6 +259,7 @@ const conversations: Conversation[] = [
 		id: '0968319c-bdee-4d00-9ddc-d1b87e500a41'
 	},
 	{
+		_id: '',
 		title: 'Historia de la IA',
 		create_time: 1696702054.885555,
 		update_time: 1696702121.753502,
