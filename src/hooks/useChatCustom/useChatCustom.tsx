@@ -45,7 +45,7 @@ const useChatCustom = () => {
 		try {
 			const response = await axios.post('/api/chat', {
 				message: newMessage,
-				userId: userId.current
+				user_id: userId.current
 			});
 
 			setNewMessage({
