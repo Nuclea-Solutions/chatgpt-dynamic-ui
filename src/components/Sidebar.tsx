@@ -5,6 +5,7 @@ import SidebarConversationComponent from '@/stories/sidebar/components/sidebar_c
 import { Image } from '@nextui-org/react';
 import useMessagesStore from '@/store/useMessagesStore';
 import { AssistantAvatar } from './Icons';
+import { truncateSync } from 'fs';
 
 const SidebarComponent = ({
 	conversations,
@@ -32,6 +33,7 @@ const SidebarComponent = ({
 	const [dropDown, setDropDown] = useState(false);
 	const currentDate = new Date();
 	const router = useRouter();
+	const [sidebarButtonHover, setSidebarButtonHover] = useState(false);
 
 	const [setMessages, setMessagesComponents] = useMessagesStore((state) => [
 		state.setMessages,
@@ -55,6 +57,13 @@ const SidebarComponent = ({
 		} else {
 			return 0;
 		}
+	};
+
+	const handleSidebarButtonHoverEnter = () => {
+		setSidebarButtonHover(true);
+	};
+	const handleSidebarButtonHoverLeave = () => {
+		setSidebarButtonHover(false);
 	};
 
 	//This hook counts the conversations by date and adds the number of conversations by date to be able to show it in the sidebar
@@ -399,7 +408,7 @@ const SidebarComponent = ({
 
 			<div
 				onClick={handleToggleSidebar}
-				className={`w-6 h-6 flex justify-center items-center absolute top-0 right-0 -mr-12 cursor-pointer md:hidden`}
+				className={`w-6 h-6 flex justify-center items-center absolute top-0 right-0 -mr-12 cursor-pointer sm:hidden`}
 			>
 				<svg
 					stroke='currentColor'
@@ -418,6 +427,53 @@ const SidebarComponent = ({
 					<line x1='6' y1='6' x2='18' y2='18'></line>
 				</svg>
 			</div>
+
+			<div
+				className={` p-2 cursor-pointer hidden sm:block top-1/2 z-30 ${
+					openSidebar ? 'absolute -right-5' : 'absolute left-0 visible cursor-pointer'
+				}`}
+				onMouseEnter={handleSidebarButtonHoverEnter}
+				onMouseLeave={handleSidebarButtonHoverLeave}
+				onClick={handleToggleSidebar}
+			>
+				<div
+					className={`h-3 w-1 rounded-full  bg-gray-300  ${
+						!sidebarButtonHover ? 'translate-y-1' : 'bg-gray-800'
+					} `}
+					style={
+						sidebarButtonHover && openSidebar
+							? { transform: 'rotate(20deg) translateY(0.18rem)' }
+							: !sidebarButtonHover && !openSidebar
+							? { transform: 'rotate(-20deg) translateY(0.18rem)' }
+							: sidebarButtonHover && !openSidebar
+							? { transform: 'rotate(-20deg) translateY(0.18rem)' }
+							: {}
+					}
+				></div>
+				<div
+					className={`h-3 w-1 rounded-full bg-gray-300 ${
+						!sidebarButtonHover ? '-translate-y-1' : 'bg-gray-800'
+					}`}
+					style={
+						sidebarButtonHover && openSidebar
+							? { transform: 'rotate(-20deg) translateY(-0.18rem)' }
+							: !sidebarButtonHover && !openSidebar
+							? { transform: 'rotate(20deg) translateY(-0.18rem)' }
+							: sidebarButtonHover && !openSidebar
+							? { transform: 'rotate(20deg) translateY(-0.18rem)' }
+							: {}
+					}
+				></div>
+				<div className={`absolute min-w-max bottom-0 left-10 ${!sidebarButtonHover && 'hidden'}`}>
+					<div className='h-full relative bg-black p-2 rounded-[8px] text-sm'>
+						{openSidebar ? 'Close sidebar' : 'Open sidebar'}
+						<div
+							className={`-z-10 w-[10px] h-[10px] bg-black transform rotate-45 absolute left-0 top-[40%] -translate-x-1/2`}
+						></div>
+					</div>
+				</div>
+			</div>
+			{/* <button><span className="" data-state="closed"><div class="flex h-[72px] w-8 items-center justify-center" style={"opacity: 0.25;"}><div className="flex h-6 w-6 flex-col items-center"><div className="h-3 w-1 rounded-full bg-token-text-primary" style="transform: translateY(0.15rem) rotate(0deg) translateZ(0px);"></div><div class="h-3 w-1 rounded-full bg-token-text-primary" style="transform: translateY(-0.15rem) rotate(0deg) translateZ(0px);"></div></div></div><span style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; overflow-wrap: normal;">Close sidebar</span></span></button> */}
 		</div>
 	);
 };
