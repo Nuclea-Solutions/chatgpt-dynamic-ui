@@ -1,5 +1,6 @@
 'use client';
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
+import { usePathname, useSearchParams } from 'next/navigation';
 // components
 import HomeLayout from '@/components/HomeLayout';
 import EmptyCardsContainerComponent from '@/stories/empty_cards_container/EmptyCardsContainer.component';
@@ -18,6 +19,16 @@ Page with chat using the message and the input component that it's return from r
 export default function Chat() {
 	const { isLoading, input, handleInputChange, handleSubmit } = useChatCustom();
 	const messages = useMessagesStore((state) => state.messages);
+	//const router = useRouter();
+	const pathname = usePathname();
+	const searchParams = useSearchParams();
+
+	useEffect(() => {
+		const url = `${pathname}?${searchParams}`;
+		console.log(url);
+		// You can now use the current URL
+		// ...
+	}, [pathname, searchParams]);
 
 	return (
 		<HomeLayout>
