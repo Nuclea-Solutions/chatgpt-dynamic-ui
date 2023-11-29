@@ -11,6 +11,7 @@ interface Conversation {
 	conversation_id: string;
 	conversation_template_id: string | null;
 	id: string;
+	_id: string;
 }
 
 interface MessageModule {

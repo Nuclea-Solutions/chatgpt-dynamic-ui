@@ -15,73 +15,96 @@ Welcome to the ChatGPT Dynamic UI project. This project seeks community collabor
 
 ## Getting started 🧑🏻‍💻
 
-1. Clone this repository:
+##### 1. Clone this repository.
 
-   ```bash
-   git clone https://github.com/Nuclea-Solutions/chatgpt-dynamic-ui.git
-   ```
+```bash
+git clone https://github.com/Nuclea-Solutions/chatgpt-dynamic-ui.git
+```
 
-2. Open proyect
+##### 2. Open proyect
 
-   ```bash
-   cd chatgpt-dynamic-ui
-   code .
-   ```
+```bash
+cd chatgpt-dynamic-ui
+code .
+```
 
-3. Set-up OpenAi API
+##### 3. Set-up OpenAi API
 
-   Create a `.env.local` file and configure your environment. To create and copy your API key, visit [API Keys section in OpenAI web portal](https://platform.openai.com/account/api-keys).
+Create a `.env.local` file and configure your environment. To create and copy your API key, visit [API Keys section in OpenAI web portal](https://platform.openai.com/account/api-keys).
 
-   ```bash
-    echo "OPENAI_API_KEY=enter-your-apikey" > .env.local
-   ```
+```bash
+echo "OPENAI_API_KEY=enter-your-apikey" > .env.local
+```
 
-4. In the root directory, run the following command:
+##### 4. In the root directory, run the following command:
 
-   ```bash
-      # using npm
-      npm install
-      # using pnpm
-      pnpm install
-      # using bun
-      bun install
-   ```
+```bash
+# using npm
+npm install
+# using pnpm
+pnpm install
+# using bun
+bun install
+```
 
-5. Run project
+##### 5. Run project
 
-   ```bash
-      # using npm
-      npm run dev
-      # using pnpm
-      pnpm run dev
-      # using bun
-      bun run dev
+```bash
+# using npm
+npm run dev
+# using pnpm
+pnpm run dev
+# using bun
+bun run dev
+```
 
-   ```
+##### 6. Set local MongoDB
+
+1.  Start MongoDB with Docker
+
+```bash
+docker-compose up -d mongo
+```
+
+2.  Load initial data
+
+```bash
+# using npm
+npm run db:init
+# using pnpm
+pnpm run db:init
+# using bun
+bun run db:init
+```
+
+3.  You can visualize and modify the data with mongodb-compass. See installation [here](https://www.mongodb.com/products/tools/compass).
+
+```bash
+mongodb-compass
+```
 
 ## Run Storybook 🚀
 
 - Running Storybook in this project runs the following command.
 
 ```bash
-   # using npm
-   npm run storybook
-   # using pnpm
-   pnpm run storybook
-   # using bun
-   bun run storybook
+# using npm
+npm run storybook
+# using pnpm
+pnpm run storybook
+# using bun
+bun run storybook
 ```
 
 - Building Storybook runs the following command.
 
 ```bash
-   # using npm
-   npm run build-storybook
-   # using pnpm
-   pnpm run build-storybook
-   # using bun
-   bun run build-storybook
-
+# using npm
+npm run build-storybook
+# using pnpm
+pnpm run build-storybook
+# using bun
+bun run build-storybook
 ```
 
 #### Project's Storybook link 🔗
