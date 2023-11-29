@@ -14,13 +14,14 @@ import useMessagesStore from '@/store/useMessagesStore';
 /*
 Page with chat using the message and the input component that it's return from response
 */
+
 export default function Chat() {
 	const { isLoading, input, handleInputChange, handleSubmit } = useChatCustom();
 	const messages = useMessagesStore((state) => state.messages);
 
 	return (
 		<HomeLayout>
-			<div className='flex flex-col h-full justify-between w-full '>
+			<div className='flex flex-col h-full justify-between w-full'>
 				{/* MESSAGES */}
 				<MessagesList messages={messages} />
 				{isLoading && <p className='px-10'>cargando...</p>}
@@ -47,11 +48,11 @@ export default function Chat() {
 									{/* <span>ChatGPT can make mistakes. Consider checking important information.</span> */}
 									<span>Gú puede cometer errores. Considera revisar información importante.</span>
 								</div>
-								{/* <div className='absolute bottom-2 -right-10 xl:-right-20 z-10'>
-									<HelpButtonComponent />
-								</div> */}
 							</form>
 						</div>
+					</div>
+					<div className='fixed bottom-2 right-6  z-10'>
+						<HelpButtonComponent />
 					</div>
 				</div>
 			</div>
