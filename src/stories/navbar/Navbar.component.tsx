@@ -2,7 +2,15 @@ import { useChatGptVersion } from '@/store/useChatGptVersion';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import React, { useState } from 'react';
 
-const NavbarComponent = ({ isNewChat, hide }: { isNewChat: Boolean; hide?: boolean }) => {
+const NavbarComponent = ({
+	isNewChat,
+	hide,
+	openSidebar
+}: {
+	isNewChat: Boolean;
+	hide?: boolean;
+	openSidebar: boolean;
+}) => {
 	const [dropdown, setDropdown] = useState(false);
 	const handleDropdown = () => {
 		setDropdown((state) => !state);
@@ -13,30 +21,55 @@ const NavbarComponent = ({ isNewChat, hide }: { isNewChat: Boolean; hide?: boole
 
 	return (
 		<div
-			className={`z-10 flex min-h-[60px] justify-between  items-center gap-3 p-4 bg-white opacity-95 dark:border-gray-900/50 dark:bg-gray-800`}
+			className={`z-10 flex min-h-[60px] justify-between  items-center gap-3 py-3 px-2 bg-white opacity-95 dark:border-gray-900/50 dark:bg-gray-800`}
 		>
-			<div
-				onClick={handleDropdown}
-				className='flex items-center gap-1 text-lg py-2 rounded-xl text-gray-600 dark:text-white sm:justify-center opacity-100 cursor-pointer hover:bg-gray-50 relative '
-			>
-				<span>
-					<span className='font-semibold'>ChatGPT</span> 3.5
-				</span>
-				<svg
-					width='16'
-					height='17'
-					viewBox='0 0 16 17'
-					fill='none'
-					className='text-token-text-tertiary'
+			<div className='flex items-center gap-3'>
+				<button
+					className={`relative flex h-9 w-9 items-center justify-center whitespace-nowrap rounded-[10px] border border-gray-300 ml-2 hover:bg-gray-100 ${
+						openSidebar && 'hidden'
+					}`}
 				>
-					<path
-						d='M11.3346 7.83203L8.00131 11.1654L4.66797 7.83203'
-						stroke='currentColor'
-						strokeWidth='2'
-						strokeLinecap='round'
-						strokeLinejoin='round'
-					></path>
-				</svg>
+					<div className='flex w-full gap-2 items-center justify-center'>
+						<svg
+							width='18'
+							height='18'
+							viewBox='0 0 24 24'
+							fill='none'
+							xmlns='http://www.w3.org/2000/svg'
+							className='text-black dark:text-white'
+						>
+							<path
+								fillRule='evenodd'
+								clipRule='evenodd'
+								d='M16.7929 2.79289C18.0118 1.57394 19.9882 1.57394 21.2071 2.79289C22.4261 4.01184 22.4261 5.98815 21.2071 7.20711L12.7071 15.7071C12.5196 15.8946 12.2652 16 12 16H9C8.44772 16 8 15.5523 8 15V12C8 11.7348 8.10536 11.4804 8.29289 11.2929L16.7929 2.79289ZM19.7929 4.20711C19.355 3.7692 18.645 3.7692 18.2071 4.2071L10 12.4142V14H11.5858L19.7929 5.79289C20.2308 5.35499 20.2308 4.64501 19.7929 4.20711ZM6 5C5.44772 5 5 5.44771 5 6V18C5 18.5523 5.44772 19 6 19H18C18.5523 19 19 18.5523 19 18V14C19 13.4477 19.4477 13 20 13C20.5523 13 21 13.4477 21 14V18C21 19.6569 19.6569 21 18 21H6C4.34315 21 3 19.6569 3 18V6C3 4.34314 4.34315 3 6 3H10C10.5523 3 11 3.44771 11 4C11 4.55228 10.5523 5 10 5H6Z'
+								fill='currentColor'
+							></path>
+						</svg>
+					</div>
+				</button>
+				<div
+					onClick={handleDropdown}
+					className='flex items-center gap-1 text-lg p-2 rounded-xl text-gray-600 dark:text-white sm:justify-center opacity-100 cursor-pointer hover:bg-gray-50 relative '
+				>
+					<span>
+						<span className='font-semibold'>ChatGPT</span> 3.5
+					</span>
+					<svg
+						width='16'
+						height='17'
+						viewBox='0 0 16 17'
+						fill='none'
+						className='text-token-text-tertiary'
+					>
+						<path
+							d='M11.3346 7.83203L8.00131 11.1654L4.66797 7.83203'
+							stroke='currentColor'
+							strokeWidth='2'
+							strokeLinecap='round'
+							strokeLinejoin='round'
+						></path>
+					</svg>
+				</div>
 			</div>
 			<div className={isNewChat && 'hidden'}>
 				<button
@@ -60,8 +93,9 @@ const NavbarComponent = ({ isNewChat, hide }: { isNewChat: Boolean; hide?: boole
 					</svg>
 				</button>
 			</div>
+
 			<div
-				className={`absolute top-16 left-0 text-sm w-[326px] border rounded-[8px] flex flex-col gap-2 shadow-xl cursor-pointer bg-white ${
+				className={`absolute top-16 left-5 text-sm w-[326px] border rounded-[8px] flex flex-col gap-2 shadow-xl cursor-pointer dark:text-white dark:bg-[#202123] bg-white select-none ${
 					!dropdown && 'hidden'
 				}`}
 			>
@@ -85,7 +119,8 @@ const NavbarComponent = ({ isNewChat, hide }: { isNewChat: Boolean; hide?: boole
 									></path>
 								</svg>
 								<div>
-									GPT-3.5<div className='text-[#8e8ea0]'>Great for everyday tasks</div>
+									GPT-3.5
+									<div className='text-[#8e8ea0] '>Great for everyday tasks</div>
 								</div>
 							</div>
 						</div>
@@ -95,7 +130,7 @@ const NavbarComponent = ({ isNewChat, hide }: { isNewChat: Boolean; hide?: boole
 							viewBox='0 0 24 24'
 							fill='none'
 							xmlns='http://www.w3.org/2000/svg'
-							className='icon-md'
+							className='icon-md dark:text-white'
 						>
 							<path
 								fillRule='evenodd'
@@ -144,17 +179,20 @@ const NavbarComponent = ({ isNewChat, hide }: { isNewChat: Boolean; hide?: boole
 					</div>
 				</div>
 				<hr />
-				<div className='rounded-[8px] py-2 px-3 m-1 flex items-center'>
+				<div
+					className='rounded-[8px] py-2 px-3 m-1 flex items-center'
+					onClick={
+						publicVersion
+							? () => {
+									setPrivateVersion(false), handleDropdown();
+							  }
+							: () => {
+									setPublicVersion(true), handleDropdown();
+							  }
+					}
+				>
 					<div className='grow'>
-						{publicVersion ? (
-							<span className='' onClick={() => setPrivateVersion(false)}>
-								Go to private version
-							</span>
-						) : (
-							<span className='' onClick={() => setPublicVersion(true)}>
-								Go to public version
-							</span>
-						)}
+						{publicVersion ? <span>Go to private version</span> : <span>Go to public version</span>}
 					</div>
 					<FaArrowRightLong />
 				</div>

@@ -1,3 +1,4 @@
+import { useChatGptVersion } from '@/store/useChatGptVersion';
 import React from 'react';
 //fill-rule
 const NavbarSmallScreenComponent = ({
@@ -5,8 +6,13 @@ const NavbarSmallScreenComponent = ({
 }: {
 	handleToggleSidebar: () => void;
 }) => {
+	const publicVersion = useChatGptVersion((state) => state.publicVersion);
 	return (
-		<div className='sticky top-0 z-20 flex items-center border-b  pl-1 pt-1 text-black sm:pl-3 md:hidden bg-white dark:bg-gray-700 dark:text-white'>
+		<div
+			className={`sticky top-0 z-20 flex items-center border-b  pl-1 pt-1 text-black sm:pl-3 md:hidden bg-white dark:bg-gray-700 dark:text-white ${
+				publicVersion && 'hidden'
+			}`}
+		>
 			<button
 				type='button'
 				className='-ml-0.5 -mt-0.5 inline-flex h-10 w-10 items-center justify-center rounded-md hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white dark:hover:text-white'

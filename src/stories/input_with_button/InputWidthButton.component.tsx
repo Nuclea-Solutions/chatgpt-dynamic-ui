@@ -1,3 +1,4 @@
+import { useChatGptVersion } from '@/store/useChatGptVersion';
 import React, { ChangeEvent } from 'react';
 import { GoImage } from 'react-icons/go';
 const InputWidthButtonComponent = ({
@@ -9,15 +10,22 @@ const InputWidthButtonComponent = ({
 	value: any;
 }) => {
 	// const [inputHeight, setInputHeight] = useState(0);
+	const publicVersion = useChatGptVersion((state) => state.publicVersion);
+	const textarea = document.getElementById('textarea');
+
 	const handleChangeValue = (e: ChangeEvent<HTMLTextAreaElement>) => {
 		e.target.style.height = '56px';
 		e.target.style.height = `${Math.min(e.target.scrollHeight, 200)}px`;
 	};
 
+	const inputHeightOriginal = () => {
+		if (textarea) textarea.style.height = '56px';
+	};
 	const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
 		if (e.key === 'Enter' && !e.shiftKey && value.trim() !== '') {
 			e.preventDefault();
 			document.getElementById('submitButton')?.click();
+			inputHeightOriginal();
 		}
 	};
 
@@ -35,17 +43,18 @@ const InputWidthButtonComponent = ({
 				</span>
 				<GoImage size={20} />
 			</button> */}
+
 			<textarea
 				className='pr-16 resize-none max-h-200  outline-none py-4 w-full pl-2'
 				value={value}
 				style={{ height: '56px' }}
+				id='textarea'
 				onChange={(e) => {
 					onChange(e);
 					handleChangeValue(e);
 				}}
 				onKeyDown={handleKeyDown}
-				// placeholder='Message ChatGPT...'
-				placeholder='Envía un mensaje a Gú'
+				placeholder={` ${publicVersion ? 'Envía un mensaje a Nuclea' : 'Message ChatGPT...'}`}
 			/>
 
 			<button
@@ -55,6 +64,7 @@ const InputWidthButtonComponent = ({
 					value ? 'bg-black' : 'bg-black opacity-10 dark:bg-white'
 				}`}
 				disabled={!value}
+				onClick={inputHeightOriginal}
 			>
 				<svg
 					width='24'

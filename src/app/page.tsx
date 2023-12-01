@@ -10,6 +10,7 @@ import InputWidthButtonComponent from '@/stories/input_with_button/InputWidthBut
 import useChatCustom from '@/hooks/useChatCustom/useChatCustom';
 // store
 import useMessagesStore from '@/store/useMessagesStore';
+import { useChatGptVersion } from '@/store/useChatGptVersion';
 
 /*
 Page with chat using the message and the input component that it's return from response
@@ -18,7 +19,7 @@ Page with chat using the message and the input component that it's return from r
 export default function Chat() {
 	const { isLoading, input, handleInputChange, handleSubmit } = useChatCustom();
 	const messages = useMessagesStore((state) => state.messages);
-
+	const publicVersion = useChatGptVersion((state) => state.publicVersion);
 	return (
 		<HomeLayout>
 			<div className='flex flex-col h-full justify-between w-full'>
@@ -45,8 +46,11 @@ export default function Chat() {
 
 								{/* Footer */}
 								<div className='mt-2 text-center text-sm'>
-									{/* <span>ChatGPT can make mistakes. Consider checking important information.</span> */}
-									<span>Gú puede cometer errores. Considera revisar información importante.</span>
+									{publicVersion ? (
+										<span>Nuclea puede cometer errores. Considera checar la información.</span>
+									) : (
+										<span>ChatGPT can make mistakes. Consider checking important information.</span>
+									)}
 								</div>
 							</form>
 						</div>

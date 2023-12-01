@@ -6,7 +6,7 @@ const HelpButtonComponent = () => {
 	return (
 		<Dropdown>
 			<DropdownTrigger>
-				<div className='hidden xl:flex items-center justify-center h-6 w-6 p-3 border rounded-full bg-white border-gray-300 text-lg font-semibold text-gray-500 dark:bg-[#444654] dark:text-gray-200 cursor-pointer'>
+				<div className='hidden md:flex items-center justify-center h-6 w-6 p-3 border rounded-full bg-white border-gray-300 text-lg font-semibold text-gray-500 dark:bg-[#444654] dark:text-gray-200 cursor-pointer'>
 					?
 				</div>
 			</DropdownTrigger>
