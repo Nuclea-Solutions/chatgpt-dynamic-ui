@@ -515,7 +515,7 @@ const LayoutScreen = ({ isNewChat = true }) => {
 			<div className='w-full flex flex-col justify-between relative'>
 				<div>
 					<NavbarSmallScreenComponent handleToggleSidebar={() => {}} />
-					<NavbarComponent isNewChat={isNewChat} />
+					<NavbarComponent isNewChat={isNewChat} openSidebar={true} />
 					<ToggleComponent isNewChat={isNewChat} />
 					<div
 						className={`flex h-full w-full flex-col px-2 pb-2 md:pb-[8vh] ${

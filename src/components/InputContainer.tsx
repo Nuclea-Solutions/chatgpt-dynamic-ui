@@ -3,10 +3,11 @@
 import InputWidthButtonComponent from '@/stories/input_with_button/InputWidthButton.component';
 // hooks and store
 import useChatCustom from '@/hooks/useChatCustom/useChatCustom';
+import { useChatGptVersion } from '@/store/useChatGptVersion';
 
 const InputContainer = () => {
 	const { input, handleInputChange, handleSubmit } = useChatCustom();
-
+	const publicVersion = useChatGptVersion((state) => state.publicVersion);
 	return (
 		<form
 			onSubmit={handleSubmit}
@@ -16,12 +17,12 @@ const InputContainer = () => {
 
 			{/* Footer */}
 			<div className='mt-2 text-center text-sm'>
-				{/* <span>ChatGPT can make mistakes. Consider checking important information.</span> */}
-				<span>Gú puede cometer errores. Considera checar la información.</span>
+				{publicVersion ? (
+					<span>Nuclea puede cometer errores. Considera checar la información.</span>
+				) : (
+					<span>ChatGPT can make mistakes. Consider checking important information.</span>
+				)}
 			</div>
-			{/* <div className='absolute bottom-2 -right-10 xl:-right-20 z-10'>
-				<HelpButtonComponent />
-			</div> */}
 		</form>
 	);
 };

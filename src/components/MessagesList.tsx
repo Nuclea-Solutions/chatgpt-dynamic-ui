@@ -47,7 +47,9 @@ const MessagesList = ({ messages }: { messages: Message[] }) => {
 
 								{/* ASSISTANT MESSAGE */}
 								{item.id?.includes('error') ? (
-									<ErrorMessage content={parseItemOutput?.message?.content ?? ''} />
+									<div className='w-[75%] md:max-w-[80%]'>
+										<ErrorMessage content={parseItemOutput?.message?.content ?? ''} />
+									</div>
 								) : item.role === 'assistant' ? (
 									/* ASSISTANT MESSAGE */
 
@@ -88,12 +90,14 @@ const MessagesList = ({ messages }: { messages: Message[] }) => {
 								) : (
 									/* USER MESSAGE */
 									<div
-										className='flex-1 md:max-w-[80%]'
+										className='flex-1 w-full'
 										onMouseEnter={() => setShowIconInUserMessage(true)}
 										onMouseLeave={() => setShowIconInUserMessage(false)}
 									>
 										<p className='font-semibold text-sm mb-1'>You</p>
-										<p className='m-0 break-words'>{item.content}</p>
+										<div className='w-[75%] md:max-w-[80%]'>
+											<p className='m-0 break-words'>{item.content}</p>
+										</div>
 										<div
 											className={`mt-2 text-gray-400 hover:text-black hover:cursor-pointer w-0 ${
 												!showIconInUserMessage && 'opacity-0'
