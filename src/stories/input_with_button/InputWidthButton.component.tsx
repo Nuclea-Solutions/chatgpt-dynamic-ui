@@ -11,7 +11,6 @@ const InputWidthButtonComponent = ({
 }) => {
 	// const [inputHeight, setInputHeight] = useState(0);
 	const publicVersion = useChatGptVersion((state) => state.publicVersion);
-	const textarea = document.getElementById('textarea');
 
 	const handleChangeValue = (e: ChangeEvent<HTMLTextAreaElement>) => {
 		e.target.style.height = '56px';
@@ -19,7 +18,10 @@ const InputWidthButtonComponent = ({
 	};
 
 	const inputHeightOriginal = () => {
-		if (textarea) textarea.style.height = '56px';
+		if (typeof window !== 'undefined') {
+			const textarea = document.getElementById('textarea');
+			if (textarea) textarea.style.height = '56px';
+		}
 	};
 	const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
 		if (e.key === 'Enter' && !e.shiftKey && value.trim() !== '') {
