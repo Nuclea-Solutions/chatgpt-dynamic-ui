@@ -1,7 +1,7 @@
 // libraries
 import { useState, useMemo, useEffect, useCallback, useRef } from 'react';
 import { useChat } from 'ai/react';
-import { useParams } from 'next/navigation';
+// import { useParams } from 'next/navigation';
 import axios from 'axios';
 // store and context
 import useMessagesStore from '@/store/useMessagesStore';
@@ -12,7 +12,7 @@ import { nanoid } from 'nanoid';
 import { Message } from 'ai';
 
 const useChatCustom = () => {
-	const params = useParams();
+	// const params = useParams();
 	const [dateInput, setDateInput] = useState<Date | undefined>();
 	const userId = useRef(nanoid());
 	const [listOfComponents, setListOfComponents] = useState<any[]>([]);
@@ -92,61 +92,64 @@ const useChatCustom = () => {
 	};
 
 	// Get one conversation
-	const getConversation = useCallback(async () => {
-		if (!params.id) return;
+	const getConversation = useCallback(
+		async (paramId: string) => {
+			// if (!params.id) return;
 
-		try {
-			const { data } = await axios.get(`/api/conversation/${params.id}`);
+			try {
+				const { data } = await axios.get(`/api/conversation/${paramId}`);
 
-			let resultMessages: Message[] = [];
-			Object.values((data as Conversation).mapping).forEach(
-				(item: MessageModule, index: number, array: MessageModule[]) => {
-					if (
-						!item.message ||
-						item.message?.author.role === 'system' ||
-						item.message?.author.role === 'tool'
-					) {
-						return;
+				let resultMessages: Message[] = [];
+				Object.values((data as Conversation).mapping).forEach(
+					(item: MessageModule, index: number, array: MessageModule[]) => {
+						if (
+							!item.message ||
+							item.message?.author.role === 'system' ||
+							item.message?.author.role === 'tool'
+						) {
+							return;
+						}
+
+						// it always has one element
+						const part = item.message?.content.parts[0];
+						if (
+							item.message.recipient !== 'all' &&
+							array[index + 1]?.message?.author.role === 'tool'
+						) {
+							// TOOL (PLUGINS) MESSAGE
+							const nextItem = array[index + 1];
+							const partTool = nextItem?.message?.content.parts[0];
+
+							const payload = {
+								id: item.id,
+								createdAt: item.message.create_time ?? new Date(),
+								content: partTool,
+								role: 'function',
+								name: nextItem.message?.author.name,
+								function_call: part
+								// string | ChatCompletionMessage.FunctionCall	undefined;
+							};
+							resultMessages.push(payload as Message);
+						} else {
+							// MARKDOWN AND TEXT MESSAGES
+							const payload = {
+								id: item.id,
+								createdAt: item.message.create_time ?? new Date(),
+								content: part,
+								role: item.message.author.role
+							};
+							resultMessages.push(payload as Message);
+						}
 					}
-
-					// it always has one element
-					const part = item.message?.content.parts[0];
-					if (
-						item.message.recipient !== 'all' &&
-						array[index + 1]?.message?.author.role === 'tool'
-					) {
-						// TOOL (PLUGINS) MESSAGE
-						const nextItem = array[index + 1];
-						const partTool = nextItem?.message?.content.parts[0];
-
-						const payload = {
-							id: item.id,
-							createdAt: item.message.create_time ?? new Date(),
-							content: partTool,
-							role: 'function',
-							name: nextItem.message?.author.name,
-							function_call: part
-							// string | ChatCompletionMessage.FunctionCall	undefined;
-						};
-						resultMessages.push(payload as Message);
-					} else {
-						// MARKDOWN AND TEXT MESSAGES
-						const payload = {
-							id: item.id,
-							createdAt: item.message.create_time ?? new Date(),
-							content: part,
-							role: item.message.author.role
-						};
-						resultMessages.push(payload as Message);
-					}
-				}
-			);
-			setMessages(resultMessages);
-			data && formatOutput(data);
-		} catch (err) {
-			console.error({ err });
-		}
-	}, [conversationList]);
+				);
+				setMessages(resultMessages);
+				data && formatOutput(data);
+			} catch (err) {
+				console.error({ err });
+			}
+		},
+		[conversationList]
+	);
 
 	// Format message for render
 	const formatOutput = useCallback((conversation: Conversation) => {

@@ -174,7 +174,8 @@ const SidebarComponent = ({
 				{conversations?.map((conversation) => (
 					<div
 						onClick={() => {
-							router.push(`/conversation/${conversation.id}`);
+							// @ts-ignore
+							router.push(`/conversation/[id]`, `/conversation/${conversation.id}`);
 							setIsSelected(conversation.id);
 						}}
 						key={conversation.id}

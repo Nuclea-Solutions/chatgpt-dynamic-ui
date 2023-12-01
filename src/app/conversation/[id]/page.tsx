@@ -13,13 +13,22 @@ import '../styles.css';
 /*
 Conversation detail page: rendering a conversation with the new structure (type Conversation)
 */
-export default function Conversation() {
-	const messages = useMessagesStore((state) => state.messages);
 
+export async function generateStaticParams() {
+	const conversations = await fetch('/conversations').then((res) => res.json());
+
+	return conversations.map((item: Conversation) => ({
+		id: item.id
+	}));
+}
+
+export default function Page({ params }: { params: { id: string } }) {
+	const messages = useMessagesStore((state) => state.messages);
 	const { getConversation } = useChatCustom();
 
 	useEffect(() => {
-		getConversation();
+		if (!params.id) return;
+		getConversation(params.id);
 	}, []);
 
 	return (
