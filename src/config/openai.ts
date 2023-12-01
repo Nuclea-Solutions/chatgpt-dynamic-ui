@@ -1,7 +1,7 @@
 import { OpenAI } from 'openai';
 
 const openaiConfig =
-	process.env.NODE_ENV === 'development'
+	process.env.NODE_ENV === 'production'
 		? {
 				apiKey: process.env.OPENAI_API_KEY,
 				baseURL: 'https://oai.hconeai.com/v1',
