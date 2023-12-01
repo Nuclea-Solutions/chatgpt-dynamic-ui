@@ -6,6 +6,7 @@ import { Image } from '@nextui-org/react';
 import useMessagesStore from '@/store/useMessagesStore';
 import { AssistantAvatar } from './Icons';
 import { truncateSync } from 'fs';
+import { useChatGptVersion } from '@/store/useChatGptVersion';
 
 const SidebarComponent = ({
 	conversations,
@@ -39,6 +40,8 @@ const SidebarComponent = ({
 		state.setMessages,
 		state.setMessagesComponents
 	]);
+
+	const publicVersion = useChatGptVersion((state) => state.publicVersion);
 
 	//This function checks the creation date of each conversation
 	const calculatedDays = (date: number) => {
@@ -117,14 +120,14 @@ const SidebarComponent = ({
 		<div
 			className={`h-screen bg-light flex flex-col sm:w-[300px] text-base bg-black text-white ${
 				openSidebar ? 'visible fixed md:relative left-0 top-0 z-30' : 'w-0 invisible absolute'
-			} `}
+			} ${publicVersion && 'hidden'}`}
 		>
 			<div
 				className={`flex w-full min-h-[44px] gap-3 p-2 items-center ${
 					openSidebar ? 'visible' : 'w-0 invisible'
 				} `}
 			>
-				<div className='flex justify-between px-3 gap-3 min-h-[44px] py-1 items-center transition-colors duration-200 text-white cursor-pointer rounded hover:bg-gray-500/10 h-11  flex-grow overflow-hidden'>
+				<div className='flex justify-between px-2 gap-3 min-h-[44px] py-1 items-center transition-colors duration-200 text-white cursor-pointer rounded-[8px] hover:bg-gray-500/30 h-11  flex-grow overflow-hidden'>
 					<div className='flex items-center gap-2'>
 						<div
 							className={`rounded-full w-[28px] h-[28px] flex items-center justify-center p-1 bg-white text-black`}
