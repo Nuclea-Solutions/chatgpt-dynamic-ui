@@ -119,7 +119,7 @@ const SidebarComponent = ({
 	return (
 		<div
 			className={`h-screen bg-light flex flex-col sm:w-[300px] text-base bg-black text-white ${
-				openSidebar ? 'visible fixed md:relative left-0 top-0 z-30' : 'w-0 invisible absolute'
+				openSidebar ? 'visible fixed md:relative left-0 top-0 z-50' : 'w-0 invisible absolute'
 			} ${publicVersion && 'hidden'}`}
 		>
 			<div
@@ -290,11 +290,11 @@ const SidebarComponent = ({
 				))}
 			</div>
 			<div
-				className={`flex flex-col cursor-pointer  px-3 py-1  ${
+				className={`flex flex-col cursor-pointer px-3 py-1 ${
 					openSidebar ? 'visible' : 'w-0 invisible'
 				} relative`}
 			>
-				<div className='flex items-center gap-3 w-full rounded-[8px] text-sm p-1 hover:bg-gray-700/50 text-white'>
+				<div className='flex items-center gap-3 w-full rounded-[8px] text-sm p-1 hover:bg-[#202123] text-white'>
 					<span className='flex w-full flex-row flex-wrap-reverse justify-between'>
 						<span className='gold-new-button flex items-center gap-3'>
 							<span className='flex h-8 w-8 items-center justify-center rounded-full border border-white/50 bg-black'>
@@ -325,7 +325,9 @@ const SidebarComponent = ({
 				</div>
 				<div
 					onClick={() => setDropDown((prev) => !prev)}
-					className='flex items-center gap-3  w-full rounded-[8px] text-sm p-1 hover:bg-gray-700/50 text-white'
+					className={`flex items-center gap-3  w-full rounded-[8px] text-sm p-1 hover:bg-[#202123] text-white relative ${
+						dropDown && 'bg-[#202123]'
+					}`}
 				>
 					<div className='h-8 w-8 rounded-[2px]'>
 						<Image src={photoUrl} alt='user' width={100} radius='none' />
@@ -333,78 +335,74 @@ const SidebarComponent = ({
 					<p className='grow overflow-hidden text-ellipsis font-semibold whitespace-nowrap text-left'>
 						{userName}
 					</p>
-				</div>
 
-				<div
-					className={`${
-						dropDown ? 'bg-[#050509] absolute -top-[174px] right-3 py-3 z-10 rounded' : 'hidden'
-					}`}
-					style={{ width: 'calc(100% - 24px)' }}
-				>
-					<div className='flex gap-3 p-3 min-h-[44px]  hover:bg-gray-700/50'>
-						<svg
-							xmlns='http://www.w3.org/2000/svg'
-							width='25'
-							height='25'
-							viewBox='0 0 25 25'
-							className='h-4 w-4 shrink-0'
-							fill='none'
-						>
-							<path
+					<div
+						className={`${
+							dropDown
+								? 'bg-[#202123] w-full  absolute bottom-11 right-[1px]  py-3 z-10 rounded-[8px] border border-gray-700'
+								: 'hidden'
+						}`}
+					>
+						<div className='flex gap-3 p-3 min-h-[44px]  hover:bg-gray-700/50'>
+							<svg
+								width='18'
+								height='18'
+								viewBox='0 0 24 24'
+								fill='none'
+								xmlns='http://www.w3.org/2000/svg'
+								className='icon-md'
+							>
+								<path
+									d='M10.663 6.3872C10.8152 6.29068 11 6.40984 11 6.59007V8C11 8.55229 11.4477 9 12 9C12.5523 9 13 8.55229 13 8V6.59007C13 6.40984 13.1848 6.29068 13.337 6.3872C14.036 6.83047 14.5 7.61105 14.5 8.5C14.5 9.53284 13.8737 10.4194 12.9801 10.8006C12.9932 10.865 13 10.9317 13 11V13C13 13.5523 12.5523 14 12 14C11.4477 14 11 13.5523 11 13V11C11 10.9317 11.0068 10.865 11.0199 10.8006C10.1263 10.4194 9.5 9.53284 9.5 8.5C9.5 7.61105 9.96397 6.83047 10.663 6.3872Z'
+									fill='currentColor'
+								></path>
+								<path
+									fillRule='evenodd'
+									clipRule='evenodd'
+									d='M4 5V19C4 20.6569 5.34315 22 7 22H19C19.3346 22 19.6471 21.8326 19.8325 21.5541C20.0179 21.2755 20.0517 20.9227 19.9225 20.614C19.4458 19.4747 19.4458 18.5253 19.9225 17.386C19.9737 17.2637 20 17.1325 20 17V3C20 2.44772 19.5523 2 19 2H7C5.34315 2 4 3.34315 4 5ZM6 5C6 4.44772 6.44772 4 7 4H18V16H7C6.64936 16 6.31278 16.0602 6 16.1707V5ZM7 18H17.657C17.5343 18.6699 17.5343 19.3301 17.657 20H7C6.44772 20 6 19.5523 6 19C6 18.4477 6.44772 18 7 18Z'
+									fill='currentColor'
+								></path>
+							</svg>
+							<span>Custom instructions</span>
+						</div>
+						<div className='flex gap-3 p-3 min-h-[44px]  hover:bg-gray-700/50'>
+							<svg
 								stroke='currentColor'
-								strokeLinecap='round'
-								strokeLinejoin='round'
+								fill='none'
 								strokeWidth='2'
-								d='M21.44 15.707a2 2 0 0 1-2 2h-12l-4 4v-16a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10Z'
-							></path>
-							<path
-								fill='currentColor'
-								stroke='currentColor'
+								viewBox='0 0 24 24'
 								strokeLinecap='round'
 								strokeLinejoin='round'
-								strokeWidth='1.7'
-								d='M7.825 11.375a.687.687 0 1 0 0-1.375.687.687 0 0 0 0 1.375ZM12.5 11.375a.687.687 0 1 0 0-1.375.687.687 0 0 0 0 1.375ZM17.175 11.375a.687.687 0 1 0 0-1.375.687.687 0 0 0 0 1.375Z'
-							></path>
-						</svg>
-						<span>Custom instructions</span>
-					</div>
-					<div className='flex gap-3 p-3 min-h-[44px]  hover:bg-gray-700/50'>
-						<svg
-							stroke='currentColor'
-							fill='none'
-							strokeWidth='2'
-							viewBox='0 0 24 24'
-							strokeLinecap='round'
-							strokeLinejoin='round'
-							className='icon-sm'
-							height='1em'
-							width='1em'
-							xmlns='http://www.w3.org/2000/svg'
-						>
-							<circle cx='12' cy='12' r='3'></circle>
-							<path d='M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z'></path>
-						</svg>
-						<span>Settings</span>
-					</div>
-					<div className='my-1.5 h-px dark:bg-white/20 bg-black/20 ' role='none'></div>
-					<div className='flex gap-3 p-3 min-h-[44px]  hover:bg-gray-700/50'>
-						<svg
-							stroke='currentColor'
-							fill='none'
-							strokeWidth='2'
-							viewBox='0 0 24 24'
-							strokeLinecap='round'
-							strokeLinejoin='round'
-							className='icon-sm'
-							height='1em'
-							width='1em'
-							xmlns='http://www.w3.org/2000/svg'
-						>
-							<path d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4'></path>
-							<polyline points='16 17 21 12 16 7'></polyline>
-							<line x1='21' y1='12' x2='9' y2='12'></line>
-						</svg>
-						<span>Log out</span>
+								className='icon-sm'
+								height='1em'
+								width='1em'
+								xmlns='http://www.w3.org/2000/svg'
+							>
+								<circle cx='12' cy='12' r='3'></circle>
+								<path d='M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z'></path>
+							</svg>
+							<span>Settings</span>
+						</div>
+						<div className='my-1.5 h-px bg-gray-700' role='none'></div>
+						<div className='flex gap-3 p-3 min-h-[44px]  hover:bg-gray-700/50'>
+							<svg
+								stroke='currentColor'
+								fill='none'
+								strokeWidth='2'
+								viewBox='0 0 24 24'
+								strokeLinecap='round'
+								strokeLinejoin='round'
+								className='icon-sm'
+								height='1em'
+								width='1em'
+								xmlns='http://www.w3.org/2000/svg'
+							>
+								<path d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4'></path>
+								<polyline points='16 17 21 12 16 7'></polyline>
+								<line x1='21' y1='12' x2='9' y2='12'></line>
+							</svg>
+							<span>Log out</span>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -4,6 +4,7 @@ import NavbarSmallScreenComponent from '@/stories/navbar_small_screen/NavbarSmal
 import NavbarComponent from '@/stories/navbar/Navbar.component';
 import { useParams } from 'next/navigation';
 import useMessagesStore from '@/store/useMessagesStore';
+import { useChatGptVersion } from '../store/useChatGptVersion';
 
 const LayoutNavbar = ({
 	handleToggleSidebar,
@@ -14,10 +15,13 @@ const LayoutNavbar = ({
 }) => {
 	const params: { id?: string } = useParams();
 	const messages = useMessagesStore((state) => state.messages);
-
+	const publicVersion = useChatGptVersion((state) => state.publicVersion);
 	return (
 		<div className={` w-full z-30 sticky top-0`}>
-			<NavbarSmallScreenComponent handleToggleSidebar={handleToggleSidebar} />
+			<NavbarSmallScreenComponent
+				handleToggleSidebar={handleToggleSidebar}
+				publicVersion={publicVersion}
+			/>
 			<NavbarComponent
 				isNewChat={!params.id}
 				hide={messages.every((item) => item.role === 'system')}
