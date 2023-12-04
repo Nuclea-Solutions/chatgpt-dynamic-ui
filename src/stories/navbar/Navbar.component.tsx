@@ -1,4 +1,4 @@
-import { useChatGptVersion } from '@/store/useChatGptVersion';
+import { useChatGptVersion } from '../../store/useChatGptVersion';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import React, { useState } from 'react';
 
@@ -19,15 +19,16 @@ const NavbarComponent = ({
 	const setPrivateVersion = useChatGptVersion((state) => state.setPrivateVersion);
 	const publicVersion = useChatGptVersion((state) => state.publicVersion);
 
+	console.log(openSidebar);
 	return (
 		<div
-			className={`z-10 flex min-h-[60px] justify-between  items-center gap-3 py-3 px-2 bg-white opacity-95 dark:border-gray-900/50 dark:bg-gray-800`}
+			className={`z-10 flex min-h-[60px] justify-between  items-center gap-3 py-3 px-2 bg-white dark:border-gray-900/50 dark:bg-gray-700`}
 		>
 			<div className='flex items-center gap-3'>
 				<button
-					className={`relative flex h-9 w-9 items-center justify-center whitespace-nowrap rounded-[10px] border border-gray-300 ml-2 hover:bg-gray-100 ${
-						openSidebar && 'hidden'
-					}`}
+					className={`relative hidden md:flex h-9 w-9 items-center justify-center whitespace-nowrap rounded-[10px] border border-gray-300 ml-2 hover:bg-gray-100 ${
+						openSidebar && 'md:hidden'
+					} `}
 				>
 					<div className='flex w-full gap-2 items-center justify-center'>
 						<svg
@@ -47,6 +48,7 @@ const NavbarComponent = ({
 						</svg>
 					</div>
 				</button>
+
 				<div
 					onClick={handleDropdown}
 					className='flex items-center gap-1 text-lg p-2 rounded-xl text-gray-600 dark:text-white sm:justify-center opacity-100 cursor-pointer hover:bg-gray-50 relative '
@@ -95,11 +97,11 @@ const NavbarComponent = ({
 			</div>
 
 			<div
-				className={`absolute top-16 left-5 text-sm w-[326px] border rounded-[8px] flex flex-col gap-2 shadow-xl cursor-pointer dark:text-white dark:bg-[#202123] bg-white select-none ${
+				className={`absolute top-[108px] md:top-16 left-2 text-sm w-[326px] border rounded-[8px] flex flex-col gap-2 shadow-xl cursor-pointer bg-white dark:text-white dark:bg-[#202123] select-none ${
 					!dropdown && 'hidden'
-				}`}
+				} ${!openSidebar && 'md:left-16'}`}
 			>
-				<div className='rounded-[8px] py-2 px-3 m-1 '>
+				<div className='rounded-[8px] py-2 px-3 m-1'>
 					<div className='flex grow items-start justify-between gap-2'>
 						<div>
 							<div className='flex gap-2'>

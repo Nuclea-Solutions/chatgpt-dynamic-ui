@@ -89,7 +89,7 @@ const SidebarComponent = ({
 	return (
 		<div
 			className={`h-screen flex flex-col w-[80%] sm:w-[260px]  md:w-[420px] text-sm bg-black text-white ${
-				openSidebar ? 'visible fixed md:relative left-0 top-0 z-30' : 'w-0 invisible absolute'
+				openSidebar ? 'visible fixed md:relative left-0 top-0 z-50' : 'w-0 invisible absolute'
 			} `}
 		>
 			<div

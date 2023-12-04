@@ -40,9 +40,7 @@ const EmptyCardsContainerComponent = ({ isNewChat }: Props) => {
 						</div>
 					</div>
 					<div className='mb-5 text-2xl font-semibold text-black dark:text-white'>
-						{/* How can I help you today?
-						 */}
-						¿En qué te puedo ayudar?
+						{publicVersion ? '¿En qué te puedo ayudar?' : 'How can I help you today?'}
 					</div>
 				</div>
 			</div>
