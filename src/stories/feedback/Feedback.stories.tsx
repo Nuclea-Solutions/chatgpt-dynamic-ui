@@ -161,4 +161,8 @@ export default {
 	}
 } as Meta<typeof FeedbackComponent>;
 
-export const Base: Story = {};
+export const Base: Story = {
+	args: {
+		isLastMessage: true
+	}
+};

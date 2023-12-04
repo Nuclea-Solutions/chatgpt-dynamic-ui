@@ -1,4 +1,4 @@
-import { useChatGptVersion } from '@/store/useChatGptVersion';
+import { useChatGptVersion } from '../../store/useChatGptVersion';
 import React, { ChangeEvent } from 'react';
 import { GoImage } from 'react-icons/go';
 const InputWidthButtonComponent = ({
