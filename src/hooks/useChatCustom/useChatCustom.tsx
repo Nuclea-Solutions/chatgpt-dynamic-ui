@@ -8,12 +8,7 @@ import { nanoid } from 'nanoid';
 
 const useChatCustom = () => {
 	const userId = useRef(nanoid());
-	const [listOfComponents, setListOfComponents] = useState<any[]>([]);
-	const [
-		setNewMessage,
-	] = useMessagesStore((state) => [
-		state.setNewMessage,
-	]);
+	const [setNewMessage] = useMessagesStore((state) => [state.setNewMessage]);
 	const [inputMessage, setInputMessage] = useState('');
 	const [isLoading, setIsLoading] = useState(false);
 
@@ -61,8 +56,7 @@ const useChatCustom = () => {
 		handleInputChange: handleChangeMessage,
 		handleSubmit: handleSubmitCustom,
 		input: inputMessage,
-		listOfComponents,
-		isLoading,
+		isLoading
 	};
 };
 
