@@ -1,12 +1,9 @@
 'use client';
 // libraries
 import { useState } from 'react';
-import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material';
 // components
-import ComponentMessage from '@/components/ComponentMessage';
 import Avatar from '@/components/Avatar';
 import AssistantMessage from '@/components/AssistantMessage';
-import { CodeBlock } from './CodeBlock';
 import ErrorMessage from './ErrorMessage';
 // utils
 import { cn } from '@/utils/utils';
@@ -71,22 +68,6 @@ const MessagesList = ({ messages }: { messages: Message[] }) => {
 											showFeedbackMessage={showFeedbackMessage}
 										/>
 									</div>
-								) : /* TOOL/FUNCTION MESSAGE */
-								item.role === 'function' ? (
-									<Accordion className='max-w-[500px] bg-[#ececf1]'>
-										<AccordionSummary>
-											<span className='pr-1 font-bold'>Used:</span>
-											{item.name}
-										</AccordionSummary>
-										<AccordionDetails>
-											<CodeBlock
-												value={item.function_call?.toString() ?? 'Function name'}
-												language='javascript'
-												type='request'
-											/>
-											<CodeBlock value={item.content} language='javascript' type='response' />
-										</AccordionDetails>
-									</Accordion>
 								) : (
 									/* USER MESSAGE */
 									<div
@@ -108,21 +89,6 @@ const MessagesList = ({ messages }: { messages: Message[] }) => {
 									</div>
 								)}
 							</div>
-							{item.role === 'assistant'
-								? parseItemOutput?.message?.component && (
-										<div className='m-[24px]'>
-											<ComponentMessage
-												key={`${item.id}-${Date.now()}`}
-												component={
-													typeof parseItemOutput.message?.component === 'string'
-														? parseItemOutput.message?.component
-														: parseItemOutput.message?.component?.name ?? ''
-												}
-												componentProps={parseItemOutput.message?.component?.props ?? []}
-											/>
-										</div>
-								  )
-								: null}
 						</div>
 					</div>
 				</div>
