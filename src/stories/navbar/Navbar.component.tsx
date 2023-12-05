@@ -19,7 +19,6 @@ const NavbarComponent = ({
 	const setPrivateVersion = useChatGptVersion((state) => state.setPrivateVersion);
 	const publicVersion = useChatGptVersion((state) => state.publicVersion);
 
-	console.log(openSidebar);
 	return (
 		<div
 			className={`z-10 flex min-h-[60px] justify-between  items-center gap-3 py-3 px-2 bg-white dark:border-gray-900/50 dark:bg-gray-700`}

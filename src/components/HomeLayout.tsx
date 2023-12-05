@@ -3,7 +3,7 @@ import React from 'react';
 
 const HomeLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
-		<NextUIProvider className='flex justify-center h-[100%]'>
+		<NextUIProvider className='flex justify-center h-full'>
 			<div className='h-full w-full'>
 				{children}
 
