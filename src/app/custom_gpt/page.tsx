@@ -36,6 +36,7 @@ const page = () => {
 	};
 
 	useEffect(() => {
+		if (typeof window === 'undefined') return;
 		const handleResize = () => {
 			setWindowWidth(window.innerWidth);
 		};
