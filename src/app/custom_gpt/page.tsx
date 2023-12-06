@@ -18,7 +18,7 @@ const page = () => {
 		setIsActive(activeView);
 	};
 
-	const [windowWidth, setWindowWidth] = useState<number>();
+	const [windowWidth, setWindowWidth] = useState<number>(0);
 
 	const [checkboxes, setCheckboxes] = useState<CheckboxState>({
 		webBrowsing: false,
