@@ -1,20 +1,14 @@
 'use client';
 import React, { useState } from 'react';
 import LayoutSidebar from './LayoutSidebar';
-import LayoutNavbar from './LayoutNavbar';
 import FeedbackModalComponent from '@/stories/feedback_modal/FeedbackModal.component';
 import { useFeedbackModal } from '../store/useFeedbackModal';
+import { usesidebar } from '@/store/useSidebar';
 
 const LayoutSecondary = ({ children }: { children: React.ReactNode }) => {
-	const [openSidebar, setOPenSidebar] = useState<boolean>(true);
-
-	const handleOpenSidebar = () => {
-		setOPenSidebar(true);
-	};
-
-	const handleToggleSidebar = () => {
-		setOPenSidebar((prev) => !prev);
-	};
+	const openSidebar = usesidebar((state) => state.openSidebar);
+	const handleOpenSidebar = usesidebar((state) => state.setOpenSidebar);
+	const handleToggleSidebar = usesidebar((state) => state.setHandleToggleSidebar);
 
 	const openModal = useFeedbackModal((state) => state.openModal);
 	const like = useFeedbackModal((state) => state.like);
@@ -27,7 +21,7 @@ const LayoutSecondary = ({ children }: { children: React.ReactNode }) => {
 				handleToggleSidebar={handleToggleSidebar}
 			/>
 			<div className='w-full max-h-[100vh] overflow-scroll overflow-x-hidden relative'>
-				<LayoutNavbar handleToggleSidebar={handleToggleSidebar} openSidebar={openSidebar} />
+				{/* <LayoutNavbar handleToggleSidebar={handleToggleSidebar} openSidebar={openSidebar} /> */}
 
 				{children}
 			</div>

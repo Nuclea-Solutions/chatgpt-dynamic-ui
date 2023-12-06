@@ -1,5 +1,4 @@
 'use client';
-import { useRef } from 'react';
 // components
 import HomeLayout from '@/components/HomeLayout';
 import EmptyCardsContainerComponent from '@/stories/empty_cards_container/EmptyCardsContainer.component';

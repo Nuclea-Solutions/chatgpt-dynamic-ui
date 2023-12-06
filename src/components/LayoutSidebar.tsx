@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import SidebarComponent from './Sidebar';
 import useConversationsStore from '@/store/useConversationsStore';
 import axios from 'axios';
+import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 
 export default function LayoutSidebar({
 	openSidebar,
@@ -15,6 +17,8 @@ export default function LayoutSidebar({
 }) {
 	const [list, setList] = useState<Conversation[] | []>([]);
 	const setConversationList = useConversationsStore((state) => state.setConversationList);
+
+	const actualPath = usePathname();
 
 	const getConversations = async () => {
 		try {
@@ -30,6 +34,10 @@ export default function LayoutSidebar({
 		getConversations();
 	}, []);
 
+	if (actualPath === '/custom_gpt') {
+		return null;
+	}
+	console.log(actualPath);
 	return (
 		<SidebarComponent
 			userName='Anónimo'
