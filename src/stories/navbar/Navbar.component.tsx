@@ -1,6 +1,7 @@
 import { useChatGptVersion } from '../../store/useChatGptVersion';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 const NavbarComponent = ({
 	isNewChat,
@@ -197,6 +198,16 @@ const NavbarComponent = ({
 					</div>
 					<FaArrowRightLong />
 				</div>
+
+				<Link href={'/custom_gpt'} className={`${publicVersion && 'hidden'}`}>
+					<hr />
+					<div className='rounded-[8px] py-2 px-3 m-1 flex items-center'>
+						<div className='grow'>
+							<span>Custom GPT</span>
+						</div>
+						<FaArrowRightLong />
+					</div>
+				</Link>
 			</div>
 		</div>
 	);
