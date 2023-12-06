@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import ToggleCustomGPT from '@/stories/second_phase/toggle_customGPT/ToggleCustomGPT.component';
 import InputWidthButtonComponent from '@/stories/input_with_button/InputWidthButton.component';
-import useChatCustom from '@/hooks/useChatCustom/useChatCustom';
 import Avatar from '@/components/Avatar';
 import { HiOutlineCube } from 'react-icons/hi';
 import UploadImageComponent from '@/stories/second_phase/upload_image/UploadImage.component';
@@ -19,7 +18,7 @@ const page = () => {
 		setIsActive(activeView);
 	};
 
-	const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+	const [windowWidth, setWindowWidth] = useState<number>();
 
 	const [checkboxes, setCheckboxes] = useState<CheckboxState>({
 		webBrowsing: false,
@@ -37,11 +36,13 @@ const page = () => {
 
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
+			setWindowWidth(window.innerWidth);
 			const handleResize = () => {
 				setWindowWidth(window.innerWidth);
 			};
 
 			window.addEventListener('resize', handleResize);
+
 			return () => {
 				window.removeEventListener('resize', handleResize);
 			};
