@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import SidebarComponent from './Sidebar';
+import { usePathname } from 'next/navigation';
 
 export default function LayoutSidebar({
 	openSidebar,
@@ -12,6 +13,10 @@ export default function LayoutSidebar({
 	handleToggleSidebar: () => void;
 }) {
 	// const [list, setList] = useState<Conversation[] | []>([]);
+	const actualPath = usePathname();
+	if (actualPath === '/custom_gpt') {
+		return null;
+	}
 
 	return (
 		<SidebarComponent

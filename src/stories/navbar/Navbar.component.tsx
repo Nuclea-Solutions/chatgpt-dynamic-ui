@@ -1,6 +1,7 @@
 import { useChatGptVersion } from '../../store/useChatGptVersion';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 const NavbarComponent = ({
 	isNewChat,
@@ -19,7 +20,6 @@ const NavbarComponent = ({
 	const setPrivateVersion = useChatGptVersion((state) => state.setPrivateVersion);
 	const publicVersion = useChatGptVersion((state) => state.publicVersion);
 
-	console.log(openSidebar);
 	return (
 		<div
 			className={`z-10 flex min-h-[60px] justify-between  items-center gap-3 py-3 px-2 bg-white dark:border-gray-900/50 dark:bg-gray-700`}
@@ -198,6 +198,16 @@ const NavbarComponent = ({
 					</div>
 					<FaArrowRightLong />
 				</div>
+
+				<Link href={'/custom_gpt'} className={`${publicVersion && 'hidden'}`}>
+					<hr />
+					<div className='rounded-[8px] py-2 px-3 m-1 flex items-center'>
+						<div className='grow'>
+							<span>Custom GPT</span>
+						</div>
+						<FaArrowRightLong />
+					</div>
+				</Link>
 			</div>
 		</div>
 	);
