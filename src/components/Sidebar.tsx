@@ -163,6 +163,31 @@ const SidebarComponent = ({
 					</div>
 				</div>
 			</div>
+			<div
+				className={`flex w-full min-h-[44px] gap-3 p-2 items-center ${
+					openSidebar ? 'visible' : 'w-0 invisible'
+				} `}
+			>
+				<div className='flex justify-between px-2 gap-3 min-h-[44px] py-1 items-center transition-colors duration-200 text-white cursor-pointer rounded-[8px] hover:bg-gray-500/30 h-11  flex-grow overflow-hidden'>
+					<div className='flex items-center gap-2'>
+						<div
+							className={`rounded-full w-[28px] h-[28px] flex items-center justify-center p-1 bg-white text-black`}
+						>
+							<AssistantAvatar />
+						</div>
+						<button
+							onClick={() => {
+								setMessages([]);
+								setMessagesComponents([]);
+								router.push('/custom_gpt');
+							}}
+							className='truncate text-sm'
+						>
+							Custom GPT
+						</button>
+					</div>
+				</div>
+			</div>
 			<div className='flex-1 overflow-y-auto border-white/20 py-2 pl-2' id='content_sidebar'>
 				<div
 					className={`px-3 h-9 pb-2 pt-3 text-ellipsis overflow-hidden break-all ${

@@ -6,7 +6,7 @@ import useChatCustom from '@/hooks/useChatCustom/useChatCustom';
 import { useChatGptVersion } from '@/store/useChatGptVersion';
 
 const InputContainer = () => {
-	const { input, handleInputChange, handleSubmit } = useChatCustom();
+	const { input, handleInputChange, handleSubmit } = useChatCustom({});
 	const publicVersion = useChatGptVersion((state) => state.publicVersion);
 	return (
 		<form
