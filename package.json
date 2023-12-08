@@ -24,6 +24,7 @@
 		"axios": "^1.5.0",
 		"clsx": "^2.0.0",
 		"dayjs": "^1.11.9",
+		"encoding": "^0.1.13",
 		"framer-motion": "^10.16.4",
 		"immer": "^10.0.3",
 		"mongodb": "^6.3.0",

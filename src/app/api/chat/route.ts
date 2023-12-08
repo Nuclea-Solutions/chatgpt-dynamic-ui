@@ -1,5 +1,11 @@
 import { NextResponse } from 'next/server';
 import openai from '@/config/openai';
+import {
+	DEFAULT_NAME,
+	DEFAULT_DESCRIPTION,
+	DEFAULT_MODEL,
+	DEFAULT_INSTRUCTIONS
+} from '@/config/assistant-config';
 import { TOOL_FUNCTIONS } from './functions';
 
 const users: {
@@ -10,10 +16,6 @@ const users: {
 	};
 } = {};
 
-const instructions = `
-
-`;
-
 export async function POST(req: Request) {
 	try {
 		const json = await req.json();
@@ -23,10 +25,10 @@ export async function POST(req: Request) {
 		if (!users[user_id]) {
 			try {
 				const assistant = await openai.beta.assistants.create({
-					name: 'Chat Dynamic UI Assitant',
-					instructions: instructions.replace(/\s+/g, ' '),
-					description: 'Chat Dynamic UI Assitant',
-					model: 'gpt-4-1106-preview'
+					name: json?.name ?? DEFAULT_NAME,
+					instructions: json?.instructions ?? DEFAULT_INSTRUCTIONS.replace(/\s+/g, ' '),
+					description: json?.description ?? DEFAULT_DESCRIPTION,
+					model: DEFAULT_MODEL
 				});
 				const emptyThread = await openai.beta.threads.create({});
 
