@@ -18,7 +18,7 @@ const AssistantMessage = ({
 		const assistanConversations = conversationsStorage.filter(
 			(assistanConversation) => assistanConversation.role === 'assistant'
 		);
-		const lastMessageId = assistanConversations[assistanConversations.length - 1].id;
+		const lastMessageId = assistanConversations[assistanConversations.length - 1]?.id;
 		return lastMessageId === contentId;
 	}, []);
 
