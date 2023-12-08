@@ -12,6 +12,9 @@ const sohne = localFont({ src: '../../fonts/Test Söhne/TestSöhne-Buch.otf' });
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang='en'>
+			<head>
+				<link rel='icon' href='/favicon.png' /> {/* Ruta del favicon */}
+			</head>
 			<body
 				className={cn(
 					sohne.className,

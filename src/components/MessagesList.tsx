@@ -36,8 +36,8 @@ const MessagesList = ({ messages }: { messages: Message[] }) => {
 			item.role !== 'system' && (
 				<div className='w-full justify-center' key={`${item.id}-${nanoid()}`}>
 					<div className={cn(['whitespace-pre-wrap flex justify-center'])}>
-						<div className='w-full md:w-[820px] md:max-w-[94%] bg-inherit'>
-							<div className='flex py-6'>
+						<div className='w-full md:w-[820px] md:max-w-[91%] bg-inherit'>
+							<div className='flex py-3 px-5'>
 								<div>
 									<Avatar author={item.role} />
 								</div>
@@ -71,12 +71,12 @@ const MessagesList = ({ messages }: { messages: Message[] }) => {
 								) : (
 									/* USER MESSAGE */
 									<div
-										className='flex-1 w-full'
+										className='flex-1 w-full  md:w-[820px] md:max-w-[91%]'
 										onMouseEnter={() => setShowIconInUserMessage(true)}
 										onMouseLeave={() => setShowIconInUserMessage(false)}
 									>
 										<p className='font-semibold text-sm mb-1'>You</p>
-										<div className='w-[75%] md:max-w-[80%]'>
+										<div className=' w-[100%]'>
 											<p className='m-0 break-words'>{item.content}</p>
 										</div>
 										<div
