@@ -10,11 +10,11 @@ import useChatCustom from '@/hooks/useChatCustom/useChatCustom';
 // store
 import useMessagesStore from '@/store/useMessagesStore';
 import { useChatGptVersion } from '@/store/useChatGptVersion';
+import { MessageRole } from '@/types/message';
 
 /*
 Page with chat using the message and the input component that it's return from response
 */
-
 export default function Chat() {
 	const { isLoading, input, handleInputChange, handleSubmit } = useChatCustom({});
 	const messages = useMessagesStore((state) => state.messages);
@@ -28,7 +28,7 @@ export default function Chat() {
 
 				<div className='h-full pt-2 text-center text-xs text-gray-600 dark:text-gray-300 md:px-[60px] flex flex-col justify-end sticky z-20 bottom-0'>
 					{/* Empty chat cards */}
-					{messages?.every((item) => item.role === 'system') && (
+					{messages?.every((item) => item.role === MessageRole.SYSTEM) && (
 						<div className='h-full w-full relative'>
 							<EmptyCardsContainerComponent isNewChat />
 						</div>
@@ -37,7 +37,7 @@ export default function Chat() {
 					<div className='w-full pt-2 text-center text-xs text-gray-600 dark:text-gray-300 flex justify-center'>
 						<div className=' w-full px-2 flex items-center flex-row-reverse md:block'>
 							<form
-								onSubmit={handleSubmit}
+								onSubmit={(e) => handleSubmit(e, 'chat')}
 								className='w-full lg:mx-auto lg:max-w-2xl xl:max-w-3xl bg-white dark:bg-[#444654] rounded-large relative'
 								id='formu'
 							>

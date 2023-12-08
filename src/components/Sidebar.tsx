@@ -36,10 +36,7 @@ const SidebarComponent = ({
 	const router = useRouter();
 	const [sidebarButtonHover, setSidebarButtonHover] = useState(false);
 
-	const [setMessages, setMessagesComponents] = useMessagesStore((state) => [
-		state.setMessages,
-		state.setMessagesComponents
-	]);
+	const setMessages = useMessagesStore((state) => state.setMessages);
 
 	const publicVersion = useChatGptVersion((state) => state.publicVersion);
 
@@ -137,7 +134,6 @@ const SidebarComponent = ({
 						<button
 							onClick={() => {
 								setMessages([]);
-								setMessagesComponents([]);
 								router.push('/');
 							}}
 							className='truncate text-sm'
@@ -178,7 +174,6 @@ const SidebarComponent = ({
 						<button
 							onClick={() => {
 								setMessages([]);
-								setMessagesComponents([]);
 								router.push('/custom_gpt');
 							}}
 							className='truncate text-sm'

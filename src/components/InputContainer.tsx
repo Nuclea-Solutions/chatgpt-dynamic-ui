@@ -10,7 +10,7 @@ const InputContainer = () => {
 	const publicVersion = useChatGptVersion((state) => state.publicVersion);
 	return (
 		<form
-			onSubmit={handleSubmit}
+			onSubmit={(e) => handleSubmit(e, 'chat')}
 			className='w-full lg:mx-auto lg:max-w-2xl xl:max-w-3xl bg-white dark:bg-[#444654] rounded-large relative'
 		>
 			<InputWidthButtonComponent value={input} onChange={handleInputChange} />

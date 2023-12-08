@@ -21,17 +21,27 @@ interface CheckboxState {
 
 const page = () => {
 	const [isActive, setIsActive] = useState('create');
-	const [name, description, instructions, setName, setDescription, setInstructions] = useCustomGPT(
-		(state) => [
-			state.name,
-			state.description,
-			state.instructions,
-			state.setName,
-			state.setDescription,
-			state.setInstructions
-		]
-	);
-	const { handleSubmit, input, handleInputChange } = useChatCustom({ customGPT: true });
+	const [
+		name,
+		description,
+		instructions,
+		setName,
+		setDescription,
+		setInstructions,
+		configurationMessages
+	] = useCustomGPT((state) => [
+		state.name,
+		state.description,
+		state.instructions,
+		state.setName,
+		state.setDescription,
+		state.setInstructions,
+		state.configurationMessages
+	]);
+	const { handleSubmit, input, handleInputChange, configureInput, handleChangeConfigureMessage } =
+		useChatCustom({
+			customGPT: true
+		});
 	const messages = useMessagesStore((state) => state.messages);
 
 	const handleActiveView = (activeView: string) => {
@@ -87,28 +97,37 @@ const page = () => {
 						style={windowWidth > 768 ? { height: 'calc(100% - 58px)' } : {}}
 					>
 						<div>
-							<div className='flex gap-1'>
-								<div>
-									<Avatar author='assistant' />
+							{!configurationMessages?.length ? (
+								<div className='flex gap-1'>
+									<div>
+										<Avatar author='assistant' />
+									</div>
+									<div>
+										<p className='font-semibold'>GPT Builder</p>
+										<p>
+											Hi! I'll help you build a new GPT. You can say something like, "make a
+											creative who helpps generate visuals for new products" or "make a software
+											engineer who helps format my code." <br />
+											<br />
+											What would your like to make?
+										</p>
+									</div>
 								</div>
+							) : (
 								<div>
-									<p className='font-semibold'>GPT Builder</p>
-									<p>
-										Hi! I'll help you build a new GPT. You can say something like, "make a creative
-										who helpps generate visuals for new products" or "make a software engineer who
-										helps format my code." <br />
-										<br />
-										What would your like to make?
-									</p>
+									<MessagesList messages={configurationMessages} />
 								</div>
-							</div>
+							)}
 						</div>
 
 						<form
 							className='bg-white dark:bg-[#444654] rounded-large relative'
-							onSubmit={handleSubmit}
+							onSubmit={(e) => handleSubmit(e, 'configure')}
 						>
-							<InputWidthButtonComponent value={input} onChange={handleInputChange} />
+							<InputWidthButtonComponent
+								value={configureInput}
+								onChange={handleChangeConfigureMessage}
+							/>
 						</form>
 					</div>
 
@@ -243,7 +262,7 @@ const page = () => {
 						)}
 						<form
 							className='w-full lg:mx-auto lg:max-w-2xl xl:max-w-3xl bg-white dark:bg-[#444654] rounded-large relative'
-							onSubmit={handleSubmit}
+							onSubmit={(e) => handleSubmit(e, 'chat')}
 						>
 							<InputWidthButtonComponent value={input} onChange={handleInputChange} />
 						</form>
