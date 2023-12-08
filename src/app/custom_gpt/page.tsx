@@ -1,10 +1,17 @@
 'use client';
+// libraries
 import React, { useState, useEffect } from 'react';
-import ToggleCustomGPT from '@/stories/second_phase/toggle_customGPT/ToggleCustomGPT.component';
-import InputWidthButtonComponent from '@/stories/input_with_button/InputWidthButton.component';
-import Avatar from '@/components/Avatar';
 import { HiOutlineCube } from 'react-icons/hi';
+// components
+import InputWidthButtonComponent from '@/stories/input_with_button/InputWidthButton.component';
+import ToggleCustomGPT from '@/stories/second_phase/toggle_customGPT/ToggleCustomGPT.component';
+import Avatar from '@/components/Avatar';
 import UploadImageComponent from '@/stories/second_phase/upload_image/UploadImage.component';
+import MessagesList from '@/components/MessagesList';
+// store and context
+import useCustomGPT from '@/store/useCustomGPT';
+import useMessagesStore from '@/store/useMessagesStore';
+import useChatCustom from '@/hooks/useChatCustom/useChatCustom';
 
 interface CheckboxState {
 	webBrowsing: boolean;
@@ -14,6 +21,29 @@ interface CheckboxState {
 
 const page = () => {
 	const [isActive, setIsActive] = useState('create');
+	const [
+		name,
+		description,
+		instructions,
+		setName,
+		setDescription,
+		setInstructions,
+		configurationMessages
+	] = useCustomGPT((state) => [
+		state.name,
+		state.description,
+		state.instructions,
+		state.setName,
+		state.setDescription,
+		state.setInstructions,
+		state.configurationMessages
+	]);
+	const { handleSubmit, input, handleInputChange, configureInput, handleChangeConfigureMessage } =
+		useChatCustom({
+			customGPT: true
+		});
+	const messages = useMessagesStore((state) => state.messages);
+
 	const handleActiveView = (activeView: string) => {
 		setIsActive(activeView);
 	};
@@ -67,25 +97,37 @@ const page = () => {
 						style={windowWidth > 768 ? { height: 'calc(100% - 58px)' } : {}}
 					>
 						<div>
-							<div className='flex gap-1'>
-								<div>
-									<Avatar author='assistant' />
+							{!configurationMessages?.length ? (
+								<div className='flex gap-1'>
+									<div>
+										<Avatar author='assistant' />
+									</div>
+									<div>
+										<p className='font-semibold'>GPT Builder</p>
+										<p>
+											Hi! I'll help you build a new GPT. You can say something like, "make a
+											creative who helpps generate visuals for new products" or "make a software
+											engineer who helps format my code." <br />
+											<br />
+											What would your like to make?
+										</p>
+									</div>
 								</div>
+							) : (
 								<div>
-									<p className='font-semibold'>GPT Builder</p>
-									<p>
-										Hi! I'll help you build a new GPT. You can say something like, "make a creative
-										who helpps generate visuals for new products" or "make a software engineer who
-										helps format my code." <br />
-										<br />
-										What would your like to make?
-									</p>
+									<MessagesList messages={configurationMessages} />
 								</div>
-							</div>
+							)}
 						</div>
 
-						<form className='bg-white dark:bg-[#444654] rounded-large relative'>
-							<InputWidthButtonComponent value={''} onChange={() => {}} />
+						<form
+							className='bg-white dark:bg-[#444654] rounded-large relative'
+							onSubmit={(e) => handleSubmit(e, 'configure')}
+						>
+							<InputWidthButtonComponent
+								value={configureInput}
+								onChange={handleChangeConfigureMessage}
+							/>
 						</form>
 					</div>
 
@@ -105,6 +147,8 @@ const page = () => {
 									id=''
 									placeholder='Name your GPT'
 									className='p-2 border rounded-[8px]'
+									value={name}
+									onChange={(e) => setName(e.target.value)}
 								/>
 							</div>
 
@@ -116,6 +160,8 @@ const page = () => {
 									id=''
 									placeholder='Add a shor description about what this GPT does'
 									className='p-2 border rounded-[8px]'
+									value={description}
+									onChange={(e) => setDescription(e.target.value)}
 								/>
 							</div>
 
@@ -127,6 +173,8 @@ const page = () => {
 									cols={50} // Número de columnas que se muestran
 									style={{ resize: 'vertical' }} // Permite redimensionar verticalmente
 									className='border rounded-[8px] outline-none p-2'
+									value={instructions}
+									onChange={(e) => setInstructions(e.target.value)}
 								/>
 							</div>
 
@@ -202,11 +250,21 @@ const page = () => {
 				>
 					<div className='flex flex-col justify-between h-full'>
 						<h4 className='flex justify-center '>Preview</h4>
-						<div className='flex justify-center '>
-							<HiOutlineCube size={50} />
-						</div>
-						<form className='w-full lg:mx-auto lg:max-w-2xl xl:max-w-3xl bg-white dark:bg-[#444654] rounded-large relative'>
-							<InputWidthButtonComponent value={''} onChange={() => {}} />
+
+						{!messages?.length ? (
+							<div className='flex justify-center '>
+								<HiOutlineCube size={50} />
+							</div>
+						) : (
+							<div>
+								<MessagesList messages={messages} />
+							</div>
+						)}
+						<form
+							className='w-full lg:mx-auto lg:max-w-2xl xl:max-w-3xl bg-white dark:bg-[#444654] rounded-large relative'
+							onSubmit={(e) => handleSubmit(e, 'chat')}
+						>
+							<InputWidthButtonComponent value={input} onChange={handleInputChange} />
 						</form>
 					</div>
 				</div>
