@@ -23,7 +23,7 @@ const AssistantMessage = ({
 	}, []);
 
 	return (
-		<div className='flex-1 flex flex-col item-start justify-between md:max-w-[80%] gap-3'>
+		<div className='flex-1 flex flex-col item-start justify-between md:max-w-[90%] gap-3'>
 			<MarkdownMessage id={contentId} content={content} />
 			<FeedbackComponent showFeedbackMessage={showFeedbackMessage} isLastMessage={isLastMessage} />
 		</div>
