@@ -2,7 +2,7 @@ import { Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from '@nextui-o
 
 import React from 'react';
 
-const HelpButtonComponent = ({ email = 'alan@nuclea.solutions' }: { email?: string }) => {
+const HelpButtonComponent = ({ email = 'proyect@gmail.com' }: { email?: string }) => {
 	return (
 		<Dropdown>
 			<DropdownTrigger>
