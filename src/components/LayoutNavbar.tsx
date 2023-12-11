@@ -2,7 +2,7 @@
 import React from 'react';
 import NavbarSmallScreenComponent from '@/stories/navbar_small_screen/NavbarSmallScreen.component';
 import NavbarComponent from '@/stories/navbar/Navbar.component';
-import { useParams } from 'next/navigation';
+import { useParams, usePathname } from 'next/navigation';
 import useMessagesStore from '@/store/useMessagesStore';
 import { useChatGptVersion } from '../store/useChatGptVersion';
 
@@ -16,6 +16,11 @@ const LayoutNavbar = ({
 	const params: { id?: string } = useParams();
 	const messages = useMessagesStore((state) => state.messages);
 	const publicVersion = useChatGptVersion((state) => state.publicVersion);
+	const actualPath = usePathname();
+
+	if (actualPath === '/custom_gpt') {
+		return null;
+	}
 	return (
 		<div className={` w-full z-30 sticky top-0`}>
 			<NavbarSmallScreenComponent

@@ -18,7 +18,7 @@ const ToggleCustomGPT = ({
 
 	return (
 		<div
-			className={`flex flex-col justify-center w-full mt-2 px-2 md:px-0 sm:items-center md:p-0  overflow-hidden `}
+			className={`flex flex-col justify-center w-full mt-2 px-2 md:px-0 sm:items-center md:p-0 overflow-hidden`}
 		>
 			<div className='flex gap-1 p-1 rounded-xl h-[50px] relative bg-gray-200 text-gray-600 dark:bg-gray-800 dark:text-white'>
 				<button
