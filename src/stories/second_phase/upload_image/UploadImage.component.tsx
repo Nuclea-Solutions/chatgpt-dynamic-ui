@@ -5,15 +5,16 @@ const UploadImageComponent = () => {
 	const [showPhotoDropdown, setShowDropdown] = useState(false);
 
 	return (
-		<div className='flex flex-col items-center gap-2 '>
+		<div className='flex flex-col items-center gap-2 relative'>
 			<div
 				onClick={() => setShowDropdown((state) => !state)}
 				className={`flex justify-center items-center border-3 border-dashed rounded-full w-20 h-20 text-gray-700 dark:text-white hover:cursor-pointer`}
 			>
 				<FaPlus size={30} />
 			</div>
+
 			<div
-				className={`border p-1 rounded-2xl bg-gray-200 dark:bg-[#202123] ${
+				className={`border p-1 rounded-2xl bg-gray-200 dark:bg-[#202123] absolute -bottom-[138px] ${
 					!showPhotoDropdown && 'hidden'
 				}`}
 			>

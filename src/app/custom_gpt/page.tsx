@@ -2,6 +2,7 @@
 // libraries
 import React, { useState, useEffect } from 'react';
 import { HiOutlineCube } from 'react-icons/hi';
+import { PiArrowCounterClockwiseFill } from 'react-icons/pi';
 // components
 import InputWidthButtonComponent from '@/stories/input_with_button/InputWidthButton.component';
 import ToggleCustomGPT from '@/stories/second_phase/toggle_customGPT/ToggleCustomGPT.component';
@@ -12,6 +13,7 @@ import MessagesList from '@/components/MessagesList';
 import useCustomGPT from '@/store/useCustomGPT';
 import useMessagesStore from '@/store/useMessagesStore';
 import useChatCustom from '@/hooks/useChatCustom/useChatCustom';
+import HelpButtonComponent from '@/stories/help_button/HelpButton.component';
 
 interface CheckboxState {
 	webBrowsing: boolean;
@@ -49,6 +51,7 @@ const page = () => {
 	};
 
 	const [windowWidth, setWindowWidth] = useState<number>(0);
+	const [previewHovered, setPreviewHovered] = useState(false);
 
 	const [checkboxes, setCheckboxes] = useState<CheckboxState>({
 		webBrowsing: false,
@@ -80,8 +83,11 @@ const page = () => {
 	}, []);
 
 	return (
-		<div className=' w-full'>
-			<section className={`flex flex-col md:flex-row`} style={{ height: 'calc(100vh - 64px) ' }}>
+		<div className=' w-full relative'>
+			<section
+				className={`flex flex-col md:flex-row z-10`}
+				style={{ height: 'calc(100vh - 64px)' }}
+			>
 				<div className='md:hidden'>
 					<ToggleCustomGPT handleActiveView={handleActiveView} isActive={isActive} />
 				</div>
@@ -93,7 +99,7 @@ const page = () => {
 					<div
 						className={`${
 							isActive !== 'create' && 'hidden'
-						} overflow-y-auto flex flex-col py-3 px-2 justify-between h-full`}
+						} overflow-y-auto flex flex-col py-8 px-2 justify-between h-full`}
 						style={windowWidth > 768 ? { height: 'calc(100% - 58px)' } : {}}
 					>
 						<div>
@@ -244,12 +250,23 @@ const page = () => {
 				</div>
 
 				<div
-					className={`md:flex flex-col  flex-1 border h-full py-3 px-2  ${
+					className={`md:flex flex-col  flex-1 border h-full py-8 px-2  ${
 						isActive !== 'preview' && 'hidden'
 					}`}
 				>
 					<div className='flex flex-col justify-between h-full'>
-						<h4 className='flex justify-center '>Preview</h4>
+						<h4
+							className='flex justify-center items-center gap-2 hover:cursor-pointer'
+							onMouseEnter={() => setPreviewHovered(true)}
+							onMouseLeave={() => setPreviewHovered(false)}
+						>
+							<div>Preview</div>
+							<div className='w-5 h-5'>
+								<div className={`${!previewHovered && 'hidden'}`}>
+									<PiArrowCounterClockwiseFill />
+								</div>
+							</div>
+						</h4>
 
 						{!messages?.length ? (
 							<div className='flex justify-center '>
@@ -269,6 +286,9 @@ const page = () => {
 					</div>
 				</div>
 			</section>
+			<div className='fixed bottom-2 right-4'>
+				<HelpButtonComponent />
+			</div>
 		</div>
 	);
 };

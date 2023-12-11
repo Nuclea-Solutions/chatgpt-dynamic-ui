@@ -1,15 +1,30 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { IoIosArrowBack, IoIosArrowDown } from 'react-icons/io';
 import { GoDotFill } from 'react-icons/go';
+import { HiOutlineDotsHorizontal } from 'react-icons/hi';
 import { useRouter } from 'next/navigation';
+import SaveMenuComponent from '../save_menu/SaveMenu.component';
+import DeleteMenuComponent from '../delete_menu/DeleteMenu.component';
 const NavbarCustomGPTComponent = () => {
+	const [openMenu, setOpenMenu] = useState<boolean>(false);
+	const [openMenuDelete, setOpenMenuDelete] = useState<boolean>(false);
 	const router = useRouter();
+
+	const handleOpenMenu = () => {
+		setOpenMenu((prev) => !prev);
+		setOpenMenuDelete(false);
+	};
+	const handleOpenMenuDelete = () => {
+		setOpenMenuDelete((prev) => !prev);
+		setOpenMenu(false);
+	};
+
 	return (
-		<nav className='p-2 h-16 border'>
+		<nav className='p-2 h-16 border z-30'>
 			<div className='flex justify-between items-center'>
 				<div className='flex items-center gap-3'>
-					<div onClick={router.back}>
+					<div onClick={router.back} className='hover:cursor-pointer'>
 						<IoIosArrowBack />
 					</div>
 					<div className='flex items-center gap-2'>
@@ -24,11 +39,36 @@ const NavbarCustomGPTComponent = () => {
 						</div>
 					</div>
 				</div>
-				<div>
-					<button className='flex items-center gap-2 bg-green-500 px-2 py-1 rounded-[8px] text-white'>
-						{' '}
-						Save <IoIosArrowDown />
-					</button>
+
+				<div className='flex gap-1'>
+					<div className='relative'>
+						<button
+							className='flex items-center gap-2 px-2 py-1 rounded-[8px] text-white border h-full'
+							onClick={handleOpenMenu}
+						>
+							{' '}
+							<HiOutlineDotsHorizontal size={18} color='#000' />
+						</button>
+						<div className={`absolute right-0 top-10 z-50 ${!openMenu && 'hidden'}`}>
+							<DeleteMenuComponent />
+						</div>
+					</div>
+					<div className='relative'>
+						<button
+							className='flex items-center gap-2 bg-green-500 px-2 py-1 rounded-[8px] text-white h-full'
+							onClick={handleOpenMenuDelete}
+						>
+							{' '}
+							Save <IoIosArrowDown />
+						</button>
+						<div
+							className={`absolute right-0 top-10 z-20 ${
+								!openMenuDelete && 'hidden'
+							} whitespace-nowrap`}
+						>
+							<SaveMenuComponent />
+						</div>
+					</div>
 				</div>
 			</div>
 		</nav>

@@ -2,7 +2,7 @@ import { Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from '@nextui-o
 
 import React from 'react';
 
-const HelpButtonComponent = () => {
+const HelpButtonComponent = ({ email = 'alan@nuclea.solutions' }: { email?: string }) => {
 	return (
 		<Dropdown>
 			<DropdownTrigger>
@@ -11,6 +11,11 @@ const HelpButtonComponent = () => {
 				</div>
 			</DropdownTrigger>
 			<DropdownMenu>
+				<DropdownItem key='email'>
+					<div className='flex px-3 min-h-[44px] py-1 items-center gap-3 transition-colors duration-200 text-sm text-gray-300'>
+						{email}
+					</div>
+				</DropdownItem>
 				<DropdownItem key='new'>
 					<div className='flex px-3 min-h-[44px] py-1 items-center gap-3 transition-colors duration-200 text-sm '>
 						{/* <Link href='#'> */}
@@ -31,6 +36,29 @@ const HelpButtonComponent = () => {
 							<line x1='10' y1='14' x2='21' y2='3'></line>
 						</svg>
 						<span className='text-xs'>Help &amp; FAQ</span>
+						{/* </Link> */}
+					</div>
+				</DropdownItem>
+				<DropdownItem key='new'>
+					<div className='flex px-3 min-h-[44px] py-1 items-center gap-3 transition-colors duration-200 text-sm '>
+						{/* <Link href='#'> */}
+						<svg
+							stroke='currentColor'
+							fill='none'
+							strokeWidth='2'
+							viewBox='0 0 24 24'
+							strokeLinecap='round'
+							strokeLinejoin='round'
+							className='icon-sm'
+							height='1em'
+							width='1em'
+							xmlns='http://www.w3.org/2000/svg'
+						>
+							<path d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'></path>
+							<polyline points='15 3 21 3 21 9'></polyline>
+							<line x1='10' y1='14' x2='21' y2='3'></line>
+						</svg>
+						<span className='text-xs'>Release notes</span>
 						{/* </Link> */}
 					</div>
 				</DropdownItem>
