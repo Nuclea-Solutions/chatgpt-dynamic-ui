@@ -5,7 +5,9 @@ import SidebarConversationComponent from '@/stories/sidebar/components/sidebar_c
 import { Image } from '@nextui-org/react';
 import useMessagesStore from '@/store/useMessagesStore';
 import { AssistantAvatar } from './Icons';
-import { truncateSync } from 'fs';
+import { LiaUserPlusSolid } from 'react-icons/lia';
+import { MdOutlineStars } from 'react-icons/md';
+import { PiCirclesFour } from 'react-icons/pi';
 import { useChatGptVersion } from '@/store/useChatGptVersion';
 
 const SidebarComponent = ({
@@ -120,7 +122,7 @@ const SidebarComponent = ({
 			} ${publicVersion && 'hidden'}`}
 		>
 			<div
-				className={`flex w-full min-h-[44px] gap-3 p-2 items-center ${
+				className={`flex w-full min-h-[44px] gap-3 px-2 items-center ${
 					openSidebar ? 'visible' : 'w-0 invisible'
 				} `}
 			>
@@ -159,6 +161,7 @@ const SidebarComponent = ({
 					</div>
 				</div>
 			</div>
+
 			<div
 				className={`flex w-full min-h-[44px] gap-3 p-2 items-center ${
 					openSidebar ? 'visible' : 'w-0 invisible'
@@ -183,6 +186,32 @@ const SidebarComponent = ({
 					</div>
 				</div>
 			</div>
+
+			<div
+				className={`flex w-full min-h-[44px] gap-3 px-2 items-center ${
+					openSidebar ? 'visible' : 'w-0 invisible'
+				} `}
+			>
+				<div className='flex justify-between px-2 gap-3 min-h-[44px] items-center transition-colors duration-200 text-white cursor-pointer rounded-[8px] hover:bg-gray-500/30 h-11  flex-grow overflow-hidden'>
+					<div className='flex items-center gap-2'>
+						<div
+							className={`rounded-full w-[28px] h-[28px] flex items-center justify-center p-1  text-gray-200`}
+						>
+							<PiCirclesFour size={32} />
+						</div>
+						<button
+							onClick={() => {
+								setMessages([]);
+								router.push('/');
+							}}
+							className='text-sm'
+						>
+							Explore
+						</button>
+					</div>
+				</div>
+			</div>
+			{/* l */}
 			<div className='flex-1 overflow-y-auto border-white/20 py-2 pl-2' id='content_sidebar'>
 				<div
 					className={`px-3 h-9 pb-2 pt-3 text-ellipsis overflow-hidden break-all ${
@@ -309,6 +338,7 @@ const SidebarComponent = ({
 					</div>
 				))}
 			</div>
+
 			<div
 				className={`flex flex-col cursor-pointer px-3 py-1 ${
 					openSidebar ? 'visible' : 'w-0 invisible'
@@ -343,6 +373,7 @@ const SidebarComponent = ({
 						</span>
 					</span>
 				</div>
+
 				<div
 					onClick={() => setDropDown((prev) => !prev)}
 					className={`flex items-center gap-3  w-full rounded-[8px] text-sm p-1 hover:bg-[#202123] text-white relative ${
@@ -363,6 +394,15 @@ const SidebarComponent = ({
 								: 'hidden'
 						}`}
 					>
+						<div className='flex gap-3 p-3 min-h-[44px]  hover:bg-gray-700/50'>
+							<MdOutlineStars size={18} />
+							<span>My plan</span>
+						</div>
+						<div className='flex gap-3 p-3 min-h-[44px]  hover:bg-gray-700/50'>
+							<LiaUserPlusSolid size={18} />
+
+							<span>My GPTs</span>
+						</div>
 						<div className='flex gap-3 p-3 min-h-[44px]  hover:bg-gray-700/50'>
 							<svg
 								width='18'
@@ -404,7 +444,7 @@ const SidebarComponent = ({
 							<span>Settings</span>
 						</div>
 						<div className='my-1.5 h-px bg-gray-700' role='none'></div>
-						<div className='flex gap-3 p-3 min-h-[44px]  hover:bg-gray-700/50'>
+						<div className='flex gap-3 p-3 min-h-[44px]  hover:bg-gray-700/50 items-center'>
 							<svg
 								stroke='currentColor'
 								fill='none'
@@ -413,8 +453,8 @@ const SidebarComponent = ({
 								strokeLinecap='round'
 								strokeLinejoin='round'
 								className='icon-sm'
-								height='1em'
-								width='1em'
+								height='1.2em'
+								width='1.2em'
 								xmlns='http://www.w3.org/2000/svg'
 							>
 								<path d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4'></path>

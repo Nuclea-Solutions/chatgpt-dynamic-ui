@@ -4,6 +4,7 @@ import LayoutSidebar from './LayoutSidebar';
 import FeedbackModalComponent from '@/stories/feedback_modal/FeedbackModal.component';
 import { useFeedbackModal } from '../store/useFeedbackModal';
 import { usesidebar } from '@/store/useSidebar';
+import LayoutNavbar from './LayoutNavbar';
 
 const LayoutSecondary = ({ children }: { children: React.ReactNode }) => {
 	const openSidebar = usesidebar((state) => state.openSidebar);
@@ -20,8 +21,8 @@ const LayoutSecondary = ({ children }: { children: React.ReactNode }) => {
 				handleOpenSidebar={handleOpenSidebar}
 				handleToggleSidebar={handleToggleSidebar}
 			/>
-			<div className='w-full max-h-[100vh] overflow-scroll overflow-x-hidden'>
-				{/* <LayoutNavbar handleToggleSidebar={handleToggleSidebar} openSidebar={openSidebar} /> */}
+			<div className='w-full max-h-[100vh] overflow-y-auto overflow-x-hidden'>
+				<LayoutNavbar handleToggleSidebar={handleToggleSidebar} openSidebar={openSidebar} />
 
 				{children}
 			</div>
