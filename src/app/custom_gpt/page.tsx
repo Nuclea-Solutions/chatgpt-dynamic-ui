@@ -102,7 +102,7 @@ const page = () => {
 						} overflow-y-auto flex flex-col py-8 px-2 justify-between h-full`}
 						style={windowWidth > 768 ? { height: 'calc(100% - 58px)' } : {}}
 					>
-						<div>
+						<div className='h-full overflow-scroll'>
 							{!configurationMessages?.length ? (
 								<div className='flex gap-1'>
 									<div>
@@ -250,7 +250,7 @@ const page = () => {
 				</div>
 
 				<div
-					className={`md:flex flex-col  flex-1 border h-full py-8 px-2  ${
+					className={`md:flex flex-col  flex-1 border h-full py-8 px-2 ${
 						isActive !== 'preview' && 'hidden'
 					}`}
 				>
@@ -273,7 +273,7 @@ const page = () => {
 								<HiOutlineCube size={50} />
 							</div>
 						) : (
-							<div>
+							<div className='h-full overflow-scroll'>
 								<MessagesList messages={messages} />
 							</div>
 						)}

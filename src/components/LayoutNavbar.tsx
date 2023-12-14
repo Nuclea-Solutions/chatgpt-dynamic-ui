@@ -18,7 +18,7 @@ const LayoutNavbar = ({
 	const publicVersion = useChatGptVersion((state) => state.publicVersion);
 	const actualPath = usePathname();
 
-	if (actualPath === '/custom_gpt') {
+	if (actualPath === '/custom_gpt' || actualPath === '/gpts') {
 		return null;
 	}
 	return (

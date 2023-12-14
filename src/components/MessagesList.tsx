@@ -10,10 +10,12 @@ import { cn } from '@/utils/utils';
 import { Message, MessageRole } from '@/types/message';
 import { nanoid } from 'nanoid';
 import { TbPencil } from 'react-icons/tb';
+import { usePathname } from 'next/navigation';
 
 const MessagesList = ({ messages }: { messages: Message[] }) => {
 	const [showIconInUserMessage, setShowIconInUserMessage] = useState(false);
 	const [showFeedbackMessage, setShowFeedbackMessage] = useState(false);
+	const actualPath = usePathname();
 
 	return messages?.map((item) => {
 		let parseItem: any = {
@@ -35,7 +37,9 @@ const MessagesList = ({ messages }: { messages: Message[] }) => {
 		return (
 			<div className='w-full justify-center' key={`${item.id}-${nanoid()}`}>
 				<div className={cn(['whitespace-pre-wrap flex justify-center'])}>
-					<div className='w-full md:w-[820px] md:max-w-[91%] bg-inherit'>
+					<div
+						className={`w-full md:max-w-[91%] bg-inherit ${actualPath === '/' && 'md:w-[820px]'}`}
+					>
 						<div className='flex py-3 px-5'>
 							<div>
 								<Avatar author={item.role} />
@@ -50,7 +54,9 @@ const MessagesList = ({ messages }: { messages: Message[] }) => {
 								/* ASSISTANT MESSAGE */
 
 								<div
-									className='flex flex-col w-full md:w-[820px] md:max-w-[91%]'
+									className={`flex flex-col w-full md:max-w-[91%] ${
+										actualPath === '/' && 'md:w-[820px]'
+									}`}
 									onMouseEnter={() => setShowFeedbackMessage(true)}
 									onMouseLeave={() => setShowFeedbackMessage(false)}
 								>
@@ -70,7 +76,7 @@ const MessagesList = ({ messages }: { messages: Message[] }) => {
 							) : (
 								/* USER MESSAGE */
 								<div
-									className='flex-1 w-full  md:w-[820px] md:max-w-[91%]'
+									className={`flex-1 w-full md:max-w-[91%] ${actualPath === '/' && 'md:w-[820px]'}`}
 									onMouseEnter={() => setShowIconInUserMessage(true)}
 									onMouseLeave={() => setShowIconInUserMessage(false)}
 								>
