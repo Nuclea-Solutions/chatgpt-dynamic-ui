@@ -102,7 +102,7 @@ const page = () => {
 						} overflow-y-auto flex flex-col py-8 px-2 justify-between h-full`}
 						style={windowWidth > 768 ? { height: 'calc(100% - 58px)' } : {}}
 					>
-						<div className='h-full overflow-scroll'>
+						<div className='h-full overflow-auto'>
 							{!configurationMessages?.length ? (
 								<div className='flex gap-1'>
 									<div>
@@ -120,7 +120,7 @@ const page = () => {
 									</div>
 								</div>
 							) : (
-								<div>
+								<div className='overflow-auto'>
 									<MessagesList messages={configurationMessages} />
 								</div>
 							)}
@@ -273,7 +273,7 @@ const page = () => {
 								<HiOutlineCube size={50} />
 							</div>
 						) : (
-							<div className='h-full overflow-scroll'>
+							<div className='h-full overflow-auto'>
 								<MessagesList messages={messages} />
 							</div>
 						)}

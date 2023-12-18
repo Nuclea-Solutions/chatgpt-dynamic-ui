@@ -2,6 +2,8 @@ import { useChatGptVersion } from '../../store/useChatGptVersion';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import React, { useState } from 'react';
 import Link from 'next/link';
+import useMessagesStore from '../../store/useMessagesStore';
+import { useshareLinkToChat } from '@/store/useLinkToChatComponent';
 
 const NavbarComponent = ({
 	isNewChat,
@@ -20,9 +22,13 @@ const NavbarComponent = ({
 	const setPrivateVersion = useChatGptVersion((state) => state.setPrivateVersion);
 	const publicVersion = useChatGptVersion((state) => state.publicVersion);
 
+	const handleOpenShareLinkToChat = useshareLinkToChat((state) => state.setOpenShareLinkToChat);
+
+	const messages = useMessagesStore((state) => state.messages);
+
 	return (
 		<div
-			className={`z-10 flex min-h-[60px] justify-between  items-center gap-3 py-3 px-2 bg-white dark:border-gray-900/50 dark:bg-gray-700`}
+			className={`z-10 flex min-h-[60px] justify-between  items-center gap-3 py-3 px-2 bg-white/90 dark:border-gray-900/50 dark:bg-gray-700`}
 		>
 			<div className='flex items-center gap-3'>
 				<button
@@ -73,10 +79,11 @@ const NavbarComponent = ({
 					</svg>
 				</div>
 			</div>
-			<div className={isNewChat && 'hidden'}>
+			<div className={`${messages.length < 1 && 'hidden'}`}>
 				<button
 					aria-label='Share chat'
 					className='flex p-2 items-center gap-3 transition-colors border rounded-[8px] border-gray-300 duration-200 text-black dark:text-white cursor-pointer text-sm bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700'
+					onClick={handleOpenShareLinkToChat}
 				>
 					<svg
 						width='18'
@@ -198,16 +205,6 @@ const NavbarComponent = ({
 					</div>
 					<FaArrowRightLong />
 				</div>
-
-				<Link href={'/custom_gpt'} className={`${publicVersion && 'hidden'}`}>
-					<hr />
-					<div className='rounded-[8px] py-2 px-3 m-1 flex items-center'>
-						<div className='grow'>
-							<span>Custom GPT</span>
-						</div>
-						<FaArrowRightLong />
-					</div>
-				</Link>
 			</div>
 		</div>
 	);
