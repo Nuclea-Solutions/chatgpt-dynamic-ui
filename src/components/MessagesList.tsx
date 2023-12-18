@@ -18,22 +18,6 @@ const MessagesList = ({ messages }: { messages: Message[] }) => {
 	const actualPath = usePathname();
 
 	return messages?.map((item) => {
-		let parseItem: any = {
-			output: { message: { content: item.content } }
-		};
-		try {
-			parseItem =
-				messages.length > 1 && item.role === 'assistant' && item.content.length > 2
-					? JSON.parse(item.content)
-					: { output: { message: { content: item.content } } };
-		} catch (error) {
-			parseItem = { output: { message: { content: item.content } } };
-		}
-		const parseItemOutput = parseItem?.output ?? {
-			output: { message: parseItem?.messages ?? { content: item.content } }
-		};
-		const parseItemMessage = parseItem?.message ?? { message: { content: item.content } };
-
 		return (
 			<div className='w-full justify-center' key={`${item.id}-${nanoid()}`}>
 				<div className={cn(['whitespace-pre-wrap flex justify-center'])}>
@@ -42,15 +26,15 @@ const MessagesList = ({ messages }: { messages: Message[] }) => {
 					>
 						<div className='flex py-3 px-5'>
 							<div>
-								<Avatar author={item.role} />
+								<Avatar author={item.author.role} />
 							</div>
 
 							{/* ASSISTANT MESSAGE */}
 							{item.id?.includes('error') ? (
 								<div className='w-[75%] md:max-w-[80%]'>
-									<ErrorMessage content={parseItemOutput?.message?.content ?? ''} />
+									<ErrorMessage content={item?.content ?? ''} />
 								</div>
-							) : item.role === MessageRole.ASSISTANT ? (
+							) : item.author.role === MessageRole.ASSISTANT ? (
 								/* ASSISTANT MESSAGE */
 
 								<div
@@ -63,13 +47,7 @@ const MessagesList = ({ messages }: { messages: Message[] }) => {
 									<p className='font-semibold text-sm mb-1'>Gú</p>
 									<AssistantMessage
 										contentId={item.id ?? nanoid()}
-										content={
-											parseItem && Object.keys(parseItem)?.includes('output')
-												? parseItemOutput?.message?.content ?? ''
-												: parseItemMessage
-												? parseItemMessage?.content
-												: 'no readable message'
-										}
+										content={item.content}
 										showFeedbackMessage={showFeedbackMessage}
 									/>
 								</div>

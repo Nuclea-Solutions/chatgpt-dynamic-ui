@@ -1,6 +1,9 @@
 'use client';
-import SidebarComponent from './Sidebar';
+import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
+import SidebarComponent from './Sidebar';
+import useConversationsStore from '@/store/useConversationsStore';
+import axios from 'axios';
 
 export default function LayoutSidebar({
 	openSidebar,
@@ -12,14 +15,30 @@ export default function LayoutSidebar({
 	handleToggleSidebar: () => void;
 }) {
 	const actualPath = usePathname();
+	const [setConversationList, conversationList] = useConversationsStore((state) => [
+		state.setConversationList,
+		state.conversationList
+	]);
+
+	const getConversations = async () => {
+		try {
+			const response = await axios.get('/api/conversations');
+			setConversationList([...conversationList, ...response.data.conversations]);
+		} catch (err) {
+			console.log({ err });
+		}
+	};
+
+	useEffect(() => {
+		getConversations();
+	}, []);
+
 	if (actualPath === '/custom_gpt') {
 		return null;
 	}
-
 	return (
 		<SidebarComponent
 			userName='Anónimo'
-			conversations={[]}
 			photoUrl='https://www.pngkit.com/png/full/281-2812821_user-account-management-logo-user-icon-png.png'
 			openSidebar={openSidebar}
 			handleOpenSidebar={handleOpenSidebar}

@@ -1,3 +1,5 @@
+import { MessageRole } from './message';
+
 type ConversationList = Conversation[];
 
 interface Conversation {
@@ -11,13 +13,14 @@ interface Conversation {
 	conversation_id: string;
 	conversation_template_id: string | null;
 	id: string;
+	_id: string;
 }
 
 interface MessageModule {
 	id: string;
 	message: Message | null;
-	parent: string | null;
-	children: string[];
+	parent?: string | null;
+	children?: string[];
 }
 
 interface Mapping {
@@ -25,24 +28,25 @@ interface Mapping {
 }
 
 interface Message {
-	id: string;
+	id?: string;
 	author: Author;
-	create_time: number | null;
-	update_time: any;
+	// role: MessageRole;
+	create_time?: number | null;
+	update_time?: any;
 	content: Content;
-	status: string;
-	end_turn: boolean | null;
-	weight: number;
-	metadata: Metadata;
-	recipient: string;
+	status?: string;
+	end_turn?: boolean | null;
+	weight?: number;
+	metadata?: Metadata;
+	recipient?: string;
 	// output_component?: string | null;
 	// input_component?: string | null;
 }
 
 interface Author {
-	role: string;
-	name: any;
-	metadata: Metadata;
+	role: MessageRole;
+	name?: any;
+	metadata?: Metadata;
 }
 
 interface Metadata {}

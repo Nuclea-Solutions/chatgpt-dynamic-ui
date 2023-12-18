@@ -10,7 +10,8 @@
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build",
 		"chromatic": "npx chromatic",
-		"prettier-lint": "prettier --check '**/*.{ts,tsx}' --config .prettierrc"
+		"prettier-lint": "prettier --check '**/*.{ts,tsx}' --config .prettierrc",
+		"db:init": "node scripts/init-data.js"
 	},
 	"dependencies": {
 		"@emotion/react": "^11.11.1",
@@ -26,6 +27,8 @@
 		"encoding": "^0.1.13",
 		"framer-motion": "^10.16.4",
 		"immer": "^10.0.3",
+		"mongodb": "^6.3.0",
+		"mongoose": "^8.0.3",
 		"nanoid": "^4.0.2",
 		"next": "13.4.4-canary.11",
 		"openai": "^4.20.1",
