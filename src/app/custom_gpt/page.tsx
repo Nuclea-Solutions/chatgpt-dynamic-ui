@@ -3,6 +3,9 @@
 import React, { useState, useEffect } from 'react';
 import { HiOutlineCube } from 'react-icons/hi';
 import { PiArrowCounterClockwiseFill } from 'react-icons/pi';
+import { MdArrowBackIos } from 'react-icons/md';
+import { LuSettings } from 'react-icons/lu';
+import { RiShareBoxFill } from 'react-icons/ri';
 // components
 import InputWidthButtonComponent from '@/stories/input_with_button/InputWidthButton.component';
 import ToggleCustomGPT from '@/stories/second_phase/toggle_customGPT/ToggleCustomGPT.component';
@@ -22,7 +25,7 @@ interface CheckboxState {
 }
 
 const page = () => {
-	const [isActive, setIsActive] = useState('create');
+	const [isActive, setIsActive] = useState('newAction');
 	const [
 		name,
 		description,
@@ -88,11 +91,11 @@ const page = () => {
 				className={`flex flex-col md:flex-row z-10`}
 				style={{ height: 'calc(100vh - 64px)' }}
 			>
-				<div className='md:hidden'>
+				<div className={` ${isActive === 'newAction' ? 'hidden' : 'md:hidden'} `}>
 					<ToggleCustomGPT handleActiveView={handleActiveView} isActive={isActive} />
 				</div>
-				<div className={`md:block flex-1 md:border ${isActive === 'preview' && 'hidden'}`}>
-					<div className='hidden md:block'>
+				<div className={`md:block flex-1 md:border `}>
+					<div className={` ${isActive === 'newAction' ? 'hidden' : 'hidden md:block'} `}>
 						<ToggleCustomGPT handleActiveView={handleActiveView} isActive={isActive} />
 					</div>
 
@@ -241,9 +244,76 @@ const page = () => {
 
 							<div className='flex flex-col gap-1'>
 								<h4>Actions</h4>
-								<div className='px-4 py-2 rounded-[8px] border w-fit hover:bg-gray-200'>
+								<div
+									className='px-4 py-2 rounded-[8px] border w-fit hover:bg-gray-200'
+									onClick={() => handleActiveView('newAction')}
+								>
 									Create new action
 								</div>
+							</div>
+						</form>
+					</div>
+
+					<div className={`${isActive !== 'newAction' && 'hidden'}`}>
+						<div className='flex px-4 pt-6'>
+							<div className='border rounded-[8px] h-fit px-3 py-2 flex justify-center'>
+								<MdArrowBackIos />
+							</div>
+							<div className='flex flex-col items-center w-full'>
+								<h2 className='font-bold'>Add actions</h2>
+								<p className='text-gray-400 text-sm'>
+									Let your GPT information or take actions outside of ChatGPT.
+								</p>
+								<p className='text-gray-400 text-sm'>Learn more.</p>
+							</div>
+						</div>
+						<form className='px-4 pt-6 flex flex-col gap-6'>
+							<div className='flex flex-col gap-1'>
+								<label htmlFor='authentication'>Authentication</label>
+								<div className='flex'>
+									<input
+										type='text'
+										name='authentication'
+										id=''
+										placeholder='None'
+										className='p-2 border rounded-l-[8px] w-full'
+									/>
+									<div className='py-2 px-3 flex items-center justify-center border border-l-0 rounded-r-[8px] '>
+										<LuSettings />
+									</div>
+								</div>
+							</div>
+							<div className='flex flex-col gap-1'>
+								<div className='flex justify-between'>
+									<p>Schema</p>
+									<div className='flex gap-2'>
+										<div className='border rounded-[8px] py-1 px-2 '>Import from URL</div>
+										<div className='border rounded-[8px] py-1 px-2 '>Examples</div>
+									</div>
+								</div>
+								<div className='relative flex flex-col gap-2'>
+									<textarea
+										name='schema'
+										id=''
+										cols={30}
+										rows={15}
+										className='w-full outline-none border rounded-[8px] p-1 text-sm'
+										placeholder='Enter your OpenAPI schema here'
+									></textarea>
+									<div className='border rounded-[8px] py-1 px-2 font-bold text-sm w-fit flex items-center gap-2 absolute bottom-2 right-2 hover:cursor-pointer hover:bg-gray-100'>
+										Get help from ActionsGPT <RiShareBoxFill size={14} />
+									</div>
+								</div>
+							</div>
+							<div>
+								<label htmlFor='policy'>Privacy policy</label>
+								<input
+									type='text'
+									name='policy'
+									id=''
+									placeholder='https://api.example-weather-app.com/privacy'
+									className='p-2 border rounded-[8px] w-full'
+								/>
 							</div>
 						</form>
 					</div>
