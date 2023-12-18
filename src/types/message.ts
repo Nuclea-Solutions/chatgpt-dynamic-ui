@@ -8,6 +8,6 @@ export enum MessageRole {
 export interface Message {
 	content: any;
 	id?: string;
-	role: MessageRole;
+	author: { role: MessageRole };
 	tool_calls?: { name: string; arguments: string };
 }

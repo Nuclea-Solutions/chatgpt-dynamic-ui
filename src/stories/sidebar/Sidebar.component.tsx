@@ -3,6 +3,7 @@ import './Sidebar.styles.css';
 import SidebarConversationComponent from './components/sidebar_conversation/SidebarConversation.component';
 import { Image } from '@nextui-org/react';
 import { AssistantAvatar } from '../../components/Icons';
+import { Conversation } from '@/types/conversation';
 
 // interface ConversationProps {
 // 	id: number;

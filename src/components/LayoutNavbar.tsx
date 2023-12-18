@@ -29,7 +29,7 @@ const LayoutNavbar = ({
 			/>
 			<NavbarComponent
 				isNewChat={!params.id}
-				hide={messages.every((item) => item.role === 'system')}
+				hide={messages.every((item) => item.author.role === 'system')}
 				openSidebar={openSidebar}
 			/>
 		</div>
