@@ -1,4 +1,5 @@
 // libraries
+'use client';
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 // components
@@ -7,6 +8,7 @@ import SidebarConversationComponent from '@/stories/sidebar/components/sidebar_c
 import { AssistantAvatar } from './Icons';
 // store
 import useMessagesStore from '@/store/useMessagesStore';
+import { PiCirclesFour } from 'react-icons/pi';
 import { useChatGptVersion } from '@/store/useChatGptVersion';
 import useConversationsStore from '@/store/useConversationsStore';
 // styles and utils
@@ -123,7 +125,7 @@ const SidebarComponent = ({
 			} ${publicVersion && 'hidden'}`}
 		>
 			<div
-				className={`flex w-full min-h-[44px] gap-3 p-2 items-center ${
+				className={`flex w-full min-h-[44px] gap-3 px-2 items-center ${
 					openSidebar ? 'visible' : 'w-0 invisible'
 				} `}
 			>
@@ -162,30 +164,32 @@ const SidebarComponent = ({
 					</div>
 				</div>
 			</div>
+
 			<div
-				className={`flex w-full min-h-[44px] gap-3 p-2 items-center ${
+				className={`flex w-full min-h-[44px] gap-3 px-2 items-center ${
 					openSidebar ? 'visible' : 'w-0 invisible'
 				} `}
 			>
-				<div className='flex justify-between px-2 gap-3 min-h-[44px] py-1 items-center transition-colors duration-200 text-white cursor-pointer rounded-[8px] hover:bg-gray-500/30 h-11  flex-grow overflow-hidden'>
+				<div className='flex justify-between px-2 gap-3 min-h-[44px] items-center transition-colors duration-200 text-white cursor-pointer rounded-[8px] hover:bg-gray-500/30 h-11  flex-grow overflow-hidden'>
 					<div className='flex items-center gap-2'>
 						<div
-							className={`rounded-full w-[28px] h-[28px] flex items-center justify-center p-1 bg-white text-black`}
+							className={`rounded-full w-[28px] h-[28px] flex items-center justify-center p-1  text-gray-200`}
 						>
-							<AssistantAvatar />
+							<PiCirclesFour size={32} />
 						</div>
 						<button
 							onClick={() => {
 								setMessages([]);
-								router.push('/custom_gpt');
+								router.push('/gpts');
 							}}
-							className='truncate text-sm'
+							className='text-sm'
 						>
-							Custom GPT
+							Explore
 						</button>
 					</div>
 				</div>
 			</div>
+			{/* l */}
 			<div className='flex-1 overflow-y-auto border-white/20 py-2 pl-2' id='content_sidebar'>
 				<div
 					className={`px-3 h-9 pb-2 pt-3 text-ellipsis overflow-hidden break-all ${
@@ -312,6 +316,7 @@ const SidebarComponent = ({
 					</div>
 				))}
 			</div>
+
 			<div
 				className={`flex flex-col cursor-pointer px-3 py-1 ${
 					openSidebar ? 'visible' : 'w-0 invisible'
@@ -346,6 +351,7 @@ const SidebarComponent = ({
 						</span>
 					</span>
 				</div>
+
 				<div
 					onClick={() => setDropDown((prev) => !prev)}
 					className={`flex items-center gap-3  w-full rounded-[8px] text-sm p-1 hover:bg-[#202123] text-white relative ${
@@ -366,6 +372,56 @@ const SidebarComponent = ({
 								: 'hidden'
 						}`}
 					>
+						<div className='flex gap-3 p-3 min-h-[44px]  hover:bg-gray-700/50'>
+							<svg
+								width='18'
+								height='18'
+								viewBox='0 0 24 24'
+								fill='none'
+								xmlns='http://www.w3.org/2000/svg'
+								className='icon-md'
+							>
+								<path
+									d='M11.4284 2.39822C11.7719 2.15891 12.2281 2.15891 12.5716 2.39822L15.0347 4.11412C15.1532 4.19667 15.2882 4.25257 15.4303 4.27799L18.3853 4.80632C18.7974 4.88 19.12 5.2026 19.1937 5.61471L19.722 8.56969C19.7474 8.71185 19.8033 8.84682 19.8859 8.96531L21.6018 11.4284C21.8411 11.7719 21.8411 12.2281 21.6018 12.5716L19.8859 15.0347C19.8033 15.1532 19.7474 15.2882 19.722 15.4303L19.1937 18.3853C19.12 18.7974 18.7974 19.12 18.3853 19.1937L15.4303 19.722C15.2881 19.7474 15.1532 19.8033 15.0347 19.8859L12.5716 21.6018C12.2281 21.8411 11.7719 21.8411 11.4284 21.6018L8.96531 19.8859C8.84682 19.8033 8.71185 19.7474 8.56969 19.722L5.61471 19.1937C5.2026 19.12 4.88 18.7974 4.80632 18.3853L4.27799 15.4303C4.25257 15.2881 4.19667 15.1532 4.11412 15.0347L2.39822 12.5716C2.15891 12.2281 2.15891 11.7719 2.39822 11.4284L4.11412 8.96531C4.19667 8.84682 4.25257 8.71185 4.27799 8.56969L4.80632 5.61471C4.88 5.2026 5.2026 4.88 5.61471 4.80632L8.56969 4.27799C8.71185 4.25257 8.84682 4.19667 8.96531 4.11412L11.4284 2.39822Z'
+									stroke='currentColor'
+									strokeWidth='2'
+								></path>
+								<path
+									d='M11.5876 8.10179C11.7862 7.81201 12.2138 7.81201 12.4124 8.10179L13.4865 9.66899C13.5515 9.76386 13.6473 9.83341 13.7576 9.86593L15.58 10.4031C15.9169 10.5025 16.0491 10.9092 15.8349 11.1876L14.6763 12.6934C14.6061 12.7846 14.5696 12.8971 14.5727 13.0121L14.625 14.9113C14.6346 15.2625 14.2886 15.5138 13.9576 15.3961L12.1675 14.7596C12.0592 14.721 11.9408 14.721 11.8325 14.7596L10.0424 15.3961C9.71135 15.5138 9.36537 15.2625 9.37502 14.9113L9.42726 13.0121C9.43042 12.8971 9.39385 12.7846 9.32372 12.6934L8.16514 11.1876C7.9509 10.9092 8.08306 10.5025 8.42003 10.4031L10.2424 9.86593C10.3527 9.83341 10.4485 9.76386 10.5135 9.66899L11.5876 8.10179Z'
+									fill='currentColor'
+								></path>
+							</svg>
+							<span>My plan</span>
+						</div>
+						<div className='flex gap-3 p-3 min-h-[44px]  hover:bg-gray-700/50'>
+							<svg
+								width='18'
+								height='18'
+								viewBox='0 0 24 24'
+								fill='none'
+								xmlns='http://www.w3.org/2000/svg'
+								className='icon-md'
+							>
+								<path
+									fillRule='evenodd'
+									clipRule='evenodd'
+									d='M12 4C10.3431 4 9 5.34315 9 7C9 8.65685 10.3431 10 12 10C13.6569 10 15 8.65685 15 7C15 5.34315 13.6569 4 12 4ZM7 7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7C17 9.76142 14.7614 12 12 12C9.23858 12 7 9.76142 7 7Z'
+									fill='currentColor'
+								></path>
+								<path
+									d='M4.5 21C4.5 17.7804 6.82883 15.0685 10 14.2516'
+									stroke='currentColor'
+									strokeWidth='2'
+									strokeLinecap='round'
+								></path>
+								<circle cx='15.625' cy='15.625' r='1.625' fill='currentColor'></circle>
+								<circle cx='20.125' cy='15.625' r='1.625' fill='currentColor'></circle>
+								<circle cx='20.125' cy='20.125' r='1.625' fill='currentColor'></circle>
+								<circle cx='15.625' cy='20.125' r='1.625' fill='currentColor'></circle>
+							</svg>
+
+							<span>My GPTs</span>
+						</div>
 						<div className='flex gap-3 p-3 min-h-[44px]  hover:bg-gray-700/50'>
 							<svg
 								width='18'
@@ -407,7 +463,7 @@ const SidebarComponent = ({
 							<span>Settings</span>
 						</div>
 						<div className='my-1.5 h-px bg-gray-700' role='none'></div>
-						<div className='flex gap-3 p-3 min-h-[44px]  hover:bg-gray-700/50'>
+						<div className='flex gap-3 p-3 min-h-[44px]  hover:bg-gray-700/50 items-center'>
 							<svg
 								stroke='currentColor'
 								fill='none'
@@ -416,8 +472,8 @@ const SidebarComponent = ({
 								strokeLinecap='round'
 								strokeLinejoin='round'
 								className='icon-sm'
-								height='1em'
-								width='1em'
+								height='1.2em'
+								width='1.2em'
 								xmlns='http://www.w3.org/2000/svg'
 							>
 								<path d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4'></path>

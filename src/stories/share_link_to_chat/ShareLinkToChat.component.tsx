@@ -1,6 +1,8 @@
+import { useshareLinkToChat } from '@/store/useLinkToChatComponent';
 import React from 'react';
 
 const ShareLinkToChatComponent = () => {
+	const handleCloseShareLinkToChat = useshareLinkToChat((state) => state.setCloseShareLinkToChat);
 	return (
 		<div className='relative col-auto col-start-2 row-auto row-start-2 w-full rounded-[8px] text-left shadow-xl transition-all left-1/2 -translate-x-1/2 bg-white dark:bg-gray-900 max-w-[550px]'>
 			<div className='px-4 pb-4 pt-5 sm:p-6 flex items-center justify-between border-b border-black/10 dark:border-white/10'>
@@ -16,7 +18,10 @@ const ShareLinkToChatComponent = () => {
 						</div>
 					</div>
 				</div>
-				<button className='text-gray-500 transition hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'>
+				<button
+					className='text-gray-500 transition hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
+					onClick={handleCloseShareLinkToChat}
+				>
 					<svg
 						stroke='currentColor'
 						fill='none'

@@ -8,6 +8,8 @@ import InputWidthButtonComponent from '../input_with_button/InputWidthButton.com
 import RegenerateButtonComponent from '../regenerate_button/RegenerateButton.component';
 import HelpButtonComponent from '../help_button/HelpButton.component';
 import DefaultOptionCardComponent from '../default_option_card/DefaultOptionCard.component';
+import { Conversation } from '@/types/conversation';
+import { MessageRole } from '@/types/message';
 
 const conversations: Conversation[] = [
 	{
@@ -20,7 +22,7 @@ const conversations: Conversation[] = [
 				message: {
 					id: '785d9878-1a15-4272-99b1-96dd3328331c',
 					author: {
-						role: 'system',
+						role: MessageRole.SYSTEM,
 						name: null,
 						metadata: {}
 					},
@@ -44,7 +46,7 @@ const conversations: Conversation[] = [
 				message: {
 					id: 'aaa2f08c-0a20-47c5-bd0b-8eaff58074b5',
 					author: {
-						role: 'user',
+						role: MessageRole.USER,
 						name: null,
 						metadata: {}
 					},
@@ -71,7 +73,7 @@ const conversations: Conversation[] = [
 				message: {
 					id: '0352beea-a37e-47ee-9682-9b1a73a93c2a',
 					author: {
-						role: 'assistant',
+						role: MessageRole.ASSISTANT,
 						name: null,
 						metadata: {}
 					},
@@ -105,7 +107,7 @@ const conversations: Conversation[] = [
 				message: {
 					id: '32c24d6a-0047-4275-be7f-c2c385a2b0ac',
 					author: {
-						role: 'tool',
+						role: MessageRole.TOOL,
 						name: 'theresanaiforthat.searchQuery',
 						metadata: {}
 					},
@@ -142,7 +144,7 @@ const conversations: Conversation[] = [
 				message: {
 					id: 'e321b30e-89e5-47c2-97d8-28262cf8660d',
 					author: {
-						role: 'assistant',
+						role: MessageRole.ASSISTANT,
 						name: null,
 						metadata: {}
 					},
@@ -178,7 +180,7 @@ const conversations: Conversation[] = [
 				message: {
 					id: '936603c5-0baf-45ec-bead-1ef122b9c358',
 					author: {
-						role: 'tool',
+						role: MessageRole.TOOL,
 						name: 'diagrams_show_me.get__MermaidRoute',
 						metadata: {}
 					},
@@ -215,7 +217,7 @@ const conversations: Conversation[] = [
 				message: {
 					id: 'c28c8946-e27e-49ef-b79f-3f519fc0ae57',
 					author: {
-						role: 'assistant',
+						role: MessageRole.ASSISTANT,
 						name: null,
 						metadata: {}
 					},
@@ -255,7 +257,8 @@ const conversations: Conversation[] = [
 		],
 		conversation_id: '0968319c-bdee-4d00-9ddc-d1b87e500a41',
 		conversation_template_id: null,
-		id: '0968319c-bdee-4d00-9ddc-d1b87e500a41'
+		id: '0968319c-bdee-4d00-9ddc-d1b87e500a41',
+		_id: '0968319c-bdee-4d00-9ddc-d1b87e500a41'
 	},
 	{
 		title: 'Historia de la IA',
@@ -267,7 +270,7 @@ const conversations: Conversation[] = [
 				message: {
 					id: '4745f02e-f929-4ad5-99ba-83d69147cec5',
 					author: {
-						role: 'system',
+						role: MessageRole.SYSTEM,
 						name: null,
 						metadata: {}
 					},
@@ -291,7 +294,7 @@ const conversations: Conversation[] = [
 				message: {
 					id: 'aaa2f917-9a78-4a5e-bb73-caa00c644762',
 					author: {
-						role: 'user',
+						role: MessageRole.USER,
 						name: null,
 						metadata: {}
 					},
@@ -318,7 +321,7 @@ const conversations: Conversation[] = [
 				message: {
 					id: '60d74a4b-0d84-4459-b9fb-e9848ab2aeab',
 					author: {
-						role: 'assistant',
+						role: MessageRole.ASSISTANT,
 						name: null,
 						metadata: {}
 					},
@@ -352,7 +355,7 @@ const conversations: Conversation[] = [
 				message: {
 					id: '398f5a9a-fb2b-4b27-8b7a-657f36e94b9f',
 					author: {
-						role: 'tool',
+						role: MessageRole.TOOL,
 						name: 'diagrams_show_me.get_DiagramGuidelinesRoute',
 						metadata: {}
 					},
@@ -389,7 +392,7 @@ const conversations: Conversation[] = [
 				message: {
 					id: '2f3d9f5f-ab5f-41c8-9563-378584ac08b3',
 					author: {
-						role: 'assistant',
+						role: MessageRole.ASSISTANT,
 						name: null,
 						metadata: {}
 					},
@@ -425,7 +428,7 @@ const conversations: Conversation[] = [
 				message: {
 					id: 'c8d8fcf5-3237-4299-bc99-7348019f2563',
 					author: {
-						role: 'tool',
+						role: MessageRole.TOOL,
 						name: 'diagrams_show_me.get__MermaidRoute',
 						metadata: {}
 					},
@@ -462,7 +465,7 @@ const conversations: Conversation[] = [
 				message: {
 					id: '6774176b-5519-4be1-b9dd-128b29d6acae',
 					author: {
-						role: 'assistant',
+						role: MessageRole.ASSISTANT,
 						name: null,
 						metadata: {}
 					},
@@ -499,7 +502,8 @@ const conversations: Conversation[] = [
 		plugin_ids: ['plugin-5ce50344-30ff-4d83-9dd3-f8265abc2f0f'],
 		conversation_id: '34e430e5-9b8f-4188-9bac-537844290bb9',
 		conversation_template_id: null,
-		id: '34e430e5-9b8f-4188-9bac-537844290bb9'
+		id: '34e430e5-9b8f-4188-9bac-537844290bb9',
+		_id: '34e430e5-9b8f-4188-9bac-537844290bb9'
 	}
 ];
 
