@@ -21,7 +21,7 @@ const NavbarCustomGPTComponent = () => {
 	};
 
 	return (
-		<nav className='p-2 h-16 border z-30'>
+		<nav className='p-2 h-16 border z-30 dark:bg-[#444654] dark:text-white'>
 			<div className='flex justify-between items-center'>
 				<div className='flex items-center gap-3'>
 					<div onClick={router.back} className='hover:cursor-pointer'>
@@ -43,11 +43,11 @@ const NavbarCustomGPTComponent = () => {
 				<div className='flex gap-1'>
 					<div className='relative'>
 						<button
-							className='flex items-center gap-2 px-2 py-1 rounded-[8px] text-white border h-full'
+							className='flex items-center gap-2 px-2 py-1 rounded-[8px] text-black dark:text-white border h-full'
 							onClick={handleOpenMenu}
 						>
 							{' '}
-							<HiOutlineDotsHorizontal size={18} color='#000' />
+							<HiOutlineDotsHorizontal size={18} />
 						</button>
 						<div className={`absolute right-0 top-10 z-50 ${!openMenu && 'hidden'}`}>
 							<DeleteMenuComponent />
