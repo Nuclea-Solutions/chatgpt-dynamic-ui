@@ -9,7 +9,7 @@ import { RiShareBoxFill } from 'react-icons/ri';
 import { IoChevronDownSharp } from 'react-icons/io5';
 import { AiOutlineCheck } from 'react-icons/ai';
 import { FiTrash2 } from 'react-icons/fi';
-import { v4 as uuidv4 } from 'uuid';
+
 // components
 import InputWidthButtonComponent from '@/stories/input_with_button/InputWidthButton.component';
 import ToggleCustomGPT from '@/stories/second_phase/toggle_customGPT/ToggleCustomGPT.component';
@@ -115,13 +115,15 @@ const page = () => {
 	const [importFromUrl, setImportFromUrl] = useState(false);
 	const [schemaValue, setSchemaValue] = useState('');
 
-	const [inputs, setInputs] = useState([{ id: uuidv4(), value: '' }]);
+	// const [inputs, setInputs] = useState([{ id: uuidv4(), value: '' }]);
+	const [inputs, setInputs] = useState([{ id: 'input_1', value: '' }]);
 
 	const handleInputChanges = (id: any, value: any) => {
 		const newInputs = inputs.map((input) => (input.id === id ? { ...input, value } : input));
 
 		if (id === inputs[inputs.length - 1].id) {
-			newInputs.push({ id: uuidv4(), value: '' });
+			newInputs.push({ id: `input_${inputs.length + 1}`, value: '' });
+			// newInputs.push({ id: uuidv4(), value: '' });
 		}
 
 		setInputs(newInputs);
@@ -301,7 +303,7 @@ const page = () => {
 											className='p-2 border rounded-l-[8px] w-full bg-inherit text-gray-500 dark:border-gray-500'
 										/>
 										<div
-											className='inline py-2 px-3 border rounded-r-[8px] border-l-0  dark:border-gray-500'
+											className='inline py-2 px-3 border rounded-r-[8px] border-l-0  dark:border-gray-500 cursor-pointer'
 											onClick={() => handleInputDelete(input.id)}
 										>
 											X
@@ -364,7 +366,7 @@ const page = () => {
 						</form>
 					</div>
 
-					<div className={`${isActive !== 'newAction' && 'hidden'} overflow-auto`}>
+					<div className={`${isActive !== 'newAction' && 'hidden'} overflow-auto h-full`}>
 						<div className='flex px-4 pt-6 '>
 							<div
 								className='border rounded-[8px] h-fit px-3 py-3 flex justify-center cursor-pointer dark:border-gray-500'
@@ -388,7 +390,7 @@ const page = () => {
 								<FiTrash2 size={16} />
 							</div>
 						</div>
-						<form className='px-6 pt-6 flex flex-col gap-6'>
+						<form className='px-6 pt-6 flex flex-col gap-6 pb-4'>
 							<div className='flex flex-col gap-1'>
 								<label htmlFor='authentication'>Authentication</label>
 								<div className='flex cursor-pointer' onClick={handleAuthTypeModalOpen}>
