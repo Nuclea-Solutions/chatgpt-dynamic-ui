@@ -4,12 +4,14 @@ const AuthModalComponent = ({
 	authenticationType = 'apikey',
 	authType = 'basic',
 	handleAuthenticationType,
-	handleAuthType
+	handleAuthType,
+	handleAuthTypeModalOpen
 }: {
 	authenticationType: string;
 	authType: string;
-	handleAuthenticationType: () => void;
-	handleAuthType: () => void;
+	handleAuthenticationType: (e: ChangeEvent<HTMLInputElement>) => void;
+	handleAuthType: (e: ChangeEvent<HTMLInputElement>) => void;
+	handleAuthTypeModalOpen: () => void;
 }) => {
 	// const [authenticationType, setAuthenticationType] = useState('none');
 	// const [authType, setAuthType] = useState('basic');
@@ -23,7 +25,7 @@ const AuthModalComponent = ({
 	// };
 
 	return (
-		<div className='flex flex-col bg-white dark:bg-[#202123] dark:text-white w-full min-w-[300px] max-w-[400px] rounded-xl border'>
+		<div className='flex flex-col bg-white dark:bg-[#202123] dark:text-white rounded-xl border w-[300px] md:w-[400px]'>
 			<div className='p-5 border-b-1 font-semibold'>Authentication</div>
 			<div>
 				<div className='p-5 flex flex-col gap-3'>
@@ -195,7 +197,10 @@ const AuthModalComponent = ({
 					)}
 
 					<div className=' flex justify-end gap-2'>
-						<button className='bg-gray-200 py-1 px-2 rounded-[6px] border border-white'>
+						<button
+							className='bg-gray-200 py-1 px-2 rounded-[6px] border border-white'
+							onClick={handleAuthTypeModalOpen}
+						>
 							Cancel
 						</button>
 						<button className='bg-gray-200 py-1 px-2 rounded-[6px] border border-white'>

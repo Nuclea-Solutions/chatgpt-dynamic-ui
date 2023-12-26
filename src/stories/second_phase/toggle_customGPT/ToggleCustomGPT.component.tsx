@@ -20,12 +20,14 @@ const ToggleCustomGPT = ({
 		<div
 			className={`flex flex-col justify-center w-full mt-2 px-2 md:px-0 sm:items-center md:p-0 overflow-hidden`}
 		>
-			<div className='flex gap-1 p-1 rounded-xl h-[50px] relative bg-gray-200 text-gray-600 dark:bg-gray-800 dark:text-white'>
+			<div className='flex gap-1 p-1 rounded-xl h-[50px] relative bg-gray-200 text-gray-600 dark:bg-[#545467] dark:text-white'>
 				<button
 					name='create'
 					onClick={toggle}
 					className={`${
-						isActive === 'create' ? 'border bg-white dark:bg-gray-700/50' : 'text-gray-400/90'
+						isActive === 'create'
+							? 'border dark:border-none bg-white dark:bg-[#353541]'
+							: 'text-gray-400/90'
 					}  rounded-xl w-full outline-none px-6`}
 				>
 					<div className='flex justify-center gap-2 '>
@@ -42,7 +44,9 @@ const ToggleCustomGPT = ({
 					name='configure'
 					onClick={toggle}
 					className={`${
-						isActive == 'configure' ? 'border bg-white dark:bg-gray-700/50' : 'text-gray-400/90'
+						isActive == 'configure'
+							? 'border dark:border-none bg-white dark:bg-[#353541]'
+							: 'text-gray-400/90'
 					} px-6 rounded-xl w-full outline-none`}
 				>
 					<div className='flex justify-center gap-2 items-center'>
