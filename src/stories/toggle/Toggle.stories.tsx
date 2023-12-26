@@ -23,40 +23,40 @@ export default {
 				<>
 					<Title />
 					<Subtitle>
-						Tabla de contenido <hr className='my-4' />
+						Index <hr className='my-4' />
 					</Subtitle>
 					<ul>
-						<li>Descripcion general</li>
-						<li>Componente</li>
+						<li>General description</li>
+						<li>Selected component</li>
 						<li>Controls</li>
-						<li>Paleta de colores</li>
-						<li>Iconos</li>
+						<li>Colors palette</li>
+						<li>Icons</li>
 					</ul>
 					<Subtitle>
-						Descripcion general
+						General description
 						<hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						Se puede crear este componente utilizando un componente contenedor padre "div", dentro
-						del componente padre se agregan dos contenedores para las opciones gpt-3.5 y gpt-4 que
-						contienen los iconos con el texto, los contenedores con las opciones gpt-3.5 y gpt-4
-						estan condicionados con un estilo que simula el componente seleccionado.
+						Can this component be created using a parent container component 'div'? Within the
+						parent component, two containers are added for the GPT-3.5 and GPT-4 options containing
+						icons with text. These containers for the GPT-3.5 and GPT-4 options are conditioned with
+						a style that simulates the selected component
 					</Description>
 					<Canvas>
 						<Story of={Base} />
 					</Canvas>
 
 					<Subtitle>
-						Componente <hr className='my-4' />
+						Component <hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						El componente de Toggle recibe un parametro "isNewChat" que es tipo booleano y su
-						funcion es esconder el componente en caso de que el estado sea falso, ya que este
-						componente solo se mostrara en caso de que el usuario seleccione un nuevo chat. Al hacer
-						hover sobre el componente mostrara un modal bajo el componente y el contenido dependera
-						si el hover se hace sobre el componente gpt-3.5 o gpt-4.
+						The Toggle component receives a parameter 'isNewChat' of type boolean. Its purpose is to
+						hide the component when the state is false, as this component will only be shown when
+						the user selects a new chat. Upon hovering over the component, it will display a modal
+						beneath it, and the content will depend on whether the hover is over the GPT-3.5 or
+						GPT-4 component.
 					</Description>
 
 					<Canvas>
@@ -64,17 +64,17 @@ export default {
 					</Canvas>
 
 					<Subtitle>
-						Controles
+						Controls
 						<hr className='my-4' />
 					</Subtitle>
 					<Description>
-						En el apartado de controles nos muestra las variables que recibe el componente para su
-						personalizacion
+						In the 'Controls' section, it presents the variables that the component receives for
+						customization.
 					</Description>
 					<Controls />
 
 					<Subtitle>
-						Paleta de colores
+						Colors palette
 						<hr className='my-4' />
 					</Subtitle>
 					<ColorPalette>
@@ -110,11 +110,11 @@ export default {
 					</ColorPalette>
 
 					<Subtitle>
-						Iconos
+						Icons
 						<hr className='my-4' />
 					</Subtitle>
 					<IconGallery>
-						<IconItem name='icono de rayo'>
+						<IconItem name='Lightning icon'>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								viewBox='0 0 16 16'
@@ -129,7 +129,7 @@ export default {
 								></path>
 							</svg>
 						</IconItem>
-						<IconItem name='icono de informacion'>
+						<IconItem name='Information icon'>
 							<svg
 								stroke='currentColor'
 								fill='currentColor'
@@ -143,7 +143,7 @@ export default {
 								<path d='M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z'></path>
 							</svg>
 						</IconItem>
-						<IconItem name='icono de estrellas'>
+						<IconItem name='Stars icon'>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								viewBox='0 0 16 16'
@@ -158,7 +158,7 @@ export default {
 								></path>
 							</svg>
 						</IconItem>
-						<IconItem name='icono de candado'>
+						<IconItem name='Padlock icon'>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								viewBox='0 0 24 24'

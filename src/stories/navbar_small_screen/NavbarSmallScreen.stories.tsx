@@ -21,41 +21,43 @@ export default {
 				<>
 					<Title />
 					<Subtitle>
-						Tabla de contenido <hr className='my-4' />
+						Index
+						<hr className='my-4' />
 					</Subtitle>
 					<ul>
-						<li>Descripcion general</li>
-						<li>Componente</li>
+						<li>General description</li>
+						<li>Component</li>
 						<li>Controls</li>
-						<li>Paleta de colores</li>
-						<li>Iconos</li>
+						<li>Colors palette</li>
+						<li>Icons</li>
 					</ul>
 					<Subtitle>
-						Descripcion general
+						General description
 						<hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						Se puede crear este componente utilizando un componente contenedor padre "div", dentro
-						de este componente se agregan tres componentes hijo. -boton -h1 -boton, el primero boton
-						contendra un icono hamburguesa para desplegar el sidebar, el h1 contiene un texto, y el
-						tercer boton contiene un boton con un icono de "+". El componente navbarSmall tiene la
-						propiedad sticky para que siempre este presente en la pantalla, y solo se muestra en
-						pantallas pequeñas.
+						You can create this component using a parent container component, a 'div.' Inside this
+						component, three child components are added: a button, an h1, and another button. The
+						first button will contain a hamburger icon to toggle the sidebar, the h1 contains text,
+						and the third button contains a button with a '+' icon. The 'navbarSmall' component has
+						the 'sticky' property to ensure it is always present on the screen and is only displayed
+						on small screens.
 					</Description>
 					<Canvas />
 
 					<Subtitle>
-						Componente <hr className='my-4' />
+						Component <hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						El componente de navbarSmall no recibe ningun parametro por lo que no contirne controles
+						The navbarSmall component does not receive any parameters and thus does not include
+						controls
 					</Description>
 
 					<Canvas />
 					<Subtitle>
-						Paleta de colores
+						Colors palette
 						<hr className='my-4' />
 					</Subtitle>
 					<ColorPalette>
@@ -70,11 +72,11 @@ export default {
 					</ColorPalette>
 
 					<Subtitle>
-						Iconos
+						Icons
 						<hr className='my-4' />
 					</Subtitle>
 					<IconGallery>
-						<IconItem name='icono de menu'>
+						<IconItem name='Menu icon'>
 							<svg
 								width='24'
 								height='24'
@@ -91,7 +93,7 @@ export default {
 								></path>
 							</svg>
 						</IconItem>
-						<IconItem name='icono de nuevo chat'>
+						<IconItem name='New chat icon'>
 							<svg
 								width='18'
 								height='18'

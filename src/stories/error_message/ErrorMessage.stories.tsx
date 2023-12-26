@@ -27,42 +27,42 @@ export default {
 						Tabla de contenido <hr className='my-4' />
 					</Subtitle>
 					<ul>
-						<li>Descripcion general</li>
-						<li>Componente</li>
-						<li>Controles</li>
-						<li>Paleta de colores</li>
+						<li>General Description</li>
+						<li>Component</li>
+						<li>Controls</li>
+						<li>Color Palette</li>
 					</ul>
 					<Subtitle>
-						Descripcion general
+						General Description
 						<hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						Para la creacion de este componente solamente es necesario un componente padre "div",
-						que contenga el mensaje, a este div se le aplican estilos para que de la vista de un
-						mesaje de error.
+						For the creation of this component, only a parent component 'div' is required that
+						contains the message. Styles are applied to this div to give the appearance of an error
+						message.
 					</Description>
 					<Canvas />
 
 					<Subtitle>
-						Componente <hr className='my-4' />
+						Component <hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						El componente recibe un paramaetro "content" que que es lo que es el contenido que se
-						muestra en el componente.
+						The component receives a parameter 'content' which represents the content displayed in
+						the component.
 					</Description>
 
 					<Canvas />
 
 					<Subtitle>
-						Controles
+						Controls
 						<hr className='my-4' />
 					</Subtitle>
 					<Controls />
 
 					<Subtitle>
-						Paleta de colores
+						Color Palette
 						<hr className='my-4' />
 					</Subtitle>
 					<ColorPalette>

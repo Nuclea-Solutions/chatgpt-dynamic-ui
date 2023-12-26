@@ -23,56 +23,57 @@ export default {
 				<>
 					<Title />
 					<Subtitle>
-						Tabla de contenido <hr className='my-4' />
+						Index <hr className='my-4' />
 					</Subtitle>
 					<ul>
-						<li>Descripcion general</li>
-						<li>Componente activo</li>
+						<li>General Description</li>
+						<li>Active component</li>
 						<li>Controls</li>
-						<li>Paleta de colores</li>
-						<li>Iconos</li>
+						<li>Color Palette</li>
+						<li>Icons</li>
 					</ul>
 					<Subtitle>
-						Descripcion general
+						General Description
 						<hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						Se puede crear este componente utilizando un componente padre "div" como contenedor,
-						dentro del contenedor se agrega un dos botones y un text area, el primer boton contiene
-						el icono de imagen que es el componente que servira para subir imagenes, el segundo
-						boton es el boton para enviar el mensaje.
+						This component can be created using a parent 'div' container. Inside the container, you
+						can add two buttons and a text area. The first button contains the image icon, which
+						serves as the component for uploading images, and the second button is the send message
+						button.
 					</Description>
 					<Canvas />
 
 					<Subtitle>
-						Componente activo
+						Active component
 						<hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						El componente recibe dos parametros que utiliza para cambiar el estado del componente
-						"inputValue y setInputValue", por ejemplo al escribir el boton cambia a un color verde,
-						asi mismo el componente crece en altura de hasta 200 px, utilizando una funcion que para
-						capturar el valor del text area, y asi mismo cambiar el estado del boton y del mismo
-						text area. El boton utilizado es un boton de la libreria nextui, la documentacion
-						oficial en el siguiente link: https://nextui.org/docs/components/button.
+						The component receives two parameters, 'inputValue' and 'setInputValue,' which it uses
+						to change the state of the component. For example, as you type, the button changes to
+						green, and the component can expand in height up to 200 pixels. This is achieved by
+						using a function to capture the value of the text area and update the state of both the
+						button and the text area. The button used is a Next UI library component, and you can
+						find the official documentation at the following link:
+						https://nextui.org/docs/components/button.
 					</Description>
 
 					<Canvas of={Active} />
 
 					<Subtitle>
-						Controles
+						Controls
 						<hr className='my-4' />
 					</Subtitle>
 					<Description>
-						En el apartado de controles nos muestra las variables que recibe el componente para su
-						personalizacion
+						In the controls section, it showcases the variables that the component receives for
+						customization.
 					</Description>
 					<Controls of={Active} />
 
 					<Subtitle>
-						Paleta de colores
+						Color Palette
 						<hr className='my-4' />
 					</Subtitle>
 					<ColorPalette>
@@ -100,14 +101,14 @@ export default {
 					</ColorPalette>
 
 					<Subtitle>
-						Iconos
+						Icons
 						<hr className='my-4' />
 					</Subtitle>
 					<IconGallery>
-						<IconItem name='icono de imagen'>
+						<IconItem name='Image icon'>
 							<GoImage />
 						</IconItem>
-						<IconItem name='icono de enviar'>
+						<IconItem name='Send icon'>
 							<svg width='24' height='24' viewBox='0 0 24 24' fill='none'>
 								<path
 									d='M7 11L12 6L17 11M12 18V7'

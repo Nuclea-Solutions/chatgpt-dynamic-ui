@@ -3,7 +3,7 @@ import { FaArrowRightLong } from 'react-icons/fa6';
 import React, { useState } from 'react';
 import Link from 'next/link';
 import useMessagesStore from '../../store/useMessagesStore';
-import { useshareLinkToChat } from '@/store/useLinkToChatComponent';
+import { useshareLinkToChat } from '../../store/useLinkToChatComponent';
 
 const NavbarComponent = ({
 	isNewChat,

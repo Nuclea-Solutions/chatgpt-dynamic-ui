@@ -24,23 +24,22 @@ export default {
 				<>
 					<Title />
 					<Subtitle>
-						Tabla de contenido <hr className='my-4' />
+						Index <hr className='my-4' />
 					</Subtitle>
 					<ul>
-						<li>Descripcion general</li>
-						<li>Componente con color</li>
+						<li>General Description</li>
+						<li>Color Component</li>
 						<li>Controls</li>
-						<li>Paleta de colores</li>
-						<li>Iconos</li>
+						<li>Color Palette</li>
+						<li>Icons</li>
 					</ul>
 					<Subtitle>
-						Descripcion general
-						<hr className='my-4' />
+						General Description <hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						Se puede crear este componente utilizando la api de audio de react para poder reproducir
-						audios, asi mismo dando estilos con tailwind y los iconos de la libreria react/icons
+						Is it possible to create this component using the React audio API to play audio, while
+						also styling it with Tailwind CSS and using icons from the React/Icons library
 					</Description>
 					<Canvas>
 						<div className='flex gap-2 '>
@@ -63,17 +62,17 @@ export default {
 					</Canvas>
 
 					<Subtitle>
-						Controles
+						Controls
 						<hr className='my-4' />
 					</Subtitle>
 					<Description>
-						En el apartado de controles nos muestra las variables que recibe el componente para su
-						personalizacion
+						In the controls section, it shows the variables that the component receives for
+						customization
 					</Description>
 					<Controls />
 
 					<Subtitle>
-						Paleta de colores
+						Color Palette
 						<hr className='my-4' />
 					</Subtitle>
 					<ColorPalette>
@@ -88,14 +87,14 @@ export default {
 					</ColorPalette>
 
 					<Subtitle>
-						Iconos
+						Icons
 						<hr className='my-4' />
 					</Subtitle>
 					<IconGallery>
-						<IconItem name='icono de pausa'>
+						<IconItem name='Pause icon'>
 							<CiPause1 />
 						</IconItem>
-						<IconItem name='icono de play'>
+						<IconItem name='Play icon'>
 							<CiPlay1 />
 						</IconItem>
 					</IconGallery>

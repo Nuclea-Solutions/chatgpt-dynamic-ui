@@ -22,39 +22,38 @@ export default {
 				<>
 					<Title />
 					<Subtitle>
-						Tabla de contenido <hr className='my-4' />
+						Index <hr className='my-4' />
 					</Subtitle>
 					<ul>
-						<li>Descripcion general</li>
-						<li>Componente</li>
+						<li>General description</li>
+						<li>Component</li>
 						<li>Controls</li>
-						<li>Paleta de colores</li>
-						<li>Iconos</li>
+						<li>Colors palette</li>
+						<li>Icons</li>
 					</ul>
 					<Subtitle>
-						Descripcion general
+						General description
 						<hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						Este componente estilo modal se enfoca en las configuraciones de la pagina, este
-						componentecuenta con dos secciones la primera seria Theme que sirve para cambiar de modo
-						claro a modo obscuro y limpiar todos los chat, en la segunda seccion tenemos el control
-						de datos, esta seccion sirve para compartir los links, exportar los datos de las
-						conversaciones y borrar la cuenta.
+						This modal-style component focuses on page settings. The component has two sections. The
+						first one is Theme, which is used to switch between light mode and dark mode and clear
+						all chats. In the second section, we have 'Data Control,' which is used for sharing
+						links, exporting conversation data, and deleting the account.
 					</Description>
 					<Canvas>
 						<Story />
 					</Canvas>
 
 					<Subtitle>
-						Componente <hr className='my-4' />
+						Component <hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						El componente de no recibe parametros por lo que no cuenta con el apartado de controles,
-						este componente funciona simplemente con un useState que captura la tab seleccionada y
-						condicionalmente muestra el contenido de la tab que el usuario selecciona.
+						The component does not receive parameters, so it does not have a controls section. This
+						component functions with a useState that captures the selected tab and conditionally
+						displays the content of the tab that the user selects.
 					</Description>
 
 					<Canvas>
@@ -62,7 +61,7 @@ export default {
 					</Canvas>
 
 					<Subtitle>
-						Paleta de colores
+						Colors palette
 						<hr className='my-4' />
 					</Subtitle>
 					<ColorPalette>
@@ -104,11 +103,11 @@ export default {
 					</ColorPalette>
 
 					<Subtitle>
-						Iconos
+						Icons
 						<hr className='my-4' />
 					</Subtitle>
 					<IconGallery>
-						<IconItem name='icono de configuracion'>
+						<IconItem name='Settings icon'>
 							<svg
 								stroke='currentColor'
 								fill='currentColor'
@@ -120,13 +119,13 @@ export default {
 								xmlns='http://www.w3.org/2000/svg'
 							>
 								<path
-									fillRule='evenodd'
+									fill-rule='evenodd'
 									d='M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z'
-									clipRule='evenodd'
+									clip-rule='evenodd'
 								></path>
 							</svg>
 						</IconItem>
-						<IconItem name='icono de datos'>
+						<IconItem name='data icon'>
 							<svg
 								stroke='currentColor'
 								fill='currentColor'

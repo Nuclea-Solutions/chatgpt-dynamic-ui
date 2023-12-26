@@ -21,38 +21,37 @@ export default {
 				<>
 					<Title />
 					<Subtitle>
-						Tabla de contenido <hr className='my-4' />
+						Index <hr className='my-4' />
 					</Subtitle>
 					<ul>
-						<li>Descripcion general</li>
-						<li>Componente activado</li>
+						<li>General description</li>
+						<li>Active component</li>
 						<li>Controls</li>
-						<li>Paleta de colores</li>
-						<li>Iconos</li>
+						<li>Colors palette</li>
 					</ul>
 					<Subtitle>
-						Descripcion general
+						General description
 						<hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						Switch es un componente que recibe dos parametros para su correcto funcionamiento, el
-						primer parametro "isChecked" que es un parametro boolean para el estado de componente, y
-						"toggleSwitch" es un parametro de tipo funcion que sirve para el funcionamiento del
-						switch.
+						The 'Switch' component receives two parameters for its proper functioning. The first
+						parameter is 'isChecked,' which is a boolean parameter representing the component's
+						state, and 'toggleSwitch' is a function parameter responsible for the switch's
+						functionality.
 					</Description>
 					<Canvas>
 						<Story of={Inactive} />
 					</Canvas>
 
 					<Subtitle>
-						Componente activado
+						Active component
 						<hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						El componente de Switch al recibir el parametro isChecked en true el componente se
-						mostrara como en el siguiente ejemplo.
+						When the 'Switch' component receives the 'isChecked' parameter as true, the component
+						will appear as in the following example.
 					</Description>
 
 					<Canvas>
@@ -60,17 +59,17 @@ export default {
 					</Canvas>
 
 					<Subtitle>
-						Controles
+						Controls
 						<hr className='my-4' />
 					</Subtitle>
 					<Description>
-						En el apartado de controles nos muestra las variables que recibe el componente para su
-						personalizacion
+						In the 'Controls' section, it showcases the variables that the component receives for
+						customization.
 					</Description>
 					<Controls />
 
 					<Subtitle>
-						Paleta de colores
+						Colors palette
 						<hr className='my-4' />
 					</Subtitle>
 					<ColorPalette>
