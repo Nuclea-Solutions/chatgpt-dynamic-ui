@@ -23,9 +23,10 @@ export default function LayoutSidebar({
 	const getConversations = async () => {
 		try {
 			const response = await axios.get('/api/conversations');
+			if (!response.data.conversations.length) return;
 			setConversationList([...conversationList, ...response.data.conversations]);
 		} catch (err) {
-			console.log({ err });
+			console.error({ err });
 		}
 	};
 

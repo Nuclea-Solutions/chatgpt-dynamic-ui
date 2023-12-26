@@ -1,11 +1,12 @@
 // libraries
-import { useState, useCallback, useRef, useEffect } from 'react';
+import { useState, useCallback, useRef } from 'react';
 import axios from 'axios';
 import { useParams } from 'next/navigation';
 // store and context
 import useMessagesStore from '@/store/useMessagesStore';
 import useCustomGPT from '@/store/useCustomGPT';
 import useConversationsStore from '@/store/useConversationsStore';
+import { useShallow } from 'zustand/react/shallow';
 // utils
 import { nanoid } from 'nanoid';
 import { Message, MessageRole } from '@/types/message';
@@ -26,25 +27,31 @@ const useChatCustom = ({ customGPT }: { customGPT?: boolean }) => {
 	const [inputMessage, setInputMessage] = useState('');
 	const [configureInput, setConfigureInput] = useState('');
 	const [isLoading, setIsLoading] = useState(false);
-	const [currentConversation, setCurrentConversation] = useState<Conversation>();
 
-	const [messages, setNewMessage, setMessages] = useMessagesStore((state) => [
-		state.messages,
-		state.setNewMessage,
-		state.setMessages
+	const [messages, setNewMessage, setMessages] = useMessagesStore(
+		useShallow((state) => [state.messages, state.setNewMessage, state.setMessages])
+	);
+	const [name, description, instructions, setNewConfigurationMessage] = useCustomGPT(
+		useShallow((state) => [
+			state.name,
+			state.description,
+			state.instructions,
+			state.setNewConfigurationMessage
+		])
+	);
+	const [
+		setNewMessageToConversation,
+		setConversationList,
+		conversationList,
+		currentConversationId,
+		setCurrentConversationId
+	] = useConversationsStore((state) => [
+		state.setNewMessageToConversation,
+		state.setConversationList,
+		state.conversationList,
+		state.currentConversationId,
+		state.setCurrentConversationId
 	]);
-	const [name, description, instructions, setNewConfigurationMessage] = useCustomGPT((state) => [
-		state.name,
-		state.description,
-		state.instructions,
-		state.setNewConfigurationMessage
-	]);
-	const [setNewMessageToConversation, setConversationList, conversationList] =
-		useConversationsStore((state) => [
-			state.setNewMessageToConversation,
-			state.setConversationList,
-			state.conversationList
-		]);
 
 	const handleChangeMessage = (e: any) => {
 		setInputMessage(e.target.value);
@@ -55,33 +62,61 @@ const useChatCustom = ({ customGPT }: { customGPT?: boolean }) => {
 	};
 
 	// Post message
-	const sendMessage = useCallback(async (payload: ChatPayload, type: 'chat' | 'configure') => {
-		setInputMessage('');
-		setConfigureInput('');
-		const setMesageFn = type === 'configure' ? setNewConfigurationMessage : setNewMessage;
+	const sendMessage = useCallback(
+		async (payload: ChatPayload, type: 'chat' | 'configure', conversationId?: string) => {
+			setInputMessage('');
+			setConfigureInput('');
+			const setMesageFn = type === 'configure' ? setNewConfigurationMessage : setNewMessage;
 
-		try {
-			const response = await axios.post('/api/chat', payload);
-			const messageToSave = {
-				content: response.data,
-				id: nanoid(),
-				author: { role: MessageRole.ASSISTANT }
-			};
-			setMesageFn(messageToSave);
+			try {
+				const response = await axios.post('/api/chat', payload);
+				const messageToSave = {
+					content: response.data,
+					id: nanoid(),
+					author: { role: MessageRole.ASSISTANT }
+				};
+				setMesageFn(messageToSave);
 
-			if (type !== 'configure' && !!currentConversation) {
-				// TODO:
-				setNewMessageToConversation(messageToSave, currentConversation?._id);
+				if (type !== 'configure') {
+					const converId = conversationId ? conversationId : currentConversationId;
+					setNewMessageToConversation(messageToSave, converId);
+				}
+			} catch (error) {
+				console.error(error);
+				setMesageFn({
+					content: 'An error ocurred. Try again later',
+					id: `error-${nanoid()}`,
+					author: { role: MessageRole.ASSISTANT }
+				});
 			}
-		} catch (error) {
-			console.error(error);
-			setMesageFn({
-				content: 'An error ocurred. Try again later',
-				id: `error-${nanoid()}`,
-				author: { role: MessageRole.ASSISTANT }
-			});
+		},
+		[currentConversationId, conversationList]
+	);
+
+	// Set current messages to conversation
+	const setFormattedConversation = (message: Message) => {
+		if (!message.id) {
+			message.id = nanoid();
 		}
-	}, []);
+
+		const converId = nanoid();
+		const conver: any = {
+			id: converId,
+			_id: converId,
+			title: message.content,
+			create_time: Date.now(),
+			update_time: Date.now(),
+			mapping: {
+				[message.id]: {
+					id: message.id,
+					message: message
+				}
+			}
+		};
+		setCurrentConversationId(conver._id);
+		setConversationList([...conversationList, conver]);
+		return conver._id;
+	};
 
 	// Submit user message
 	const handleSubmitCustom = (e: React.FormEvent<HTMLFormElement>, type: 'chat' | 'configure') => {
@@ -97,9 +132,8 @@ const useChatCustom = ({ customGPT }: { customGPT?: boolean }) => {
 		};
 		setMesageFn(messageToSave);
 
-		if (type !== 'configure' && !!currentConversation) {
-			// TODO:
-			setNewMessageToConversation(messageToSave, currentConversation?._id);
+		if (type !== 'configure' && !!currentConversationId) {
+			setNewMessageToConversation(messageToSave, currentConversationId);
 		}
 
 		const payload: ChatPayload = {
@@ -110,6 +144,12 @@ const useChatCustom = ({ customGPT }: { customGPT?: boolean }) => {
 			payload.name = name;
 			payload.description = description;
 			payload.instructions = instructions;
+		}
+
+		if (messages.length === 0 && !params.id) {
+			const converId = setFormattedConversation(messageToSave);
+			sendMessage(payload, type, converId);
+			return;
 		}
 		sendMessage(payload, type);
 	};
@@ -133,8 +173,11 @@ const useChatCustom = ({ customGPT }: { customGPT?: boolean }) => {
 						return;
 					}
 
+					const type = typeof item.message?.content === 'string' ? 'new_chat' : 'history_chat';
+
 					// it always has one element
-					const part = item.message?.content.parts[0];
+					const part =
+						type === 'history_chat' ? item.message?.content.parts[0] : item.message?.content;
 					if (
 						item.message.recipient !== 'all' &&
 						array[index + 1]?.message?.author.role === MessageRole.TOOL
@@ -178,34 +221,7 @@ const useChatCustom = ({ customGPT }: { customGPT?: boolean }) => {
 		} catch (err) {
 			console.error({ err });
 		}
-	}, [conversationList]);
-
-	// Set current messages to conversation
-	useEffect(() => {
-		if (messages.length === 1) {
-			const messageItem = messages[0];
-			if (!messageItem.id) {
-				messageItem.id = nanoid();
-			}
-
-			const converId = nanoid();
-			const conver: any = {
-				id: converId,
-				_id: converId,
-				title: messageItem.content,
-				create_time: Date.now(),
-				update_time: Date.now(),
-				mapping: {
-					[messageItem.id]: {
-						id: messageItem.id,
-						message: messageItem
-					}
-				}
-			};
-			setCurrentConversation(conver);
-			setConversationList([...conversationList, conver]);
-		}
-	}, [messages]);
+	}, [conversationList, params?.id]);
 
 	return {
 		handleInputChange: handleChangeMessage,
