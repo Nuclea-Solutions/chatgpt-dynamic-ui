@@ -22,7 +22,7 @@ const LayoutNavbar = ({
 		return null;
 	}
 	return (
-		<div className={` w-full z-30 sticky top-0`}>
+		<div className={` w-full z-30`}>
 			<NavbarSmallScreenComponent
 				handleToggleSidebar={handleToggleSidebar}
 				publicVersion={publicVersion}
