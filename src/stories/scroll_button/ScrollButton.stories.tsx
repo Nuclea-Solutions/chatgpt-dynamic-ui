@@ -24,40 +24,41 @@ export default {
 				<>
 					<Title />
 					<Subtitle>
-						Tabla de contenido <hr className='my-4' />
+						Index <hr className='my-4' />
 					</Subtitle>
 					<ul>
-						<li>Descripcion general</li>
-						<li>Componente</li>
+						<li>General description</li>
+						<li>Component</li>
 						<li>Controls</li>
-						<li>Paleta de colores</li>
-						<li>Iconos</li>
+						<li>Colors palette</li>
+						<li>Icons</li>
 					</ul>
 					<Subtitle>
-						Descripcion general
+						General description
 						<hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						Scroll button es un componente que sirve para un caso en especifico que es navegarte al
-						final de tu pagina sin tener que hacer scroll en ella simplemente con dar un click sobre
-						el. Se puede crear este componente utilizando un boton con un icono dentro de el.
+						A 'scroll button' is a component intended for a specific purpose, allowing you to
+						navigate to the bottom of your page with a single click, eliminating the need for manual
+						scrolling. This component can be created using a button with an embedded icon.
 					</Description>
 					<Canvas />
 					<Subtitle>
-						Componente <hr className='my-4' />
+						Component <hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						El componente maneja funciones para obtener la posicion de la pantalla en eje y, se crea
-						una condicion con el scroll en el eje y si se cumple, este componente se muestra, y al
-						dar click te navega al final del scroll. Al no recibir parametros este componente no
-						maneha controles.
+						The component manages functions to determine the screen's Y-axis position. It
+						establishes a condition based on the Y-axis scroll position, and when this condition is
+						met, the component becomes visible. Clicking on the component allows you to navigate to
+						the bottom of the scroll. As it does not receive parameters, this component does not
+						handle controls.
 					</Description>
 					<Canvas />
 
 					<Subtitle>
-						Paleta de colores
+						Colors palette
 						<hr className='my-4' />
 					</Subtitle>
 					<ColorPalette>
@@ -78,11 +79,11 @@ export default {
 					</ColorPalette>
 
 					<Subtitle>
-						Iconos
+						Icons
 						<hr className='my-4' />
 					</Subtitle>
 					<IconGallery>
-						<IconItem name='icono de flecha hacia abajo'>
+						<IconItem name='Down arrow icon'>
 							<svg
 								stroke='currentColor'
 								fill='none'

@@ -24,25 +24,25 @@ export default {
 				<>
 					<Title />
 					<Subtitle>
-						Tabla de contenido <hr className='my-4' />
+						Index <hr className='my-4' />
 					</Subtitle>
 					<ul>
-						<li>Descripcion general</li>
-						<li>Componentes reutilizables</li>
-						<li>Controles</li>
-						<li>Paleta de colores</li>
-						<li>Iconos</li>
+						<li>General Description</li>
+						<li>Reusable components</li>
+						<li>Controls</li>
+						<li>Color Palette</li>
+						<li>Icons</li>
 					</ul>
 					<Subtitle>
-						Descripcion general
+						General Description
 						<hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						Se puede crear este componente tipo modal utilizando un div padre que envuelve todos los
-						elementos necesarios que debera incluir este componente modal, utilizando la propiedad
-						position relative y left-1/2 para poder centrar el modal ademas de el parametro que
-						tendra la funcion de mostrar o esconder el modal.
+						Is it possible to create this modal-type component using a parent div that wraps all the
+						necessary elements that should be included in this modal component, using the "position:
+						relative" property and "left-1/2" to center the modal, in addition to the parameter that
+						will control the function to show or hide the modal.
 					</Description>
 					<Canvas>
 						<div className='flex gap-2 justify-center '>
@@ -51,13 +51,13 @@ export default {
 					</Canvas>
 
 					<Subtitle>
-						Componentes reutilizables <hr className='my-4' />
+						Reusable components <hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						El componente de switch es un componente reutilizable que recibe dos parametros,
-						isChecked y una funcion que cambia el estado de isChecked y asi es como se cambia el
-						estado de activo e inactivo.
+						The switch component is a reusable component that receives two parameters, isChecked and
+						a function that changes the state of isChecked, and that's how the active and inactive
+						states are toggled.
 					</Description>
 
 					<Canvas>
@@ -68,17 +68,17 @@ export default {
 					</Canvas>
 
 					<Subtitle>
-						Controles
+						Controls
 						<hr className='my-4' />
 					</Subtitle>
 					<Description>
-						En el apartado de controles nos muestra las variables que recibe el componente para su
-						personalizacion
+						In the controls section, it shows the variables that the component receives for its
+						customization
 					</Description>
 					<Controls />
 
 					<Subtitle>
-						Paleta de colores
+						Color Palette
 						<hr className='my-4' />
 					</Subtitle>
 					<ColorPalette>
@@ -96,11 +96,11 @@ export default {
 					</ColorPalette>
 
 					<Subtitle>
-						Iconos
+						Icons
 						<hr className='my-4' />
 					</Subtitle>
 					<IconGallery>
-						<IconItem name='icono de mas informacion'>
+						<IconItem name='Information icon'>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								viewBox='0 0 18 18'

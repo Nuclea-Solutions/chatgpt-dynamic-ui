@@ -69,7 +69,7 @@ const schemaExamples = [
 ];
 
 const page = () => {
-	const [isActive, setIsActive] = useState('create');
+	const [isActive, setIsActive] = useState('newAction');
 	const [
 		name,
 		description,

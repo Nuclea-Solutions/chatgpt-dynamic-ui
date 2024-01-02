@@ -14,38 +14,37 @@ export default {
 				<>
 					<Title />
 					<Subtitle>
-						Tabla de contenido <hr className='my-4' />
+						Index <hr className='my-4' />
 					</Subtitle>
 					<ul>
-						<li>Descripcion general</li>
-						<li>Componente vacio</li>
+						<li>General description</li>
+						<li>Empty component</li>
 						<li>Controls</li>
-						<li>Paleta de colores</li>
-						<li>Iconos</li>
 					</ul>
 					<Subtitle>
-						Descripcion general
+						General description
 						<hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						Se puede crear este componente utilizando la libreria de de nextui table. Este
-						componente recibe dos parametros del que son de tipo arreglo de objetos, el primer
-						parametro es para las columnas y el segundo para las filas, la documentacion oficial
-						para crear la tabla en el siguiente link: https://nextui.org/docs/components/table
+						This component can be created using the Next UI table library. The component receives
+						two parameters, both of which are arrays of objects. The first parameter is for defining
+						the columns, and the second parameter is for specifying the rows. You can find the
+						official documentation for creating the table at the following link:
+						https://nextui.org/docs/components/table
 					</Description>
 					<Canvas>
 						<Story of={Base} />
 					</Canvas>
 
 					<Subtitle>
-						Componente vacio <hr className='my-4' />
+						Empty component <hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						El componente de table al no recibir datos en el parametro row, tiene la funcion de
-						mostrar un mensaje para avisar al usuario que la tabla esta vacia. Este componente viene
-						con los colores predeterminados por la libreria nextui.
+						When the 'Table' component doesn't receive any data in the 'row' parameter, its purpose
+						is to display a message notifying the user that the table is empty. This component uses
+						the default colors provided by the Next UI library.
 					</Description>
 
 					<Canvas>
@@ -53,12 +52,12 @@ export default {
 					</Canvas>
 
 					<Subtitle>
-						Controles
+						Controls
 						<hr className='my-4' />
 					</Subtitle>
 					<Description>
-						En el apartado de controles nos muestra las variables que recibe el componente para su
-						personalizacion
+						In the 'Controls' section, it showcases the variables that the component receives for
+						customization.
 					</Description>
 					<Controls />
 				</>

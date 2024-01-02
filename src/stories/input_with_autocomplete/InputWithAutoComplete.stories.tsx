@@ -13,56 +13,56 @@ export default {
 				<>
 					<Title />
 					<Subtitle>
-						Tabla de contenido <hr className='my-4' />
+						Index
+						<hr className='my-4' />
 					</Subtitle>
 					<ul>
-						<li>Descripcion general</li>
-						<li>Componente</li>
+						<li>General description</li>
+						<li>Component</li>
 						<li>Controls</li>
-						<li>Nota</li>
+						<li>Note</li>
 					</ul>
 					<Subtitle>
-						Descripcion general
+						General description
 						<hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						Para crear esta caja de texto con autocompletado se utilizo la libreria de componentes
-						llamada material ui en el siguiente link esta la documentacion oficial de el componente:
-						https://mui.com/material-ui/react-autocomplete/ .
+						To create this text box with autocomplete, the component library used is called Material
+						UI. You can find the official documentation for the component at the following link:
+						https://mui.com/material-ui/react-autocomplete/.
 					</Description>
 					<Canvas />
 
 					<Subtitle>
-						Componente <hr className='my-4' />
+						Component <hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						El componente de autocompletado recibe dos parametros, label que es el texto que se
-						muestra cuando el input se encuentra vacio y se recibe el otro parametro, options que es
-						un arrlego de objetos y cada objeto tiene la siguiente estructura "label:string,
-						year:number",
+						The autocomplete component receives two parameters. 'Label' is the text displayed when
+						the input is empty, and the other parameter is 'options,' which is an array of objects.
+						Each object in the array has the following structure: 'label: string, year: number.'
 					</Description>
 
 					<Canvas />
 
 					<Subtitle>
-						Controles
+						Controls
 						<hr className='my-4' />
 					</Subtitle>
 					<Description>
-						En el apartado de controles nos muestra las variables que recibe el componente para su
-						personalizacion
+						In the controls section, it showcases the variables the component receives for
+						customization.
 					</Description>
 					<Controls />
 
 					<Subtitle>
-						Nota
+						Note
 						<hr className='my-4' />
 					</Subtitle>
 					<Description>
-						El componente no recibe parametros por lo cual carece de controles y los estilos vienen
-						predeterminados por las librerias de componentes.
+						The component does not accept any parameters, and thus, it lacks controls. The styles
+						are predefined by the component libraries.
 					</Description>
 				</>
 			)

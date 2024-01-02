@@ -23,39 +23,39 @@ export default {
 				<>
 					<Title />
 					<Subtitle>
-						Tabla de contenido <hr className='my-4' />
+						Index <hr className='my-4' />
 					</Subtitle>
 					<ul>
-						<li>Descripcion general</li>
-						<li>Componente</li>
-						<li>Paleta de colores</li>
-						<li>Iconos</li>
+						<li>General Description</li>
+						<li>Controls</li>
+						<li>Color Palette</li>
+						<li>Icons</li>
 					</ul>
 					<Subtitle>
-						Descripcion general
+						General Description
 						<hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						Para la creacion de este componente solamente es necesario un componente padre "div",
-						que contenga un boton para el icono de copiar y otro contenedor que contenga dos
-						botones, para los iconos de like y dislike.
+						For the creation of this component, only a parent "div" component is necessary,
+						containing a button for the copy icon and another container that holds two buttons for
+						the like and dislike icons.
 					</Description>
 					<Canvas />
 
 					<Subtitle>
-						Componente <hr className='my-4' />
+						Component <hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						El componente no recibe ningun parametro como props por lo cual no contiene controles y
-						su funcionamiento es interno.
+						The component does not receive any parameters as props, and therefore, it does not
+						contain controls, as its functionality is internal.
 					</Description>
 
 					<Canvas />
 
 					<Subtitle>
-						Paleta de colores
+						Color Palette
 						<hr className='my-4' />
 					</Subtitle>
 					<ColorPalette>
@@ -83,11 +83,11 @@ export default {
 					</ColorPalette>
 
 					<Subtitle>
-						Iconos
+						Icons
 						<hr className='my-4' />
 					</Subtitle>
 					<IconGallery>
-						<IconItem name='icono de copiar'>
+						<IconItem name='Copy icon'>
 							<svg
 								stroke='currentColor'
 								fill='none'
@@ -104,7 +104,7 @@ export default {
 								<rect x='8' y='2' width='8' height='4' rx='1' ry='1'></rect>
 							</svg>
 						</IconItem>
-						<IconItem name='icono de like'>
+						<IconItem name='Like icon'>
 							<svg
 								stroke='currentColor'
 								fill='none'
@@ -120,7 +120,7 @@ export default {
 								<path d='M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3'></path>
 							</svg>
 						</IconItem>
-						<IconItem name='icono de dislike'>
+						<IconItem name='Dislike icon'>
 							<svg
 								stroke='currentColor'
 								fill='none'
@@ -136,7 +136,7 @@ export default {
 								<path d='M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17'></path>
 							</svg>
 						</IconItem>
-						<IconItem name='icono de regenerar'>
+						<IconItem name='Regenerate icon'>
 							<svg
 								stroke='currentColor'
 								fill='none'

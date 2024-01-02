@@ -24,27 +24,26 @@ export default {
 				<>
 					<Title />
 					<Subtitle>
-						Tabla de contenido <hr className='my-4' />
+						Index <hr className='my-4' />
 					</Subtitle>
 					<ul>
-						<li>Descripcion general</li>
-						<li>Componente</li>
+						<li>General Description</li>
+						<li>Component</li>
 						<li>Controls</li>
-						<li>Paleta de colores</li>
-						<li>Iconos</li>
+						<li>Color Palette</li>
+						<li>Icons</li>
 					</ul>
 					<Subtitle>
-						Descripcion general
+						General Description
 						<hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						Se puede crear este componente tipo carta utilizando un contenedor padre que contenga
-						dos contenedores, el primer contenedor debera tener el titulo y la descripcion de la
-						carta y el segundo contenedor contendra el icono, para cambiar el color y que aparezca
-						el icono el hacer hover, se requiere utilizar los metodos onMouseEnter y onMouseLeave en
-						el componente padre, acompañado de un useEffect para poder cambiar el estado del
-						componente.
+						You can create this card-type component by using a parent container that contains two
+						containers. The first container should have the title and description of the card, and
+						the second container will hold the icon. To change the color and make the icon appear on
+						hover, you need to use the onMouseEnter and onMouseLeave methods in the parent
+						component, along with a useEffect to change the component's state.
 					</Description>
 					<Canvas>
 						<div className='flex gap-2 '>
@@ -53,13 +52,13 @@ export default {
 					</Canvas>
 
 					<Subtitle>
-						Componente
+						Component
 						<hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						El componente de Default option recibe dos parametros de los cuales el primero es el
-						titulo de la carta, y el otro parametro es la descripcion de la carta.
+						The Default Option component receives two parameters, where the first one is the title
+						of the card, and the other parameter is the card description.
 					</Description>
 
 					<Canvas>
@@ -70,17 +69,17 @@ export default {
 					</Canvas>
 
 					<Subtitle>
-						Controles
+						Controls
 						<hr className='my-4' />
 					</Subtitle>
 					<Description>
-						En el apartado de controles nos muestra las variables que recibe el componente para su
-						personalizacion
+						In the controls section, it displays the variables that the component receives for its
+						customization.
 					</Description>
 					<Controls />
 
 					<Subtitle>
-						Paleta de colores
+						Color Palette
 						<hr className='my-4' />
 					</Subtitle>
 					<ColorPalette>
@@ -103,11 +102,11 @@ export default {
 					</ColorPalette>
 
 					<Subtitle>
-						Iconos
+						Icons
 						<hr className='my-4' />
 					</Subtitle>
 					<IconGallery>
-						<IconItem name='icono de enviar'>
+						<IconItem name='Send icon'>
 							<svg
 								width='18'
 								height='18'
