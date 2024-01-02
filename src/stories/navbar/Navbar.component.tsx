@@ -1,7 +1,6 @@
 import { useChatGptVersion } from '../../store/useChatGptVersion';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import React, { useState } from 'react';
-import Link from 'next/link';
 import useMessagesStore from '../../store/useMessagesStore';
 import { useshareLinkToChat } from '../../store/useLinkToChatComponent';
 
@@ -28,7 +27,7 @@ const NavbarComponent = ({
 
 	return (
 		<div
-			className={`z-10 flex min-h-[60px] justify-between  items-center gap-3 py-3 px-2 bg-white/90 dark:border-gray-900/50 dark:bg-gray-700`}
+			className={`z-30 flex min-h-[60px] justify-between  items-center gap-3 py-3 px-2 bg-white/90 dark:border-gray-900/50 dark:bg-gray-700 relative`}
 		>
 			<div className='flex items-center gap-3'>
 				<button
