@@ -41,6 +41,8 @@ const SidebarComponent = ({
 	const [sidebarButtonHover, setSidebarButtonHover] = useState(false);
 
 	const setMessages = useMessagesStore((state) => state.setMessages);
+	const setCurrentConversationId = useConversationsStore((state) => state.setCurrentConversationId);
+
 	const conversationList = useConversationsStore((state) => state.conversationList);
 
 	const publicVersion = useChatGptVersion((state) => state.publicVersion);
@@ -105,9 +107,10 @@ const SidebarComponent = ({
 
 	// Handle go to conversation detail
 	const handleGoToDetail = (conversationId: string) => {
+		setCurrentConversationId(conversationId);
+		setIsSelected(conversationId);
 		setMessages([]);
 		router.push(`/conversation/${conversationId}`);
-		setIsSelected(conversationId);
 	};
 
 	useEffect(() => {
@@ -146,6 +149,7 @@ const SidebarComponent = ({
 						<button
 							onClick={() => {
 								setMessages([]);
+								setCurrentConversationId(null);
 								router.push('/');
 							}}
 							className='truncate text-sm'

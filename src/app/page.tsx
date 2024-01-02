@@ -4,12 +4,12 @@ import HomeLayout from '@/components/HomeLayout';
 import EmptyCardsContainerComponent from '@/stories/empty_cards_container/EmptyCardsContainer.component';
 import HelpButtonComponent from '@/stories/help_button/HelpButton.component';
 import MessagesList from '@/components/MessagesList';
-import InputWidthButtonComponent from '@/stories/input_with_button/InputWidthButton.component';
 // hooks
 import useChatCustom from '@/hooks/useChatCustom/useChatCustom';
 // store
 import useMessagesStore from '@/store/useMessagesStore';
 import { useChatGptVersion } from '@/store/useChatGptVersion';
+import InputContainer from '@/components/InputContainer';
 
 /*
 Page with chat using the message and the input component that it's return from response
@@ -34,24 +34,7 @@ export default function Chat() {
 					)}
 
 					<div className='w-full pt-2 text-center text-xs text-gray-600 dark:text-gray-300 flex justify-center'>
-						<div className=' w-full px-2 flex items-center flex-row-reverse md:block'>
-							<form
-								onSubmit={(e) => handleSubmit(e, 'chat')}
-								className='w-full lg:mx-auto lg:max-w-2xl xl:max-w-3xl bg-white dark:bg-[#444654] rounded-large relative'
-								id='formu'
-							>
-								<InputWidthButtonComponent value={input} onChange={handleInputChange} />
-
-								{/* Footer */}
-								<div className='mt-2 text-center text-sm'>
-									{publicVersion ? (
-										<span>Nuclea puede cometer errores. Considera checar la información.</span>
-									) : (
-										<span>ChatGPT can make mistakes. Consider checking important information.</span>
-									)}
-								</div>
-							</form>
-						</div>
+						<InputContainer />
 					</div>
 					<div className='fixed bottom-2 right-6  z-10'>
 						<HelpButtonComponent />
