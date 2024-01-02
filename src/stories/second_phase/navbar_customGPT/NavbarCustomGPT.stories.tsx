@@ -1,5 +1,5 @@
 import type { StoryObj, Meta } from '@storybook/react';
-import NavbarCustomGPT from './NavbarCustomGPT.component';
+import NavbarCustomGPT from './NavbarCustomGPT.componentstory';
 import {
 	Canvas,
 	ColorItem,
