@@ -44,7 +44,6 @@ const NavbarCustomGPTComponent = () => {
 							className='flex items-center gap-2 px-2 py-1 rounded-[8px] text-black dark:text-white border h-full'
 							onClick={handleOpenMenu}
 						>
-							{' '}
 							<HiOutlineDotsHorizontal size={18} />
 						</button>
 						<div className={`absolute right-0 top-10 z-50 ${!openMenu && 'hidden'}`}>
@@ -56,7 +55,6 @@ const NavbarCustomGPTComponent = () => {
 							className='flex items-center gap-2 bg-green-500 px-2 py-1 rounded-[8px] text-white h-full'
 							onClick={handleOpenMenuDelete}
 						>
-							{' '}
 							Save <IoIosArrowDown />
 						</button>
 						<div
