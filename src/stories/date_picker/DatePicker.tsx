@@ -17,12 +17,13 @@ const DatePickerCustom = ({
 	value: Date;
 }) => {
 	// const [date, setDate] = useState<Dayjs | null>(dayjs(new Date()));
+
 	return (
 		<div className='flex w-full full-width-child items-center'>
 			<LocalizationProvider dateAdapter={AdapterDayjs}>
 				<DemoContainer components={['DatePicker', 'DatePicker']}>
 					<DatePicker
-						label='Selecciona un afecha'
+						label='Selecciona una fecha'
 						value={value}
 						onChange={(newValue) => {
 							if (!newValue) return;

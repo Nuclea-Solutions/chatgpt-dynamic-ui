@@ -24,57 +24,57 @@ export default {
 				<>
 					<Title />
 					<Subtitle>
-						Tabla de contenido <hr className='my-4' />
+						Index <hr className='my-4' />
 					</Subtitle>
 					<ul>
-						<li>Descripcion general</li>
-						<li>Componente seleccionado</li>
+						<li>General description</li>
+						<li>Selected component</li>
 						<li>Controls</li>
-						<li>Paleta de colores</li>
-						<li>Iconos</li>
+						<li>Colors palette</li>
+						<li>Icons</li>
 					</ul>
 					<Subtitle>
-						Descripcion general
+						General description
 						<hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						Se puede crear este componente utilizando un contenedor padre "div", dentro de este
-						contenedor se agrega el primer icono, un div contenedor que contiene el texto y un div
-						para difuminar el texto, al final un div contenedor que contiene los iconos de editar y
-						eliminar, este ultimo contenedor su visibilidad esta condicionada a si esta conversacion
-						esta seleccionada.
+						You can create this component using a parent container 'div.' Inside this container, you
+						add the first icon, a div container that holds the text, and another div to blur the
+						text. Finally, there's a div container that contains the edit and delete icons. The
+						visibility of the delete icon container is conditioned on whether this conversation is
+						selected.
 					</Description>
 					<Canvas>
 						<Story of={NoSelected} />
 					</Canvas>
 
 					<Subtitle>
-						Componente seleccionado
+						Selected component
 						<hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						El componente de Select recibe tres parametros para su correcto funcionamiento, title,
-						itemId y isSelected. isSelected recibe el id de la conversacion que esta seleccionada y
-						con itemId se valida si la conversacion seleccionada es igual a id de la conversacion
-						para asi mostrar o ocultar los botones de editar y eliminar.
+						The Select component receives three parameters for its proper functioning: title,
+						itemId, and isSelected. isSelected receives the ID of the selected conversation, and
+						with itemId, it checks whether the selected conversation's ID matches the conversation's
+						ID to determine whether to display or hide the edit and delete buttons.
 					</Description>
 
 					<Canvas />
 
 					<Subtitle>
-						Controles
+						Controls
 						<hr className='my-4' />
 					</Subtitle>
 					<Description>
-						En el apartado de controles nos muestra las variables que recibe el componente para su
-						personalizacion
+						In the 'Controls' section, it presents the variables that the component receives for
+						customization.
 					</Description>
 					<Controls />
 
 					<Subtitle>
-						Paleta de colores
+						Colors palette
 						<hr className='my-4' />
 					</Subtitle>
 					<ColorPalette>
@@ -88,11 +88,11 @@ export default {
 					</ColorPalette>
 
 					<Subtitle>
-						Iconos
+						Icons
 						<hr className='my-4' />
 					</Subtitle>
 					<IconGallery>
-						<IconItem name='icono de elipsis'>
+						<IconItem name='Elipsis icon'>
 							<svg
 								width='24'
 								height='24'

@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import React, { useState } from 'react';
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
 import { RiLockLine } from 'react-icons/ri';
@@ -20,7 +19,7 @@ const MyGPTCardComponent = ({ image, title, description }: MyGPTCard) => {
 			<div className='flex gap-10'>
 				<div className='flex items-center gap-4 ml-2'>
 					<div className='flex items-center justify-center h-[40px] w-[40px] rounded-full overflow-hidden border'>
-						<Image alt='gpt image' src={image} width={28} height={28} />
+						<img src={image} alt='gpt image' width={28} height={28} />
 					</div>
 
 					<div>

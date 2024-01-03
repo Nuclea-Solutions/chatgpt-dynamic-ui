@@ -22,42 +22,41 @@ export default {
 				<>
 					<Title />
 					<Subtitle>
-						Tabla de contenido <hr className='my-4' />
+						Index <hr className='my-4' />
 					</Subtitle>
 					<ul>
-						<li>Descripcion general</li>
-						<li>Componente</li>
+						<li>General description</li>
+						<li>Component</li>
 						<li>Controls</li>
-						<li>Paleta de colores</li>
-						<li>Iconos</li>
+						<li>Colors</li>
+						<li>Icons</li>
 					</ul>
 					<Subtitle>
-						Descripcion general
+						General description
 						<hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						Se puede crear este componente tipo modal utilizando un comtenedor padre "div",
-						dividirlo en dos secciones que en este caso Seria la parte del titulo con el boton de
-						cerrar y la otra parte seria la parte del contenido, este componente sirve para exportar
-						una conversacion al copiar el link de la conversacion se puede compartir con mas
-						personas para que asi puedan ver la conversacion que les pases por medio del link.
+						You can create this modal-type component using a parent container 'div,' dividing it
+						into two sections. In this case, one section is for the title with the close button, and
+						the other section is for the content. This component is used to export a conversation by
+						copying the conversation link, allowing you to share it with others so they can view the
+						conversation through the link.
 					</Description>
 					<Canvas>
 						<Story />
 					</Canvas>
 
 					<Subtitle>
-						Componente <hr className='my-4' />
+						Component <hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						El componente de Sidebar hasta el momento solo funciona de modo visual, no tiene ningun
-						funcionamiento, pero a resumidas cuentas, el icono de la "x" servida para cerrar el
-						componente, el icono del lapiz servira para cambiar el nombre de la conversacion, en
-						more info te rediccionara a una pagina con documentacion sobre el componente, en el
-						componente central se mostrara la conversacion y por ultimo el boton verde permitira
-						copiar el link de la conversacion.
+						The Sidebar component, up to this point, functions only visually and does not have any
+						functional interactions. In summary, the 'x' icon is used to close the component, the
+						pencil icon is for changing the conversation name, the 'More Info' option redirects to a
+						page with documentation about the component, the central component displays the
+						conversation, and the green button allows you to copy the conversation link.
 					</Description>
 
 					<Canvas>
@@ -65,7 +64,7 @@ export default {
 					</Canvas>
 
 					<Subtitle>
-						Paleta de colores
+						Colors palette
 						<hr className='my-4' />
 					</Subtitle>
 					<ColorPalette>
@@ -109,11 +108,11 @@ export default {
 					</ColorPalette>
 
 					<Subtitle>
-						Iconos
+						Icons
 						<hr className='my-4' />
 					</Subtitle>
 					<IconGallery>
-						<IconItem name='icono de cerrar'>
+						<IconItem name='close icon'>
 							<svg
 								stroke='currentColor'
 								fill='none'
@@ -129,7 +128,7 @@ export default {
 								<line x1='6' y1='6' x2='18' y2='18'></line>
 							</svg>
 						</IconItem>
-						<IconItem name='icono de lapiz'>
+						<IconItem name='pencil icon'>
 							<svg
 								stroke='currentColor'
 								fill='none'
@@ -146,7 +145,7 @@ export default {
 								<path d='M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z'></path>
 							</svg>
 						</IconItem>
-						<IconItem name='icono de tres puntos'>
+						<IconItem name='Ellipsis icon'>
 							<svg
 								stroke='currentColor'
 								fill='currentColor'
@@ -159,7 +158,7 @@ export default {
 								<path d='M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z'></path>
 							</svg>
 						</IconItem>
-						<IconItem name='icono de link'>
+						<IconItem name='Link icon'>
 							<svg
 								stroke='currentColor'
 								fill='none'
@@ -176,7 +175,7 @@ export default {
 								<path d='M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71'></path>
 							</svg>
 						</IconItem>
-						<IconItem name='icono de compartir'>
+						<IconItem name='Share icon'>
 							<svg
 								stroke='currentColor'
 								fill='none'
