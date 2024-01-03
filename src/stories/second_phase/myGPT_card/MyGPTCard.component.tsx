@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
 import { RiLockLine } from 'react-icons/ri';
 import { TbPencil, TbTrash } from 'react-icons/tb';
-import DeleteMenuComponent from '../delete_menu/DeleteMenu.component';
 
 interface MyGPTCard {
 	image: string;
