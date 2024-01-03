@@ -139,23 +139,21 @@ const SidebarComponent = ({
 					openSidebar ? 'visible' : 'w-0 invisible'
 				} `}
 			>
-				<div className='flex justify-between px-2 gap-3 min-h-[44px] py-1 items-center transition-colors duration-200 text-white cursor-pointer rounded-[8px] hover:bg-gray-500/30 h-11  flex-grow overflow-hidden'>
+				<div
+					className='flex justify-between px-2 gap-3 min-h-[44px] py-1 items-center transition-colors duration-200 text-white cursor-pointer rounded-[8px] hover:bg-gray-500/30 h-11  flex-grow overflow-hidden'
+					onClick={() => {
+						setMessages([]);
+						setCurrentConversationId(null);
+						router.push('/');
+					}}
+				>
 					<div className='flex items-center gap-2'>
 						<div
 							className={`rounded-full w-[28px] h-[28px] flex items-center justify-center p-1 bg-white text-black`}
 						>
 							<AssistantAvatar />
 						</div>
-						<button
-							onClick={() => {
-								setMessages([]);
-								setCurrentConversationId(null);
-								router.push('/');
-							}}
-							className='truncate text-sm'
-						>
-							New chat
-						</button>
+						<button className='truncate text-sm'>New chat</button>
 					</div>
 					<div>
 						<svg
@@ -180,6 +178,10 @@ const SidebarComponent = ({
 				className={`flex w-full min-h-[44px] gap-3 px-2 items-center ${
 					openSidebar ? 'visible' : 'w-0 invisible'
 				} `}
+				onClick={() => {
+					setMessages([]);
+					router.push('/gpts');
+				}}
 			>
 				<div className='flex justify-between px-2 gap-3 min-h-[44px] items-center transition-colors duration-200 text-white cursor-pointer rounded-[8px] hover:bg-gray-500/30 h-11  flex-grow overflow-hidden'>
 					<div className='flex items-center gap-2'>
@@ -188,15 +190,7 @@ const SidebarComponent = ({
 						>
 							<PiCirclesFour size={32} />
 						</div>
-						<button
-							onClick={() => {
-								setMessages([]);
-								router.push('/gpts');
-							}}
-							className='text-sm'
-						>
-							Explore
-						</button>
+						<button className='text-sm'>Explore</button>
 					</div>
 				</div>
 			</div>

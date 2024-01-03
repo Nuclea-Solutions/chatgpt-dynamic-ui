@@ -1,5 +1,4 @@
 'use client';
-// libraries
 import React, { useState, useEffect, ChangeEvent } from 'react';
 import { HiOutlineCube } from 'react-icons/hi';
 import { PiArrowCounterClockwiseFill } from 'react-icons/pi';
@@ -13,21 +12,24 @@ import { FiTrash2 } from 'react-icons/fi';
 // components
 import InputWidthButtonComponent from '@/stories/input_with_button/InputWidthButton.component';
 import ToggleCustomGPT from '@/stories/second_phase/toggle_customGPT/ToggleCustomGPT.component';
-import Avatar from '@/components/Avatar';
-import UploadImageComponent from '@/stories/second_phase/upload_image/UploadImage.component';
+// import Avatar from '@/components/Avatar';
+// import UploadImageComponent from '@/stories/second_phase/upload_image/UploadImage.component';
 import MessagesList from '@/components/MessagesList';
 // store and context
-import useCustomGPT from '@/store/useCustomGPT';
+// import useCustomGPT from '@/store/useCustomGPT';
 import useMessagesStore from '@/store/useMessagesStore';
 import useChatCustom from '@/hooks/useChatCustom/useChatCustom';
 import HelpButtonComponent from '@/stories/help_button/HelpButton.component';
 import AuthModalComponent from '@/stories/second_phase/authentication_modal/AuthModal.component';
+import CustomGPTCreateSectionComponent from '@/stories/second_phase/custom_gpt_create_section/CustomGPTCreateSection.component';
+import CustomGPTConfigureSectionComponent from '@/stories/second_phase/custom_gpt_configure_section/CustomGPTConfigureSection.component';
+import CustomGPTNewActionSectionComponent from '@/stories/second_phase/custom_gpt_newAction_section/CustomGPTNewActionSection.component';
 
-interface CheckboxState {
-	webBrowsing: boolean;
-	dalleImageGeneration: boolean;
-	codeInterpreter: boolean;
-}
+// interface CheckboxState {
+// 	webBrowsing: boolean;
+// 	dalleImageGeneration: boolean;
+// 	codeInterpreter: boolean;
+// }
 
 const schemaExamples = [
 	{
@@ -69,24 +71,24 @@ const schemaExamples = [
 ];
 
 const page = () => {
-	const [isActive, setIsActive] = useState('newAction');
-	const [
-		name,
-		description,
-		instructions,
-		setName,
-		setDescription,
-		setInstructions,
-		configurationMessages
-	] = useCustomGPT((state) => [
-		state.name,
-		state.description,
-		state.instructions,
-		state.setName,
-		state.setDescription,
-		state.setInstructions,
-		state.configurationMessages
-	]);
+	const [isActive, setIsActive] = useState('create');
+	// const [
+	// 	name,
+	// 	description,
+	// 	instructions,
+	// 	setName,
+	// 	setDescription,
+	// 	setInstructions,
+	// 	configurationMessages
+	// ] = useCustomGPT((state) => [
+	// 	state.name,
+	// 	state.description,
+	// 	state.instructions,
+	// 	state.setName,
+	// 	state.setDescription,
+	// 	state.setInstructions,
+	// 	state.configurationMessages
+	// ]);
 	const { handleSubmit, input, handleInputChange, configureInput, handleChangeConfigureMessage } =
 		useChatCustom({
 			customGPT: true
@@ -97,14 +99,14 @@ const page = () => {
 		setIsActive(activeView);
 	};
 
-	const [windowWidth, setWindowWidth] = useState<number>(0);
+	// const [windowWidth, setWindowWidth] = useState<number>(0);
 	const [previewHovered, setPreviewHovered] = useState(false);
 
-	const [checkboxes, setCheckboxes] = useState<CheckboxState>({
-		webBrowsing: false,
-		dalleImageGeneration: false,
-		codeInterpreter: false
-	});
+	// const [checkboxes, setCheckboxes] = useState<CheckboxState>({
+	// 	webBrowsing: false,
+	// 	dalleImageGeneration: false,
+	// 	codeInterpreter: false
+	// });
 
 	const [examplesDropDow, setExamplesDropdown] = useState(false);
 	const [examplesOptions, setExamplesOptions] = useState('');
@@ -115,24 +117,23 @@ const page = () => {
 	const [importFromUrl, setImportFromUrl] = useState(false);
 	const [schemaValue, setSchemaValue] = useState('');
 
-	// const [inputs, setInputs] = useState([{ id: uuidv4(), value: '' }]);
-	const [inputs, setInputs] = useState([{ id: 'input_1', value: '' }]);
+	// const [inputs, setInputs] = useState([{ id: 'input_1', value: '' }]);
 
-	const handleInputChanges = (id: any, value: any) => {
-		const newInputs = inputs.map((input) => (input.id === id ? { ...input, value } : input));
+	// const handleInputChanges = (id: any, value: any) => {
+	// 	const newInputs = inputs.map((input) => (input.id === id ? { ...input, value } : input));
 
-		if (id === inputs[inputs.length - 1].id) {
-			newInputs.push({ id: `input_${inputs.length + 1}`, value: '' });
-			// newInputs.push({ id: uuidv4(), value: '' });
-		}
+	// 	if (id === inputs[inputs.length - 1].id) {
+	// 		newInputs.push({ id: `input_${inputs.length + 1}`, value: '' });
 
-		setInputs(newInputs);
-	};
+	// 	}
 
-	const handleInputDelete = (id: any) => {
-		const newInputs = inputs.filter((input) => input.id !== id);
-		setInputs(newInputs);
-	};
+	// 	setInputs(newInputs);
+	// };
+
+	// const handleInputDelete = (id: any) => {
+	// 	const newInputs = inputs.filter((input) => input.id !== id);
+	// 	setInputs(newInputs);
+	// };
 
 	const handleOpenImportFromUrl = () => setImportFromUrl(true);
 	const handleCloseImportFromUrl = () => setImportFromUrl(false);
@@ -166,28 +167,28 @@ const page = () => {
 		setExamplesOptions(value);
 	};
 
-	const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-		const { name, checked } = event.target;
-		setCheckboxes({
-			...checkboxes,
-			[name]: checked
-		});
-	};
+	// const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+	// 	const { name, checked } = event.target;
+	// 	setCheckboxes({
+	// 		...checkboxes,
+	// 		[name]: checked
+	// 	});
+	// };
 
-	useEffect(() => {
-		if (typeof window !== 'undefined') {
-			setWindowWidth(window.innerWidth);
-			const handleResize = () => {
-				setWindowWidth(window.innerWidth);
-			};
+	// useEffect(() => {
+	// 	if (typeof window !== 'undefined') {
+	// 		setWindowWidth(window.innerWidth);
+	// 		const handleResize = () => {
+	// 			setWindowWidth(window.innerWidth);
+	// 		};
 
-			window.addEventListener('resize', handleResize);
+	// 		window.addEventListener('resize', handleResize);
 
-			return () => {
-				window.removeEventListener('resize', handleResize);
-			};
-		}
-	}, []);
+	// 		return () => {
+	// 			window.removeEventListener('resize', handleResize);
+	// 		};
+	// 	}
+	// }, []);
 
 	return (
 		<div className={`w-full relative dark:bg-[#444654] dark:text-white`}>
@@ -203,7 +204,7 @@ const page = () => {
 						<ToggleCustomGPT handleActiveView={handleActiveView} isActive={isActive} />
 					</div>
 
-					<div
+					{/* <div
 						className={`${
 							isActive !== 'create' && 'hidden'
 						} overflow-y-auto flex flex-col py-8 px-2 justify-between h-full dark:text-white/70`}
@@ -242,9 +243,10 @@ const page = () => {
 								onChange={handleChangeConfigureMessage}
 							/>
 						</form>
-					</div>
+					</div> */}
+					<CustomGPTCreateSectionComponent isActive={isActive} />
 
-					<div
+					{/* <div
 						className={`${isActive !== 'configure' && 'hidden'} py-3 px-2 overflow-auto`}
 						style={{ height: 'calc(100% - 58px)' }}
 					>
@@ -364,9 +366,10 @@ const page = () => {
 								</div>
 							</div>
 						</form>
-					</div>
+					</div> */}
+					<CustomGPTConfigureSectionComponent isActive={isActive} setIsActive={setIsActive} />
 
-					<div className={`${isActive !== 'newAction' && 'hidden'} overflow-auto h-full`}>
+					{/* <div className={`${isActive !== 'newAction' && 'hidden'} overflow-auto h-full`}>
 						<div className='flex px-4 pt-6 '>
 							<div
 								className='border rounded-[8px] h-fit px-3 py-3 flex justify-center cursor-pointer dark:border-gray-500'
@@ -562,7 +565,23 @@ const page = () => {
 								/>
 							</div>
 						</form>
-					</div>
+					</div> */}
+
+					<CustomGPTNewActionSectionComponent
+						examplesDropDow={examplesDropDow}
+						handleActiveView={handleActiveView}
+						handleAuthTypeModalOpen={handleAuthTypeModalOpen}
+						handleCloseImportFromUrl={handleCloseImportFromUrl}
+						handleDeleteAction={handleDeleteAction}
+						handleExaplesDropdow={handleExaplesDropdow}
+						handleExaplesOptions={handleExaplesOptions}
+						handleOpenImportFromUrl={handleOpenImportFromUrl}
+						handleTextareaValue={handleTextareaValue}
+						importFromUrl={importFromUrl}
+						isActive={isActive}
+						schemaValue={schemaValue}
+						setExamplesDropdown={setExamplesDropdown}
+					/>
 				</div>
 
 				<div

@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from 'react';
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
 import { RiLockLine } from 'react-icons/ri';
