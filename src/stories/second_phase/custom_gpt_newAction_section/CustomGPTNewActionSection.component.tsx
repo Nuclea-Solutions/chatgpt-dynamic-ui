@@ -1,4 +1,5 @@
-import React, { ChangeEvent, useState } from 'react';
+import { Button, MenuHandler, MenuList, Menu, MenuItem } from '@material-tailwind/react';
+import React, { ChangeEvent, MouseEvent, useState } from 'react';
 import { AiOutlineCheck } from 'react-icons/ai';
 import { FiTrash2 } from 'react-icons/fi';
 import { IoChevronDownSharp } from 'react-icons/io5';
@@ -57,7 +58,8 @@ const CustomGPTNewActionSectionComponent = ({
 	setExamplesDropdown,
 	handleCloseImportFromUrl,
 	handleTextareaValue,
-	schemaValue
+	schemaValue,
+	examplesOptions
 }: {
 	isActive: string;
 	handleActiveView: (activeView: string) => void;
@@ -72,9 +74,8 @@ const CustomGPTNewActionSectionComponent = ({
 	handleCloseImportFromUrl: () => void;
 	handleTextareaValue: (e: ChangeEvent<HTMLTextAreaElement>) => void;
 	schemaValue: string;
+	examplesOptions: string;
 }) => {
-	const [examplesOptions, setExamplesOptions] = useState('');
-
 	return (
 		<div className={`${isActive !== 'newAction' && 'hidden'} overflow-auto h-full`}>
 			<div className='flex px-4 pt-6 '>
@@ -129,6 +130,7 @@ const CustomGPTNewActionSectionComponent = ({
 								>
 									{examplesOptions === '' ? 'Examples' : examplesOptions} <IoChevronDownSharp />
 								</div>
+
 								<div
 									className={`flex flex-col gap-2 absolute bg-gray-500 text-white z-20 px-4 py-2 -right-4 top-1 rounded-[8px] whitespace-nowrap cursor-pointer ${
 										!examplesDropDow && 'hidden'
@@ -145,6 +147,7 @@ const CustomGPTNewActionSectionComponent = ({
 										</div>
 										Examples
 									</div>
+
 									<div
 										className='flex gap-2 items-center'
 										onClick={() => {
@@ -201,6 +204,7 @@ const CustomGPTNewActionSectionComponent = ({
 							</div>
 						)}
 					</div>
+
 					<div className='relative flex flex-col gap-2'>
 						<textarea
 							name='schema'
