@@ -1,5 +1,5 @@
 import { Button, MenuHandler, MenuList, Menu, MenuItem } from '@material-tailwind/react';
-import React, { ChangeEvent, MouseEvent, useState } from 'react';
+import React, { ChangeEvent, MouseEvent, useEffect, useRef, useState } from 'react';
 import { AiOutlineCheck } from 'react-icons/ai';
 import { FiTrash2 } from 'react-icons/fi';
 import { IoChevronDownSharp } from 'react-icons/io5';
@@ -76,6 +76,27 @@ const CustomGPTNewActionSectionComponent = ({
 	schemaValue: string;
 	examplesOptions: string;
 }) => {
+	const [menuVisible, setMenuVisible] = useState(false);
+	const menuRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+				setMenuVisible(false);
+			}
+		};
+
+		document.addEventListener('mousedown', handleClickOutside as any);
+
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside as any);
+		};
+	}, []);
+
+	const handleDivClick = () => {
+		setMenuVisible(!menuVisible);
+	};
+
 	return (
 		<div className={`${isActive !== 'newAction' && 'hidden'} overflow-auto h-full`}>
 			<div className='flex px-4 pt-6 '>
@@ -124,22 +145,23 @@ const CustomGPTNewActionSectionComponent = ({
 								>
 									Import from URL
 								</div>
+
 								<div
 									className='border rounded-[8px] py-1 px-4 flex gap-6 items-center dark:border-gray-500 cursor-pointer'
-									onClick={handleExaplesDropdow}
+									onClick={handleDivClick}
 								>
 									{examplesOptions === '' ? 'Examples' : examplesOptions} <IoChevronDownSharp />
 								</div>
-
 								<div
 									className={`flex flex-col gap-2 absolute bg-gray-500 text-white z-20 px-4 py-2 -right-4 top-1 rounded-[8px] whitespace-nowrap cursor-pointer ${
-										!examplesDropDow && 'hidden'
+										!menuVisible && 'hidden'
 									}`}
+									ref={menuRef}
 								>
 									<div
 										className='flex gap-2 items-center'
 										onClick={() => {
-											handleExaplesOptions('Examples'), setExamplesDropdown(false);
+											handleExaplesOptions('Examples'), handleDivClick();
 										}}
 									>
 										<div className={`${examplesOptions !== 'Examples' && 'invisible'}`}>
@@ -151,7 +173,7 @@ const CustomGPTNewActionSectionComponent = ({
 									<div
 										className='flex gap-2 items-center'
 										onClick={() => {
-											handleExaplesOptions('Wheather'), setExamplesDropdown(false);
+											handleExaplesOptions('Wheather'), handleDivClick();
 										}}
 									>
 										<div className={`${examplesOptions !== 'Wheather' && 'invisible'}`}>
@@ -162,7 +184,7 @@ const CustomGPTNewActionSectionComponent = ({
 									<div
 										className={`flex gap-2 items-center`}
 										onClick={() => {
-											handleExaplesOptions('Pet store'), setExamplesDropdown(false);
+											handleExaplesOptions('Pet store'), handleDivClick();
 										}}
 									>
 										<div className={`${examplesOptions !== 'Pet store' && 'invisible'}`}>
@@ -173,7 +195,7 @@ const CustomGPTNewActionSectionComponent = ({
 									<div
 										className={`flex gap-2 items-center`}
 										onClick={() => {
-											handleExaplesOptions('blank'), setExamplesDropdown(false);
+											handleExaplesOptions('blank'), handleDivClick();
 										}}
 									>
 										<div className={`${examplesOptions !== 'Blank Template' && 'invisible'}`}>

@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { IoIosArrowBack, IoIosArrowDown } from 'react-icons/io';
 import { GoDotFill } from 'react-icons/go';
 import { HiOutlineDotsHorizontal } from 'react-icons/hi';
@@ -7,18 +7,59 @@ import { useRouter } from 'next/navigation';
 import SaveMenuComponent from '../save_menu/SaveMenu.component';
 import DeleteMenuComponent from '../delete_menu/DeleteMenu.component';
 const NavbarCustomGPTComponent = () => {
-	const [openMenu, setOpenMenu] = useState<boolean>(false);
-	const [openMenuDelete, setOpenMenuDelete] = useState<boolean>(false);
 	const router = useRouter();
+	const [menuVisibleDelete, setMenuVisibleDelete] = useState(false);
+	const menuDeleteRef = useRef<HTMLDivElement>(null);
+	const buttonDeleteRef = useRef<HTMLButtonElement>(null);
+	const [saveMenuVisible, setSaveMenuVisible] = useState(false);
+	const saveMenuRef = useRef<HTMLDivElement>(null);
+	const buttonSaveMenuRef = useRef<HTMLButtonElement>(null);
 
-	const handleOpenMenu = () => {
-		setOpenMenu((prev) => !prev);
-		setOpenMenuDelete(false);
-	};
 	const handleOpenMenuDelete = () => {
-		setOpenMenuDelete((prev) => !prev);
-		setOpenMenu(false);
+		setMenuVisibleDelete((prev) => !prev);
 	};
+
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (
+				menuDeleteRef.current &&
+				!menuDeleteRef.current.contains(event.target as Node) &&
+				buttonDeleteRef.current &&
+				!buttonDeleteRef.current.contains(event.target as Node)
+			) {
+				setMenuVisibleDelete(false);
+			}
+		};
+
+		document.addEventListener('mousedown', handleClickOutside as any);
+
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside as any);
+		};
+	}, []);
+
+	const handleOpenMenuSave = () => {
+		setSaveMenuVisible(!saveMenuVisible);
+	};
+
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (
+				saveMenuRef.current &&
+				!saveMenuRef.current.contains(event.target as Node) &&
+				buttonSaveMenuRef.current &&
+				!buttonSaveMenuRef.current.contains(event.target as Node)
+			) {
+				setSaveMenuVisible(false);
+			}
+		};
+
+		document.addEventListener('mousedown', handleClickOutside as any);
+
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside as any);
+		};
+	}, []);
 
 	return (
 		<nav className='p-2 h-16 border z-30 dark:bg-[#444654] dark:text-white'>
@@ -44,27 +85,33 @@ const NavbarCustomGPTComponent = () => {
 					<div className='relative'>
 						<button
 							className='flex items-center gap-2 px-2 py-1 rounded-[8px] text-black dark:text-white border h-full'
-							onClick={handleOpenMenu}
+							onClick={handleOpenMenuDelete}
+							ref={buttonDeleteRef}
 						>
-							{' '}
 							<HiOutlineDotsHorizontal size={18} />
 						</button>
-						<div className={`absolute right-0 top-10 z-50 ${!openMenu && 'hidden'}`}>
+
+						<div
+							className={`absolute right-0 top-10 z-50 ${!menuVisibleDelete && 'hidden'}`}
+							ref={menuDeleteRef}
+						>
 							<DeleteMenuComponent />
 						</div>
 					</div>
+
 					<div className='relative'>
 						<button
 							className='flex items-center gap-2 bg-green-500 px-2 py-1 rounded-[8px] text-white h-full'
-							onClick={handleOpenMenuDelete}
+							onClick={handleOpenMenuSave}
+							ref={buttonSaveMenuRef}
 						>
-							{' '}
 							Save <IoIosArrowDown />
 						</button>
 						<div
 							className={`absolute right-0 top-10 z-20 ${
-								!openMenuDelete && 'hidden'
+								!saveMenuVisible && 'hidden'
 							} whitespace-nowrap`}
+							ref={saveMenuRef}
 						>
 							<SaveMenuComponent />
 						</div>

@@ -1,6 +1,6 @@
 // libraries
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 // components
 import { Image } from '@nextui-org/react';
@@ -39,6 +39,8 @@ const SidebarComponent = ({
 	const currentDate = new Date();
 	const router = useRouter();
 	const [sidebarButtonHover, setSidebarButtonHover] = useState(false);
+	const userMenuRef = useRef<HTMLDivElement>(null);
+	const buttonUserMenuRef = useRef<HTMLDivElement>(null);
 
 	const setMessages = useMessagesStore((state) => state.setMessages);
 	const setCurrentConversationId = useConversationsStore((state) => state.setCurrentConversationId);
@@ -125,6 +127,29 @@ const SidebarComponent = ({
 
 		return () => {
 			window.removeEventListener('resize', handleResize);
+		};
+	}, []);
+
+	const handleOpenMenuUser = () => {
+		setDropDown((prev) => !prev);
+	};
+
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (
+				userMenuRef.current &&
+				!userMenuRef.current.contains(event.target as Node) &&
+				buttonUserMenuRef.current &&
+				!buttonUserMenuRef.current.contains(event.target as Node)
+			) {
+				setDropDown(false);
+			}
+		};
+
+		document.addEventListener('mousedown', handleClickOutside as any);
+
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside as any);
 		};
 	}, []);
 
@@ -328,10 +353,11 @@ const SidebarComponent = ({
 				</div>
 
 				<div
-					onClick={() => setDropDown((prev) => !prev)}
+					onClick={handleOpenMenuUser}
 					className={`flex items-center gap-3  w-full rounded-[8px] text-sm p-1 hover:bg-[#202123] text-white relative ${
 						dropDown && 'bg-[#202123]'
 					}`}
+					ref={buttonUserMenuRef}
 				>
 					<div className='h-8 w-8 rounded-[2px]'>
 						<Image src={photoUrl} alt='user' width={100} radius='none' />
@@ -346,6 +372,7 @@ const SidebarComponent = ({
 								? 'bg-[#202123] w-full  absolute bottom-11 right-[1px]  py-3 z-10 rounded-[8px] border border-gray-700'
 								: 'hidden'
 						}`}
+						ref={userMenuRef}
 					>
 						<div className='flex gap-3 p-3 min-h-[44px]  hover:bg-gray-700/50'>
 							<svg
