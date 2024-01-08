@@ -1,150 +1,73 @@
 import { NextResponse } from 'next/server';
-import openai from '@/config/openai';
-import {
-	DEFAULT_NAME,
-	DEFAULT_DESCRIPTION,
-	DEFAULT_MODEL,
-	DEFAULT_INSTRUCTIONS
-} from '@/config/assistant-config';
-import { TOOL_FUNCTIONS } from './functions';
+import { ChatPromptTemplate, MessagesPlaceholder } from '@langchain/core/prompts';
+import { chatModel } from '@/config/openai';
+import { createOpenAIFunctionsAgent, AgentExecutor } from 'langchain/agents';
+import { TOOLS } from './functions';
+import { ChatMessageHistory } from 'langchain/stores/message/in_memory';
+import { RunnableWithMessageHistory } from '@langchain/core/runnables';
+import { nanoid } from '@/utils/utils';
+
+const messageHistory = new ChatMessageHistory();
 
 export async function POST(req: Request) {
 	try {
 		const json = await req.json();
-		const { message, user_id, thread_id, run_id, assistant_id } = json;
+		const { message, user_id, session_id } = json;
+		let sessionId: string | undefined = session_id;
+		console.log({ json });
 
-		const response: {
-			run_id?: string;
-			thread_id?: string;
-			assistant_id?: string;
-		} = { thread_id, run_id, assistant_id };
+		const template = ChatPromptTemplate.fromMessages([
+			['system', 'You are a helpfull assistant.'],
+			['user', '{input}'],
+			new MessagesPlaceholder('agent_scratchpad')
+		]);
 
-		// Check if the user exists
-		if (!user_id) {
-			try {
-				const assistant = await openai.beta.assistants.create({
-					name: json?.name ?? DEFAULT_NAME,
-					instructions: json?.instructions ?? DEFAULT_INSTRUCTIONS.replace(/\s+/g, ' '),
-					description: json?.description ?? DEFAULT_DESCRIPTION,
-					model: DEFAULT_MODEL
-				});
-				const emptyThread = await openai.beta.threads.create({});
-
-				response.assistant_id = assistant.id;
-				response.thread_id = emptyThread.id;
-			} catch (error) {
-				console.log({ error });
-				return error;
-			}
-		}
-
-		// Continue the assistant
-		if (response.run_id && response.thread_id) {
-			const firstRunCheck = await openai.beta.threads.runs.retrieve(
-				response.thread_id,
-				response.run_id
-			);
-
-			if (firstRunCheck.status === 'in_progress') {
-				return NextResponse.json('ok');
-			}
-		}
-
-		if (!response.thread_id) {
-			return NextResponse.json('ok');
-		}
-
-		// else no run we can continue
-		await openai.beta.threads.messages.create(response.thread_id, {
-			role: 'user',
-			content: message
+		const agent = await createOpenAIFunctionsAgent({
+			llm: chatModel,
+			tools: TOOLS,
+			prompt: template
 		});
 
-		const run = await openai.beta.threads.runs.create(response.thread_id, {
-			assistant_id: response.assistant_id ?? ''
+		const agentExecutor = new AgentExecutor({
+			agent,
+			tools: TOOLS
 		});
-		response.run_id = run.id;
 
-		// 5. Handle the run
-		const assistantResponse = await handleAssitantRun(response.thread_id, run.id);
+		const agentWithChatHistory = new RunnableWithMessageHistory({
+			runnable: agentExecutor,
+			// This is needed because in most real world scenarios, a session id is needed per user.
+			// It isn't really used here because we are using a simple in memory ChatMessageHistory.
+			getMessageHistory: (_sessionId) => messageHistory,
+			inputMessagesKey: 'input',
+			historyMessagesKey: 'chat_history'
+		});
+
+		// TODO: session by conversation or by user session?
+		// New conversation
+		if (!sessionId) {
+			sessionId = nanoid();
+		}
+
+		const result5 = await agentWithChatHistory.invoke(
+			{
+				input: message
+			},
+			{
+				// This is needed because in most real world scenarios, a session id is needed per user.
+				// It isn't really used here because we are using a simple in memory ChatMessageHistory.
+				configurable: {
+					sessionId
+				}
+			}
+		);
+
+		console.log({ result5 });
 
 		return NextResponse.json({
-			data: assistantResponse,
-			run_id: run.id,
-			thread_id: response.thread_id,
-			assistant_id: response.assistant_id
+			data: result5.output,
+			session_id: sessionId
 		});
 	} catch (error) {
 		console.log({ error });
-		return error;
-	}
-}
-
-async function handleAssitantRun(thread_id: string, run_id: string): Promise<any> {
-	let response = await openai.beta.threads.runs.retrieve(thread_id, run_id);
-
-	let waitBackoff = 1150;
-	while (response.status === 'queued' || response.status === 'in_progress') {
-		await new Promise((resolve) => setTimeout(resolve, waitBackoff));
-		waitBackoff += 200;
-		response = await openai.beta.threads.runs.retrieve(thread_id, run_id);
-	}
-
-	if (
-		response.status === 'failed' ||
-		response.status === 'cancelled' ||
-		response.status === 'cancelling' ||
-		response.status === 'expired'
-	) {
-		return 'Ocurrió un error, por favor intenta de nuevo';
-	}
-
-	if (response.status === 'completed') {
-		// send last messgae
-		const threadMessages = await openai.beta.threads.messages.list(thread_id);
-
-		const lastMessage = threadMessages.data
-			.filter((m) => m.run_id === run_id && m.role === 'assistant')
-			.pop();
-
-		if (lastMessage) {
-			// @ts-ignore
-			return lastMessage.content[0].text.value;
-		} else {
-			return 'Ocurrió un error, por favor intenta de nuevo';
-		}
-	}
-
-	if (response.status === 'requires_action') {
-		const functionNames = response.required_action?.submit_tool_outputs.tool_calls;
-
-		if (!functionNames) {
-			return 'Ocurrió un error, por favor intenta de nuevo';
-		}
-
-		const functionOutputs: {
-			tool_call_id: string;
-			output: string;
-		}[] = [];
-
-		for (const functionName of functionNames!) {
-			if (!TOOL_FUNCTIONS[functionName.function.name]) {
-				continue;
-			}
-
-			const functionResponse = await TOOL_FUNCTIONS[functionName.function.name](
-				functionName.function.arguments
-			);
-
-			functionOutputs.push({
-				tool_call_id: functionName.id,
-				output: functionResponse
-			});
-		}
-
-		const run = await openai.beta.threads.runs.submitToolOutputs(thread_id, run_id, {
-			tool_outputs: functionOutputs
-		});
-		return await handleAssitantRun(thread_id, run.id);
 	}
 }
