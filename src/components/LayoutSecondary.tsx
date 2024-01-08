@@ -23,9 +23,7 @@ const LayoutSecondary = ({ children }: { children: React.ReactNode }) => {
 				handleOpenSidebar={handleOpenSidebar}
 				handleToggleSidebar={handleToggleSidebar}
 			/>
-			<div className='w-full max-h-[100vh] overflow-y-auto overflow-x-hidden'>
-				<LayoutNavbar handleToggleSidebar={handleToggleSidebar} openSidebar={openSidebar} />
-
+			<div className='w-full max-h-[100vh] overflow-y-auto overflow-x-hidden pt-28 md:pt-16'>
 				{children}
 			</div>
 

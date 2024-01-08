@@ -22,7 +22,7 @@ const LayoutNavbar = ({
 		return null;
 	}
 	return (
-		<div className={` w-full z-30`}>
+		<div className={` w-full z-30 absolute top-0`}>
 			<NavbarSmallScreenComponent
 				handleToggleSidebar={handleToggleSidebar}
 				publicVersion={publicVersion}

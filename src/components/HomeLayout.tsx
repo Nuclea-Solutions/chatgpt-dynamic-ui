@@ -1,20 +1,15 @@
 import { NextUIProvider } from '@nextui-org/react';
 import React from 'react';
+import LayoutNavbar from './LayoutNavbar';
+import { usesidebar } from '@/store/useSidebar';
 
 const HomeLayout = ({ children }: { children: React.ReactNode }) => {
+	const handleToggleSidebar = usesidebar((state) => state.setHandleToggleSidebar);
+	const openSidebar = usesidebar((state) => state.openSidebar);
 	return (
-		<NextUIProvider className='flex justify-center h-full'>
-			<div className='h-full w-full'>
-				{children}
-
-				{/* <div className='mt-2'>
-					<span>
-						Free Research Preview. ChatGPT may produce inaccurate information about people, places,
-						or facts.
-						<span className='underline'>ChatGPT September 25 Version</span>
-					</span>
-				</div> */}
-			</div>
+		<NextUIProvider className='  h-full'>
+			<LayoutNavbar handleToggleSidebar={handleToggleSidebar} openSidebar={openSidebar} />
+			<div className='h-full w-full'>{children}</div>
 		</NextUIProvider>
 	);
 };

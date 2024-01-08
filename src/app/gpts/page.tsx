@@ -102,7 +102,7 @@ const page = () => {
 							</div>
 							<div>
 								<p className='font-semibold '>
-									Create a GPT{' '}
+									Create a GPT
 									<span className='rounded-full bg-blue-100 px-2 py-[2px] text-xs font-thin text-blue-400'>
 										Beta
 									</span>
