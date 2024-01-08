@@ -162,6 +162,7 @@ const useChatCustom = ({ customGPT }: { customGPT?: boolean }) => {
 			// const { data } = await axios.get(`/api/conversation/${params.id}`);
 			const data = conversationList.find((item) => item._id === params.id);
 
+			if (!data) return;
 			let resultMessages: Message[] = [];
 			Object.values((data as Conversation).mapping).forEach(
 				(item: MessageModule, index: number, array: MessageModule[]) => {

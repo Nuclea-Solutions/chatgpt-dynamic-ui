@@ -7,7 +7,7 @@ export const metadata = {
 	description: ''
 };
 
-const sohne = localFont({ src: '../../fonts/Test Söhne/TestSöhne-Buch.otf' });
+// const sohne = localFont({ src: '../../fonts/Test Söhne/TestSöhne-Buch.otf' });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			</head>
 			<body
 				className={cn(
-					sohne.className,
+					//sohne.className,
 					'bg-white dark:bg-gray-700 min-h-screen flex text-[#374151] w-full text-base'
 				)}
 			>

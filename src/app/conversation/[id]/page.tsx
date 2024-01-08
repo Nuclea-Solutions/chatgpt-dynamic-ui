@@ -10,19 +10,30 @@ import useChatCustom from '@/hooks/useChatCustom/useChatCustom';
 import useMessagesStore from '@/store/useMessagesStore';
 // utils
 import '../styles.css';
+import axios from 'axios';
 
 /*
 Conversation detail page: rendering a conversation with the new structure (type Conversation)
 */
-export default function Conversation() {
+
+export async function generateStaticParams() {
+	const conversations = await axios.get('/api/conversations');
+
+	return conversations.data?.map((conversation: any) => ({
+		id: conversation.id
+	}));
+}
+
+export default function Page({ params }: { params: { id: unknown } }) {
 	const messages = useMessagesStore((state) => state.messages);
 	const { getConversation } = useChatCustom({});
-	const params = useParams();
+	// const params = useParams();
+	const { id } = params;
 
 	useEffect(() => {
-		if (!params.id) return;
+		// if (!id) return;
 		getConversation();
-	}, [params?.id]);
+	}, [id]);
 
 	return (
 		<div className='flex justify-center h-full'>

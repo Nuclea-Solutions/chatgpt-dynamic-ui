@@ -22,6 +22,7 @@ import useMessagesStore from '@/store/useMessagesStore';
 import useChatCustom from '@/hooks/useChatCustom/useChatCustom';
 import HelpButtonComponent from '@/stories/help_button/HelpButton.component';
 import AuthModalComponent from '@/stories/second_phase/authentication_modal/AuthModal.component';
+import { Button, Menu, MenuItem } from '@mui/material';
 
 interface CheckboxState {
 	webBrowsing: boolean;
