@@ -23,41 +23,41 @@ export default {
 				<>
 					<Title />
 					<Subtitle>
-						Tabla de contenido <hr className='my-4' />
+						Index <hr className='my-4' />
 					</Subtitle>
 					<ul>
-						<li>Descripcion general</li>
-						<li>Componente</li>
+						<li>General description</li>
+						<li>Component</li>
 						<li>Controls</li>
-						<li>Paleta de colores</li>
-						<li>Iconos</li>
+						<li>Colors Palette</li>
+						<li>Icons</li>
 					</ul>
 					<Subtitle>
-						Descripcion general
+						General description
 						<hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						Se puede crear este componente utilizando un componente contenedor padre "div", dentro
-						del componente padre se agregan tres contenedores para las distintas secciones, la
-						primera que contiene los botones para nuevo chat y esconder el menu, la segunda seccion
-						que muestra las conversaciones y por ultimo el apartado de usuario. Estas secciones se
-						acomodan utilizando flexbox.
+						You can create this component using a parent container 'div.' Inside the parent
+						component, three containers are added for different sections. The first section contains
+						buttons for a new chat and hiding the menu, the second section displays the
+						conversations, and the last section is for the user profile. These sections are arranged
+						using flexbox.
 					</Description>
 					<Canvas>
 						<Story />
 					</Canvas>
 
 					<Subtitle>
-						Componente <hr className='my-4' />
+						Component <hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						El componente de Sidebar recibe tres parametros para la correcta utilizacion de este
-						mismo, "conversations,useName,photoUrl", de lo cual las conversaciones se reciben como
-						un arreglo de objetos, el objeto contiene un campo de fecha y con un algoritmo interno
-						del componente, se agrupan las conversaciones por las conversaciones de hoy, ayer,
-						ultimos 7 dias y menos de un mes.
+						The Sidebar component receives three parameters for its proper usage: 'conversations,
+						useName, photoUrl.' Conversations are received as an array of objects, and each object
+						contains a date field. Using an internal algorithm within the component, the
+						conversations are grouped into categories such as today, yesterday, the last 7 days, and
+						less than a month old.
 					</Description>
 
 					<Canvas>
@@ -65,17 +65,17 @@ export default {
 					</Canvas>
 
 					<Subtitle>
-						Controles
+						Controls
 						<hr className='my-4' />
 					</Subtitle>
 					<Description>
-						En el apartado de controles nos muestra las variables que recibe el componente para su
-						personalizacion
+						In the controls section, it showcases the variables that the component receives for
+						customization.
 					</Description>
 					<Controls />
 
 					<Subtitle>
-						Paleta de colores
+						Colors palette
 						<hr className='my-4' />
 					</Subtitle>
 					<ColorPalette>
@@ -91,11 +91,11 @@ export default {
 					</ColorPalette>
 
 					<Subtitle>
-						Iconos
+						Icons
 						<hr className='my-4' />
 					</Subtitle>
 					<IconGallery>
-						<IconItem name='icono de mas'>
+						<IconItem name='Plus icon'>
 							<svg
 								stroke='currentColor'
 								fill='none'
@@ -112,7 +112,7 @@ export default {
 								<line x1='5' y1='12' x2='19' y2='12'></line>
 							</svg>
 						</IconItem>
-						<IconItem name='icono de sidebar'>
+						<IconItem name='Sidebar icon'>
 							<svg
 								stroke='currentColor'
 								fill='none'
@@ -129,7 +129,7 @@ export default {
 								<line x1='9' y1='3' x2='9' y2='21'></line>
 							</svg>
 						</IconItem>
-						<IconItem name='icono de mensaje'>
+						<IconItem name='Message icon'>
 							<svg
 								stroke='currentColor'
 								fill='none'
@@ -145,7 +145,7 @@ export default {
 								<path d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'></path>
 							</svg>
 						</IconItem>
-						<IconItem name='icono de estrellas'>
+						<IconItem name='Starts icon'>
 							<svg
 								width='16'
 								height='16'
@@ -164,7 +164,7 @@ export default {
 								></path>
 							</svg>
 						</IconItem>
-						<IconItem name='icono de tres puntos'>
+						<IconItem name='Elipsis icon'>
 							<svg
 								stroke='currentColor'
 								fill='none'
@@ -182,7 +182,7 @@ export default {
 								<circle cx='5' cy='12' r='1'></circle>
 							</svg>
 						</IconItem>
-						<IconItem name='icono de mensaje "custom instuctions"'>
+						<IconItem name='Message icon "custom instuctions"'>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								width='25'
@@ -208,7 +208,7 @@ export default {
 								></path>
 							</svg>
 						</IconItem>
-						<IconItem name='icono de configuracion'>
+						<IconItem name='Config icon'>
 							<svg
 								stroke='currentColor'
 								fill='none'
@@ -225,7 +225,7 @@ export default {
 								<path d='M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z'></path>
 							</svg>
 						</IconItem>
-						<IconItem name='icono de cerrar sesion'>
+						<IconItem name='Logout icon'>
 							<svg
 								stroke='currentColor'
 								fill='none'

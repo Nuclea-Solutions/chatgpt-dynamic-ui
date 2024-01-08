@@ -13,54 +13,57 @@ export default {
 				<>
 					<Title />
 					<Subtitle>
-						Tabla de contenido <hr className='my-4' />
+						Index <hr className='my-4' />
 					</Subtitle>
 					<ul>
-						<li>Descripcion general</li>
-						<li>Componente</li>
-						<li>Nota</li>
+						<li>General description</li>
+						<li>Component</li>
+						<li>Note</li>
 					</ul>
 					<Subtitle>
-						Descripcion general
+						General description
 						<hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						Para crear este componente se necesita intalar el api de google maps
-						@react-google-maps/api para importar los componentes necesarios para su utilizacion, asi
-						mismo se debe crear un proyecto en https://developers.google.com, despues de crear el
-						proyecto se deben habilitar las api necesarias para el proyecto, para el buscador con
-						autocomplete se requiere habilitar la api de "Places API" y para el mapa se habilita
-						"Maps JavaScript API". Una vez concluidos los pasos anteriores se tiene que crear la key
-						que se utilizara en el proyecto.
+						To create this component, you need to install the Google Maps API @react-google-maps/api
+						to import the necessary components for its use. Additionally, you must create a project
+						on https://developers.google.com. After creating the project, you need to enable the
+						necessary APIs for the project. To use the autocomplete search, you should enable the
+						"Places API," and for the map, enable "Maps JavaScript API." Once you've completed the
+						previous steps, you need to generate the API key that will be used in the project.
 					</Description>
 					<Canvas />
 
 					<Subtitle>
-						Componente
+						Component
 						<hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						En este componente se utiliza el input de la libreria nextui en el siguiente link se
-						encuentra la documentacion: https://nextui.org/docs/components/input. Para cargar el
-						mapa y el autocomplete es necesario importar el componente LoadScript para envolver todo
-						nuestros componentes, el mismo que necesita los parametros key e libraries, para su
-						correcto funcionamiento. El input debe ir envuelto en un componente padre
-						StandaloneSearchBox que se importa de react-google-maps/api para que asi se pueda
-						autocompletar el input, por ultimo tenemos que importar GoogleMap de la misma libreria
-						para poder mostrar el mapa.
+						In this component, the input from the Next UI library is used. You can find the
+						documentation at the following link: https://nextui.org/docs/components/input. To load
+						the map and enable autocomplete, it's necessary to import the LoadScript component to
+						wrap all your components. This component requires the parameters key and libraries for
+						proper functionality. The input should be wrapped in a parent component
+						StandaloneSearchBox imported from react-google-maps/api to enable autocomplete for the
+						input. Finally, you need to import GoogleMap from the same library to display the map.
 					</Description>
 
 					<Canvas />
 
 					<Subtitle>
-						Nota
+						Note
 						<hr className='my-4' />
 					</Subtitle>
 					<Description>
-						El componente no recibe parametros por lo cual carece de controles y los estilos vienen
-						predeterminados por las librerias de componentes.
+						In this component, the input from the Next UI library is used. You can find the
+						documentation at the following link: https://nextui.org/docs/components/input. To load
+						the map and enable autocomplete, it's necessary to import the LoadScript component to
+						wrap all your components. This component requires the parameters key and libraries for
+						proper functionality. The input should be wrapped in a parent component
+						StandaloneSearchBox imported from react-google-maps/api to enable autocomplete for the
+						input. Finally, you need to import GoogleMap from the same library to display the map
 					</Description>
 				</>
 			)

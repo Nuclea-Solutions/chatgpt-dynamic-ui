@@ -23,36 +23,36 @@ export default {
 				<>
 					<Title />
 					<Subtitle>
-						Tabla de contenido <hr className='my-4' />
+						Index <hr className='my-4' />
 					</Subtitle>
 					<ul>
-						<li>Descripcion general</li>
-						<li>Componente con color</li>
+						<li>General description</li>
+						<li>Component</li>
 						<li>Controls</li>
-						<li>Paleta de colores</li>
-						<li>Iconos</li>
+						<li>Colors palette</li>
+						<li>Icons</li>
 					</ul>
 					<Subtitle>
-						Descripcion general
+						General description
 						<hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						Se puede crear este componente simplemente con un contenedor padre "div", dentros de
-						este contenedor agregar un boton que contenga un texto con un icono
+						This component can be created with just a parent container 'div.' Inside this container,
+						add a button that includes text with an icon.
 					</Description>
 					<Canvas>
 						<Story of={Base} />
 					</Canvas>
 
 					<Subtitle>
-						Componente
+						Component
 						<hr className='my-4' />
 					</Subtitle>
 
 					<Description>
-						El componente consta de dos estados regenerate y stop regenerate como se muestra en la
-						siguiente seccion.
+						The component consists of two states, 'regenerate' and 'stop regenerate,' as shown in
+						the following section.
 					</Description>
 
 					<Canvas>
@@ -61,17 +61,17 @@ export default {
 					</Canvas>
 
 					<Subtitle>
-						Controles
+						Controls
 						<hr className='my-4' />
 					</Subtitle>
 					<Description>
-						En el apartado de controles nos muestra las variables que recibe el componente para su
-						personalizacion
+						In the controls section, it showcases the variables that the component receives for
+						customization.
 					</Description>
 					<Controls />
 
 					<Subtitle>
-						Paleta de colores
+						Colors palette
 						<hr className='my-4' />
 					</Subtitle>
 					<ColorPalette>
@@ -80,11 +80,11 @@ export default {
 					</ColorPalette>
 
 					<Subtitle>
-						Iconos
+						Icons
 						<hr className='my-4' />
 					</Subtitle>
 					<IconGallery>
-						<IconItem name='icono de stop'>
+						<IconItem name='Stop icon'>
 							<svg
 								stroke='currentColor'
 								fill='none'
@@ -100,7 +100,7 @@ export default {
 								<rect x='3' y='3' width='18' height='18' rx='2' ry='2'></rect>
 							</svg>
 						</IconItem>
-						<IconItem name='icono de regenerar'>
+						<IconItem name='Regenerate icon'>
 							<svg
 								stroke='currentColor'
 								fill='none'

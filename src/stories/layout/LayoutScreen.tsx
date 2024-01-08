@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import RightSideBarComponent from '../right_sidebar/RightSideBar.component';
 import SidebarComponent from '../sidebar/Sidebar.component';
 import NavbarComponent from '../navbar/Navbar.component';
 import NavbarSmallScreenComponent from '../navbar_small_screen/NavbarSmallScreen.component';
@@ -8,8 +7,8 @@ import InputWidthButtonComponent from '../input_with_button/InputWidthButton.com
 import RegenerateButtonComponent from '../regenerate_button/RegenerateButton.component';
 import HelpButtonComponent from '../help_button/HelpButton.component';
 import DefaultOptionCardComponent from '../default_option_card/DefaultOptionCard.component';
-import { Conversation } from '@/types/conversation';
-import { MessageRole } from '@/types/message';
+import { Conversation } from '../../types/conversation';
+import { MessageRole } from '../../types/message';
 
 const conversations: Conversation[] = [
 	{
@@ -582,8 +581,6 @@ const LayoutScreen = ({ isNewChat = true }) => {
 					<HelpButtonComponent />
 				</div>
 			</div>
-
-			<RightSideBarComponent />
 		</div>
 	);
 };

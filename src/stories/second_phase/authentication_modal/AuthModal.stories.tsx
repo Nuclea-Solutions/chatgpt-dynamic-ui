@@ -4,8 +4,6 @@ import {
 	ColorPalette,
 	Controls,
 	Description,
-	IconGallery,
-	IconItem,
 	Story,
 	Subtitle,
 	Title

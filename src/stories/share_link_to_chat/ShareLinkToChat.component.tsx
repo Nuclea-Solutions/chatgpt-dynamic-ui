@@ -1,4 +1,4 @@
-import { useshareLinkToChat } from '@/store/useLinkToChatComponent';
+import { useshareLinkToChat } from '../../store/useLinkToChatComponent';
 import React from 'react';
 
 const ShareLinkToChatComponent = () => {
