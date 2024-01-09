@@ -80,7 +80,7 @@ const NavbarComponent = ({
 						</svg>
 					</div>
 				</button>
-				{/* cccccccccccccccccccccccccccccccccccccccccccc */}
+
 				<div
 					onClick={handleOpenDropDown}
 					className='flex items-center gap-1 text-lg p-2 rounded-xl text-gray-600 dark:text-white sm:justify-center opacity-100 cursor-pointer hover:bg-gray-50 relative '
