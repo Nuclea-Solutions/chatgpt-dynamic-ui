@@ -20,7 +20,7 @@ export default function Chat() {
 	const publicVersion = useChatGptVersion((state) => state.publicVersion);
 	return (
 		<HomeLayout>
-			<div className='flex flex-col h-full justify-between w-full'>
+			<div className='flex flex-col h-full justify-between w-full overflow-hidden'>
 				{/* MESSAGES */}
 				<MessagesList messages={messages} />
 				{isLoading && <p className='px-10'>cargando...</p>}

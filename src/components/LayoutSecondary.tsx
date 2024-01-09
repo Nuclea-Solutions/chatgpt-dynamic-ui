@@ -1,12 +1,12 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import LayoutSidebar from './LayoutSidebar';
 import FeedbackModalComponent from '@/stories/feedback_modal/FeedbackModal.component';
 import { useFeedbackModal } from '../store/useFeedbackModal';
 import { usesidebar } from '@/store/useSidebar';
-import LayoutNavbar from './LayoutNavbar';
 import ShareLinkToChatComponent from '@/stories/share_link_to_chat/ShareLinkToChat.component';
 import { useshareLinkToChat } from '@/store/useLinkToChatComponent';
+import { usePathname } from 'next/navigation';
 
 const LayoutSecondary = ({ children }: { children: React.ReactNode }) => {
 	const openSidebar = usesidebar((state) => state.openSidebar);
@@ -16,6 +16,8 @@ const LayoutSecondary = ({ children }: { children: React.ReactNode }) => {
 	const openModal = useFeedbackModal((state) => state.openModal);
 	const like = useFeedbackModal((state) => state.like);
 
+	const actualPath = usePathname();
+
 	return (
 		<>
 			<LayoutSidebar
@@ -23,7 +25,11 @@ const LayoutSecondary = ({ children }: { children: React.ReactNode }) => {
 				handleOpenSidebar={handleOpenSidebar}
 				handleToggleSidebar={handleToggleSidebar}
 			/>
-			<div className='w-full max-h-[100vh] overflow-y-auto overflow-x-hidden pt-28 md:pt-16'>
+			<div
+				className={`w-full max-h-[100vh] overflow-y-auto overflow-x-hidden ${
+					actualPath === '/' && 'pt-28 md:pt-16'
+				}`}
+			>
 				{children}
 			</div>
 
