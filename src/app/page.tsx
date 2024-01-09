@@ -17,7 +17,7 @@ Page with chat using the message and the input component that it's return from r
 export default function Chat() {
 	const { isLoading, input, handleInputChange, handleSubmit } = useChatCustom({});
 	const messages = useMessagesStore((state) => state.messages);
-	const publicVersion = useChatGptVersion((state) => state.publicVersion);
+
 	return (
 		<HomeLayout>
 			<div className='flex flex-col h-full justify-between w-full overflow-hidden'>

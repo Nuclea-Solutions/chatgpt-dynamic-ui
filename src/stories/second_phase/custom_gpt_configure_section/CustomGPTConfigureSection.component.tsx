@@ -67,6 +67,7 @@ const CustomGPTConfigureSectionComponent = ({
 	const handleActiveView = (activeView: string) => {
 		setIsActive(activeView);
 	};
+
 	return (
 		<div
 			className={`${isActive !== 'configure' && 'hidden'} py-3 px-2 overflow-auto`}
