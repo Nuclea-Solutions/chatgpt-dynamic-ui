@@ -69,7 +69,7 @@ const schemaExamples = [
 ];
 
 const page = () => {
-	const [isActive, setIsActive] = useState('newAction');
+	const [isActive, setIsActive] = useState('create');
 	const [
 		name,
 		description,
@@ -115,7 +115,6 @@ const page = () => {
 	const [importFromUrl, setImportFromUrl] = useState(false);
 	const [schemaValue, setSchemaValue] = useState('');
 
-	// const [inputs, setInputs] = useState([{ id: uuidv4(), value: '' }]);
 	const [inputs, setInputs] = useState([{ id: 'input_1', value: '' }]);
 
 	const handleInputChanges = (id: any, value: any) => {
@@ -123,7 +122,6 @@ const page = () => {
 
 		if (id === inputs[inputs.length - 1].id) {
 			newInputs.push({ id: `input_${inputs.length + 1}`, value: '' });
-			// newInputs.push({ id: uuidv4(), value: '' });
 		}
 
 		setInputs(newInputs);
