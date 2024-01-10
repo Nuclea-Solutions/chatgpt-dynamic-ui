@@ -1,6 +1,6 @@
 // libraries
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 // components
 import { Image } from '@nextui-org/react';
@@ -39,6 +39,8 @@ const SidebarComponent = ({
 	const currentDate = new Date();
 	const router = useRouter();
 	const [sidebarButtonHover, setSidebarButtonHover] = useState(false);
+	const userMenuRef = useRef<HTMLDivElement>(null);
+	const buttonUserMenuRef = useRef<HTMLDivElement>(null);
 
 	const setMessages = useMessagesStore((state) => state.setMessages);
 	const setCurrentConversationId = useConversationsStore((state) => state.setCurrentConversationId);
@@ -128,6 +130,29 @@ const SidebarComponent = ({
 		};
 	}, []);
 
+	const handleOpenMenuUser = () => {
+		setDropDown((prev) => !prev);
+	};
+
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (
+				userMenuRef.current &&
+				!userMenuRef.current.contains(event.target as Node) &&
+				buttonUserMenuRef.current &&
+				!buttonUserMenuRef.current.contains(event.target as Node)
+			) {
+				setDropDown(false);
+			}
+		};
+
+		document.addEventListener('mousedown', handleClickOutside as any);
+
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside as any);
+		};
+	}, []);
+
 	return (
 		<div
 			className={`h-screen bg-light flex flex-col sm:w-[300px] text-base bg-black text-white ${
@@ -139,23 +164,21 @@ const SidebarComponent = ({
 					openSidebar ? 'visible' : 'w-0 invisible'
 				} `}
 			>
-				<div className='flex justify-between px-2 gap-3 min-h-[44px] py-1 items-center transition-colors duration-200 text-white cursor-pointer rounded-[8px] hover:bg-gray-500/30 h-11  flex-grow overflow-hidden'>
+				<div
+					className='flex justify-between px-2 gap-3 min-h-[44px] py-1 items-center transition-colors duration-200 text-white cursor-pointer rounded-[8px] hover:bg-gray-500/30 h-11  flex-grow overflow-hidden'
+					onClick={() => {
+						setMessages([]);
+						setCurrentConversationId(null);
+						router.push('/');
+					}}
+				>
 					<div className='flex items-center gap-2'>
 						<div
 							className={`rounded-full w-[28px] h-[28px] flex items-center justify-center p-1 bg-white text-black`}
 						>
 							<AssistantAvatar />
 						</div>
-						<button
-							onClick={() => {
-								setMessages([]);
-								setCurrentConversationId(null);
-								router.push('/');
-							}}
-							className='truncate text-sm'
-						>
-							New chat
-						</button>
+						<button className='truncate text-sm'>New chat</button>
 					</div>
 					<div>
 						<svg
@@ -180,6 +203,10 @@ const SidebarComponent = ({
 				className={`flex w-full min-h-[44px] gap-3 px-2 items-center ${
 					openSidebar ? 'visible' : 'w-0 invisible'
 				} `}
+				onClick={() => {
+					setMessages([]);
+					router.push('/gpts');
+				}}
 			>
 				<div className='flex justify-between px-2 gap-3 min-h-[44px] items-center transition-colors duration-200 text-white cursor-pointer rounded-[8px] hover:bg-gray-500/30 h-11  flex-grow overflow-hidden'>
 					<div className='flex items-center gap-2'>
@@ -188,15 +215,7 @@ const SidebarComponent = ({
 						>
 							<PiCirclesFour size={32} />
 						</div>
-						<button
-							onClick={() => {
-								setMessages([]);
-								router.push('/gpts');
-							}}
-							className='text-sm'
-						>
-							Explore
-						</button>
+						<button className='text-sm'>Explore</button>
 					</div>
 				</div>
 			</div>
@@ -334,10 +353,11 @@ const SidebarComponent = ({
 				</div>
 
 				<div
-					onClick={() => setDropDown((prev) => !prev)}
+					onClick={handleOpenMenuUser}
 					className={`flex items-center gap-3  w-full rounded-[8px] text-sm p-1 hover:bg-[#202123] text-white relative ${
 						dropDown && 'bg-[#202123]'
 					}`}
+					ref={buttonUserMenuRef}
 				>
 					<div className='h-8 w-8 rounded-[2px]'>
 						<Image src={photoUrl} alt='user' width={100} radius='none' />
@@ -352,6 +372,7 @@ const SidebarComponent = ({
 								? 'bg-[#202123] w-full  absolute bottom-11 right-[1px]  py-3 z-10 rounded-[8px] border border-gray-700'
 								: 'hidden'
 						}`}
+						ref={userMenuRef}
 					>
 						<div className='flex gap-3 p-3 min-h-[44px]  hover:bg-gray-700/50'>
 							<svg
