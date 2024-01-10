@@ -1,3 +1,4 @@
+'use client';
 import { Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from '@nextui-org/react';
 
 import React from 'react';
