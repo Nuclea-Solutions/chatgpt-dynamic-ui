@@ -1,6 +1,6 @@
 import { useChatGptVersion } from '../../store/useChatGptVersion';
 import { FaArrowRightLong } from 'react-icons/fa6';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import useMessagesStore from '../../store/useMessagesStore';
 import { useshareLinkToChat } from '../../store/useLinkToChatComponent';
 
@@ -14,9 +14,13 @@ const NavbarComponent = ({
 	openSidebar: boolean;
 }) => {
 	const [dropdown, setDropdown] = useState(false);
+	const dropdownRef = useRef<HTMLDivElement>(null);
+	const buttonDropdownRef = useRef<HTMLDivElement>(null);
+
 	const handleDropdown = () => {
 		setDropdown((state) => !state);
 	};
+
 	const setPublicVersion = useChatGptVersion((state) => state.setPublicVersion);
 	const setPrivateVersion = useChatGptVersion((state) => state.setPrivateVersion);
 	const publicVersion = useChatGptVersion((state) => state.publicVersion);
@@ -24,6 +28,29 @@ const NavbarComponent = ({
 	const handleOpenShareLinkToChat = useshareLinkToChat((state) => state.setOpenShareLinkToChat);
 
 	const messages = useMessagesStore((state) => state.messages);
+
+	const handleOpenDropDown = () => {
+		setDropdown((prev) => !prev);
+	};
+
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (
+				dropdownRef.current &&
+				!dropdownRef.current.contains(event.target as Node) &&
+				buttonDropdownRef.current &&
+				!buttonDropdownRef.current.contains(event.target as Node)
+			) {
+				setDropdown(false);
+			}
+		};
+
+		document.addEventListener('mousedown', handleClickOutside as any);
+
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside as any);
+		};
+	}, []);
 
 	return (
 		<div
@@ -55,8 +82,9 @@ const NavbarComponent = ({
 				</button>
 
 				<div
-					onClick={handleDropdown}
+					onClick={handleOpenDropDown}
 					className='flex items-center gap-1 text-lg p-2 rounded-xl text-gray-600 dark:text-white sm:justify-center opacity-100 cursor-pointer hover:bg-gray-50 relative '
+					ref={buttonDropdownRef}
 				>
 					<span>
 						<span className='font-semibold'>ChatGPT</span> 3.5
@@ -106,6 +134,7 @@ const NavbarComponent = ({
 				className={`absolute top-[108px] md:top-16 left-2 text-sm w-[326px] border rounded-[8px] flex flex-col gap-2 shadow-xl cursor-pointer bg-white dark:text-white dark:bg-[#202123] select-none ${
 					!dropdown && 'hidden'
 				} ${!openSidebar && 'md:left-16'}`}
+				ref={dropdownRef}
 			>
 				<div className='rounded-[8px] py-2 px-3 m-1'>
 					<div className='flex grow items-start justify-between gap-2'>

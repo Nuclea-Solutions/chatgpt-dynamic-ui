@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+'use client';
+import React, { useEffect, useRef, useState } from 'react';
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
 import { RiLockLine } from 'react-icons/ri';
 import { TbPencil, TbTrash } from 'react-icons/tb';
@@ -12,8 +13,28 @@ interface MyGPTCard {
 const MyGPTCardComponent = ({ image, title, description }: MyGPTCard) => {
 	const [editHover, setEditHover] = useState(false);
 	const [clickMoreOptions, setClickMoreOptions] = useState(false);
-
+	const menuMoreOptionsRef = useRef<HTMLDivElement>(null);
+	const buttonMoreOptionsRef = useRef<HTMLDivElement>(null);
 	const handleMoreOptions = () => setClickMoreOptions((state) => !state);
+
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (
+				menuMoreOptionsRef.current &&
+				!menuMoreOptionsRef.current.contains(event.target as Node) &&
+				buttonMoreOptionsRef.current &&
+				!buttonMoreOptionsRef.current.contains(event.target as Node)
+			) {
+				setClickMoreOptions(false);
+			}
+		};
+
+		document.addEventListener('mousedown', handleClickOutside as any);
+
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside as any);
+		};
+	}, []);
 	return (
 		<div className='flex items-center justify-between gap-10 text-sm hover:cursor-pointer hover:bg-gray-200 rounded-[8px] h-16 py-2  pr-4 relative'>
 			<div className='flex gap-10'>
@@ -45,13 +66,16 @@ const MyGPTCardComponent = ({ image, title, description }: MyGPTCard) => {
 							!editHover && 'hidden'
 						}`}
 					>
-						Edit GPT{' '}
+						Edit GPT
 						<div className={`h-4 w-4 bg-black absolute -bottom-1 left-[40%] -rotate-45`}></div>
 					</div>
 				</div>
-				<div onClick={handleMoreOptions}>
+				<div onClick={handleMoreOptions} ref={buttonMoreOptionsRef}>
 					<BiDotsHorizontalRounded />
-					<div className={` absolute -top-14 right-0 ${!clickMoreOptions && 'hidden'}`}>
+					<div
+						className={` absolute -top-14 right-0 ${!clickMoreOptions && 'hidden'}`}
+						ref={menuMoreOptionsRef}
+					>
 						<div className='flex items-center gap-2 py-4 pr-16 pl-4 bg-gray-200 rounded-[8px] text-red-500 border border-gray-300'>
 							<TbTrash size={24} />
 							<div className='whitespace-nowrap'>Delete GPT</div>

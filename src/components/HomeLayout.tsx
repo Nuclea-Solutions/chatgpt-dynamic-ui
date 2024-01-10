@@ -7,7 +7,7 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
 	const handleToggleSidebar = usesidebar((state) => state.setHandleToggleSidebar);
 	const openSidebar = usesidebar((state) => state.openSidebar);
 	return (
-		<NextUIProvider className='  h-full'>
+		<NextUIProvider className='h-full overflow-hidden'>
 			<LayoutNavbar handleToggleSidebar={handleToggleSidebar} openSidebar={openSidebar} />
 			<div className='h-full w-full'>{children}</div>
 		</NextUIProvider>

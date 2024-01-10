@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			<body
 				className={cn(
 					sohne.className,
-					'bg-white dark:bg-gray-700 min-h-screen flex text-[#374151] w-full text-base'
+					'bg-white dark:bg-gray-700 min-h-screen flex text-[#374151] w-full text-base overflow-hidden'
 				)}
 			>
 				<LayoutSecondary>{children}</LayoutSecondary>
