@@ -20,7 +20,7 @@ export default function Chat() {
 
 	return (
 		<HomeLayout>
-			<div className='flex flex-col h-full justify-between w-full overflow-hidden'>
+			<div className='flex flex-col h-full justify-between w-full overflow-y-auto'>
 				{/* MESSAGES */}
 				<MessagesList messages={messages} />
 				{isLoading && <p className='px-10'>cargando...</p>}
