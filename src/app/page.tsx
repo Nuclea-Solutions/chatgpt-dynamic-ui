@@ -8,14 +8,13 @@ import MessagesList from '@/components/MessagesList';
 import useChatCustom from '@/hooks/useChatCustom/useChatCustom';
 // store
 import useMessagesStore from '@/store/useMessagesStore';
-import { useChatGptVersion } from '@/store/useChatGptVersion';
 import InputContainer from '@/components/InputContainer';
 
 /*
 Page with chat using the message and the input component that it's return from response
 */
-export default function Chat() {
-	const { isLoading, input, handleInputChange, handleSubmit } = useChatCustom({});
+export default function Page() {
+	const { isLoading } = useChatCustom({});
 	const messages = useMessagesStore((state) => state.messages);
 
 	return (

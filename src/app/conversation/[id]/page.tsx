@@ -9,7 +9,7 @@ import InputContainer from '@/components/InputContainer';
 import useChatCustom from '@/hooks/useChatCustom/useChatCustom';
 import useMessagesStore from '@/store/useMessagesStore';
 // utils
-import '../styles.css';
+import './styles.css';
 
 /*
 Conversation detail page: rendering a conversation with the new structure (type Conversation)

@@ -20,8 +20,7 @@ export async function GET(req: Request) {
 		const client = await runMongo();
 		const db = client?.db('conversations');
 		const collection = db?.collection('conversations');
-		const conversations = collection?.find({}).toArray();
-
+		const conversations = await collection?.find({}).toArray();
 		return NextResponse.json({ conversations });
 	} catch (error) {
 		console.error({ error });
