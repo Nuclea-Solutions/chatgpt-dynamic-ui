@@ -21,7 +21,7 @@ export default function Page() {
 		<HomeLayout>
 			<div className='flex flex-col h-full justify-between w-full overflow-y-auto'>
 				{/* MESSAGES */}
-				<MessagesList messages={messages} />
+				<MessagesList />
 				{isLoading && <p className='px-10'>cargando...</p>}
 
 				<div className='h-full pt-2 text-center text-xs text-gray-600 dark:text-gray-300 md:px-[60px] flex flex-col justify-end sticky z-20 bottom-0'>

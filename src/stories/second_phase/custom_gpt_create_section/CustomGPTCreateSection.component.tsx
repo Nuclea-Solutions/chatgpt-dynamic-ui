@@ -53,7 +53,7 @@ const CustomGPTCreateSectionComponent = ({ isActive }: { isActive: string }) => 
 					</div>
 				) : (
 					<div className='overflow-auto'>
-						<MessagesList messages={configurationMessages} />
+						<MessagesList isConfigureChat />
 					</div>
 				)}
 			</div>

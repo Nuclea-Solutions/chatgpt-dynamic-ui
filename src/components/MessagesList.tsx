@@ -1,23 +1,41 @@
 'use client';
 // libraries
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { nanoid } from 'nanoid';
+import { usePathname } from 'next/navigation';
 // components
 import Avatar from '@/components/Avatar';
 import AssistantMessage from '@/components/AssistantMessage';
 import ErrorMessage from './ErrorMessage';
+import { TbPencil } from 'react-icons/tb';
+// hooks and store
+import useChatCustom from '@/hooks/useChatCustom/useChatCustom';
+import useMessagesStore from '@/store/useMessagesStore';
 // utils
 import { cn } from '@/utils/utils';
-import { Message, MessageRole } from '@/types/message';
-import { nanoid } from 'nanoid';
-import { TbPencil } from 'react-icons/tb';
-import { usePathname } from 'next/navigation';
+import { MessageRole } from '@/types/message';
+import useCustomGPT from '@/store/useCustomGPT';
 
-const MessagesList = ({ messages }: { messages: Message[] }) => {
+const MessagesList = ({
+	isConfigureChat,
+	conversationId
+}: {
+	isConfigureChat?: boolean;
+	conversationId?: string;
+}) => {
 	const [showIconInUserMessage, setShowIconInUserMessage] = useState(false);
 	const [showFeedbackMessage, setShowFeedbackMessage] = useState(false);
 	const actualPath = usePathname();
 
-	return messages?.map((item) => {
+	const { getConversation } = useChatCustom({ conversationId });
+	const messages = useMessagesStore((state) => state.messages);
+	const configurationMessages = useCustomGPT((state) => state.configurationMessages);
+
+	useEffect(() => {
+		getConversation();
+	}, []);
+
+	return (!isConfigureChat ? messages : configurationMessages)?.map((item) => {
 		return (
 			<div className='w-full justify-center' key={`${item.id}-${nanoid()}`}>
 				<div className={cn(['whitespace-pre-wrap flex justify-center'])}>

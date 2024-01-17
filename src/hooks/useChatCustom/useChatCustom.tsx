@@ -20,9 +20,14 @@ type ChatPayload = {
 	instructions?: string;
 };
 
-const useChatCustom = ({ customGPT }: { customGPT?: boolean }) => {
+const useChatCustom = ({
+	customGPT,
+	conversationId
+}: {
+	customGPT?: boolean;
+	conversationId?: string;
+}) => {
 	const userId = useRef(nanoid());
-	const params = useParams();
 
 	const [inputMessage, setInputMessage] = useState('');
 	const [configureInput, setConfigureInput] = useState('');
@@ -146,7 +151,7 @@ const useChatCustom = ({ customGPT }: { customGPT?: boolean }) => {
 			payload.instructions = instructions;
 		}
 
-		if (messages.length === 0 && !params.id) {
+		if (messages.length === 0 && !conversationId) {
 			const converId = setFormattedConversation(messageToSave);
 			sendMessage(payload, type, converId);
 			return;
@@ -156,11 +161,11 @@ const useChatCustom = ({ customGPT }: { customGPT?: boolean }) => {
 
 	// Get one conversation
 	const getConversation = useCallback(async () => {
-		if (!params.id) return;
+		if (!conversationId) return;
 
 		try {
 			// const { data } = await axios.get(`/api/conversation/${params.id}`);
-			const data = conversationList.find((item) => item._id === params.id);
+			const data = conversationList.find((item) => item._id === conversationId);
 
 			let resultMessages: Message[] = [];
 			Object.values((data as Conversation).mapping).forEach(
@@ -221,7 +226,7 @@ const useChatCustom = ({ customGPT }: { customGPT?: boolean }) => {
 		} catch (err) {
 			console.error({ err });
 		}
-	}, [conversationList, params?.id]);
+	}, [conversationList, conversationId]);
 
 	return {
 		handleInputChange: handleChangeMessage,
