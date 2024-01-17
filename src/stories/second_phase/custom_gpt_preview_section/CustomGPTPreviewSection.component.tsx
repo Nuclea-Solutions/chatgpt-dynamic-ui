@@ -41,7 +41,7 @@ const CustomGPTPreviewSectionComponent = ({ isActive }: { isActive: string }) =>
 					</div>
 				) : (
 					<div className='h-full overflow-auto'>
-						<MessagesList messages={messages} />
+						<MessagesList />
 					</div>
 				)}
 				<form

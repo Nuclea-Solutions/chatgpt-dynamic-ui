@@ -127,7 +127,8 @@
 		"moderation_results": [],
 		"current_node": "1d09eeb3-3073-476e-bbae-dbe63421bc87",
 		"plugin_ids": null,
-		"id": "fca54f38-98c4-445c-a13d-e7bb4542851c"
+		"id": "fca54f38-98c4-445c-a13d-e7bb4542851c",
+		"_id": "fca54f38-98c4-445c-a13d-e7bb4542851c"
 	},
 	{
 		"title": "Diagrama AI Aprender Idiomas",
@@ -450,7 +451,8 @@
 		],
 		"conversation_id": "0968319c-bdee-4d00-9ddc-d1b87e500a41",
 		"conversation_template_id": null,
-		"id": "0968319c-bdee-4d00-9ddc-d1b87e500a41"
+		"id": "0968319c-bdee-4d00-9ddc-d1b87e500a41",
+		"_id": "0968319c-bdee-4d00-9ddc-d1b87e500a41"
 	},
 	{
 		"title": "Historia de la IA",
@@ -772,7 +774,8 @@
 		],
 		"conversation_id": "34e430e5-9b8f-4188-9bac-537844290bb9",
 		"conversation_template_id": null,
-		"id": "34e430e5-9b8f-4188-9bac-537844290bb9"
+		"id": "34e430e5-9b8f-4188-9bac-537844290bb9",
+		"_id": "34e430e5-9b8f-4188-9bac-537844290bb9"
 	},
 	{
 		"title": "Orden de lista incorrecta",
@@ -1311,7 +1314,8 @@
 		"plugin_ids": null,
 		"conversation_id": "9227c95c-20fb-40b3-9d0d-2ec5de142e40",
 		"conversation_template_id": null,
-		"id": "9227c95c-20fb-40b3-9d0d-2ec5de142e40"
+		"id": "9227c95c-20fb-40b3-9d0d-2ec5de142e40",
+		"_id": "9227c95c-20fb-40b3-9d0d-2ec5de142e40"
 	},
 	{
 		
@@ -2094,7 +2098,8 @@
 		"plugin_ids": null,
 		"conversation_id": "25370cfe-4999-4b17-9818-7e2f99101b5b",
 		"conversation_template_id": null,
-		"id": "25370cfe-4999-4b17-9818-7e2f99101b5b"
+		"id": "25370cfe-4999-4b17-9818-7e2f99101b5b",
+		"_id": "25370cfe-4999-4b17-9818-7e2f99101b5b"
 	},
 	{
 		"title": "New chat",
@@ -2951,7 +2956,8 @@
 		"plugin_ids": null,
 		"conversation_id": "d4260e49-eb82-429a-b453-b0228b70a9ba",
 		"conversation_template_id": null,
-		"id": "d4260e49-eb82-429a-b453-b0228b70a9ba"
+		"id": "d4260e49-eb82-429a-b453-b0228b70a9ba",
+		"_id": "d4260e49-eb82-429a-b453-b0228b70a9ba"
 	},
 	{
 		"title": "Convertir Timestamp Firebase a Datetime",
@@ -3166,7 +3172,8 @@
 		"plugin_ids": null,
 		"conversation_id": "da90dcae-1597-4bea-9d71-6dfd21a5e670",
 		"conversation_template_id": null,
-		"id": "da90dcae-1597-4bea-9d71-6dfd21a5e670"
+		"id": "da90dcae-1597-4bea-9d71-6dfd21a5e670",
+		"_id": "da90dcae-1597-4bea-9d71-6dfd21a5e670"
 	},
 	{
 		"title": "Ordenar por precio cercano",
@@ -3867,7 +3874,8 @@
 		"plugin_ids": null,
 		"conversation_id": "325d7415-a679-49db-9173-def8b343d8e5",
 		"conversation_template_id": null,
-		"id": "325d7415-a679-49db-9173-def8b343d8e5"
+		"id": "325d7415-a679-49db-9173-def8b343d8e5",
+		"_id": "325d7415-a679-49db-9173-def8b343d8e5"
 	},
 	{
 		"title": "Error de permisos en Pub/Sub",
@@ -4325,7 +4333,8 @@
 		"plugin_ids": null,
 		"conversation_id": "9378e1b1-72e9-4d25-b843-d09032baa101",
 		"conversation_template_id": null,
-		"id": "9378e1b1-72e9-4d25-b843-d09032baa101"
+		"id": "9378e1b1-72e9-4d25-b843-d09032baa101",
+		"_id": "9378e1b1-72e9-4d25-b843-d09032baa101"
 	},
 	{
 		"title": "Regex para números 10 dígitos",
@@ -4462,6 +4471,7 @@
 		"conversation_id": "b2bc278c-cacc-4b78-af82-11195a94bac8",
 		"conversation_template_id": null,
 		"gizmo_id": null,
-		"id": "b2bc278c-cacc-4b78-af82-11195a94bac8"
+		"id": "b2bc278c-cacc-4b78-af82-11195a94bac8",
+		"_id": "b2bc278c-cacc-4b78-af82-11195a94bac8"
 	}
 ]
