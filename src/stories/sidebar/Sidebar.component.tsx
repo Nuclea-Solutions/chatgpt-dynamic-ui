@@ -5,13 +5,6 @@ import { Image } from '@nextui-org/react';
 import { AssistantAvatar } from '../../components/Icons';
 import { Conversation } from '@/types/conversation';
 
-// interface ConversationProps {
-// 	id: number;
-// 	title: string;
-// 	content?: string;
-// 	date: string;
-// }
-
 const SidebarComponent = ({
 	conversations,
 	userName,
@@ -33,10 +26,8 @@ const SidebarComponent = ({
 	const [isSelected, setIsSelected] = useState('');
 	const [dropDown, setDropDown] = useState(false);
 	const currentDate = new Date();
-	// const router = useRouter();
 
 	//This function checks the creation date of each conversation
-
 	const calculatedDays = (date: number) => {
 		const createdDate: Date = new Date(date);
 		const difInMilisecond: number = currentDate.getTime() - createdDate.getTime();

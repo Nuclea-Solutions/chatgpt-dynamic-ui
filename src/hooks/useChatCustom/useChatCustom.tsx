@@ -1,7 +1,6 @@
 // libraries
 import { useState, useCallback, useRef } from 'react';
 import axios from 'axios';
-import { useParams } from 'next/navigation';
 // store and context
 import useMessagesStore from '@/store/useMessagesStore';
 import useCustomGPT from '@/store/useCustomGPT';
@@ -32,6 +31,7 @@ const useChatCustom = ({
 	const [inputMessage, setInputMessage] = useState('');
 	const [configureInput, setConfigureInput] = useState('');
 	const [isLoading, setIsLoading] = useState(false);
+	const [usesLocalDB, setUsesLocalDB] = useState(true);
 
 	const [messages, setNewMessage, setMessages] = useMessagesStore(
 		useShallow((state) => [state.messages, state.setNewMessage, state.setMessages])
@@ -67,10 +67,8 @@ const useChatCustom = ({
 	};
 
 	// Post message
-	const sendMessage = useCallback(
+	const postChat = useCallback(
 		async (payload: ChatPayload, type: 'chat' | 'configure', conversationId?: string) => {
-			setInputMessage('');
-			setConfigureInput('');
 			const setMesageFn = type === 'configure' ? setNewConfigurationMessage : setNewMessage;
 
 			try {
@@ -84,7 +82,12 @@ const useChatCustom = ({
 
 				if (type !== 'configure') {
 					const converId = conversationId ? conversationId : currentConversationId;
+					const currentConver = conversationList.filter(
+						(item) => item._id === currentConversationId
+					);
+
 					setNewMessageToConversation(messageToSave, converId);
+					await saveNewMessageToConversation(messageToSave, currentConver[0]);
 				}
 			} catch (error) {
 				console.error(error);
@@ -98,8 +101,26 @@ const useChatCustom = ({
 		[currentConversationId, conversationList]
 	);
 
+	// Save conversation
+	const saveConversation = async (conversations: Conversation[], newConversation: Conversation) => {
+		return await axios.post('/api/conversation', { data: newConversation });
+	};
+
+	// Save new message to conversation
+	const saveNewMessageToConversation = async (
+		newMessage: Message,
+		currentConversation: Conversation
+	) => {
+		if (!currentConversation || !usesLocalDB) {
+			return;
+		}
+		return await axios.post(`/api/message/${currentConversation._id}`, {
+			data: { message: newMessage, conversation: currentConversation }
+		});
+	};
+
 	// Set current messages to conversation
-	const setFormattedConversation = (message: Message) => {
+	const setFormattedConversation = async (message: Message) => {
 		if (!message.id) {
 			message.id = nanoid();
 		}
@@ -107,8 +128,8 @@ const useChatCustom = ({
 		const converId = nanoid();
 		const conver: any = {
 			id: converId,
-			_id: converId,
-			title: message.content,
+			// _id: converId,
+			title: message.content.length > 30 ? message.content.slice(0, 30) : message.content,
 			create_time: Date.now(),
 			update_time: Date.now(),
 			mapping: {
@@ -118,13 +139,33 @@ const useChatCustom = ({
 				}
 			}
 		};
-		setCurrentConversationId(conver._id);
-		setConversationList([...conversationList, conver]);
-		return conver._id;
+		try {
+			const conversation = await saveConversation([...conversationList, conver], conver);
+
+			if (!conversation.data) {
+				setCurrentConversationId(converId);
+				setConversationList([...conversationList, { ...conver, _id: converId }]);
+				setUsesLocalDB(false);
+				return converId;
+			}
+
+			setCurrentConversationId(conversation.data?._id);
+			setConversationList([...conversationList, conversation.data]);
+			return conversation.data._id;
+		} catch (error) {
+			console.error({ error });
+			setCurrentConversationId(converId);
+			setConversationList([...conversationList, { ...conver, _id: converId }]);
+			setUsesLocalDB(false);
+			return converId;
+		}
 	};
 
 	// Submit user message
-	const handleSubmitCustom = (e: React.FormEvent<HTMLFormElement>, type: 'chat' | 'configure') => {
+	const handleSubmitCustom = async (
+		e: React.FormEvent<HTMLFormElement>,
+		type: 'chat' | 'configure'
+	) => {
 		e.preventDefault();
 		if (!e) return;
 		const messageContent = type === 'configure' ? configureInput : inputMessage;
@@ -136,9 +177,13 @@ const useChatCustom = ({
 			author: { role: type === 'configure' ? MessageRole.SYSTEM : MessageRole.USER }
 		};
 		setMesageFn(messageToSave);
+		setInputMessage('');
+		setConfigureInput('');
 
 		if (type !== 'configure' && !!currentConversationId) {
+			const currentConver = conversationList.filter((item) => item._id === currentConversationId);
 			setNewMessageToConversation(messageToSave, currentConversationId);
+			await saveNewMessageToConversation(messageToSave, currentConver[0]);
 		}
 
 		const payload: ChatPayload = {
@@ -151,12 +196,14 @@ const useChatCustom = ({
 			payload.instructions = instructions;
 		}
 
+		// Conversation first message
 		if (messages.length === 0 && !conversationId) {
-			const converId = setFormattedConversation(messageToSave);
-			sendMessage(payload, type, converId);
+			const converId = await setFormattedConversation(messageToSave);
+			postChat(payload, type, converId);
 			return;
 		}
-		sendMessage(payload, type);
+		// New message to conversation
+		postChat(payload, type);
 	};
 
 	// Get one conversation
@@ -165,7 +212,7 @@ const useChatCustom = ({
 
 		try {
 			// const { data } = await axios.get(`/api/conversation/${params.id}`);
-			const data = conversationList.find((item) => item._id === conversationId);
+			const data = conversationList?.find((item) => item._id === conversationId);
 
 			let resultMessages: Message[] = [];
 			Object.values((data as Conversation).mapping).forEach(
