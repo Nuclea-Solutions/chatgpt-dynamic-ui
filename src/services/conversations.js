@@ -9,6 +9,13 @@ class ConversationService {
 		return Conversation.findById(id);
 	}
 
+	save(conversation) {
+		return Conversation.create(conversation);
+	}
+
+	update(id, newMapping) {
+		return Conversation.updateOne(id, { mapping: newMapping });
+	}
 }
 
 module.exports = ConversationService;

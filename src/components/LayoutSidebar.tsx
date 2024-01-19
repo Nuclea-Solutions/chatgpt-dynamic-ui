@@ -15,16 +15,13 @@ export default function LayoutSidebar({
 	handleToggleSidebar: () => void;
 }) {
 	const actualPath = usePathname();
-	const [setConversationList, conversationList] = useConversationsStore((state) => [
-		state.setConversationList,
-		state.conversationList
-	]);
+	const setConversationList = useConversationsStore((state) => state.setConversationList);
 
 	const getConversations = async () => {
 		try {
 			const response = await axios.get('/api/conversations');
 			if (!response.data.conversations.length) return;
-			setConversationList([...conversationList, ...response.data.conversations]);
+			setConversationList(response.data.conversations);
 		} catch (err) {
 			console.error({ err });
 		}

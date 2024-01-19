@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 // components
 import MessagesList from '@/components/MessagesList';
 import InputContainer from '@/components/InputContainer';
@@ -18,16 +19,18 @@ export default async function Page({ params }: { params: { id: unknown } }) {
 	const { id } = params;
 
 	return (
-		<div className='flex justify-center h-full'>
-			<div className='h-full w-full flex flex-col justify-between'>
-				<div className='w-full'>
-					<MessagesList conversationId={id as string} />
-				</div>
+		<Suspense fallback={<p>Loading feed...</p>}>
+			<div className='flex justify-center h-full'>
+				<div className='h-full w-full flex flex-col justify-between'>
+					<div className='w-full'>
+						<MessagesList conversationId={id as string} />
+					</div>
 
-				<div className='w-full px-4 flex items-center flex-row-reverse md:block sticky z-20 bottom-0'>
-					<InputContainer />
+					<div className='w-full px-4 flex items-center flex-row-reverse md:block sticky z-20 bottom-0'>
+						<InputContainer />
+					</div>
 				</div>
 			</div>
-		</div>
+		</Suspense>
 	);
 }

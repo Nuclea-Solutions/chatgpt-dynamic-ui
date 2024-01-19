@@ -29,7 +29,7 @@ const useConversationsStore = create<ConversationsStore>((set) => ({
 					: state.conversationList[state.conversationList.length - 1]?._id;
 
 				draft.conversationList = draft.conversationList.map((item) =>
-					item.id === converID
+					item._id === converID
 						? {
 								...item,
 								mapping: {
