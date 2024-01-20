@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { runMongo } from '@/config/mongodb';
 
 const getConnection = require('../../../config/connection.js');
 const ConversationService = require('../../../services/conversations.js');
@@ -18,12 +19,11 @@ export async function POST(req: Request) {
 			return NextResponse.json({ ...newConver, _id: newConver._id.toString() });
 		}
 
-		// TODO: logic for prod mongo
-		// const client = await runMongo();
-		// const db = client?.db('conversations');
-		// const collection = db?.collection('conversations');
-		// const conversation = await collection?.findOne({ id });
-		// return NextResponse.json(conversation);
+		const client = await runMongo();
+		const db = client?.db('conversations');
+		const collection = db?.collection('conversations');
+		const conversation = await collection?.insertOne(data);
+		return NextResponse.json(conversation);
 	} catch (error) {
 		console.log({ error });
 		return NextResponse.json(undefined);

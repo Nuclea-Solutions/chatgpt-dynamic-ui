@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { runMongo } from '@/config/mongodb';
+
 const ConversationService = require('../../../services/conversations.js');
 const conversationService = new ConversationService();
 const getConnection = require('../../../config/connection.js');
@@ -13,7 +14,6 @@ export async function GET(req: Request) {
 				return NextResponse.json({ conversations: [] });
 			}
 			const conversations = await conversationService.getAll();
-
 			return NextResponse.json({ conversations });
 		}
 

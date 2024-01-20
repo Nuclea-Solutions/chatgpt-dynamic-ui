@@ -7,25 +7,25 @@ const conversationSchema = new mongoose.Schema(
 		update_time: mongoose.Schema.Types.Mixed,
 		mapping: {
 			id: String,
-			message: {
-				id: String,
-				author: {
-					role: String,
-					name: String,
-					metadata: {}
-				},
-				create_time: mongoose.Schema.Types.Mixed,
-				update_time: mongoose.Schema.Types.Mixed,
-				content: {
-					content_type: String,
-					parts: Array
-				},
-				status: String,
-				end_turn: Boolean,
-				weight: Number,
-				metadata: {},
-				recipient: String
-			},
+			// message: {
+			// 	id: String,
+			// 	author: {
+			// 		role: String,
+			// 		name: String,
+			// 		metadata: {}
+			// 	},
+			// 	create_time: mongoose.Schema.Types.Mixed,
+			// 	update_time: mongoose.Schema.Types.Mixed,
+			// 	content: {
+			// 		content_type: String,
+			// 		parts: Array
+			// 	},
+			// 	status: String,
+			// 	end_turn: Boolean,
+			// 	weight: Number,
+			// 	metadata: {},
+			// 	recipient: String
+			// },
 			parent: String,
 			children: Array
 		},
