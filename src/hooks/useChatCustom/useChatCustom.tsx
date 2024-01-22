@@ -102,7 +102,7 @@ const useChatCustom = ({
 	);
 
 	// Save conversation
-	const saveConversation = async (conversations: Conversation[], newConversation: Conversation) => {
+	const saveConversation = async (newConversation: Conversation) => {
 		return await axios.post('/api/conversation', { data: newConversation });
 	};
 
@@ -124,11 +124,10 @@ const useChatCustom = ({
 		if (!message.id) {
 			message.id = nanoid();
 		}
-
 		const converId = nanoid();
 		const conver: any = {
 			id: converId,
-			// _id: converId,
+			_id: converId,
 			title: message.content.length > 30 ? message.content.slice(0, 30) : message.content,
 			create_time: Date.now(),
 			update_time: Date.now(),
@@ -140,18 +139,13 @@ const useChatCustom = ({
 			}
 		};
 		try {
-			const conversation = await saveConversation([...conversationList, conver], conver);
-
+			const conversation = await saveConversation(conver);
 			if (!conversation.data) {
-				setCurrentConversationId(converId);
-				setConversationList([...conversationList, { ...conver, _id: converId }]);
 				setUsesLocalDB(false);
-				return converId;
 			}
-
-			setCurrentConversationId(conversation.data?._id);
-			setConversationList([...conversationList, conversation.data]);
-			return conversation.data._id;
+			setCurrentConversationId(converId);
+			setConversationList([...conversationList, { ...conver, _id: converId }]);
+			return converId;
 		} catch (error) {
 			console.error({ error });
 			setCurrentConversationId(converId);

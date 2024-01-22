@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { nanoid } from 'nanoid';
+import { runMongo } from '@/config/mongodb';
 
 const getConnection = require('../../../../config/connection.js');
 const ConversationService = require('../../../../services/conversations.js');
@@ -11,30 +12,30 @@ export async function POST(req: Request) {
 		const id = req.url.slice(req.url.lastIndexOf('/') + 1);
 		const { data } = json;
 
+		const messageId = data.message.id ?? nanoid();
+		let newConver = {
+			...data.conversation,
+			mapping: {
+				...data.conversation.mapping,
+				[messageId]: { message: data.message, id: messageId }
+			}
+		};
+
 		if (process.env.NODE_ENV === 'development') {
 			const connect = await getConnection();
 			if (!connect) return;
-
-			const messageId = data.message.id ?? nanoid();
-			let newConver = {
-				...data.conversation,
-				mapping: {
-					...data.conversation.mapping,
-					[messageId]: { message: data.message, id: messageId }
-				}
-			};
-
 			await conversationService.update({ _id: id }, newConver.mapping);
 			return NextResponse.json(newConver);
 		}
 
-		// TODO: post message in prod
-		// const client = await runMongo();
-		// const db = client?.db('conversations');
-		// const collection = db?.collection('conversations');
-		// const conversation = await collection?.findOne({ id });
+		const client = await runMongo();
+		const db = client?.db('conversations');
 
-		// return NextResponse.json(conversation);
+		const updated = await db
+			?.collection('conversations')
+			.updateOne({ id: id }, { $set: { mapping: newConver.mapping } });
+
+		return NextResponse.json(updated);
 	} catch (error) {
 		console.error(error);
 		return error;
