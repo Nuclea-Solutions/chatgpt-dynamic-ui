@@ -9,8 +9,6 @@ export async function GET(req: Request) {
 	try {
 		// DEVELOPMENT
 		if (process.env.NODE_ENV === 'development') {
-			console.log(mongoose.connection.readyState);
-
 			const connection = await getConnection();
 			// Without db
 			if (!connection || connection === 'no-db') {

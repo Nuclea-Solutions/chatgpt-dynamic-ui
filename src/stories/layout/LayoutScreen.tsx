@@ -256,8 +256,8 @@ const conversations: Conversation[] = [
 		],
 		conversation_id: '0968319c-bdee-4d00-9ddc-d1b87e500a41',
 		conversation_template_id: null,
-		id: '0968319c-bdee-4d00-9ddc-d1b87e500a41',
-		_id: '0968319c-bdee-4d00-9ddc-d1b87e500a41'
+		id: '0968319c-bdee-4d00-9ddc-d1b87e500a41'
+		// _id: '0968319c-bdee-4d00-9ddc-d1b87e500a41'
 	},
 	{
 		title: 'Historia de la IA',
@@ -501,8 +501,8 @@ const conversations: Conversation[] = [
 		plugin_ids: ['plugin-5ce50344-30ff-4d83-9dd3-f8265abc2f0f'],
 		conversation_id: '34e430e5-9b8f-4188-9bac-537844290bb9',
 		conversation_template_id: null,
-		id: '34e430e5-9b8f-4188-9bac-537844290bb9',
-		_id: '34e430e5-9b8f-4188-9bac-537844290bb9'
+		id: '34e430e5-9b8f-4188-9bac-537844290bb9'
+		// _id: '34e430e5-9b8f-4188-9bac-537844290bb9'
 	}
 ];
 
