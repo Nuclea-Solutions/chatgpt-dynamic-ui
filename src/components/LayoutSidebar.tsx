@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation';
 import SidebarComponent from './Sidebar';
 import useConversationsStore from '@/store/useConversationsStore';
 import axios from 'axios';
+import { Conversation } from '@/types/conversation';
 
 export default function LayoutSidebar({
 	openSidebar,
@@ -21,7 +22,10 @@ export default function LayoutSidebar({
 		try {
 			const response = await axios.get('/api/conversations');
 			if (!response.data.conversations.length) return;
-			setConversationList(response.data.conversations);
+			const orderedConversation = response.data.conversations?.sort(
+				(a: Conversation, b: Conversation) => b.create_time - a.create_time
+			);
+			setConversationList(orderedConversation);
 		} catch (err) {
 			console.error({ err });
 		}

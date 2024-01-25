@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { produce } from 'immer';
 import { Message } from '@/types/message';
 import { Conversation } from '@/types/conversation';
-import { nanoid } from 'nanoid';
+import { nanoid } from '@/utils/utils';
 
 interface ConversationsStore {
 	conversationList: Conversation[];
@@ -26,10 +26,10 @@ const useConversationsStore = create<ConversationsStore>((set) => ({
 			produce(state, (draft) => {
 				const converID = conversationId
 					? conversationId
-					: state.conversationList[state.conversationList.length - 1]?._id;
+					: state.conversationList[state.conversationList.length - 1]?.id;
 
 				draft.conversationList = draft.conversationList.map((item) =>
-					item._id === converID
+					item.id === converID
 						? {
 								...item,
 								mapping: {
