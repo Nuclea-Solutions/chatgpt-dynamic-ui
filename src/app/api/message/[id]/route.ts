@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
-import { nanoid } from 'nanoid';
+import { nanoid } from '@/utils/utils';
 import { runMongo } from '@/config/mongodb';
 
-const getConnection = require('../../../../config/connection.js');
+const { getConnection, mongoose } = require('../../../../config/connection.js');
 const ConversationService = require('../../../../services/conversations.js');
 const conversationService = new ConversationService();
 
@@ -21,16 +21,22 @@ export async function POST(req: Request) {
 			}
 		};
 
+		// DEVELOPMENT
 		if (process.env.NODE_ENV === 'development') {
-			const connect = await getConnection();
-			if (!connect) return;
-			await conversationService.update({ _id: id }, newConver.mapping);
-			return NextResponse.json(newConver);
+			// Optional local mongo db for development
+			if (mongoose.connection.readyState !== 0) {
+				await getConnection();
+				await conversationService.update({ id: id }, newConver.mapping);
+				return NextResponse.json(newConver);
+			} else {
+				// Without db
+				return NextResponse.json({});
+			}
 		}
 
+		// PRODUCTION
 		const client = await runMongo();
 		const db = client?.db('conversations');
-
 		const updated = await db
 			?.collection('conversations')
 			.updateOne({ id: id }, { $set: { mapping: newConver.mapping } });

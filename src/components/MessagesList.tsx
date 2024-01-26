@@ -1,7 +1,6 @@
 'use client';
 // libraries
 import { useState, useEffect } from 'react';
-import { nanoid } from 'nanoid';
 import { usePathname } from 'next/navigation';
 // components
 import Avatar from '@/components/Avatar';
@@ -12,7 +11,7 @@ import { TbPencil } from 'react-icons/tb';
 import useChatCustom from '@/hooks/useChatCustom/useChatCustom';
 import useMessagesStore from '@/store/useMessagesStore';
 // utils
-import { cn } from '@/utils/utils';
+import { cn, nanoid } from '@/utils/utils';
 import { MessageRole } from '@/types/message';
 import useCustomGPT from '@/store/useCustomGPT';
 

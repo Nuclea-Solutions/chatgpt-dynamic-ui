@@ -7,7 +7,5 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 // 15 character random string
-export const nanoid = customAlphabet(
-	'0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
-	15
-);
+export const nanoid = customAlphabet('0123456789', 16);
+// export const nanoid = customAlphabet('1234567890', 20);

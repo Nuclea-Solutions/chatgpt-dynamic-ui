@@ -2,10 +2,10 @@
 	{
 		"title": "Tabla Datos Muestra 6",
 		"create_time": {
-			"$numberDouble": "1691425341.01132"
+			"$numberDouble": "1705932372023"
 		},
 		"update_time": {
-			"$numberDouble": "1691425353.0"
+			"$numberDouble": "1705932372023"
 		},
 		"mapping": {
 			"f8d137c5-930b-4dd8-8c28-87bb2af82160": {
@@ -4330,10 +4330,10 @@
 	{
 		"title": "Regex para números 10 dígitos",
 		"create_time": {
-			"$numberDouble": "1691591908.937552"
+			"$numberDouble": "1706032402256"
 		},
 		"update_time": {
-			"$numberDouble": "1691591914.0"
+			"$numberDouble": "1706032402256"
 		},
 		"mapping": {
 			"a59eb7d6-39dc-4596-abf9-b26d5b40db81": {

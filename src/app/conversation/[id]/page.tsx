@@ -11,7 +11,7 @@ Conversation detail page: rendering a conversation with the new structure (type 
 export async function generateStaticParams() {
 	const data = await fetch(`${URL}/api/conversations`).then((res) => res.json());
 	return data?.conversations?.map((conversation: any) => ({
-		id: conversation._id
+		id: conversation.id
 	}));
 }
 

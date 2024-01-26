@@ -8,21 +8,19 @@ import {
 } from '@/config/assistant-config';
 import { TOOL_FUNCTIONS } from './functions';
 
-const users: {
-	[key: string]: {
-		run_id?: string;
-		thread_id: string;
-		assistant_id: string;
-	};
-} = {};
-
 export async function POST(req: Request) {
 	try {
 		const json = await req.json();
-		const { message, user_id } = json;
+		const { message, user_id, thread_id, run_id, assistant_id } = json;
+
+		const response: {
+			run_id?: string;
+			thread_id?: string;
+			assistant_id?: string;
+		} = { thread_id, run_id, assistant_id };
 
 		// Check if the user exists
-		if (!users[user_id]) {
+		if (!user_id) {
 			try {
 				const assistant = await openai.beta.assistants.create({
 					name: json?.name ?? DEFAULT_NAME,
@@ -32,42 +30,50 @@ export async function POST(req: Request) {
 				});
 				const emptyThread = await openai.beta.threads.create({});
 
-				users[user_id] = {
-					assistant_id: assistant.id,
-					thread_id: emptyThread.id
-				};
+				response.assistant_id = assistant.id;
+				response.thread_id = emptyThread.id;
 			} catch (error) {
 				console.log({ error });
 				return error;
 			}
 		}
 
-		const { run_id, thread_id, assistant_id } = users[user_id] || {};
-
 		// Continue the assistant
-		if (run_id) {
-			const firstRunCheck = await openai.beta.threads.runs.retrieve(thread_id, run_id);
+		if (response.run_id && response.thread_id) {
+			const firstRunCheck = await openai.beta.threads.runs.retrieve(
+				response.thread_id,
+				response.run_id
+			);
 
 			if (firstRunCheck.status === 'in_progress') {
 				return NextResponse.json('ok');
 			}
 		}
 
+		if (!response.thread_id) {
+			return NextResponse.json('ok');
+		}
+
 		// else no run we can continue
-		await openai.beta.threads.messages.create(thread_id, {
+		await openai.beta.threads.messages.create(response.thread_id, {
 			role: 'user',
 			content: message
 		});
 
-		const run = await openai.beta.threads.runs.create(thread_id, {
-			assistant_id: assistant_id
+		const run = await openai.beta.threads.runs.create(response.thread_id, {
+			assistant_id: response.assistant_id ?? ''
 		});
-		users[user_id].run_id = run.id;
+		response.run_id = run.id;
 
 		// 5. Handle the run
-		const assistantResponse = await handleAssitantRun(thread_id, run.id);
+		const assistantResponse = await handleAssitantRun(response.thread_id, run.id);
 
-		return NextResponse.json(assistantResponse);
+		return NextResponse.json({
+			data: assistantResponse,
+			run_id: run.id,
+			thread_id: response.thread_id,
+			assistant_id: response.assistant_id
+		});
 	} catch (error) {
 		console.log({ error });
 		return error;

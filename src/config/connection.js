@@ -7,9 +7,9 @@ async function getConnection() {
 		console.log('Successfully connected to mongodb');
 		return connection;
 	} catch (error) {
-		console.error('Mongodb connection error: ', { error });
+		console.log('Mongodb connection error: ', { error });
 		return 'no-db';
 	}
 }
 
-module.exports = getConnection;
+module.exports = { getConnection, mongoose };

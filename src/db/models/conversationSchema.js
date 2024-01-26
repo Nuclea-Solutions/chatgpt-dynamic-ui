@@ -31,6 +31,7 @@ const conversationSchema = new mongoose.Schema(
 		},
 		current_node: String,
 		id: String,
+		// _id: String,
 		// _id: mongoose.Schema.ObjectId
 	},
 	{ strict: false }

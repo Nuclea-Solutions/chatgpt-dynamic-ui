@@ -233,10 +233,10 @@ const SidebarComponent = ({
 					<h3 className=' text-xs font-medium text-gray-500'>Today</h3>
 				</div>
 				{conversationList?.map((conversation) => (
-					<div onClick={(e) => handleGoToDetail(e, conversation._id)} key={conversation._id}>
+					<div onClick={(e) => handleGoToDetail(e, conversation.id)} key={conversation.id}>
 						{calculatedDays(conversation.create_time) === 1 && (
 							<SidebarConversationComponent
-								itemId={conversation._id}
+								itemId={conversation.id}
 								title={conversation.title}
 								isSelected={isSelected}
 							/>
@@ -252,10 +252,10 @@ const SidebarComponent = ({
 					<h3 className='text-xs font-medium text-gray-500'>Yesterday</h3>
 				</div>
 				{conversationList?.map((conversation) => (
-					<div onClick={(e) => handleGoToDetail(e, conversation._id)} key={conversation._id}>
+					<div onClick={(e) => handleGoToDetail(e, conversation.id)} key={conversation.id}>
 						{calculatedDays(conversation.create_time) === 2 && (
 							<SidebarConversationComponent
-								itemId={conversation._id}
+								itemId={conversation.id}
 								title={conversation.title}
 								isSelected={isSelected}
 							/>
@@ -271,10 +271,10 @@ const SidebarComponent = ({
 					<h3 className='text-xs font-medium text-gray-500'>Less than seven days</h3>
 				</div>
 				{conversationList?.map((conversation) => (
-					<div onClick={(e) => handleGoToDetail(e, conversation._id)} key={conversation._id}>
+					<div onClick={(e) => handleGoToDetail(e, conversation.id)} key={conversation.id}>
 						{calculatedDays(conversation.create_time) === 3 && (
 							<SidebarConversationComponent
-								itemId={conversation._id}
+								itemId={conversation.id}
 								title={conversation.title}
 								isSelected={isSelected}
 							/>
@@ -290,10 +290,10 @@ const SidebarComponent = ({
 					<h3 className='text-xs font-medium text-gray-500'>Less than thirty days</h3>
 				</div>
 				{conversationList?.map((conversation) => (
-					<div onClick={(e) => handleGoToDetail(e, conversation._id)} key={conversation._id}>
+					<div onClick={(e) => handleGoToDetail(e, conversation.id)} key={conversation.id}>
 						{calculatedDays(conversation.create_time) === 4 && (
 							<SidebarConversationComponent
-								itemId={conversation._id}
+								itemId={conversation.id}
 								title={conversation.title}
 								isSelected={isSelected}
 							/>
@@ -309,10 +309,10 @@ const SidebarComponent = ({
 					<h3 className='text-xs font-medium text-gray-500'>More than thirty days</h3>
 				</div>
 				{conversationList?.map((conversation) => (
-					<div onClick={(e) => handleGoToDetail(e, conversation._id)} key={conversation._id}>
+					<div onClick={(e) => handleGoToDetail(e, conversation.id)} key={conversation.id}>
 						{calculatedDays(conversation.create_time) === 0 && (
 							<SidebarConversationComponent
-								itemId={conversation._id}
+								itemId={conversation.id}
 								title={conversation.title}
 								isSelected={isSelected}
 							/>

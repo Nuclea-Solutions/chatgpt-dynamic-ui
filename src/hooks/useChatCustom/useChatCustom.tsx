@@ -7,16 +7,19 @@ import useCustomGPT from '@/store/useCustomGPT';
 import useConversationsStore from '@/store/useConversationsStore';
 import { useShallow } from 'zustand/react/shallow';
 // utils
-import { nanoid } from 'nanoid';
+import { nanoid } from '@/utils/utils';
 import { Message, MessageRole } from '@/types/message';
 import { Conversation, MessageModule } from '@/types/conversation';
 
 type ChatPayload = {
 	message: string;
-	user_id: string;
+	user_id?: string;
 	name?: string;
 	description?: string;
 	instructions?: string;
+	run_id?: string;
+	thread_id?: string;
+	assistant_id?: string;
 };
 
 const useChatCustom = ({
@@ -32,6 +35,11 @@ const useChatCustom = ({
 	const [configureInput, setConfigureInput] = useState('');
 	const [isLoading, setIsLoading] = useState(false);
 	const [usesLocalDB, setUsesLocalDB] = useState(true);
+	const [chataMetadata, setChataMetadata] = useState<{
+		run_id: string;
+		thread_id: string;
+		assistant_id: string;
+	}>();
 
 	const [messages, setNewMessage, setMessages] = useMessagesStore(
 		useShallow((state) => [state.messages, state.setNewMessage, state.setMessages])
@@ -73,8 +81,16 @@ const useChatCustom = ({
 
 			try {
 				const response = await axios.post('/api/chat', payload);
+				if (!chataMetadata) {
+					setChataMetadata({
+						thread_id: response.data.thread_id,
+						run_id: response.data.run_id,
+						assistant_id: response.data.assistant_id
+					});
+				}
+
 				const messageToSave = {
-					content: response.data,
+					content: response.data.data,
 					id: nanoid(),
 					author: { role: MessageRole.ASSISTANT }
 				};
@@ -83,7 +99,7 @@ const useChatCustom = ({
 				if (type !== 'configure') {
 					const converId = conversationId ? conversationId : currentConversationId;
 					const currentConver = conversationList.filter(
-						(item) => item._id === currentConversationId
+						(item) => item.id === currentConversationId
 					);
 
 					setNewMessageToConversation(messageToSave, converId);
@@ -114,9 +130,14 @@ const useChatCustom = ({
 		if (!currentConversation || !usesLocalDB) {
 			return;
 		}
-		return await axios.post(`/api/message/${currentConversation._id}`, {
-			data: { message: newMessage, conversation: currentConversation }
-		});
+
+		try {
+			await axios.post(`/api/message/${currentConversation.id}`, {
+				data: { message: newMessage, conversation: currentConversation }
+			});
+		} catch (error) {
+			console.log('error while saving conversation to db');
+		}
 	};
 
 	// Set current messages to conversation
@@ -127,7 +148,7 @@ const useChatCustom = ({
 		const converId = nanoid();
 		const conver: any = {
 			id: converId,
-			_id: converId,
+			// _id: converId,
 			title: message.content.length > 30 ? message.content.slice(0, 30) : message.content,
 			create_time: Date.now(),
 			update_time: Date.now(),
@@ -144,12 +165,11 @@ const useChatCustom = ({
 				setUsesLocalDB(false);
 			}
 			setCurrentConversationId(converId);
-			setConversationList([...conversationList, { ...conver, _id: converId }]);
+			setConversationList([...conversationList, conver]);
 			return converId;
 		} catch (error) {
-			console.error({ error });
 			setCurrentConversationId(converId);
-			setConversationList([...conversationList, { ...conver, _id: converId }]);
+			setConversationList([...conversationList, conver]);
 			setUsesLocalDB(false);
 			return converId;
 		}
@@ -171,19 +191,26 @@ const useChatCustom = ({
 			author: { role: type === 'configure' ? MessageRole.SYSTEM : MessageRole.USER }
 		};
 		setMesageFn(messageToSave);
+
+		// Save to db
+		if (type !== 'configure' && !!currentConversationId) {
+			const currentConver = conversationList.filter((item) => item.id === currentConversationId);
+			setNewMessageToConversation(messageToSave, currentConversationId);
+			saveNewMessageToConversation(messageToSave, currentConver[0]);
+		}
+
 		setInputMessage('');
 		setConfigureInput('');
 
-		if (type !== 'configure' && !!currentConversationId) {
-			const currentConver = conversationList.filter((item) => item._id === currentConversationId);
-			setNewMessageToConversation(messageToSave, currentConversationId);
-			await saveNewMessageToConversation(messageToSave, currentConver[0]);
-		}
-
+		// Post message
 		const payload: ChatPayload = {
 			message: messageContent,
-			user_id: userId.current
+			// user_id: userId.current,
+			run_id: chataMetadata?.run_id,
+			thread_id: chataMetadata?.thread_id,
+			assistant_id: chataMetadata?.assistant_id
 		};
+
 		if (customGPT) {
 			payload.name = name;
 			payload.description = description;
@@ -197,7 +224,7 @@ const useChatCustom = ({
 			return;
 		}
 		// New message to conversation
-		postChat(payload, type);
+		postChat({ ...payload, user_id: userId.current }, type);
 	};
 
 	// Get one conversation
@@ -206,7 +233,7 @@ const useChatCustom = ({
 
 		try {
 			// const { data } = await axios.get(`/api/conversation/${params.id}`);
-			const data = conversationList?.find((item) => item._id === conversationId);
+			const data = conversationList?.find((item) => item.id === conversationId);
 
 			let resultMessages: Message[] = [];
 			Object.values((data as Conversation).mapping).forEach(

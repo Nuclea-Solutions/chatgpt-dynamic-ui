@@ -1,6 +1,6 @@
 
 const Conversation = require('./models/conversationSchema.js');
-const getConnection = require('../config/connection.js')
+const { getConnection, mongoose } = require('../config/connection.js')
 
 const initLocalDB = async () => {
 	try {
@@ -15,6 +15,7 @@ const initLocalDB = async () => {
 		if (!convesations.length) return;
 		await Promise.all(
 			await convesations.map(async (item) => {
+				// const conversationItem = { ...item, _id: new mongoose.Types.ObjectId(Date.now()) }
 				const newValue = new Conversation(item);
 				await newValue.save();
 			})
