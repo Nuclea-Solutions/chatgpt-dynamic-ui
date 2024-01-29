@@ -4,7 +4,7 @@ const initLocalDB = require('../src/db/initLocalDB.js');
 	try {
 		await initLocalDB();
 	} catch (error) {
-		console.log({ error });
+		console.log('Init data script error:', { error });
 	}
 	process.exit(1);
 })();
