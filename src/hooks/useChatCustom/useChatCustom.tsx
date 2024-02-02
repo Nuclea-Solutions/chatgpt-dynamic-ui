@@ -76,7 +76,12 @@ const useChatCustom = ({
 
 	// Post message
 	const postChat = useCallback(
-		async (payload: ChatPayload, type: 'chat' | 'configure', conversationId?: string) => {
+		async (
+			payload: ChatPayload,
+			type: 'chat' | 'configure',
+			userMessage: Message,
+			conversationId?: string
+		) => {
 			const setMesageFn = type === 'configure' ? setNewConfigurationMessage : setNewMessage;
 
 			try {
@@ -103,7 +108,20 @@ const useChatCustom = ({
 					);
 
 					setNewMessageToConversation(messageToSave, converId);
-					await saveNewMessageToConversation(messageToSave, currentConver[0]);
+					const converToAddMessage = !!currentConver[0]
+						? {
+								...currentConver[0],
+								mapping: {
+									...currentConver[0].mapping,
+									[`${userMessage.id ?? 'no-id'}`]: {
+										message: userMessage.content,
+										id: userMessage.id ?? 'no-id'
+									}
+								}
+						  }
+						: currentConver[0];
+					await saveNewMessageToConversation(messageToSave, converToAddMessage);
+					await saveNewMessageToConversation(messageToSave, converToAddMessage);
 				}
 			} catch (error) {
 				console.error(error);
@@ -196,7 +214,7 @@ const useChatCustom = ({
 		if (type !== 'configure' && !!currentConversationId) {
 			const currentConver = conversationList.filter((item) => item.id === currentConversationId);
 			setNewMessageToConversation(messageToSave, currentConversationId);
-			saveNewMessageToConversation(messageToSave, currentConver[0]);
+			await saveNewMessageToConversation(messageToSave, currentConver[0]);
 		}
 
 		setInputMessage('');
@@ -220,11 +238,11 @@ const useChatCustom = ({
 		// Conversation first message
 		if (messages.length === 0 && !conversationId) {
 			const converId = await setFormattedConversation(messageToSave);
-			postChat(payload, type, converId);
+			postChat(payload, type, messageToSave, converId);
 			return;
 		}
 		// New message to conversation
-		postChat({ ...payload, user_id: userId.current }, type);
+		postChat({ ...payload, user_id: userId.current }, type, messageToSave);
 	};
 
 	// Get one conversation
