@@ -186,7 +186,11 @@ const useChatCustom = ({
 					id: message.id,
 					message: message
 				}
-			}
+			},
+			conversation_id: converId,
+			// conversation_template_id: null,
+			// plugin_ids: null,
+			current_node: ''
 		};
 		try {
 			const conversation = await saveConversation(conver);

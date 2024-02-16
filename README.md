@@ -66,7 +66,8 @@ bun run dev
 docker-compose up -d mongo
 ```
 
-1.  Load initial data: optional step to get some conversations loaded.
+2.  Load initial data
+    It will create a local folder to store the local database. Once the folder is created, you don't need to run this script to use the db, just run docker script (unless you want to reset the conversations you added).
 
 ```bash
 # using npm
