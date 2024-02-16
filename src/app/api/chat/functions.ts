@@ -1,11 +1,23 @@
+// @ts-ignorets-
+import DynamicTools from '@/utils/dynamic';
+
+const customTool = new DynamicTools.DynamicTool({
+	name: 'get_word_length',
+	description: 'Returns the length of a word.',
+	func: async (input: string) => input.length.toString()
+});
+
+/** Define your list of tools. */
+export const TOOLS = [customTool];
+
 const FUNCTION_NAMES = {
 	getUserPhoneNumber: 'getUserPhoneNumber',
-	reactToTankYou: 'reactToTankYou'
+	reactToThankYou: 'reactToTankYou'
 };
 
 export const CHATGPT_FUNCTIONS = [
 	{
-		name: FUNCTION_NAMES.reactToTankYou,
+		name: FUNCTION_NAMES.reactToThankYou,
 		description: 'Call this function when the user says "thank you"',
 		parameters: {
 			type: 'object',

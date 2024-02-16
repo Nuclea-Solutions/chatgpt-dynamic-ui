@@ -60,7 +60,7 @@ bun run dev
 
 ##### 6. Set local MongoDB
 
-1.  Start MongoDB with Docker
+1.  Start MongoDB with Docker: set up a local db.
 
 ```bash
 docker-compose up -d mongo

@@ -20,6 +20,7 @@ type ChatPayload = {
 	run_id?: string;
 	thread_id?: string;
 	assistant_id?: string;
+	session_id?: string;
 };
 
 const useChatCustom = ({
@@ -30,15 +31,17 @@ const useChatCustom = ({
 	conversationId?: string;
 }) => {
 	const userId = useRef(nanoid());
+	const sessionId = useRef(nanoid());
 
 	const [inputMessage, setInputMessage] = useState('');
 	const [configureInput, setConfigureInput] = useState('');
 	const [isLoading, setIsLoading] = useState(false);
 	const [usesLocalDB, setUsesLocalDB] = useState(true);
 	const [chataMetadata, setChataMetadata] = useState<{
-		run_id: string;
-		thread_id: string;
-		assistant_id: string;
+		// run_id: string;
+		// thread_id: string;
+		// assistant_id: string;
+		session_id: string;
 	}>();
 
 	const [messages, setNewMessage, setMessages] = useMessagesStore(
@@ -76,21 +79,29 @@ const useChatCustom = ({
 
 	// Post message
 	const postChat = useCallback(
-		async (
-			payload: ChatPayload,
-			type: 'chat' | 'configure',
-			userMessage: Message,
-			conversationId?: string
-		) => {
+		async ({
+			payload,
+			type,
+			userMessage,
+			conversationId,
+			session_id
+		}: {
+			payload: ChatPayload;
+			type: 'chat' | 'configure';
+			userMessage: Message;
+			conversationId?: string;
+			session_id?: string;
+		}) => {
 			const setMesageFn = type === 'configure' ? setNewConfigurationMessage : setNewMessage;
 
 			try {
 				const response = await axios.post('/api/chat', payload);
 				if (!chataMetadata) {
 					setChataMetadata({
-						thread_id: response.data.thread_id,
-						run_id: response.data.run_id,
-						assistant_id: response.data.assistant_id
+						// thread_id: response.data.thread_id,
+						// run_id: response.data.run_id,
+						// assistant_id: response.data.assistant_id,
+						session_id: session_id ?? sessionId.current
 					});
 				}
 
@@ -124,7 +135,7 @@ const useChatCustom = ({
 					await saveNewMessageToConversation(messageToSave, converToAddMessage);
 				}
 			} catch (error) {
-				console.error(error);
+				console.log({ error });
 				setMesageFn({
 					content: 'An error ocurred. Try again later',
 					id: `error-${nanoid()}`,
@@ -175,7 +186,11 @@ const useChatCustom = ({
 					id: message.id,
 					message: message
 				}
-			}
+			},
+			conversation_id: converId,
+			// conversation_template_id: null,
+			// plugin_ids: null,
+			current_node: ''
 		};
 		try {
 			const conversation = await saveConversation(conver);
@@ -223,10 +238,10 @@ const useChatCustom = ({
 		// Post message
 		const payload: ChatPayload = {
 			message: messageContent,
-			// user_id: userId.current,
-			run_id: chataMetadata?.run_id,
-			thread_id: chataMetadata?.thread_id,
-			assistant_id: chataMetadata?.assistant_id
+			user_id: userId.current
+			// run_id: chataMetadata?.run_id,
+			// thread_id: chataMetadata?.thread_id,
+			// assistant_id: chataMetadata?.assistant_id
 		};
 
 		if (customGPT) {
@@ -237,12 +252,32 @@ const useChatCustom = ({
 
 		// Conversation first message
 		if (messages.length === 0 && !conversationId) {
+			// New agent session
+			// const newSessionId = nanoid();
+			// sessionId.current = newSessionId;
+			// payload.session_id = newSessionId;
+
 			const converId = await setFormattedConversation(messageToSave);
-			postChat(payload, type, messageToSave, converId);
+			postChat({
+				payload,
+				type,
+				userMessage: messageToSave,
+				conversationId: converId
+			});
+
 			return;
+		} else {
+			// payload.run_id = chataMetadata?.run_id;
+			// payload.thread_id = chataMetadata?.thread_id;
+			// payload.assistant_id = chataMetadata?.assistant_id;
+			payload.session_id = chataMetadata?.session_id;
 		}
 		// New message to conversation
-		postChat({ ...payload, user_id: userId.current }, type, messageToSave);
+		postChat({
+			payload: { ...payload, user_id: userId.current, session_id: sessionId.current },
+			type,
+			userMessage: messageToSave
+		});
 	};
 
 	// Get one conversation
