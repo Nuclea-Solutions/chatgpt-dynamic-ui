@@ -31,18 +31,18 @@ const useChatCustom = ({
 	conversationId?: string;
 }) => {
 	const userId = useRef(nanoid());
-	const sessionId = useRef(nanoid());
+	const sessionId = useRef();
 
 	const [inputMessage, setInputMessage] = useState('');
 	const [configureInput, setConfigureInput] = useState('');
 	const [isLoading, setIsLoading] = useState(false);
 	const [usesLocalDB, setUsesLocalDB] = useState(true);
-	const [chataMetadata, setChataMetadata] = useState<{
-		// run_id: string;
-		// thread_id: string;
-		// assistant_id: string;
-		session_id: string;
-	}>();
+	// const [chataMetadata, setChataMetadata] = useState<{
+	// 	// run_id: string;
+	// 	// thread_id: string;
+	// 	// assistant_id: string;
+	// 	session_id: string;
+	// }>();
 
 	const [messages, setNewMessage, setMessages] = useMessagesStore(
 		useShallow((state) => [state.messages, state.setNewMessage, state.setMessages])
@@ -96,15 +96,8 @@ const useChatCustom = ({
 
 			try {
 				const response = await axios.post('/api/chat', payload);
-				if (!chataMetadata) {
-					setChataMetadata({
-						// thread_id: response.data.thread_id,
-						// run_id: response.data.run_id,
-						// assistant_id: response.data.assistant_id,
-						session_id: session_id ?? sessionId.current
-					});
-				}
 
+				sessionId.current = response.data.session_id;
 				const messageToSave = {
 					content: response.data.data,
 					id: nanoid(),
@@ -266,15 +259,16 @@ const useChatCustom = ({
 			});
 
 			return;
-		} else {
-			// payload.run_id = chataMetadata?.run_id;
-			// payload.thread_id = chataMetadata?.thread_id;
-			// payload.assistant_id = chataMetadata?.assistant_id;
-			payload.session_id = chataMetadata?.session_id;
 		}
+
+		// payload.run_id = chataMetadata?.run_id;
+		// payload.thread_id = chataMetadata?.thread_id;
+		// payload.assistant_id = chataMetadata?.assistant_id;
+		payload.session_id = sessionId?.current;
+
 		// New message to conversation
 		postChat({
-			payload: { ...payload, user_id: userId.current, session_id: sessionId.current },
+			payload: { ...payload, user_id: userId.current, session_id: sessionId?.current },
 			type,
 			userMessage: messageToSave
 		});
