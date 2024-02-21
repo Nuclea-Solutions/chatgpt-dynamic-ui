@@ -9,10 +9,16 @@ import { URL } from '@/config';
 Conversation detail page: rendering a conversation with the new structure (type Conversation)
 */
 export async function generateStaticParams() {
-	const data = await fetch(`${URL}/api/conversations`).then((res) => res.json());
-	return data?.conversations?.map((conversation: any) => ({
+	const data = await fetch(`${URL}/api/conversations`, {
+		method: 'GET',
+		headers: {
+			'Content-Type': 'text/x-component; charset=utf-8'
+		}
+	}).then((res) => res.json());
+	const conversationsIds = data?.conversations?.map((conversation: any) => ({
 		id: conversation.id
 	}));
+	return conversationsIds;
 }
 
 export default async function Page({ params }: { params: { id: unknown } }) {
