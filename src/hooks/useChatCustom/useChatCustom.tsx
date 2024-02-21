@@ -21,6 +21,7 @@ type ChatPayload = {
 	thread_id?: string;
 	assistant_id?: string;
 	session_id?: string;
+	chat_history: any[] | [];
 };
 
 const useChatCustom = ({
@@ -31,18 +32,12 @@ const useChatCustom = ({
 	conversationId?: string;
 }) => {
 	const userId = useRef(nanoid());
-	const sessionId = useRef();
+	// const sessionId = useRef();
 
 	const [inputMessage, setInputMessage] = useState('');
 	const [configureInput, setConfigureInput] = useState('');
 	const [isLoading, setIsLoading] = useState(false);
 	const [usesLocalDB, setUsesLocalDB] = useState(true);
-	// const [chataMetadata, setChataMetadata] = useState<{
-	// 	// run_id: string;
-	// 	// thread_id: string;
-	// 	// assistant_id: string;
-	// 	session_id: string;
-	// }>();
 
 	const [messages, setNewMessage, setMessages] = useMessagesStore(
 		useShallow((state) => [state.messages, state.setNewMessage, state.setMessages])
@@ -60,13 +55,21 @@ const useChatCustom = ({
 		setConversationList,
 		conversationList,
 		currentConversationId,
-		setCurrentConversationId
+		setCurrentConversationId,
+		sessionId,
+		setSessionId,
+		chatHistory,
+		setChatHistory
 	] = useConversationsStore((state) => [
 		state.setNewMessageToConversation,
 		state.setConversationList,
 		state.conversationList,
 		state.currentConversationId,
-		state.setCurrentConversationId
+		state.setCurrentConversationId,
+		state.sessionId,
+		state.setSessionId,
+		state.chatHistory,
+		state.setChatHistory
 	]);
 
 	const handleChangeMessage = (e: any) => {
@@ -97,7 +100,9 @@ const useChatCustom = ({
 			try {
 				const response = await axios.post('/api/chat', payload);
 
-				sessionId.current = response.data.session_id;
+				setSessionId(response.data.session_id);
+				setChatHistory(response.data.chat_history);
+
 				const messageToSave = {
 					content: response.data.data,
 					id: nanoid(),
@@ -231,7 +236,8 @@ const useChatCustom = ({
 		// Post message
 		const payload: ChatPayload = {
 			message: messageContent,
-			user_id: userId.current
+			user_id: userId.current,
+			chat_history: chatHistory
 			// run_id: chataMetadata?.run_id,
 			// thread_id: chataMetadata?.thread_id,
 			// assistant_id: chataMetadata?.assistant_id
@@ -264,11 +270,12 @@ const useChatCustom = ({
 		// payload.run_id = chataMetadata?.run_id;
 		// payload.thread_id = chataMetadata?.thread_id;
 		// payload.assistant_id = chataMetadata?.assistant_id;
-		payload.session_id = sessionId?.current;
+		payload.session_id = sessionId ?? undefined;
+		payload.user_id = userId.current;
 
 		// New message to conversation
 		postChat({
-			payload: { ...payload, user_id: userId.current, session_id: sessionId?.current },
+			payload,
 			type,
 			userMessage: messageToSave
 		});
