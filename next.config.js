@@ -10,6 +10,11 @@ const nextConfig = {
 	},
 	eslint: {
 		ignoreDuringBuilds: true
+	},
+	webpack(config) {
+		/* eslint-disable */
+		config.experiments = { ...config.experiments, topLevelAwait: true }
+		return config
 	}
 };
 

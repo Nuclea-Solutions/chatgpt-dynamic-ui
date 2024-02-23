@@ -36,8 +36,9 @@ export async function POST(req: Request) {
 
 		// PRODUCTION
 		const client = await runMongo();
-		const db = client?.db('conversations');
-		const updated = await db
+		// const db = client?.db('conversations');
+		const updated = await client
+			?.db('conversations')
 			?.collection('conversations')
 			.updateOne({ id: id }, { $set: { mapping: newConver.mapping } });
 
