@@ -33,7 +33,7 @@
 		"mongodb": "^5.2.0",
 		"mongoose": "^8.0.3",
 		"nanoid": "^4.0.2",
-		"next": "13.4.4-canary.11",
+		"next": "14.1.1",
 		"openai": "^4.20.1",
 		"prop-types": "^15.8.1",
 		"rc-table": "^7.32.1",
