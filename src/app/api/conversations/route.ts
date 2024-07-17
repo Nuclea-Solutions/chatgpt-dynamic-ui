@@ -27,6 +27,6 @@ export async function GET(req: Request) {
 		return NextResponse.json({ conversations });
 	} catch (error) {
 		console.error({ error });
-		return error;
+		return NextResponse.error();
 	}
 }
