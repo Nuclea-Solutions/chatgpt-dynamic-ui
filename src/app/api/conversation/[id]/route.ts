@@ -30,6 +30,6 @@ export async function GET(req: Request) {
 		return NextResponse.json(conversation);
 	} catch (error) {
 		console.error(error);
-		return error;
+		return NextResponse.error();
 	}
 }
